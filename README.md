@@ -1,10 +1,10 @@
 # Team MicrosoftTechSupport Period 3 (Akhil, Valen, Yash, Jay)
 
-### [Repository](link here)
+### [Repository](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport)
 
-### [Scrum Board](link here)
+### [Scrum Board](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1)
 
-### [Insights](link here)
+### [Insights](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/pulse)
 
 ### [Team Overview and Journals](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport#pair-share-journals)
 
