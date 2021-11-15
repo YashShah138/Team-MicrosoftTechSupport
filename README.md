@@ -6,7 +6,7 @@
 
 ### [Insights](link here)
 
-### [Team Overview and Journals](link to readme line here)
+### [Team Overview and Journals](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport#pair-share-journals)
 
 ### Site Objective
 Temp__________________________
