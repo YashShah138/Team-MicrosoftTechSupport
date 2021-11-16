@@ -18,7 +18,7 @@ Temp__________________________
 - Temp
 
 ### Pair Share Journals
-- Jay and Yash: Link here
+- Jay and Yash: https://drive.google.com/drive/folders/1R4J1MEYuWC8TaFjjSe82onjl0v0V590C?usp=sharing
 - Akhil and Valen: Link here
 
 ### Team Overview
@@ -29,6 +29,3 @@ Temp__________________________
 | Project Designer & Technical Officer | Yash Shah | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
 | Deployment Manager | Jay Manjrekar | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
 | GitHub Admin | Valen Reynolds | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
-
-
-
