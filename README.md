@@ -19,7 +19,7 @@ Temp__________________________
 
 ### Pair Share Journals
 - Jay and Yash: [Journal](https://drive.google.com/drive/folders/1R4J1MEYuWC8TaFjjSe82onjl0v0V590C?usp=sharing)
-- Akhil and Valen:[Journal](https://drive.google.com/drive/folders/17oNFYESdK0PYHA6Rs27DjnvH61ntZlDT?usp=sharing)
+- Akhil and Valen: [Journal](https://drive.google.com/drive/folders/17oNFYESdK0PYHA6Rs27DjnvH61ntZlDT?usp=sharing)
 
 ### Team Overview
 
