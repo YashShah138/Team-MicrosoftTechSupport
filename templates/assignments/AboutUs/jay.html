@@ -1,34 +1,27 @@
-<!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
+{% set project = "Jay About Me" %}
 
-<!-- This variable sets name of browser tab  -->
-{% set project = "Jay" %}
+{% block head %}
 
-<!-- This is a replacement block for Body in base.html -->
-{% block body %}
-<!--Try building a new body here -->
-<body>
 <style>
     .h1 {
         color: white;
         text-align: center;
         padding-top: 20px;
     }
-  body {
-    background-image: url('/static/AboutUs-Pictures/Yash-Final-Background.jpeg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-  }
+    body {
+        background-image: url('/static/AboutUs-Pictures/Yash-Final-Background.jpeg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
 </style>
+
+{% endblock %}
+{% block body %}
 
 <div class="h1">
     <h1>About Me Page</h1>
-
 </div>
 
-{% endblock %}
-
-<!- This is turning off birds background from base.html -->
-{% block background %}
 {% endblock %}
