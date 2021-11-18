@@ -1,12 +1,7 @@
-<!-- Extending the predefined project layout -->
-{% extends "layouts/base.html" %}
-
-<!-- This variable sets name of browser tab  -->
+{% extends "layouts/base.html" %
 {% set project = "Yash" %}
-
-<!-- This is a replacement block for Body in base.html -->
 {% block body %}
-<!--Try building a new body here -->
+
 <body>
 <style>
     body {
@@ -16,7 +11,7 @@
         background-size: 100% 100%;
     }
 </style>
-<!--
+
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: 'Times New Roman';">
 
         <div class="col-12">
@@ -33,9 +28,9 @@
             </div>
         </div>
     </div>
--->
+
 {% endblock %}
 
-<!- This is turning off birds background from base.html -->
+<!-- This is turning off birds background from base.html -->
 {% block background %}
 {% endblock %}
