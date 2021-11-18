@@ -27,8 +27,8 @@ https://rapidapi.com/apihood/api/tides/
 
 | Role | Name | ID | Tasks | Commits | Scrumboard | Profile |
 | --- | --- | --- | --- | --- | --- | --- |
-| Scrum Master | Akhil Nandhakumar | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
-| Project Designer & Technical Officer | Yash Shah | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
+| Techincal Officer | Akhil Nandhakumar | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
+| Project Designer | Yash Shah | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
 | Deployment Manager | Jay Manjrekar | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
 | GitHub Admin | Valen Reynolds | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
-| Avinh | Valen Reynolds | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
+| Scrum Master | Avinh Huinh | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
