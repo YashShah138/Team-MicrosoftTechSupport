@@ -1,10 +1,8 @@
 # imports
-from flask import Flask, render_template
-import request
+from flask import Flask, render_template, request
 
 # creates whatever a Flask instance is
 app = Flask(__name__)
-
 
 # app.routes
 @app.route('/')
