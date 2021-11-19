@@ -3,9 +3,26 @@
 {% set project = "About Akhil" %}
 
 {% block body %}
-<!- Try building a new body here ->
+<script>
+    let imgStatus = 'mask';
+    function imageToggle() {
+        if (imgStatus == 'mask') {
+            var imgType = document.getElementById("toggleImage");
+            imgType.src = "https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Akhil/akhil_no_mask.jpeg?raw=true";
+            imgStatus = 'nomask';
+        }
+        else{
+            var imgType = document.getElementById("toggleImage");
+            imgType.src = "https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Akhil/akhil_mask.jpeg?raw=true";
+            imgStatus = 'mask';
+        }
+    }
+</script>
+
 
 <h1 align="center"> Akhil Nandhakumar </h1>
+<img id="toggleImage" src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Akhil/akhil_mask.jpeg?raw=true" width="225" height="300">
+<button id="toggleButton" onclick="imageToggle()">Click to toggle image!</button>
 <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
 <font size="+1.5"; color="black">
