@@ -1,4 +1,4 @@
-{% extends "layouts/base.html" %
+{% extends "layouts/base.html" %}
 {% set project = "Yash" %}
 {% block body %}
 
@@ -12,22 +12,6 @@
     }
 </style>
 
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: 'Times New Roman';">
-
-        <div class="col-12">
-            <form action="/Yash" id="Yash" method="POST" >
-                <label for="name"><p style="font-size:20px">Hi, what's your name? My name is Yash.</p></p></label>
-                <input name="name" id="name">
-                <input type="submit" value="Hey!">
-            </form>
-            <div class="col-12">
-                <p style="font-size:25px">Hey, {{name}}!</p></p>
-            </div>
-            <div class="col-sm">
-                <a href="{{ Journal0 }}" class="btn">Personal wireframe</a>
-            </div>
-        </div>
-    </div>
 
 {% endblock %}
 
