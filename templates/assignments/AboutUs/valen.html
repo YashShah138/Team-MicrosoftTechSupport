@@ -1,8 +1,45 @@
 {% extends "layouts/base.html" %}
 {% set project = "Valen About Me" %}
+<!- This variable sets name of browser tab  -->
+{% set project = "About Valen" %}
 
-{% block head %}
-{% endblock %}
 {% block body %}
+
+<style>
+    body {
+        background-color: lightskyblue;
+    }
+</style>
+
+<font color="black">
+
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+        <div class="col-12">
+            <p>Hello, {{input}}!</p>
+        </div>
+        <div class="col-12">
+            <form id="greet" method="POST" action={{link}} >
+                <label for="name">Type a greeting name?</label>
+                <input name="input" id="name">
+                <input type="submit" value="Greetings!">
+            </form>
+        </div>
+    </div>
+
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+        <div class="col-12">
+            <p>Hello, I am 16 years old. I go to del norte highschool. My favorite subject is history. I like to play basketball. These are pictures of me, me my grandpa and brother, and me playing basketball. My favorite food is BBQ.</p>
+            <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/about%20static/valen%20static/Valen2.jpg?raw=true" width="400" height="266">
+            <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/about%20static/valen%20static/Valen1.JPG?raw=true" width="361" height="418">
+            <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/about%20static/valen%20static/Valen3.jpg?raw=true" width="425" height="300">
+        </div>
+        <div class="col-12">
+            <form action="/Hello" id="Hello" method="POST" >
+            </form>
+        </div>
+    </div>
+
+</font>>
+
 {% endblock %}
 
