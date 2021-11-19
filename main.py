@@ -22,15 +22,9 @@ def surfingData():
     return render_template("surfingData.html")
 
 
-@app.route('/yash/', methods=['GET', 'POST'])
+@app.route('/yash/')
 def yash():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("Yash.html", name=name)
-    # starting and empty input default
-    return render_template("/assignments/AboutUs/Yash.html", name="World")
+    return render_template("/assignments/AboutUs/Yash.html")
 
 
 @app.route('/akhil/')
