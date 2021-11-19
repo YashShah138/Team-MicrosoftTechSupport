@@ -1,4 +1,4 @@
-{% extends "layouts/base.html" %}
+{% extends "assignments/AboutUs/about_layout.html" %}
 {% set project = "Jay About Me" %}
 
 {% block head %}
@@ -23,5 +23,8 @@
 <div class="h1">
     <h1>About Me Page</h1>
 </div>
+
+<img id="toggleImage" src=unmased_image width="225" height="300"> # add your images in DOM
+<button id="toggleButton" onclick="imageToggle(masked_image, unmasked_image)">Click to toggle image!</button> # add your images in function
 
 {% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layouts/base.html" %}
+{% block head %}
+<script>
+    let imgStatus = 'mask';
+    function imageToggle(unmasked, masked) {
+        if (imgStatus == 'mask') {
+            var imgType = document.getElementById("toggleImage");
+            imgType.src = unmasked;
+            imgStatus = 'nomask';
+        }
+        else{
+            var imgType = document.getElementById("toggleImage");
+            imgType.src = masked;
+            imgStatus = 'mask';
+        }
+    }
+</script>
+
+{% endblock %}
+{% block body %}
+
+{% endblock %}

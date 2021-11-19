@@ -1,6 +1,5 @@
-{% extends "layouts/base.html" %}
+{% extends "assignments/AboutUs/about_layout.html" %}
 {% set project = "Valen About Me" %}
-<!- This variable sets name of browser tab  -->
 {% set project = "About Valen" %}
 
 {% block body %}
@@ -25,6 +24,9 @@
             </form>
         </div>
     </div>
+
+    <img id="toggleImage" src=unmased_image width="225" height="300"> # add your images in DOM
+    <button id="toggleButton" onclick="imageToggle(masked_image, unmasked_image)">Click to toggle image!</button> # add your images in function
 
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
         <div class="col-12">

@@ -1,18 +1,16 @@
-{% extends "layouts/base.html" %}
+{% extends "assignments/AboutUs/about_layout.html" %}
 {% set project = "Avinh About Me" %}
 
 {% block head %}
 <script>
-
 </script>
-
 <style>
-
 </style>
 {% endblock %}
 {% block body %}
 <p>Hi I am Avinh!</p>
-<img id="masked" src="/Static/AboutUs-Pictures/Avinh/avinh_masked.jpg" alt="masked pic of Avinh">
-<img id="unmasked" src="/Static/AboutUs-Pictures/Avinh/avinh_unmasked.jpg" alt="unmasked pic of Avinh">
+<img id="toggleImage" src="/Static/AboutUs-Pictures/Avinh/avinh_masked.jpg" width="225" height="300">
+<button id="toggleButton" onclick="imageToggle('https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_masked.jpg?raw=true', 'https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_unmasked.jpg?raw=true')">Click to toggle image!</button>
+
 {% endblock %}
 
