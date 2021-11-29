@@ -27,6 +27,20 @@ def yash():
 
 @app.route('/akhil/')
 def akhil():
+
+    import requests
+    url = "https://sportscore1.p.rapidapi.com/tennis-rankings/atp"
+    querystring = {"page":"1"}
+    headers = {
+    'x-rapidapi-host': "sportscore1.p.rapidapi.com",
+    'x-rapidapi-key': "af654d789amshce4b35d071f3bd2p1c0cc8jsn8db3aa6a8acc"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    print(response.text)
+
+
     return render_template("/assignments/AboutUs/akhil.html")
 
 
