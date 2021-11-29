@@ -37,11 +37,9 @@ def akhil():
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
+    data = response.json()
 
-    print(response.text)
-
-
-    return render_template("/assignments/AboutUs/akhil.html")
+    return render_template("/assignments/AboutUs/akhil.html", data=data)
 
 
 @app.route('/valen/')

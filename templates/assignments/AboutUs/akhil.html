@@ -12,7 +12,17 @@
         margin: 0px 50px;
         font-size: 20px;color: white;
         font-family: Arial;
+
     }
+    div#api{
+        font-size: 30px;
+        background: rgba(2, 2, 2, 0.63);
+        margin-right: 25%;
+        margin-left: 25%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
     body{
         background-image: url("https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Akhil/background%20about%20image%20akhil.jpeg?raw=true");
     }
@@ -70,5 +80,46 @@
         <br>
 
     </div>
+
+    {% set rank = data.data%}
+
+    <div align="center" id="api">
+        <p> ATP Tennis Top 10 Rankings API:</p>
+        <p> Last Updated: {{rank[0].official_updated_at}}</p><br>
+
+        <img src="{{ rank[0].team.logo}}" width="50" height="50">
+        <p>{{ rank[0].ranking }}: {{ rank[0].team.name_full }}</p>
+
+        <img src="{{ rank[1].team.logo}}" width="50" height="50">
+        <p>{{ rank[1].ranking }}: {{ rank[1].team.name_full }}</p>
+
+        <img src="{{ rank[2].team.logo}}" width="50" height="50">
+        <p>{{ rank[2].ranking }}: {{ rank[2].team.name_full }}</p>
+
+        <img src="{{ rank[3].team.logo}}" width="50" height="50">
+        <p>{{ rank[3].ranking }}: {{ rank[3].team.name_full }}</p>
+
+        <img src="{{ rank[4].team.logo}}" width="50" height="50">
+        <p>{{ rank[4].ranking }}: {{ rank[4].team.name_full }}</p>
+
+        <img src="{{ rank[5].team.logo}}" width="50" height="50">
+        <p>{{ rank[5].ranking }}: {{ rank[5].team.name_full }}</p>
+
+        <img src="{{ rank[6].team.logo}}" width="50" height="50">
+        <p>{{ rank[6].ranking }}: {{ rank[6].team.name_full }}</p>
+
+        <img src="{{ rank[7].team.logo}}" width="50" height="50">
+        <p>{{ rank[7].ranking }}: {{ rank[7].team.name_full }}</p>
+
+        <img src="{{ rank[8].team.logo}}" width="50" height="50">
+        <p>{{ rank[8].ranking }}: {{ rank[8].team.name_full }}</p>
+
+        <img src="{{ rank[9].team.logo}}" width="50" height="50">
+        <p>{{ rank[9].ranking }}: {{ rank[9].team.name_full }}</p>
+    </div>
 </div>
+
+<p>Raw API Output:</p><br>
+<p>{{ rank }}</p>
+
 {% endblock %}
