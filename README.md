@@ -15,6 +15,7 @@ Temp__________________________
 - Temp
 
 #### Future Goals
+
 - Temp
 
 ### Pair Share Journals
@@ -24,6 +25,7 @@ Temp__________________________
 ### Team Overview
 
 https://rapidapi.com/apihood/api/tides/
+<img width="767" alt="Screen Shot 2021-11-30 at 12 29 22 PM" src="https://user-images.githubusercontent.com/89223735/144123230-2c0e1840-020b-4588-8c1c-ad757c15bcbf.png">
 
 | Role | Name | ID | Tasks | Commits | Scrumboard | Profile |
 | --- | --- | --- | --- | --- | --- | --- |
