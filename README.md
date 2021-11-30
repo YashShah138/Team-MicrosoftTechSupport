@@ -15,7 +15,6 @@ Temp__________________________
 - Temp
 
 #### Future Goals
-
 - Temp
 
 ### Pair Share Journals
@@ -25,7 +24,6 @@ Temp__________________________
 ### Team Overview
 
 https://rapidapi.com/apihood/api/tides/
-<img width="767" alt="Screen Shot 2021-11-30 at 12 29 22 PM" src="https://user-images.githubusercontent.com/89223735/144123230-2c0e1840-020b-4588-8c1c-ad757c15bcbf.png">
 
 | Role | Name | ID | Tasks | Commits | Scrumboard | Profile |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -39,14 +37,31 @@ https://rapidapi.com/apihood/api/tides/
 
 ## Week 1
 
+### Scrum Team Project Review
+| Role | Tasks |
+| --- | --- |
+| Design | [Wiki Theme](), [Brain Write](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/6), [Wire Frame](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/7) |
+| Technicals | [10 to  12 key ideas](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/14) |
+| Github | On Wiki containing [Management Plan](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/wiki/Company-Policies) |
+| Deployment | [Wiki Plan](), Hardware and Frequency |
+| Scrum Board | [Assignments and Backlog](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1) |
+
+### Individual
+| Name | 1.3 Program Design and Development | 1.4 Identifying and Correcting Errors | Create Task |
+| --- | --- | --- | --- |
+| Avinh |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
 ## Week 0
 
-PBL
+### PBL
 | Name | Commit |
 | --- | --- |
-| Avinh | [Initializing Commit](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/8) |
+| Avinh | [Initializing Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/8) |
 
-CollegeBoard
+### CollegeBoard
 | Name | 1.1 Collaboration Quiz | 1.2 Program Function and Purpose Quiz |
 | --- | --- | --- |
 | Avinh | ![image](https://user-images.githubusercontent.com/43688346/144121635-42db40c3-4c3b-457d-bf9b-14dc9e92fed9.png) | ![image](https://user-images.githubusercontent.com/43688346/144121687-aaaf06f1-5b0b-423b-808a-f0f7f1c24cb6.png) |
