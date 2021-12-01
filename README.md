@@ -28,9 +28,9 @@ https://rapidapi.com/apihood/api/tides/
 | Role | Name | ID | Tasks | Commits | Scrumboard | Profile |
 | --- | --- | --- | --- | --- | --- | --- |
 | Techincal Officer | Akhil Nandhakumar | #89219514 | [tasks](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/assigned/AkhilNandhakumar) | [commits](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=AkhilNandhakumar) | [scrumboard](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1?card_filter_query=assignee%3Aakhilnandhakumar) | [profile](https://github.com/AkhilNandhakumare) |
-| Project Designer | Yash Shah | #89223735 | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
-| Deployment Manager | Jay Manjrekar | #89176673 | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
-| GitHub Admin | Valen Reynolds | #89166851 | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
+| Project Designer | Yash Shah | #89223735 | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](https://github.com/YashShah138) |
+| Deployment Manager | Jay Manjrekar | #89176673 | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](https://github.com/JayManjrekar) |
+| GitHub Admin | Valen Reynolds | #89166851 | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](https://github.com/ValenReynolds) |
 | Scrum Master | Avinh Huinh | #43688346 | [tasks](link to issues filtered for individual) | [commits](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=SlimeyTurtles) | [scrumboard](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1?card_filter_query=assignee%3Aslimeyturtles) | [profile](https://github.com/SlimeyTurtles) |
 
 # Timebox
