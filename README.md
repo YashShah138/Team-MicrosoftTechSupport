@@ -35,6 +35,20 @@ https://rapidapi.com/apihood/api/tides/
 
 # Timebox
 
+## Week 2
+
+### Team
+Deployed Website: inster a link here when deploted
+
+### Individual
+| Name | About Page | 2.3 Extracting Information from Data | 2.4 Using Programs with Data |
+| --- | --- | --- | --- |
+| Avinh | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/2) | | |
+| Akhil | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/5) | | |
+| Valen | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/3) | | |
+| Yash | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/4) | | |
+| Jay | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/1) | | |
+
 ## Week 1
 
 ### Scrum Team Project Review
