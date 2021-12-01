@@ -4,11 +4,20 @@
 
 {% block body %}
 <style>
-    h1{
+    img#toggleImage{
+        margin-top: 10px;
+    }
+
+    a#links{
+        text-decoration: underline;
+        font-size: 25px;
+    }
+
+    #header{
         color: white;
         margin-top: 30px;
     }
-    div{
+    div#body{
         margin: 0px 50px;
         font-size: 20px;color: white;
         font-family: Arial;
@@ -46,15 +55,18 @@
 </script>
 
 
-<h1 align="center"> Akhil Nandhakumar </h1>
-
+<h1 id="header" align="center"> Akhil Nandhakumar </h1>
+<div align="center">
+    <a id="links" href="https://docs.google.com/document/d/1geU9paAdtZwbeuL5gZV7TnSUav7B4RINUZdbdMl7DAQ/edit?usp=sharing">CSP Journal</a><br>
+    <a id="links" href="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=AkhilNandhakumar">Commits</a>
+</div>
 <div align="center">
     <img id="toggleImage" src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Akhil/akhil_mask.jpeg?raw=true" width="225" height="300">
     <br><br>
     <button id="toggleButton" onclick="imageToggle()">Click to toggle image!</button>
 </div>
 
-<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+<div id="body" class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
     <div>
         <p>My name is Akhil Nandhakumar. I am 16 years old, and turning 17 on November 1st. I am junior at Del Norte High School.</p>
