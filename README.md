@@ -27,7 +27,7 @@ https://rapidapi.com/apihood/api/tides/
 
 | Role | Name | ID | Tasks | Commits | Scrumboard | Profile |
 | --- | --- | --- | --- | --- | --- | --- |
-| Techincal Officer | Akhil Nandhakumar | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
+| Techincal Officer | Akhil Nandhakumar | id here | [tasks](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/assigned/AkhilNandhakumar) | [commits](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=AkhilNandhakumar) | [scrumboard](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1?card_filter_query=assignee%3Aakhilnandhakumar) | [profile](https://github.com/AkhilNandhakumare) |
 | Project Designer | Yash Shah | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
 | Deployment Manager | Jay Manjrekar | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
 | GitHub Admin | Valen Reynolds | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
