@@ -31,9 +31,23 @@ https://rapidapi.com/apihood/api/tides/
 | Project Designer | Yash Shah | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
 | Deployment Manager | Jay Manjrekar | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
 | GitHub Admin | Valen Reynolds | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
-| Scrum Master | Avinh Huinh | id here | [tasks](link to issues filtered for individual) | [commits](link to individual commits) | [scrumboard](link to scrumboard with issues/tickets filtered for individual) | [profile](link to profile) |
+| Scrum Master | Avinh Huinh | #43688346 | [tasks](link to issues filtered for individual) | [commits](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=SlimeyTurtles) | [scrumboard](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1?card_filter_query=assignee%3Aslimeyturtles) | [profile](https://github.com/SlimeyTurtles) |
 
 # Timebox
+
+## Week 2
+
+### Team
+Deployed Website: inster a link here when deploted
+
+### Individual
+| Name | About Page | 2.3 Extracting Information from Data | 2.4 Using Programs with Data |
+| --- | --- | --- | --- |
+| Avinh | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/2) | | |
+| Akhil | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/5) | | |
+| Valen | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/3) | | |
+| Yash | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/4) | | |
+| Jay | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/1) | | |
 
 ## Week 1
 
