@@ -3,6 +3,7 @@
 
 {% block head %}
 <script>
+    PokemonImage
 </script>
 <style>
 </style>
@@ -11,6 +12,20 @@
 <p>Hi I am Avinh!</p>
 <img id="toggleImage" src="/Static/AboutUs-Pictures/Avinh/avinh_masked.jpg" width="225" height="300">
 <button id="toggleButton" onclick="imageToggle('https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_masked.jpg?raw=true', 'https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_unmasked.jpg?raw=true')">Click to toggle image!</button>
+
+<form id="PokeAPI" method="POST" action="/avinh/">
+    <label for="input">Enter a pokemon</label>
+    <input name="input" id="input">
+    <input type="submit" value="Enter">
+</form>
+
+<img src={{PokemonImage}} width="225" height="300">
+
+</br>
+
+<a href="https://docs.google.com/document/d/1geU9paAdtZwbeuL5gZV7TnSUav7B4RINUZdbdMl7DAQ/edit?usp=sharing">Journal</a></br>
+<a href="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=SlimeyTurtles">Commits</a></br>
+<a href="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1?card_filter_query=assignee%3Aslimeyturtles">Scrumboard Tasks</a></br>
 
 {% endblock %}
 

@@ -1,7 +1,10 @@
 # imports
 from flask import Flask, render_template, request
+import requests
 
 # creates whatever a Flask instance is
+from requests import get
+
 app = Flask(__name__)
 
 # app.routes
@@ -60,8 +63,13 @@ def valen():
     return render_template("/assignments/AboutUs/valen.html", chargers=chargers)
 
 
-@app.route('/avinh/')
+@app.route('/avinh/', methods=['GET', 'POST'])
 def avinh():
+    if request.form:
+        pokemon = request.form.get("input")
+        PokemonAPI = requests.get("https://pokeapi.co/api/v2/pokemon/" + pokemon)
+        PokemonImage = (PokemonAPI.json()["sprites"]["front_default"])
+        return render_template("/assignments/AboutUs/avinh.html", PokemonImage=PokemonImage)
     return render_template("/assignments/AboutUs/avinh.html")
 
 
