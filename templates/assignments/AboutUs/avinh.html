@@ -3,6 +3,7 @@
 
 {% block head %}
 <script>
+    PokemonImage
 </script>
 <style>
 </style>
@@ -12,5 +13,12 @@
 <img id="toggleImage" src="/Static/AboutUs-Pictures/Avinh/avinh_masked.jpg" width="225" height="300">
 <button id="toggleButton" onclick="imageToggle('https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_masked.jpg?raw=true', 'https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_unmasked.jpg?raw=true')">Click to toggle image!</button>
 
+<form id="PokeAPI" method="POST" action="/avinh/">
+    <label for="input">Enter a pokemon</label>
+    <input name="input" id="input">
+    <input type="submit" value="Enter">
+</form>
+
+<img src={{PokemonImage}} width="225" height="300">
 {% endblock %}
 
