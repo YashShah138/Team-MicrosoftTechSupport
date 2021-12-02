@@ -54,7 +54,7 @@ Deployed Website: inster a link here when deploted
 ### Scrum Team Project Review
 | Role | Tasks |
 | --- | --- |
-| Design | [Wiki Theme](), [Brain Write](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/6), [Wire Frame](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/7) |
+| Design | [Wiki Theme](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/wiki/Ideation), [Brain Write](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/6), [Wire Frame](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/7) |
 | Technicals | [10 to  12 key ideas](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/14) |
 | Github | On Wiki containing [Management Plan](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/wiki/Company-Policies) |
 | Deployment | [Wiki Plan](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/wiki/Deployment-Wiki), Hardware and Frequency |
