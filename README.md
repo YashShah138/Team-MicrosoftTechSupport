@@ -57,17 +57,18 @@ Deployed Website: inster a link here when deploted
 | Design | [Wiki Theme](), [Brain Write](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/6), [Wire Frame](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/7) |
 | Technicals | [10 to  12 key ideas](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/14) |
 | Github | On Wiki containing [Management Plan](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/wiki/Company-Policies) |
-| Deployment | [Wiki Plan](), Hardware and Frequency |
+| Deployment | [Wiki Plan](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/wiki/Deployment-Wiki), Hardware and Frequency |
 | Scrum Board | [Assignments and Backlog](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1) |
 
 ### Individual
 | Name | 1.3 Program Design and Development | 1.4 Identifying and Correcting Errors | Create Task |
 | --- | --- | --- | --- |
-| Avinh |  |  |  |
+| Avinh | ![image](https://user-images.githubusercontent.com/43688346/144491124-c734b48e-60e2-4b4f-b36d-2a9bd2db1a75.png) | ![image](https://user-images.githubusercontent.com/43688346/144491254-5df3dcb0-9066-49e4-b0ee-c9b472fc6d41.png) 2. I thought the error was that it did not check the rest of the list, but I also didnt check the rest of the list |  |
 | Akhil | [link](https://docs.google.com/document/d/16dm_jyvu32MNj9Q7EpoLF-kGiFhTdLjMARLeH_RpabA/edit?usp=sharing) | [link](https://docs.google.com/document/d/16dm_jyvu32MNj9Q7EpoLF-kGiFhTdLjMARLeH_RpabA/edit?usp=sharing) | [link](https://docs.google.com/document/d/1v6ChfcX0RCOruHQIU0WKnM6QWfdY_olDsCSDhL9Pno4/edit?usp=sharing) |
 |  |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
+
 ## Week 0
 
 ### PBL
