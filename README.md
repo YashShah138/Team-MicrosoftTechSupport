@@ -1,4 +1,4 @@
-# Team MicrosoftTechSupport Period 3 (Avinh, Akhil, Valen, Yash, Jay)
+# Team MicrosoftTechSupport Period 3 (Akhil, Avinh, Jay, Valen, Yash)
 
 ### [Repository](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport)
 
