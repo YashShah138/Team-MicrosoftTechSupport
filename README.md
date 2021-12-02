@@ -81,5 +81,6 @@ Deployed Website: inster a link here when deploted
 | Avinh | ![image](https://user-images.githubusercontent.com/43688346/144121635-42db40c3-4c3b-457d-bf9b-14dc9e92fed9.png) | ![image](https://user-images.githubusercontent.com/43688346/144121687-aaaf06f1-5b0b-423b-808a-f0f7f1c24cb6.png) |
 | Akhil | ![image](https://user-images.githubusercontent.com/89219514/144355162-aa5aab8a-4264-47d5-b11e-4ef74997c15f.png) | ![image](https://user-images.githubusercontent.com/89219514/144355183-2fff2709-2985-42d6-bdeb-29051ff0ddf7.png) <br> Corrections: Q5- while going through the answers, I forgot that there was a nested loop, and thought that the function moved both index markers at the same time, not after the outer loop had completely iterated through the list. Instead, the program would compare the element to every subsequent element in the list. |
 | Valen| | |
-| Yash | | |
+| Yash |<img width="1145" alt="Screen Shot 2021-12-02 at 11 39 31 AM" src="https://user-images.githubusercontent.com/89223735/144491339-8d0b8b47-a813-4812-88a2-c9bee76154da.png">|
+ |<img width="1146" alt="Screen Shot 2021-12-02 at 11 40 38 AM" src="https://user-images.githubusercontent.com/89223735/144491491-de3b2ad0-13a5-425f-af21-76e31895724e.png">|
 | Jay | | |
