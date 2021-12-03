@@ -65,7 +65,7 @@ Deployed Website: inster a link here when deploted
 | --- | --- | --- | --- |
 | Avinh | ![image](https://user-images.githubusercontent.com/43688346/144491124-c734b48e-60e2-4b4f-b36d-2a9bd2db1a75.png) | ![image](https://user-images.githubusercontent.com/43688346/144491254-5df3dcb0-9066-49e4-b0ee-c9b472fc6d41.png) 2. I thought the error was that it did not check the rest of the list, but I also didnt check the rest of the list |  |
 | Akhil | [link](https://docs.google.com/document/d/16dm_jyvu32MNj9Q7EpoLF-kGiFhTdLjMARLeH_RpabA/edit?usp=sharing) | [link](https://docs.google.com/document/d/16dm_jyvu32MNj9Q7EpoLF-kGiFhTdLjMARLeH_RpabA/edit?usp=sharing) | [link](https://docs.google.com/document/d/1v6ChfcX0RCOruHQIU0WKnM6QWfdY_olDsCSDhL9Pno4/edit?usp=sharing) |
-|  |  |  |  |
+| Yash | <img width="1155" alt="Screen Shot 2021-12-03 at 11 52 42 AM" src="https://user-images.githubusercontent.com/89223735/144664579-dca9d047-256c-4213-a891-9da056883e18.png">|
 |  |  |  |  |
 |  |  |  |  |
 
