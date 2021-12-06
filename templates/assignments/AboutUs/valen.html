@@ -1,4 +1,4 @@
-{% extends "assignments/AboutUs/about_layout.html" %}
+`{% extends "assignments/AboutUs/about_layout.html" %}
 {% set project = "Valen About Me" %}
 {% set project = "About Valen" %}
 
@@ -10,31 +10,42 @@
     }
 </style>
 
-{
-    a#links{
-        text-decoration: underline;
-        font-size: 25px;
-}
+<script>
+    let imgStatus = 'masked';
+    function imageToggle() {
+        if (imgStatus == 'masked') {
+            var imgType = document.getElementById("toggleImage");
+            imgType.src = "https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Valen/Photo%20on%2012-3-21%20at%2011.33%20AM%20%232.jpg?raw=true"
+            imgStatus = 'unmasked';
+        }
+        else{
+            var imgType = document.getElementById("toggleImage");
+            imgType.src = "https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Valen/Photo%20on%2012-3-21%20at%2011.33%20AM.jpg?raw=true" +
+                "";
+            imgStatus = 'masked';
+        }
+    }
+</script>
 
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-        <div class="col-12">
-            <p>Hello, {{input}}!</p>
-        </div>
-        <div class="col-12">
-            <form id="greet" method="POST" action={{link}} >
-                <label for="name">Type a greeting name?</label>
-                <input name="input" id="name">
-                <input type="submit" value="Greetings!">
-            </form>
-        </div>
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+    <div class="col-12">
+        <p>Hello, {{input}}!</p>
     </div>
+    <div class="col-12">
+        <form id="greet" method="POST" action={{link}} >
+            <label for="name">Type a greeting name?</label>
+            <input name="input" id="name">
+            <input type="submit" value="Greetings!">
+        </form>
+    </div>
+</div>
 
 <h1 id="header" align="center"> Valen Reynolds </h1>
 <div align="center">
     <a id="links" href="https://docs.google.com/document/d/1geU9paAdtZwbeuL5gZV7TnSUav7B4RINUZdbdMl7DAQ/edit?usp=sharing">CSP Journal</a><br>
     <a id="links" href="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=ValenReynolds">Commits</a>
-    <img id="toggleImage" src=unmased_image width="225" height="300"> # add your images in DOM
-    <button id="toggleButton" onclick="imageToggle(masked_image, unmasked_image)">Click to toggle image!</button> # add your images in function
+    <img id="toggleImage" src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Valen/Photo%20on%2012-3-21%20at%2011.33%20AM.jpg?raw=true" width="225" height="300">
+    <button id="toggleButton" onclick="imageToggle()">Click to toggle image!</button>
 
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
         <div class="col-12">
@@ -49,8 +60,10 @@
         </div>
     </div>
 
-<p> {{ chargers[19].name }} 2021 Record api </p>
-<p> Record: {{ chargers[19].wins }} - {{ chargers[19].losses }}</p>
+    <p> {{ chargers[19].name }} 2021 Record api </p>
+    <p> Record: {{ chargers[19].wins }} - {{ chargers[19].losses }}</p>
 
-{% endblock %}
+    {% endblock %}
 
+
+`
