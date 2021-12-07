@@ -45,9 +45,7 @@ def yash():
 
     response = requests.request("GET", url, headers=headers)
     data = response.json()
-    name = data["name"]
-    country = data["country"]
-    return render_template("/assignments/AboutUs/yash.html", name=name, country=country)
+    return render_template("/assignments/AboutUs/yash.html")
 
 
 @app.route('/akhil/')
