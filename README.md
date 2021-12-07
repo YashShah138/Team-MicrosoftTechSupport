@@ -44,7 +44,7 @@ Deployed Website: inster a link here when deploted
 | Name | About Page | 2.3 Extracting Information from Data | 2.4 Using Programs with Data |
 | --- | --- | --- | --- |
 | Avinh | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/2) | | |
-| Akhil | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/5) | | |
+| Akhil | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/5) | ![image](https://user-images.githubusercontent.com/89219514/144967891-4030c058-670a-4540-80e4-d8af50276481.png)| ![image](https://user-images.githubusercontent.com/89219514/144967922-3869ce33-c5fd-4fe0-b041-2070ac5574bc.png) Corrections: Q5, just misclicked, I changed my answer to D, but I didn't check if I had checked the box properely and it didn't select it. The answer had to include sorting by year, filtering by year, and filtering by photographer. |
 | Valen | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/3) | | |
 | Yash | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/4) | | |
 | Jay | [Ticket](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/1) | | |
