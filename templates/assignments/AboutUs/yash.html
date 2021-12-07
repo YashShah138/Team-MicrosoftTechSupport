@@ -1,12 +1,54 @@
 {% extends "assignments/AboutUs/about_layout.html" %}
-{% set project = "Yash" %}
+{% set project = "Yash About Me" %}
+
+<script>
+    let imgStatus = 'mask';
+    function imageToggle() {
+        if (imgStatus == 'mask') {
+            var imgType = document.getElementById("toggleImage");
+            imgType.src = "/static/AboutUs-Pictures/Yash/LinkedIn-Profile.jpeg";
+            imgStatus = 'nomask';
+        }
+        else{
+            var imgType = document.getElementById("toggleImage");
+            imgType.src = "/static/AboutUs-Pictures/Yash/CSP PIC2.jpeg";
+            imgStatus = 'mask';
+        }
+    }
+</script>
+
 {% block body %}
+    <div style="text-align: center;">
+        <h1>Yash Shah</h1>
+        <span>
+            <p>My name is Yash Shah. I am 16 years old and I am junior at Del Norte High School.</p>
+            <p>Some of my hobbies include spending time with my family, hanging out with friends, building LEGOs, photography, and of course, sleeping.</p>
+            <p>I would like to work as an artificial intelligence programmer or work in the private equity sector.</p>
 
-<body>
+<div align="center">
+    <img id="toggleImage" src="/static/AboutUs-Pictures/Yash/LinkedIn-Profile.jpeg" width="250" height="300">
+        <br>
+        <br>
+    <button id="toggleButton" onclick="imageToggle()">Click to toggle image!</button>
+        <br>
+        <br>
+            <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/20210731045838_IMG_2958.jpeg?raw=true" width="500" height="300">
+        <br>
+        <br>
+            <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/IMG_20190113_180358.jpeg?raw=true" width="500" height="300">
+        <br>
+        <br>
+    </div>
+        </span>
+    </div>
 
+<p>
+    {{ data }}
 
-<img id="toggleImage" src=unmased_image width="225" height="300"> # add your images in DOM
-<button id="toggleButton" onclick="imageToggle(masked_image, unmasked_image)">Click to toggle image!</button> # add your images in function
+    <div align="center" id="api">
 
+    </div>
+
+</p>
 {% endblock %}
 

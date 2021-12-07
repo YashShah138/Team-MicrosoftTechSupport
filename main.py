@@ -1,4 +1,6 @@
-# imports
+from wsgiref import headers
+
+import querystring as querystring
 from flask import Flask, render_template, request
 import requests
 
@@ -10,7 +12,7 @@ app = Flask(__name__)
 # app.routes
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("/index.html")
 
 
 @app.route('/aboutus/')
@@ -20,18 +22,36 @@ def aboutus():
 
 @app.route('/surfingData/')
 def surfingData():
-    return render_template("surfingData.html")
+    url = "https://tides.p.rapidapi.com/tides"
+    querystring = {"longitude":"-2.097","latitude":"44.414","interval":"60","duration":"1440"}
+    headers = {
+        'x-rapidapi-host': "tides.p.rapidapi.com",
+        'x-rapidapi-key': "80e73128e0mshda8c95123266391p176951jsnbc06ff234f92"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    return render_template("/assignments/surfingData.html")
 
 
 @app.route('/yash/')
 def yash():
-    return render_template("/assignments/AboutUs/Yash.html")
+    url = "https://yourf1.p.rapidapi.com/drivers"
+
+    headers = {
+    'x-rapidapi-host': "yourf1.p.rapidapi.com",
+    'x-rapidapi-key': "80e73128e0mshda8c95123266391p176951jsnbc06ff234f92"
+}
+
+    response = requests.request("GET", url, headers=headers)
+    data = response.json()
+    name = data["name"]
+    country = data["country"]
+    return render_template("/assignments/AboutUs/yash.html", name=name, country=country)
 
 
 @app.route('/akhil/')
 def akhil():
-
-    import requests
     url = "https://sportscore1.p.rapidapi.com/tennis-rankings/atp"
     querystring = {"page":"1"}
     headers = {

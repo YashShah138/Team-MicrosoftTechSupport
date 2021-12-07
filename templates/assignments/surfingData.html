@@ -1,16 +1,2 @@
-<style>
-    import requests
-
-    url = "https://tides.p.rapidapi.com/tides"
-
-    querystring = {"longitude":"-2.097","latitude":"44.414","interval":"60","duration":"1440"}
-
-    headers = {
-    'x-rapidapi-host': "tides.p.rapidapi.com",
-    'x-rapidapi-key': "80e73128e0mshda8c95123266391p176951jsnbc06ff234f92"
-    }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-
-    print(response.text)
-</style>
+{% block content %}
+{% set project = "Surfing Data" %}
