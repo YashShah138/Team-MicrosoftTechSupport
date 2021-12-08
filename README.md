@@ -38,7 +38,10 @@ https://rapidapi.com/apihood/api/tides/
 ## Week 2
 
 ### Team
-Deployed Website: inster a link here when deploted
+
+**Deployed Website**: insert link for deployted site
+
+[**Create Task Plan**](https://docs.google.com/document/d/14YG7ZscxqKMrEArx1GuzEqcIB_f6ZqT086UE8ttQ3lM/edit?usp=sharing)
 
 ### Individual
 | Name | About Page | 2.3 Extracting Information from Data | 2.4 Using Programs with Data |
