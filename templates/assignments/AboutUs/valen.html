@@ -10,17 +10,18 @@
 </style>
 
 <script>
-    let imgStatus = 'masked';
-    function imageToggle() {
-        if (imgStatus == 'masked') {
+
+    let imgStatus = 'mask';
+    function imageToggle(unmasked, masked) {
+        if (imgStatus == 'mask') {
             var imgType = document.getElementById("toggleImage");
-            imgType.src = "https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Valen/Photo%20on%2012-3-21%20at%2011.33%20AM%20%232.jpg?raw=true"
-            imgStatus = 'unmasked';
+            imgType.src = unmasked;
+            imgStatus = 'nomask';
         }
         else{
             var imgType = document.getElementById("toggleImage");
-            imgType.src = "https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Valen/Photo%20on%2012-3-21%20at%2011.33%20AM%20%232.jpg?raw=true";
-            imgStatus = 'masked';
+            imgType.src = masked;
+            imgStatus = 'mask';
         }
     }
 </script>
@@ -35,7 +36,7 @@
     <br>
     <img id="toggleImage" src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Valen/Photo%20on%2012-3-21%20at%2011.33%20AM.jpg?raw=true" width="225" height="300">
     <br>
-    <button id="toggleButton" onclick="imageToggle()">Click to toggle image!</button>
+    <button id="toggleButton" onclick="imageToggle('https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Valen/Photo%20on%2012-3-21%20at%2011.33%20AM%20%232.jpg?raw=true', 'https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Valen/Photo%20on%2012-3-21%20at%2011.33%20AM%20%232.jpg?raw=true')">Click to toggle image!</button>
 
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
         <div class="col-12">
