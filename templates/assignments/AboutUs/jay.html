@@ -1,30 +1,48 @@
-{% extends "assignments/AboutUs/about_layout.html" %}
-{% set project = "Jay About Me" %}
+{% extends "layouts/base.html" %}
 
-{% block head %}
+{% set project = "Akhil About Me" %}
 
+{% block body %}
 <style>
-    .h1 {
-        color: white;
-        text-align: center;
-        padding-top: 20px;
-    }
-    body {
-        background-image: url('/Static/AboutUs-Pictures/Yash/Yash-Final-Background.jpeg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-    }
+
 </style>
 
-{% endblock %}
-{% block body %}
+<script>
+    let imgStatus = 'mask';
+    function imageToggle(unmasked, masked) {
+        if (imgStatus == 'mask') {
+            var imgType = document.getElementById("toggleImage");
+            imgType.src = unmasked;
+            imgStatus = 'nomask';
+        }
+        else{
+            var imgType = document.getElementById("toggleImage");
+            imgType.src = masked;
+            imgStatus = 'mask';
+        }
+    }
+</script>
 
-<div class="h1">
-    <h1>About Me Page</h1>
+
+<h1 id="header" align="center"> About Jay Manjrekar </h1>
+<div align="center">
+    <a id="links" href="#">CSP Journal</a><br>
+    <a id="links" href="#">Commits</a><br>
+    <a id="links" href="https://docs.google.com/document/d/14YG7ZscxqKMrEArx1GuzEqcIB_f6ZqT086UE8ttQ3lM/edit?usp=sharing">Create Task Plan</a>
+</div>
+<div align="center">
+    <img id="toggleImage" src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Jay/mask%20photo.PNG?raw=true" width="225" height="300">
+    <br><br>
+    <button id="toggleButton" onclick="imageToggle('https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Jay/my%20pic%20without%20mask.PNG?raw=true','https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Jay/mask%20photo.PNG?raw=true')">Click to toggle image!</button>
+</div>
+<div align="center">
+    <h2>Hockey API Data</h2>
+    <p> Team Division Rank:{{var.records[0].teamRecords[0].divisionRank}} </p>
+    <p> Goals Scored {{var.records[0].teamRecords[0].goalsScored}} </p>
+    <p> Goals Against {{var.records[0].teamRecords[0].goalsAgainst}} </p>
+    <p> Games Played {{var.records[0].teamRecords[0].gamesPlayed}} </p>
 </div>
 
-<img id="toggleImage" src=unmased_image width="225" height="300"> # add your images in DOM
-<button id="toggleButton" onclick="imageToggle(masked_image, unmasked_image)">Click to toggle image!</button> # add your images in function
+
 
 {% endblock %}

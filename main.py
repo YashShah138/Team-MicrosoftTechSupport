@@ -93,7 +93,23 @@ def avinh():
 
 @app.route('/jay/')
 def jay():
-    return render_template("/assignments/AboutUs/jay.html")
+
+
+    import requests
+
+    url = "https://nhl-stats-and-live-data.p.rapidapi.com/standings"
+
+    querystring = {"date":"2018-01-09","season":"20032004"}
+
+    headers = {
+        'x-rapidapi-host': "nhl-stats-and-live-data.p.rapidapi.com",
+        'x-rapidapi-key': "39c4bf8c2emsh30b02ab6dc01dd9p13f427jsn690a650cf2ec"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    var = response.json()
+    return render_template("/assignments/AboutUs/jay.html", var=var)
+
 
 
 # run page lol
