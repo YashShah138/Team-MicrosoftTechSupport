@@ -40,15 +40,15 @@
 
 <script>
     let imgStatus = 'mask';
-    function imageToggle() {
+    function imageToggle(unmasked, masked) {
         if (imgStatus == 'mask') {
             var imgType = document.getElementById("toggleImage");
-            imgType.src = "https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Akhil/akhil_no_mask.jpeg?raw=true";
+            imgType.src = unmasked;
             imgStatus = 'nomask';
         }
         else{
             var imgType = document.getElementById("toggleImage");
-            imgType.src = "https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Akhil/akhil_mask.jpeg?raw=true";
+            imgType.src = masked;
             imgStatus = 'mask';
         }
     }
@@ -64,7 +64,7 @@
 <div align="center">
     <img id="toggleImage" src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Akhil/akhil_mask.jpeg?raw=true" width="225" height="300">
     <br><br>
-    <button id="toggleButton" onclick="imageToggle()">Click to toggle image!</button>
+    <button id="toggleButton" onclick="imageToggle('https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Akhil/akhil_no_mask.jpeg?raw=true','https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Akhil/akhil_mask.jpeg?raw=true')">Click to toggle image!</button>
 </div>
 
 <div id="body" class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
@@ -74,7 +74,7 @@
     </div>
 
     <div>
-        <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/about%20static/akhil%20static/Akhil4.jpg?raw=true"alt="Me Playing Tennis, JTT Sectional Finals" width="225" height="300">
+        <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/about%20static/akhil%20static/Akhil4.jpg?raw=true" alt="Me Playing Tennis, JTT Sectional Finals" width="225" height="300">
     </div>
 
     <div>
@@ -132,7 +132,5 @@
     </div>
 </div>
 
-<p>Raw API Output:</p><br>
-<p>{{ rank }}</p>
 
 {% endblock %}

@@ -1,6 +1,6 @@
-from wsgiref import headers
+#from wsgiref import headers
 
-import querystring as querystring
+#import querystring as querystring
 from flask import Flask, render_template, request
 import requests
 
