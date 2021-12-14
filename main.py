@@ -1,23 +1,20 @@
 #from wsgiref import headers
 
 #import querystring as querystring
-from flask import Flask, render_template, request
+from __init__ import app
+from flask import Flask, render_template, request, Blueprint
 import requests
 
-# creates whatever a Flask instance is
-from requests import get
+from crud.app_crud import app_crud
+app.register_blueprint(app_crud)
 
-app = Flask(__name__)
+
+# creates whatever a Flask instance is
 
 # app.routes
 @app.route('/')
 def index():
     return render_template("/index.html")
-
-
-@app.route('/aboutus/')
-def aboutus():
-    return render_template("/assignments/aboutus.html")
 
 
 @app.route('/surfingData/')
@@ -31,8 +28,15 @@ def surfingData():
 
     response = requests.request("GET", url, headers=headers, params=querystring)
 
-    return render_template("/assignments/surfingData.html")
+    return render_template("/assignments/#.html")
 
+@app.route('/beachlocation1/')
+def BeachLocation1():
+    return render_template("/assignments/BeachLocation1.html")
+
+@app.route('/beachlocation2/')
+def BeachLocation2():
+    return render_template("/assignments/BeachLocation2.html")
 
 @app.route('/yash/')
 def yash():
@@ -109,7 +113,6 @@ def jay():
     response = requests.request("GET", url, headers=headers, params=querystring)
     var = response.json()
     return render_template("/assignments/AboutUs/jay.html", var=var)
-
 
 
 # run page lol
