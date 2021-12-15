@@ -4,7 +4,11 @@
 .iml
 .ipr
 .xml
-/.idea
+node_modules
+/node_modules/.package-lock.json
+/static/scss/custom.css.map
+/package.json
+/package-lock.json/.idea
 /.vscode
 /venv
 __pycache__
