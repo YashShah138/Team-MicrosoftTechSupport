@@ -86,40 +86,38 @@ class Users(db.Model):
 """Database Creation and Testing section"""
 
 
-def model_tester():
-    print("--------------------------")
-    print("Seed Data for Table: users")
-    print("--------------------------")
-    db.create_all()
-    """Tester data for table"""
-    u1 = Users(name='Thomas Edison', email='tedison@example.com', password='123toby', phone="1111111111")
-    u2 = Users(name='Nicholas Tesla', email='ntesla@example.com', password='123niko', phone="1111112222")
-    u3 = Users(name='Alexander Graham Bell', email='agbell@example.com', password='123lex', phone="1111113333")
-    u4 = Users(name='Eli Whitney', email='eliw@example.com', password='123whit', phone="1111114444")
-    u5 = Users(name='John Mortensen', email='jmort1021@gmail.com', password='123qwerty', phone="8587754956")
-    u6 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8587754956")
-    # U7 intended to fail as duplicate key
-    u7 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8586791294")
-    table = [u1, u2, u3, u4, u5, u6, u7]
-    for row in table:
-        try:
-            db.session.add(row)
-            db.session.commit()
-        except IntegrityError:
-            db.session.remove()
-            print(f"Records exist, duplicate email, or error: {row.email}")
+
+# def model_tester():
+    # print("--------------------------")
+    # print("Seed Data for Table: users")
+    # print("--------------------------")
+    # db.create_all()
+    # """Tester data for table"""
+    # u1 = Users(name='Akhil Nandhakumar', email='akhil@nandhakumar.net', password='codecodecode', phone="1111111111")
+    # u2 = Users(name='Nicholas Tesla', email='ntesla@example.com', password='123niko', phone="1111112222")
+    # u3 = Users(name='Alexander Graham Bell', email='agbell@example.com', password='123lex', phone="1111113333")
+    # u4 = Users(name='Eli Whitney', email='eliw@example.com', password='123whit', phone="1111114444")
+    # u5 = Users(name='John Mortensen', email='jmort1021@gmail.com', password='123qwerty', phone="8587754956")
+    # table = [u1, u2, u3, u4, u5]
+    # for row in table:
+        # try:
+            # db.session.add(row)
+            # db.session.commit()
+        # except IntegrityError:
+            # db.session.remove()
+            # print(f"Records exist, duplicate email, or error: {row.email}")
 
 
-def model_printer():
-    print("------------")
-    print("Table: users with SQL query")
-    print("------------")
-    result = db.session.execute('select * from users')
-    print(result.keys())
-    for row in result:
-        print(row)
+# def model_printer():
+    # print("------------")
+    # print("Table: users with SQL query")
+    # print("------------")
+    # result = db.session.execute('select * from users')
+    # print(result.keys())
+    # for row in result:
+        # print(row)
 
 
-if __name__ == "__main__":
-    model_tester()  # builds model of Users
-    model_printer()
+# if __name__ == "__main__":
+    # model_tester()  # builds model of Users
+    # model_printer()
