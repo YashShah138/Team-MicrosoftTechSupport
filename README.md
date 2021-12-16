@@ -50,7 +50,7 @@ https://rapidapi.com/apihood/api/tides/
 | Name | AP MCQ |
 | --- | --- |
 | Avinh | |
-| Akhil | |
+| Akhil | ![image](https://user-images.githubusercontent.com/89219514/146318326-4b9869b6-4820-418e-a55f-2004fb8d1414.png) |
 | Yash | |
 | Valen | |
 | Jay | |
