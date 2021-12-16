@@ -46,6 +46,10 @@ https://rapidapi.com/apihood/api/tides/
 | Valen | Github Admin | Highlight issues, commits, and pull requests |
 | Jay | Design Managers | [Bootstrap Layouts](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/22), 3 frontend screens |
 
+### PBL
+| Name | Ticket |
+| Avinh | [API](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/18) |
+
 ### Individual
 | Name | AP MCQ |
 | --- | --- |
