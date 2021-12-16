@@ -23,7 +23,7 @@ def index():
 
 @app.route('/surfingData/')
 def surfingData():
-    return render_template("/assignments/#.html")
+    return render_template("/assignments/surfingData.html")
 
 @app.route('/beachlocation1/')
 def BeachLocation1():
