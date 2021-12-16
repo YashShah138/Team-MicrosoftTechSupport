@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7f863de1-c833-43de-ad7b-c4eaa5e0efcf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/templates/Test.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assignments/AboutUs/avinh.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/assignments/AboutUs/avinh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assignments/AboutUs/yash.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/assignments/AboutUs/yash.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="20y0vUDX8BnGjtdBdf3ZID3LV6R" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Static" />
+      <recent name="$PROJECT_DIR$/Static/AboutUs-Pictures" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="Test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Team-MicrosoftTechSupport/templates/Test.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Team-MicrosoftTechSupport" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.Test.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f863de1-c833-43de-ad7b-c4eaa5e0efcf" name="Changes" comment="" />
+      <created>1637001754508</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637001754508</updated>
+      <workItem from="1637001759888" duration="37000" />
+      <workItem from="1637001880314" duration="264000" />
+      <workItem from="1637082490305" duration="604000" />
+      <workItem from="1637091462981" duration="424000" />
+      <workItem from="1637094421149" duration="292000" />
+      <workItem from="1637175096723" duration="3901000" />
+      <workItem from="1637262216587" duration="706000" />
+      <workItem from="1637263393168" duration="390000" />
+      <workItem from="1637263831425" duration="651000" />
+      <workItem from="1637265590273" duration="89000" />
+      <workItem from="1637341904896" duration="328000" />
+      <workItem from="1637349805003" duration="230000" />
+      <workItem from="1637350252654" duration="2697000" />
+      <workItem from="1637358898300" duration="1109000" />
+      <workItem from="1638211904685" duration="2725000" />
+      <workItem from="1638301004276" duration="3056000" />
+      <workItem from="1638304318400" duration="63000" />
+      <workItem from="1638384843566" duration="389000" />
+      <workItem from="1638388275176" duration="674000" />
+      <workItem from="1638471070353" duration="3852000" />
+      <workItem from="1638492669126" duration="221000" />
+      <workItem from="1638559355288" duration="3619000" />
+      <workItem from="1638816699741" duration="2889000" />
+      <workItem from="1638900385818" duration="169000" />
+      <workItem from="1638905760345" duration="1949000" />
+      <workItem from="1638909056983" duration="536000" />
+      <workItem from="1638989569166" duration="3336000" />
+      <workItem from="1639010060124" duration="2559000" />
+      <workItem from="1639024470088" duration="1283000" />
+      <workItem from="1639027146192" duration="283000" />
+      <workItem from="1639028722611" duration="384000" />
+      <workItem from="1639069196662" duration="967000" />
+      <workItem from="1639075932970" duration="1491000" />
+      <workItem from="1639077540861" duration="2457000" />
+      <workItem from="1639089239788" duration="1533000" />
+      <workItem from="1639112370815" duration="2383000" />
+      <workItem from="1639154395344" duration="2368000" />
+      <workItem from="1639157128656" duration="416000" />
+      <workItem from="1639167871652" duration="371000" />
+      <workItem from="1639415513414" duration="265000" />
+      <workItem from="1639421495945" duration="1767000" />
+      <workItem from="1639511546982" duration="157000" />
+      <workItem from="1639511811182" duration="953000" />
+      <workItem from="1639594325982" duration="1177000" />
+      <workItem from="1639670987136" duration="873000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added all base home pages, added tides api, updated readme and navbar.html. Added a static folder for all our images for the project.">
+      <created>1637178779903</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1637178779903</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Changed project name for the about pages">
+      <created>1637265435311</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637265435311</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Changed the base background and changed the base font color to aquamarine">
+      <created>1637351505457</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637351505461</updated>
+    </task>
+    <task id="LOCAL-00004" summary="CHanged css for the base">
+      <created>1637351838914</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637351838914</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Changed the font tags on everybody's about me pages">
+      <created>1637352854953</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1637352854953</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Changed a lot">
+      <created>1638908479996</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1638908479996</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changed About me page - Yash">
+      <created>1638909271247</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1638909271248</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added an image carousel to about page">
+      <created>1639025768233</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1639025768233</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Created an image gallery">
+      <created>1639112530838</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1639112530840</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added all base home pages, added tides api, updated readme and navbar.html. Added a static folder for all our images for the project." />
+    <MESSAGE value="Changed project name for the about pages" />
+    <MESSAGE value="Changed the base background and changed the base font color to aquamarine" />
+    <MESSAGE value="CHanged css for the base" />
+    <MESSAGE value="Changed the font tags on everybody's about me pages" />
+    <MESSAGE value="Changed a lot" />
+    <MESSAGE value="Changed About me page - Yash" />
+    <MESSAGE value="added an image carousel to about page" />
+    <MESSAGE value="Created an image gallery" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created an image gallery" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1639423100421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
