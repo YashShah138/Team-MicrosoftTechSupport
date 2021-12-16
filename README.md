@@ -28,12 +28,36 @@ https://rapidapi.com/apihood/api/tides/
 | Role | Name | ID | Tasks | Commits | Scrumboard | Profile |
 | --- | --- | --- | --- | --- | --- | --- |
 | Techincal Officer | Akhil Nandhakumar | #89219514 | [tasks](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/assigned/AkhilNandhakumar) | [commits](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=AkhilNandhakumar) | [scrumboard](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1?card_filter_query=assignee%3Aakhilnandhakumar) | [profile](https://github.com/AkhilNandhakumare) |
-| Project Designer | Yash Shah | #89223735 | [tasks](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/assigned/YashShah138) | [commits](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=YashShah138) | [scrumboard](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1?card_filter_query=assignee%3Ayashshah138) | [profile](https://github.com/YashShah138) |
-| Deployment Manager | Jay Manjrekar | #89176673 | [tasks](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/assigned/JayManjrekar) | [commits](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=JayManjrekar) | [scrumboard](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1?card_filter_query=assignee%3Ajaymanjrekar) | [profile](https://github.com/JayManjrekar) |
+| Deployment Managerr | Yash Shah | #89223735 | [tasks](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/assigned/YashShah138) | [commits](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=YashShah138) | [scrumboard](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1?card_filter_query=assignee%3Ayashshah138) | [profile](https://github.com/YashShah138) |
+| Project Designer | Jay Manjrekar | #89176673 | [tasks](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/assigned/JayManjrekar) | [commits](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=JayManjrekar) | [scrumboard](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1?card_filter_query=assignee%3Ajaymanjrekar) | [profile](https://github.com/JayManjrekar) |
 | GitHub Admin | Valen Reynolds | #89166851 | [tasks](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/assigned/ValenReynolds) | [commits](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=ValenReynolds) | [scrumboard](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1?card_filter_query=assignee%3Avalenreynolds) | [profile](https://github.com/ValenReynolds) |
 | Scrum Master | Avinh Huinh | #43688346 | [tasks](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/assigned/SlimeyTurtles) | [commits](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=SlimeyTurtles) | [scrumboard](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1?card_filter_query=assignee%3Aslimeyturtles) | [profile](https://github.com/SlimeyTurtles) |
 
 # Timebox
+
+## Week 3
+
+### Team
+| Name | Role | Tickets |
+| --- | --- | --- |
+| Avinh | Scrum Master | [README](https://github.com/YashShah138/Team-MicrosoftTechSupport#readme), Tickets ([Scrumboard](https://github.com/YashShah138/Team-MicrosoftTechSupport/projects/1)), [Wiki](https://github.com/YashShah138/Team-MicrosoftTechSupport/wiki) |
+| Akhil | Technical Officer | Asynchrounous access to Database ([Video](https://youtu.be/mtW32BxlmUQ)) |
+| Yash | Deployment Manager | Website runs, and demonstrating update |
+| Valen | Github Admin | Highlight issues, commits, and pull requests |
+| Jay | Design Managers | [Bootstrap Layouts](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/22), 3 frontend screens |
+
+### PBL
+| Name | Ticket |
+| Avinh | [API](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/18) |
+
+### Individual
+| Name | AP MCQ |
+| --- | --- |
+| Avinh | |
+| Akhil | ![image](https://user-images.githubusercontent.com/89219514/146318326-4b9869b6-4820-418e-a55f-2004fb8d1414.png) <br> Corrections: **Q4:** Complete missclick, I knew the right answer was that the number of bits available wasn't enought to represent the number requested. **Q12:** I was looking through the questions quickly and didn't notice that the first column had different numbers, and I thought they were all the same so I looked over it and check the last column without seeing that the first value was wrong. **Q14:** Didn't check that the answer I chose would put the algorithm into an ifnitie loop because I said to store the remainder in the number instead of the integer quotient. **Q15:** The same values are printed inside the loop because program A prints i and then increments it and program B increments i and then prints it. Messed up when I was keeping track of the count on paper at repetition #5. **Q27:** Missclicked, should've put the answer that said there are problems that computer algorithms can't solve. Common sense!!!! **Q47:** Hadn't learnt/forgotten (not sure) how binary search works. Just learnt it by watching one of the college board videos and understand the issue. The list has to have all unique numbers for it to work. **Q49:** Did silly math and thought that 2^6 was 128 :( **Q50:** For an algorithm to run in reasonable time, it must take a number of steps less than or equal to a polynomial function. All of the options do this since on is 2n, n^2, and 10, which all work.|
+| Yash | |
+| Valen | <img width="1395" alt="Screen Shot 2021-12-16 at 10 53 05 AM" src="https://user-images.githubusercontent.com/89166851/146431390-60cf9344-992c-46a0-adf0-0da84231292e.png"> |
+| Jay | |
 
 ## Week 2
 
