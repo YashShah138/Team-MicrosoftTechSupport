@@ -35,6 +35,26 @@ https://rapidapi.com/apihood/api/tides/
 
 # Timebox
 
+## Week 3
+
+### Team
+| Name | Role | Tickets |
+| --- | --- | --- |
+| Avinh | Scrum Master | [README](https://github.com/YashShah138/Team-MicrosoftTechSupport#readme), Tickets ([Scrumboard](https://github.com/YashShah138/Team-MicrosoftTechSupport/projects/1)), [Wiki](https://github.com/YashShah138/Team-MicrosoftTechSupport/wiki) |
+| Akhil | Technical Officer | Asynchrounous access to Database (Video) |
+| Yash | Deployment Manager | Website runs, and demonstrating update |
+| Valen | Github Admin | Highlight issues, commits, and pull requests |
+| Jay | Design Managers | Bootstrap Layouts, 3 frontend screens |
+
+### Individual
+| Name | AP MCQ |
+| --- | --- |
+| Avinh | |
+| Akhil | |
+| Yash | |
+| Valen | |
+| Jay | |
+
 ## Week 2
 
 ### Team
