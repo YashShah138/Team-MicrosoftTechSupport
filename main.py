@@ -1,6 +1,3 @@
-#from wsgiref import headers
-
-#import querystring as querystring
 from __init__ import app
 from flask import Flask, render_template, request, Blueprint
 import requests
@@ -8,26 +5,24 @@ import requests
 from crud.app_crud import app_crud
 app.register_blueprint(app_crud)
 
-
-# creates whatever a Flask instance is
-
 # app.routes
+
 @app.route('/')
 def index():
-    return render_template("/index.html")
-
-
-@app.route('/surfingData/')
-def surfingData():
     url = "https://tides.p.rapidapi.com/tides"
     querystring = {"longitude":"-2.097","latitude":"44.414","interval":"60","duration":"1440"}
+
     headers = {
         'x-rapidapi-host': "tides.p.rapidapi.com",
-        'x-rapidapi-key': "80e73128e0mshda8c95123266391p176951jsnbc06ff234f92"
+        'x-rapidapi-key': "c1ebf686e7mshe4ed4400d544e06p107f7fjsn1235b397e8bd"
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
 
+    return render_template("/index.html", output=response.json())
+
+@app.route('/surfingData/')
+def surfingData():
     return render_template("/assignments/#.html")
 
 @app.route('/beachlocation1/')
