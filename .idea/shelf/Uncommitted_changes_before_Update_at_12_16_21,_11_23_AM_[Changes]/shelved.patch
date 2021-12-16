@@ -1,0 +1,647 @@
+Index: templates/assignments/AboutUs/avinh.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends \"assignments/AboutUs/about_layout.html\" %}\n{% set project = \"Avinh About Me\" %}\n\n{% block head %}\n<script>\n    PokemonImage\n</script>\n<style>\n</style>\n{% endblock %}\n{% block body %}\n<p>Hi I am Avinh!</p>\n<img id=\"toggleImage\" src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_masked.jpg?raw=true\">\n<button id=\"toggleButton\" onclick=\"imageToggle('https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_masked.jpg?raw=true', 'https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_unmasked.jpg?raw=true')\">Click to toggle image!</button>\n\n<form id=\"PokeAPI\" method=\"POST\" action=\"/avinh/\">\n    <label for=\"input\">Enter a pokemon</label>\n    <input name=\"input\" id=\"input\">\n    <input type=\"submit\" value=\"Enter\">\n</form>\n\n<img src={{PokemonImage}} width=\"225\" height=\"300\">\n\n</br>\n\n<a href=\"https://docs.google.com/document/d/1geU9paAdtZwbeuL5gZV7TnSUav7B4RINUZdbdMl7DAQ/edit?usp=sharing\">Journal</a></br>\n<a href=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=SlimeyTurtles\">Commits</a></br>\n<a href=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1?card_filter_query=assignee%3Aslimeyturtles\">Scrumboard Tasks</a></br>\n\n{% endblock %}\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/assignments/AboutUs/avinh.html b/templates/assignments/AboutUs/avinh.html
+--- a/templates/assignments/AboutUs/avinh.html	(revision fd8726d17c8d20c585a6a59149f80ef9db864a3c)
++++ b/templates/assignments/AboutUs/avinh.html	(date 1639154516124)
+@@ -10,7 +10,9 @@
+ {% endblock %}
+ {% block body %}
+ <p>Hi I am Avinh!</p>
+-<img id="toggleImage" src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_masked.jpg?raw=true">
++<img id="toggleImage" src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_masked.jpg?raw=true" width=300" height="400">
++<br>
++<br>
+ <button id="toggleButton" onclick="imageToggle('https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_masked.jpg?raw=true', 'https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_unmasked.jpg?raw=true')">Click to toggle image!</button>
+ 
+ <form id="PokeAPI" method="POST" action="/avinh/">
+Index: templates/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends \"layouts/base.html\" %}\n\n{% block head %}\n{% endblock %}\n\n<style>\n    body{\n        background-image: url(\"static/AboutUs-Pictures/Yash/Yash-Final-Background.jpeg\");\n    }\n</style>\n\n{% block body %}\n\n<p>Yeetus Deletus</p>\n\n{% endblock %}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/index.html b/templates/index.html
+--- a/templates/index.html	(revision fd8726d17c8d20c585a6a59149f80ef9db864a3c)
++++ b/templates/index.html	(date 1639423228961)
+@@ -1,16 +1,22 @@
++<!-- Extending the predefined project layout -->
+ {% extends "layouts/base.html" %}
++{% set Journal0 = "https://drive.google.com/drive/folders/1cfAojWNMSjeeIJGbnniqMJOjsuY6KUIx?usp=sharing" %}
++{% set project = "Home" %}
++<!-- This variable sets name of browser tab  -->
++{% set project = "Home" %}
++{% set repo = "https://github.com/YashShah138/Team-MicrosoftTechSupport" %}
+ 
+ {% block head %}
+ {% endblock %}
+ 
+-<style>
+-    body{
+-        background-image: url("static/AboutUs-Pictures/Yash/Yash-Final-Background.jpeg");
+-    }
+-</style>
+-
+ {% block body %}
+ 
+-<p>Yeetus Deletus</p>
++    <div>
++        <a href="{{ repo }}" class="btn" style="color: white">Repository</a>
++    </div>
++    <div>
++        <a href="{{ Journal0 }}" class="btn" style="color: white">Journal</a>
++    </div>
++
+ 
+ {% endblock %}
+\ No newline at end of file
+Index: templates/assignments/AboutUs/yash.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends \"assignments/AboutUs/about_layout.html\" %}\n{% set project = \"Yash About Me\" %}\n\n<script>\n    let imgStatus = 'mask';\n    function imageToggle() {\n        if (imgStatus === 'mask') {\n            let imgType = document.getElementById(\"toggleImage\");\n            imgType.src = \"/Static/AboutUs-Pictures/Yash/LinkedIn-Profile.jpeg\";\n            imgStatus = 'nomask';\n        }\n        else{\n\n            let imgType = document.getElementById(\"toggleImage\");\n            imgType.src = \"/Static/AboutUs-Pictures/Yash/CSP PIC2.jpeg\";\n            imgStatus = 'mask';\n        }\n    }\n    let slideIndex = 1;\n    showSlides(slideIndex);\n\n    // Next/previous controls\n    function plusSlides(n) {\n        showSlides(slideIndex += n);\n    }\n\n    // Thumbnail image controls\n    function currentSlide(n) {\n        showSlides(slideIndex = n);\n    }\n\n    function showSlides(n) {\n        let i;\n        let slides = document.getElementsByClassName(\"mySlides\");\n        let dots = document.getElementsByClassName(\"dot\");\n        if (n > slides.length) {slideIndex = 1}\n        if (n < 1) {slideIndex = slides.length}\n        for (i = 0; i < slides.length; i++) {\n            slides[i].style.display = \"none\";\n        }\n        for (i = 0; i < dots.length; i++) {\n            dots[i].className = dots[i].className.replace(\" active\", \"\");\n        }\n        slides[slideIndex-1].style.display = \"block\";\n        dots[slideIndex-1].className += \" active\";\n    }\n    function showSlides() {\n        let i;\n        let slides = document.getElementsByClassName(\"mySlides\");\n        for (i = 0; i < slides.length; i++) {\n            slides[i].style.display = \"none\";\n        }\n        slideIndex++;\n        if (slideIndex > slides.length) {slideIndex = 1}\n        slides[slideIndex-1].style.display = \"block\";\n        setTimeout(showSlides, 2000); // Change image every 2 seconds\n    }\n</script>\n\n{% block body %}\n\n<style>\n    table {\n        width: 50%;\n        border: 1px solid white;\n    }\n    th, td, tr {\n        border: 1px solid white;\n        padding: 15px;\n        text-align: center;\n    }\n    img {\n        border: 5px solid aquamarine;\n    }\n    * {box-sizing:border-box}\n\n    /* Slideshow container */\n    .slideshow-container {\n        max-width: 1000px;\n        position: relative;\n        margin: auto;\n    }\n\n    /* Hide the images by default */\n    .mySlides {\n        display: none;\n    }\n\n    /* Next & previous buttons */\n    .prev, .next {\n        cursor: pointer;\n        position: absolute;\n        top: 50%;\n        width: auto;\n        margin-top: -22px;\n        padding: 16px;\n        color: white;\n        font-weight: bold;\n        font-size: 18px;\n        transition: 0.6s ease;\n        border-radius: 0 3px 3px 0;\n        user-select: none;\n    }\n\n    /* Position the \"next button\" to the right */\n    .next {\n        right: 0;\n        border-radius: 3px 0 0 3px;\n    }\n\n    /* On hover, add a black background color with a little bit see-through */\n    .prev:hover, .next:hover {\n        background-color: rgba(0,0,0,0.8);\n    }\n\n    /* Caption text */\n    .text {\n        color: #f2f2f2;\n        font-size: 15px;\n        padding: 8px 12px;\n        position: absolute;\n        bottom: 8px;\n        width: 100%;\n        text-align: center;\n    }\n\n    /* Number text (1/3 etc) */\n    .numbertext {\n        color: #f2f2f2;\n        font-size: 12px;\n        padding: 8px 12px;\n        position: absolute;\n        top: 0;\n    }\n\n    /* The dots/bullets/indicators */\n    .dot {\n        cursor: pointer;\n        height: 15px;\n        width: 15px;\n        margin: 0 2px;\n        background-color: #bbb;\n        border-radius: 50%;\n        display: inline-block;\n        transition: background-color 0.6s ease;\n    }\n\n    .active, .dot:hover {\n        background-color: #717171;\n    }\n\n    /* Fading animation */\n    .fade {\n        -webkit-animation-name: fade;\n        -webkit-animation-duration: 1.5s;\n        animation-name: fade;\n        animation-duration: 1.5s;\n    }\n\n    @-webkit-keyframes fade {\n        from {opacity: .4}\n        to {opacity: 1}\n    }\n\n    @keyframes fade {\n        from {opacity: .4}\n        to {opacity: 1}\n    }\n</style>\n\n<div style=\"text-align: center;\">\n    <h1>Yash Shah</h1>\n    <span>\n        <p>My name is Yash Shah. I am 16 years old, and I am junior at Del Norte High School.</p>\n        <p>Some of my hobbies include spending time with my family, hanging out with friends, building LEGOs, photography, and of course, sleeping.</p>\n        <p>I would like to work as an artificial intelligence programmer or work in the private equity sector.</p>\n\n        <div align=\"center\">\n            <a href=\"https://docs.google.com/document/d/1b8XxDljHwsNPgyQ3KBtOjHy1575NbxJuUtkxBfm_Hk0/edit\">CSP Journal</a><br>\n            <a href=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=YashShah138\">Commits</a><br>\n            <a href=\"https://docs.google.com/document/d/14YG7ZscxqKMrEArx1GuzEqcIB_f6ZqT086UE8ttQ3lM/edit?usp=sharing\">Create Task</a>\n            <br>\n                <img id=\"toggleImage\" src=\"/static/AboutUs-Pictures/Yash/LinkedIn-Profile.jpeg\" alt=\"\" width=\"225\" height=\"300\">\n            <br>\n            <br>\n                <button id=\"toggleButton\" onclick=\"imageToggle()\">Click to toggle image!</button>\n        </div>\n    </span>\n</div>\n<br>\n<div class=\"slideshow-container\">\n    <div class=\"mySlides fade\">\n        <img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Sunset1.jpeg?raw=true\" alt=\"\" width=\"300\" height=\"500\">\n        <div class=\"text\">Sunset over UCSD Pier</div>\n    </div>\n    <div class=\"mySlides fade\">\n        <img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Carasauel1.jpeg?raw=true\" alt=\"\" width=\"300\" height=\"500\">\n        <div class=\"text\">Coast Along Highway 1</div>\n    </div>\n    <div class=\"mySlides fade\">\n        <img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c2.jpeg?raw=true\" alt=\"\" width=\"300\" height=\"500\">\n        <div class=\"text\">Lake in the trees</div>\n    </div>\n    <div class=\"mySlides fade\">\n        <img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c2.jpeg?raw=true\" alt=\"\" width=\"500\" height=\"300\">\n        <div class=\"text\">Lake in the trees</div>\n    </div>\n        <figure><img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c2.jpeg?raw=true\" alt=\"Lake in the Trees\" width=\"500\" height=\"300\"></figure>\n        <figure><img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c3.jpeg?raw=true\" alt=\"Sun in the Dead\" width=\"500\" height=\"300\"></figure>\n        <figure><img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c4.jpeg?raw=true\" alt=\"The Star\" width=\"300\" height=\"500\"></figure>\n        <figure><img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c5.jpeg?raw=true\" alt=\"La Jolla Sunset\" width=\"500\" height=\"300\"></figure>\n        <figure><img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c6.jpeg?raw=true\" alt=\"Train Through The Woods\" width=\"500\" height=\"300\"></figure>\n        <figure><img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c7.jpeg?raw=true\" alt=\"Tired Lioness\" width=\"500\" height=\"300\"></figure>\n        <figure><img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c8.jpeg?raw=true\" alt=\"Dark City\" width=\"500\" height=\"300\"></figure>\n        <figure><img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c9.jpeg?raw=true\" alt=\"University of Texas\" width=\"500\" height=\"300\"></figure>\n    <br>\n    <br>\n</div>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n<div style=\"text-align: center;\">\n    <h3>Formula One Constructors</h3>\n    <table align=\"center\">\n        <tr>\n            <th>Team</th>\n            <th>Name</th>\n            <th>Country</th>\n            <th>Number of Podiums</th>\n        </tr>\n        <tr>\n            <td>{{ data[0].team }}</td>\n            <td>{{ data[0].name }}</td>\n            <td>{{ data[0].country }}</td>\n            <td>{{ data[0].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[1].team }}</td>\n            <td>{{ data[1].name }}</td>\n            <td>{{ data[1].country }}</td>\n            <td>{{ data[1].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[2].team }}</td>\n            <td>{{ data[2].name }}</td>\n            <td>{{ data[2].country }}</td>\n            <td>{{ data[2].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[3].team }}</td>\n            <td>{{ data[3].name }}</td>\n            <td>{{ data[3].country }}</td>\n            <td>{{ data[3].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[4].team }}</td>\n            <td>{{ data[4].name }}</td>\n            <td>{{ data[4].country }}</td>\n            <td>{{ data[4].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[5].team }}</td>\n            <td>{{ data[5].name }}</td>\n            <td>{{ data[5].country }}</td>\n            <td>{{ data[5].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[6].team }}</td>\n            <td>{{ data[6].name }}</td>\n            <td>{{ data[6].country }}</td>\n            <td>{{ data[6].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[7].team }}</td>\n            <td>{{ data[7].name }}</td>\n            <td>{{ data[7].country }}</td>\n            <td>{{ data[7].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[8].team }}</td>\n            <td>{{ data[8].name }}</td>\n            <td>{{ data[8].country }}</td>\n            <td>{{ data[8].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[9].team }}</td>\n            <td>{{ data[9].name }}</td>\n            <td>{{ data[9].country }}</td>\n            <td>{{ data[9].podiums }}</td>\n        </tr>\n    </table>\n    <br>\n</div>\n    {% endblock %}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/assignments/AboutUs/yash.html b/templates/assignments/AboutUs/yash.html
+--- a/templates/assignments/AboutUs/yash.html	(revision fd8726d17c8d20c585a6a59149f80ef9db864a3c)
++++ b/templates/assignments/AboutUs/yash.html	(date 1639415775802)
+@@ -1,64 +1,6 @@
+ {% extends "assignments/AboutUs/about_layout.html" %}
+ {% set project = "Yash About Me" %}
+-
+-<script>
+-    let imgStatus = 'mask';
+-    function imageToggle() {
+-        if (imgStatus === 'mask') {
+-            let imgType = document.getElementById("toggleImage");
+-            imgType.src = "/Static/AboutUs-Pictures/Yash/LinkedIn-Profile.jpeg";
+-            imgStatus = 'nomask';
+-        }
+-        else{
+-
+-            let imgType = document.getElementById("toggleImage");
+-            imgType.src = "/Static/AboutUs-Pictures/Yash/CSP PIC2.jpeg";
+-            imgStatus = 'mask';
+-        }
+-    }
+-    let slideIndex = 1;
+-    showSlides(slideIndex);
+-
+-    // Next/previous controls
+-    function plusSlides(n) {
+-        showSlides(slideIndex += n);
+-    }
+-
+-    // Thumbnail image controls
+-    function currentSlide(n) {
+-        showSlides(slideIndex = n);
+-    }
+-
+-    function showSlides(n) {
+-        let i;
+-        let slides = document.getElementsByClassName("mySlides");
+-        let dots = document.getElementsByClassName("dot");
+-        if (n > slides.length) {slideIndex = 1}
+-        if (n < 1) {slideIndex = slides.length}
+-        for (i = 0; i < slides.length; i++) {
+-            slides[i].style.display = "none";
+-        }
+-        for (i = 0; i < dots.length; i++) {
+-            dots[i].className = dots[i].className.replace(" active", "");
+-        }
+-        slides[slideIndex-1].style.display = "block";
+-        dots[slideIndex-1].className += " active";
+-    }
+-    function showSlides() {
+-        let i;
+-        let slides = document.getElementsByClassName("mySlides");
+-        for (i = 0; i < slides.length; i++) {
+-            slides[i].style.display = "none";
+-        }
+-        slideIndex++;
+-        if (slideIndex > slides.length) {slideIndex = 1}
+-        slides[slideIndex-1].style.display = "block";
+-        setTimeout(showSlides, 2000); // Change image every 2 seconds
+-    }
+-</script>
+-
+ {% block body %}
+-
+ <style>
+     table {
+         width: 50%;
+@@ -139,7 +81,7 @@
+         height: 15px;
+         width: 15px;
+         margin: 0 2px;
+-        background-color: #bbb;
++        background-color: #ffffff;
+         border-radius: 50%;
+         display: inline-block;
+         transition: background-color 0.6s ease;
+@@ -188,62 +130,110 @@
+     </span>
+ </div>
+ <br>
+-<div class="slideshow-container">
+-    <div class="mySlides fade">
+-        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Sunset1.jpeg?raw=true" alt="" width="300" height="500">
+-        <div class="text">Sunset over UCSD Pier</div>
+-    </div>
+-    <div class="mySlides fade">
+-        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Carasauel1.jpeg?raw=true" alt="" width="300" height="500">
+-        <div class="text">Coast Along Highway 1</div>
+-    </div>
+-    <div class="mySlides fade">
+-        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c2.jpeg?raw=true" alt="" width="300" height="500">
+-        <div class="text">Lake in the trees</div>
+-    </div>
+-    <div class="mySlides fade">
+-        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c2.jpeg?raw=true" alt="" width="500" height="300">
+-        <div class="text">Lake in the trees</div>
+-    </div>
+-        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c2.jpeg?raw=true" alt="Lake in the Trees" width="500" height="300"></figure>
+-        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c3.jpeg?raw=true" alt="Sun in the Dead" width="500" height="300"></figure>
+-        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c4.jpeg?raw=true" alt="The Star" width="300" height="500"></figure>
+-        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c5.jpeg?raw=true" alt="La Jolla Sunset" width="500" height="300"></figure>
+-        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c6.jpeg?raw=true" alt="Train Through The Woods" width="500" height="300"></figure>
+-        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c7.jpeg?raw=true" alt="Tired Lioness" width="500" height="300"></figure>
+-        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c8.jpeg?raw=true" alt="Dark City" width="500" height="300"></figure>
+-        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c9.jpeg?raw=true" alt="University of Texas" width="500" height="300"></figure>
+-    <br>
+-    <br>
+-</div>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
+-<br>
++<div align="center"
++    <!-- Slideshow container -->
++    <div class="slideshow-container">
++        <!-- Full-width images with number and caption text -->
++        <div class="mySlides fade">
++            <div class="numbertext">1 / 10</div>
++            <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Sunset1.jpeg?raw=true" alt="" width="500" height="300">
++            <div class="text">Sunset over UCSD Pier</div>
++        </div>
++        <div class="mySlides fade">
++            <div class="numbertext">2 / 10</div>
++            <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Carasauel1.jpeg?raw=true" alt="" width="500" height="300">
++            <div class="text">Coast Along Highway 1</div>
++        </div>
++        <div class="mySlides fade">
++            <div class="numbertext">3 / 10</div>
++            <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c2.jpeg?raw=true" alt="" width="500" height="300">
++            <div class="text">Lake in the trees</div>
++        </div>
++        <div class="mySlides fade">
++            <div class="numbertext">4 / 10</div>
++            <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c3.jpeg?raw=true" alt="" width="500" height="300">
++            <div class="text">Sun in the Dead</div>
++        </div>
++        <div class="mySlides fade">
++            <div class="numbertext">5 / 10</div>
++            <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c4.jpeg?raw=true" alt="" width="300" height="500">
++            <div class="text">The Star</div>
++        </div>
++        <div class="mySlides fade">
++            <div class="numbertext">6 / 10</div>
++            <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c5.jpeg?raw=true" alt="" width="500" height="300">
++            <div class="text">La Jolla Sunset</div>
++        </div>
++        <div class="mySlides fade">
++            <div class="numbertext">7 / 10</div>
++            <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c6.jpeg?raw=true" alt="" width="500" height="300">
++            <div class="text">Train Through the Forest</div>
++        </div>
++        <div class="mySlides fade">
++            <div class="numbertext">8 / 10</div>
++            <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c7.jpeg?raw=true" alt="" width="500" height="300">
++            <div class="text">Tired Lioness</div>
++        </div>
++        <div class="mySlides fade">
++            <div class="numbertext">9 / 10</div>
++            <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c8.jpeg?raw=true" alt="" width="500" height="300">
++            <div class="text">Dark City</div>
++        </div>
++        <div class="mySlides fade">
++            <div class="numbertext">10 / 10</div>
++            <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c9.jpeg?raw=true" alt="" width="500" height="300">
++            <div class="text">University of Texas at Dallas</div>
++        </div>
++    </div>
+ <br>
+-<br>
++        <!-- Next and previous buttons -->
++        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
++        <a class="next" onclick="plusSlides(1)">&#10095;</a>
++    </div>
++    <br>
++    <!-- The dots/circles -->
++    <div style="text-align:center">
++        <span class="dot" onclick="currentSlide(1)"></span>
++        <span class="dot" onclick="currentSlide(2)"></span>
++        <span class="dot" onclick="currentSlide(3)"></span>
++        <span class="dot" onclick="currentSlide(4)"></span>
++        <span class="dot" onclick="currentSlide(5)"></span>
++        <span class="dot" onclick="currentSlide(6)"></span>
++        <span class="dot" onclick="currentSlide(7)"></span>
++        <span class="dot" onclick="currentSlide(8)"></span>
++        <span class="dot" onclick="currentSlide(9)"></span>
++    </div>
++
++
++<script>
++    let slideIndex = 1;
++    showSlides(slideIndex);
++
++    function plusSlides(n) {
++        showSlides(slideIndex += n);
++    }
++
++    function currentSlide(n) {
++        showSlides(slideIndex = n);
++    }
++
++    function showSlides(n) {
++        let i;
++        let slides = document.getElementsByClassName("mySlides");
++        let dots = document.getElementsByClassName("dot");
++        if (n > slides.length) {slideIndex = 1}
++        if (n < 1) {slideIndex = slides.length}
++        for (i = 0; i < slides.length; i++) {
++            slides[i].style.display = "none";
++        }
++        for (i = 0; i < dots.length; i++) {
++            dots[i].className = dots[i].className.replace(" active", "");
++        }
++        slides[slideIndex-1].style.display = "block";
++        dots[slideIndex-1].className += " active";
++    }
++</script>
++
+ <br>
+ 
+ <div style="text-align: center;">
+@@ -318,4 +308,21 @@
+     </table>
+     <br>
+ </div>
++
++<script>
++    let imgStatus = 'mask';
++    function imageToggle() {
++        if (imgStatus === 'mask') {
++            let imgType = document.getElementById("toggleImage");
++            imgType.src = "/Static/AboutUs-Pictures/Yash/LinkedIn-Profile.jpeg";
++            imgStatus = 'nomask';
++        }
++        else{
++
++            let imgType = document.getElementById("toggleImage");
++            imgType.src = "/Static/AboutUs-Pictures/Yash/CSP PIC2.jpeg";
++            imgStatus = 'mask';
++        }
++    }
++</script>
+     {% endblock %}
+\ No newline at end of file
+Index: templates/Test.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><style>\n    * {box-sizing:border-box}\n\n    /* Slideshow container */\n    .slideshow-container {\n        max-width: 1000px;\n        position: relative;\n        margin: auto;\n    }\n\n    /* Hide the images by default */\n    .mySlides {\n        display: none;\n    }\n\n    /* Next & previous buttons */\n    .prev, .next {\n        cursor: pointer;\n        position: absolute;\n        top: 50%;\n        width: auto;\n        margin-top: -22px;\n        padding: 16px;\n        color: white;\n        font-weight: bold;\n        font-size: 18px;\n        transition: 0.6s ease;\n        border-radius: 0 3px 3px 0;\n        user-select: none;\n    }\n\n    /* Position the \"next button\" to the right */\n    .next {\n        right: 0;\n        border-radius: 3px 0 0 3px;\n    }\n\n    /* On hover, add a black background color with a little bit see-through */\n    .prev:hover, .next:hover {\n        background-color: rgba(0,0,0,0.8);\n    }\n\n    /* Caption text */\n    .text {\n        color: #f2f2f2;\n        font-size: 15px;\n        padding: 8px 12px;\n        position: absolute;\n        bottom: 8px;\n        width: 100%;\n        text-align: center;\n    }\n\n    /* Number text (1/3 etc) */\n    .numbertext {\n        color: #f2f2f2;\n        font-size: 12px;\n        padding: 8px 12px;\n        position: absolute;\n        top: 0;\n    }\n\n    /* The dots/bullets/indicators */\n    .dot {\n        cursor: pointer;\n        height: 15px;\n        width: 15px;\n        margin: 0 2px;\n        background-color: #bbb;\n        border-radius: 50%;\n        display: inline-block;\n        transition: background-color 0.6s ease;\n    }\n\n    .active, .dot:hover {\n        background-color: #717171;\n    }\n\n    /* Fading animation */\n    .fade {\n        -webkit-animation-name: fade;\n        -webkit-animation-duration: 1.5s;\n        animation-name: fade;\n        animation-duration: 1.5s;\n    }\n\n    @-webkit-keyframes fade {\n        from {opacity: .4}\n        to {opacity: 1}\n    }\n\n    @keyframes fade {\n        from {opacity: .4}\n        to {opacity: 1}\n    }\n</style>\n\n<script>\n    let slideIndex = 1;\n    showSlides(slideIndex);\n\n    // Next/previous controls\n    function plusSlides(n) {\n        showSlides(slideIndex += n);\n    }\n\n    // Thumbnail image controls\n    function currentSlide(n) {\n        showSlides(slideIndex = n);\n    }\n\n    function showSlides(n) {\n        let i;\n        let slides = document.getElementsByClassName(\"mySlides\");\n        let dots = document.getElementsByClassName(\"dot\");\n        if (n > slides.length) {slideIndex = 1}\n        if (n < 1) {slideIndex = slides.length}\n        for (i = 0; i < slides.length; i++) {\n            slides[i].style.display = \"none\";\n        }\n        for (i = 0; i < dots.length; i++) {\n            dots[i].className = dots[i].className.replace(\" active\", \"\");\n        }\n        slides[slideIndex-1].style.display = \"block\";\n        dots[slideIndex-1].className += \" active\";\n    }\n    function showSlides() {\n        var i;\n        var slides = document.getElementsByClassName(\"mySlides\");\n        for (i = 0; i < slides.length; i++) {\n            slides[i].style.display = \"none\";\n        }\n        slideIndex++;\n        if (slideIndex > slides.length) {slideIndex = 1}\n        slides[slideIndex-1].style.display = \"block\";\n        setTimeout(showSlides, 10000); // Change image every 2 seconds\n    }\n</script>\n\n\n<!-- Slideshow container -->\n<div class=\"slideshow-container\">\n\n    <!-- Full-width images with number and caption text -->\n    <div class=\"mySlides fade\">\n        <img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Sunset1.jpeg?raw=true\" alt=\"\" style=\"width:100%\">\n        <div class=\"text\">Caption Text</div>\n    </div>\n\n    <div class=\"mySlides fade\">\n        <img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Carasauel1.jpeg?raw=true\" alt=\"\" style=\"width:100%\">\n        <div class=\"text\">Caption Two</div>\n    </div>\n\n    <div class=\"mySlides fade\">\n        <img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c2.jpeg?raw=true\" alt=\"\" style=\"width:100%\">\n        <div class=\"text\">Lake in the Trees</div>\n    </div>\n\n    <!-- Next and previous buttons -->\n    <a class=\"prev\" onclick=\"plusSlides(-1)\">&#10094;</a>\n    <a class=\"next\" onclick=\"plusSlides(1)\">&#10095;</a>\n</div>\n<br>\n\n<!-- The dots/circles -->\n<div style=\"text-align:center\">\n    <span class=\"dot\" onclick=\"currentSlide(1)\"></span>\n    <span class=\"dot\" onclick=\"currentSlide(2)\"></span>\n    <span class=\"dot\" onclick=\"currentSlide(3)\"></span>\n</div>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/Test.html b/templates/Test.html
+--- a/templates/Test.html	(revision fd8726d17c8d20c585a6a59149f80ef9db864a3c)
++++ b/templates/Test.html	(date 1639156109094)
+@@ -1,118 +1,157 @@
+-<style>
+-    * {box-sizing:border-box}
++<!DOCTYPE html>
++<html>
++<head>
++    <meta name="viewport" content="width=device-width, initial-scale=1">
++    <style>
++        * {box-sizing: border-box}
++        body {font-family: Verdana, sans-serif; margin:0}
++        .mySlides {display: none}
++        img {vertical-align: middle;}
+ 
+-    /* Slideshow container */
+-    .slideshow-container {
+-        max-width: 1000px;
+-        position: relative;
+-        margin: auto;
+-    }
++        /* Slideshow container */
++        .slideshow-container {
++            max-width: 1000px;
++            position: relative;
++            margin: auto;
++        }
+ 
+-    /* Hide the images by default */
+-    .mySlides {
+-        display: none;
+-    }
+-
+-    /* Next & previous buttons */
+-    .prev, .next {
+-        cursor: pointer;
+-        position: absolute;
+-        top: 50%;
+-        width: auto;
+-        margin-top: -22px;
+-        padding: 16px;
+-        color: white;
+-        font-weight: bold;
+-        font-size: 18px;
+-        transition: 0.6s ease;
+-        border-radius: 0 3px 3px 0;
+-        user-select: none;
+-    }
++        /* Next & previous buttons */
++        .prev, .next {
++            cursor: pointer;
++            position: absolute;
++            top: 50%;
++            width: auto;
++            padding: 16px;
++            margin-top: -22px;
++            color: white;
++            font-weight: bold;
++            font-size: 18px;
++            transition: 0.6s ease;
++            border-radius: 0 3px 3px 0;
++            user-select: none;
++        }
+ 
+-    /* Position the "next button" to the right */
+-    .next {
+-        right: 0;
+-        border-radius: 3px 0 0 3px;
+-    }
++        /* Position the "next button" to the right */
++        .next {
++            right: 0;
++            border-radius: 3px 0 0 3px;
++        }
+ 
+-    /* On hover, add a black background color with a little bit see-through */
+-    .prev:hover, .next:hover {
+-        background-color: rgba(0,0,0,0.8);
+-    }
++        /* On hover, add a black background color with a little bit see-through */
++        .prev:hover, .next:hover {
++            background-color: rgba(0,0,0,0.8);
++        }
+ 
+-    /* Caption text */
+-    .text {
+-        color: #f2f2f2;
+-        font-size: 15px;
+-        padding: 8px 12px;
+-        position: absolute;
+-        bottom: 8px;
+-        width: 100%;
+-        text-align: center;
+-    }
++        /* Caption text */
++        .text {
++            color: #f2f2f2;
++            font-size: 15px;
++            padding: 8px 12px;
++            position: absolute;
++            bottom: 8px;
++            width: 100%;
++            text-align: center;
++        }
+ 
+-    /* Number text (1/3 etc) */
+-    .numbertext {
+-        color: #f2f2f2;
+-        font-size: 12px;
+-        padding: 8px 12px;
+-        position: absolute;
+-        top: 0;
+-    }
++        /* Number text (1/3 etc) */
++        .numbertext {
++            color: #f2f2f2;
++            font-size: 12px;
++            padding: 8px 12px;
++            position: absolute;
++            top: 0;
++        }
+ 
+-    /* The dots/bullets/indicators */
+-    .dot {
+-        cursor: pointer;
+-        height: 15px;
+-        width: 15px;
+-        margin: 0 2px;
+-        background-color: #bbb;
+-        border-radius: 50%;
+-        display: inline-block;
+-        transition: background-color 0.6s ease;
+-    }
++        /* The dots/bullets/indicators */
++        .dot {
++            cursor: pointer;
++            height: 15px;
++            width: 15px;
++            margin: 0 2px;
++            background-color: #bbb;
++            border-radius: 50%;
++            display: inline-block;
++            transition: background-color 0.6s ease;
++        }
+ 
+-    .active, .dot:hover {
+-        background-color: #717171;
+-    }
++        .active, .dot:hover {
++            background-color: #717171;
++        }
+ 
+-    /* Fading animation */
+-    .fade {
+-        -webkit-animation-name: fade;
+-        -webkit-animation-duration: 1.5s;
+-        animation-name: fade;
+-        animation-duration: 1.5s;
+-    }
++        /* Fading animation */
++        .fade {
++            -webkit-animation-name: fade;
++            -webkit-animation-duration: 1.5s;
++            animation-name: fade;
++            animation-duration: 1.5s;
++        }
+ 
+-    @-webkit-keyframes fade {
+-        from {opacity: .4}
+-        to {opacity: 1}
+-    }
++        @-webkit-keyframes fade {
++            from {opacity: .4}
++            to {opacity: 1}
++        }
+ 
+-    @keyframes fade {
+-        from {opacity: .4}
+-        to {opacity: 1}
+-    }
+-</style>
++        @keyframes fade {
++            from {opacity: .4}
++            to {opacity: 1}
++        }
++
++        /* On smaller screens, decrease text size */
++        @media only screen and (max-width: 300px) {
++            .prev, .next,.text {font-size: 11px}
++        }
++    </style>
++</head>
++<body>
++
++<div class="slideshow-container">
++
++    <div class="mySlides fade">
++        <div class="numbertext">1 / 3</div>
++        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Sunset1.jpeg?raw=trueg" style="width:100%">
++        <div class="text">Sunset over UCSD Pier</div>
++    </div>
++
++    <div class="mySlides fade">
++        <div class="numbertext">2 / 3</div>
++        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Carasauel1.jpeg?raw=true" style="width:100%">
++        <div class="text">Coast Along Highway 1</div>
++    </div>
++
++    <div class="mySlides fade">
++        <div class="numbertext">3 / 3</div>
++        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c2.jpeg?raw=true" style="width:100%">
++        <div class="text">Lake in the trees</div>
++    </div>
++
++    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
++    <a class="next" onclick="plusSlides(1)">&#10095;</a>
++
++</div>
++<br>
++
++<div style="text-align:center">
++    <span class="dot" onclick="currentSlide(1)"></span>
++    <span class="dot" onclick="currentSlide(2)"></span>
++    <span class="dot" onclick="currentSlide(3)"></span>
++</div>
+ 
+ <script>
+-    let slideIndex = 1;
++    var slideIndex = 1;
+     showSlides(slideIndex);
+ 
+-    // Next/previous controls
+     function plusSlides(n) {
+         showSlides(slideIndex += n);
+     }
+ 
+-    // Thumbnail image controls
+     function currentSlide(n) {
+         showSlides(slideIndex = n);
+     }
+ 
+     function showSlides(n) {
+-        let i;
+-        let slides = document.getElementsByClassName("mySlides");
+-        let dots = document.getElementsByClassName("dot");
++        var i;
++        var slides = document.getElementsByClassName("mySlides");
++        var dots = document.getElementsByClassName("dot");
+         if (n > slides.length) {slideIndex = 1}
+         if (n < 1) {slideIndex = slides.length}
+         for (i = 0; i < slides.length; i++) {
+@@ -124,48 +163,7 @@
+         slides[slideIndex-1].style.display = "block";
+         dots[slideIndex-1].className += " active";
+     }
+-    function showSlides() {
+-        var i;
+-        var slides = document.getElementsByClassName("mySlides");
+-        for (i = 0; i < slides.length; i++) {
+-            slides[i].style.display = "none";
+-        }
+-        slideIndex++;
+-        if (slideIndex > slides.length) {slideIndex = 1}
+-        slides[slideIndex-1].style.display = "block";
+-        setTimeout(showSlides, 10000); // Change image every 2 seconds
+-    }
+ </script>
+ 
+-
+-<!-- Slideshow container -->
+-<div class="slideshow-container">
+-
+-    <!-- Full-width images with number and caption text -->
+-    <div class="mySlides fade">
+-        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Sunset1.jpeg?raw=true" alt="" style="width:100%">
+-        <div class="text">Caption Text</div>
+-    </div>
+-
+-    <div class="mySlides fade">
+-        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Carasauel1.jpeg?raw=true" alt="" style="width:100%">
+-        <div class="text">Caption Two</div>
+-    </div>
+-
+-    <div class="mySlides fade">
+-        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c2.jpeg?raw=true" alt="" style="width:100%">
+-        <div class="text">Lake in the Trees</div>
+-    </div>
+-
+-    <!-- Next and previous buttons -->
+-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+-</div>
+-<br>
+-
+-<!-- The dots/circles -->
+-<div style="text-align:center">
+-    <span class="dot" onclick="currentSlide(1)"></span>
+-    <span class="dot" onclick="currentSlide(2)"></span>
+-    <span class="dot" onclick="currentSlide(3)"></span>
+-</div>
+\ No newline at end of file
++</body>
++</html>
+\ No newline at end of file

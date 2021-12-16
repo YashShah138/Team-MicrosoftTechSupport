@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f863de1-c833-43de-ad7b-c4eaa5e0efcf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/Test.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/assignments/AboutUs/avinh.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/assignments/AboutUs/avinh.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/assignments/AboutUs/yash.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/assignments/AboutUs/yash.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="7f863de1-c833-43de-ad7b-c4eaa5e0efcf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,6 +154,7 @@
       <workItem from="1639511811182" duration="953000" />
       <workItem from="1639594325982" duration="1177000" />
       <workItem from="1639670987136" duration="873000" />
+      <workItem from="1639682560432" duration="633000" />
     </task>
     <task id="LOCAL-00001" summary="Added all base home pages, added tides api, updated readme and navbar.html. Added a static folder for all our images for the project.">
       <created>1637178779903</created>
@@ -223,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639112530840</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Changed some tings">
+      <created>1639683321845</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1639683321845</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,13 +243,14 @@
     <MESSAGE value="Changed About me page - Yash" />
     <MESSAGE value="added an image carousel to about page" />
     <MESSAGE value="Created an image gallery" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created an image gallery" />
+    <MESSAGE value="Changed some tings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed some tings" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1639423100421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1639682570774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
