@@ -41,10 +41,10 @@ https://rapidapi.com/apihood/api/tides/
 | Name | Role | Tickets |
 | --- | --- | --- |
 | Avinh | Scrum Master | [README](https://github.com/YashShah138/Team-MicrosoftTechSupport#readme), Tickets ([Scrumboard](https://github.com/YashShah138/Team-MicrosoftTechSupport/projects/1)), [Wiki](https://github.com/YashShah138/Team-MicrosoftTechSupport/wiki) |
-| Akhil | Technical Officer | Asynchrounous access to Database (Video) |
+| Akhil | Technical Officer | Asynchrounous access to Database ([Video](https://youtu.be/mtW32BxlmUQ)) |
 | Yash | Deployment Manager | Website runs, and demonstrating update |
 | Valen | Github Admin | Highlight issues, commits, and pull requests |
-| Jay | Design Managers | Bootstrap Layouts, 3 frontend screens |
+| Jay | Design Managers | [Bootstrap Layouts](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/22), 3 frontend screens |
 
 ### Individual
 | Name | AP MCQ |
