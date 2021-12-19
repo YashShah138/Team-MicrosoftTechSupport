@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="858b4215-7dfd-48f1-a79a-ebc0570df582" name="Changes" comment="sccs bootstrap stuff">
-      <change beforePath="$PROJECT_DIR$/model/myDB.db" beforeDir="false" afterPath="$PROJECT_DIR$/model/myDB.db" afterDir="false" />
-    </list>
+    <list default="true" id="7f863de1-c833-43de-ad7b-c4eaa5e0efcf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,19 +37,10 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/templates/layouts/navbar.html" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/templates/layouts/base.html" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Static/style/custom.scss" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Static/style/custom.css" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/requirements.txt" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/consoles/db/124c394f-ad82-4bd8-9518-7d0b9b3450bd/console.sql" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/crud/templates/crud/crud.html" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/crud/app_crud.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/crud/model.py" root0="FORCE_HIGHLIGHTING" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="216Ve0I0iv6UqjsT0Qa982BERAB" />
+  <component name="ProjectId" id="20y0vUDX8BnGjtdBdf3ZID3LV6R" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -64,40 +50,30 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Static/style" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Static/style" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/templates/assignments" />
-      <recent name="$PROJECT_DIR$/templates/layouts" />
-      <recent name="$PROJECT_DIR$/model" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/crud" />
-      <recent name="$PROJECT_DIR$/Static/AboutUs-Pictures/Valen" />
-      <recent name="$PROJECT_DIR$/Static/AboutUs-Pictures/Akhil" />
-      <recent name="$PROJECT_DIR$/Static/AboutUs-Pictures/Avinh" />
-      <recent name="$PROJECT_DIR$/Static/AboutUs-Pictures/Yash" />
+      <recent name="$PROJECT_DIR$/Static" />
+      <recent name="$PROJECT_DIR$/Static/AboutUs-Pictures" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="MicrosoftTechSupport-Project" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="Test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Team-MicrosoftTechSupport/templates/Test.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Team-MicrosoftTechSupport" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -105,74 +81,8 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/local/bin/python3.9" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="app_crud" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Team-MicrosoftTechSupport" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crud" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crud/app_crud.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="crud" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Team-MicrosoftTechSupport" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crud.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Team-MicrosoftTechSupport" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -185,215 +95,162 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Team-MicrosoftTechSupport" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crud" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crud/model.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="rest_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Team-MicrosoftTechSupport" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crud" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crud/rest_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Python.MicrosoftTechSupport-Project" />
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.crud" />
-      <item itemvalue="Python.rest_test" />
-      <item itemvalue="Python.model" />
-      <item itemvalue="Python.app_crud" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.model" />
-        <item itemvalue="Python.app_crud" />
-        <item itemvalue="Python.rest_test" />
-        <item itemvalue="Python.crud" />
+        <item itemvalue="JavaScript Debug.Test.html" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="858b4215-7dfd-48f1-a79a-ebc0570df582" name="Changes" comment="" />
-      <created>1637261616208</created>
+      <changelist id="7f863de1-c833-43de-ad7b-c4eaa5e0efcf" name="Changes" comment="" />
+      <created>1637001754508</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1637261616208</updated>
-      <workItem from="1637261621505" duration="12695000" />
-      <workItem from="1638158045334" duration="6000" />
-      <workItem from="1638214498945" duration="3814000" />
-      <workItem from="1638385037038" duration="3321000" />
-      <workItem from="1638474294954" duration="4618000" />
-      <workItem from="1638562882831" duration="1599000" />
-      <workItem from="1638818466872" duration="2925000" />
-      <workItem from="1639079237430" duration="4051000" />
-      <workItem from="1639359008979" duration="12750000" />
+      <updated>1637001754508</updated>
+      <workItem from="1637001759888" duration="37000" />
+      <workItem from="1637001880314" duration="264000" />
+      <workItem from="1637082490305" duration="604000" />
+      <workItem from="1637091462981" duration="424000" />
+      <workItem from="1637094421149" duration="292000" />
+      <workItem from="1637175096723" duration="3901000" />
+      <workItem from="1637262216587" duration="706000" />
+      <workItem from="1637263393168" duration="390000" />
+      <workItem from="1637263831425" duration="651000" />
+      <workItem from="1637265590273" duration="89000" />
+      <workItem from="1637341904896" duration="328000" />
+      <workItem from="1637349805003" duration="230000" />
+      <workItem from="1637350252654" duration="2697000" />
+      <workItem from="1637358898300" duration="1109000" />
+      <workItem from="1638211904685" duration="2725000" />
+      <workItem from="1638301004276" duration="3056000" />
+      <workItem from="1638304318400" duration="63000" />
+      <workItem from="1638384843566" duration="389000" />
+      <workItem from="1638388275176" duration="674000" />
+      <workItem from="1638471070353" duration="3852000" />
+      <workItem from="1638492669126" duration="221000" />
+      <workItem from="1638559355288" duration="3619000" />
+      <workItem from="1638816699741" duration="2889000" />
+      <workItem from="1638900385818" duration="169000" />
+      <workItem from="1638905760345" duration="1949000" />
+      <workItem from="1638909056983" duration="536000" />
+      <workItem from="1638989569166" duration="3336000" />
+      <workItem from="1639010060124" duration="2559000" />
+      <workItem from="1639024470088" duration="1283000" />
+      <workItem from="1639027146192" duration="283000" />
+      <workItem from="1639028722611" duration="384000" />
+      <workItem from="1639069196662" duration="967000" />
+      <workItem from="1639075932970" duration="1491000" />
+      <workItem from="1639077540861" duration="2457000" />
+      <workItem from="1639089239788" duration="1533000" />
+      <workItem from="1639112370815" duration="2383000" />
+      <workItem from="1639154395344" duration="2368000" />
+      <workItem from="1639157128656" duration="416000" />
+      <workItem from="1639167871652" duration="371000" />
+      <workItem from="1639415513414" duration="265000" />
+      <workItem from="1639421495945" duration="1767000" />
+      <workItem from="1639511546982" duration="157000" />
+      <workItem from="1639511811182" duration="953000" />
+      <workItem from="1639594325982" duration="1177000" />
+      <workItem from="1639670987136" duration="873000" />
+      <workItem from="1639682560432" duration="633000" />
     </task>
-    <task id="LOCAL-00001" summary="created specific directories for about pictures">
-      <created>1637350879934</created>
+    <task id="LOCAL-00001" summary="Added all base home pages, added tides api, updated readme and navbar.html. Added a static folder for all our images for the project.">
+      <created>1637178779903</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1637350879934</updated>
+      <updated>1637178779903</updated>
     </task>
-    <task id="LOCAL-00002" summary="about pics file uploads">
-      <created>1637351249373</created>
+    <task id="LOCAL-00002" summary="Changed project name for the about pages">
+      <created>1637265435311</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1637351249373</updated>
+      <updated>1637265435311</updated>
     </task>
-    <task id="LOCAL-00003" summary="About page image toggle">
-      <created>1637352427043</created>
+    <task id="LOCAL-00003" summary="Changed the base background and changed the base font color to aquamarine">
+      <created>1637351505457</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1637352427043</updated>
+      <updated>1637351505461</updated>
     </task>
-    <task id="LOCAL-00004" summary="api testing for about page">
-      <created>1638154921162</created>
+    <task id="LOCAL-00004" summary="CHanged css for the base">
+      <created>1637351838914</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1638154921162</updated>
+      <updated>1637351838914</updated>
     </task>
-    <task id="LOCAL-00005" summary="added tennis api to about page">
-      <created>1638158033627</created>
+    <task id="LOCAL-00005" summary="Changed the font tags on everybody's about me pages">
+      <created>1637352854953</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1638158033627</updated>
+      <updated>1637352854953</updated>
     </task>
-    <task id="LOCAL-00006" summary="added journal and commit links to about page">
-      <created>1638387644893</created>
+    <task id="LOCAL-00006" summary="Changed a lot">
+      <created>1638908479996</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1638387644893</updated>
+      <updated>1638908479996</updated>
     </task>
-    <task id="LOCAL-00007" summary="added create task plan to about page">
-      <created>1638992221103</created>
+    <task id="LOCAL-00007" summary="Changed About me page - Yash">
+      <created>1638909271247</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1638992221103</updated>
+      <updated>1638909271248</updated>
     </task>
-    <task id="LOCAL-00008" summary="added create task plan to about page">
-      <created>1639109705220</created>
+    <task id="LOCAL-00008" summary="added an image carousel to about page">
+      <created>1639025768233</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1639109705220</updated>
+      <updated>1639025768233</updated>
     </task>
-    <task id="LOCAL-00009" summary="beach info pages">
-      <created>1639513906049</created>
+    <task id="LOCAL-00009" summary="Created an image gallery">
+      <created>1639112530838</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1639513906049</updated>
+      <updated>1639112530840</updated>
     </task>
-    <task id="LOCAL-00010" summary="database progress">
-      <created>1639513956318</created>
+    <task id="LOCAL-00010" summary="Changed some tings">
+      <created>1639683321845</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1639513956318</updated>
+      <updated>1639683321845</updated>
     </task>
-    <task id="LOCAL-00011" summary="requirements.txt">
-      <created>1639514381184</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1639514381184</updated>
-    </task>
-    <task id="LOCAL-00012" summary="database updated and fixed">
-      <created>1639596960680</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1639596960680</updated>
-    </task>
-    <task id="LOCAL-00013" summary="sccs bootstrap stuff">
-      <created>1639598485837</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1639598485837</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="created specific directories for about pictures" />
-    <MESSAGE value="about pics file uploads" />
-    <MESSAGE value="About page image toggle" />
-    <MESSAGE value="api testing for about page" />
-    <MESSAGE value="added tennis api to about page" />
-    <MESSAGE value="added journal and commit links to about page" />
-    <MESSAGE value="added create task plan to about page" />
-    <MESSAGE value="beach info pages" />
-    <MESSAGE value="database progress" />
-    <MESSAGE value="requirements.txt" />
-    <MESSAGE value="database updated and fixed" />
-    <MESSAGE value="sccs bootstrap stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="sccs bootstrap stuff" />
+    <MESSAGE value="Added all base home pages, added tides api, updated readme and navbar.html. Added a static folder for all our images for the project." />
+    <MESSAGE value="Changed project name for the about pages" />
+    <MESSAGE value="Changed the base background and changed the base font color to aquamarine" />
+    <MESSAGE value="CHanged css for the base" />
+    <MESSAGE value="Changed the font tags on everybody's about me pages" />
+    <MESSAGE value="Changed a lot" />
+    <MESSAGE value="Changed About me page - Yash" />
+    <MESSAGE value="added an image carousel to about page" />
+    <MESSAGE value="Created an image gallery" />
+    <MESSAGE value="Changed some tings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed some tings" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$rest_test.coverage" NAME="rest_test Coverage Results" MODIFIED="1638818569043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$model.coverage" NAME="model Coverage Results" MODIFIED="1639596460218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$app_crud.coverage" NAME="app_crud Coverage Results" MODIFIED="1639510251431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1639621312040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1639682570774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
