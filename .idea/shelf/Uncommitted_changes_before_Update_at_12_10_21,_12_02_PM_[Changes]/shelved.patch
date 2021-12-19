@@ -1,0 +1,778 @@
+Index: templates/layouts/navbar.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <a class=\"navbar-brand\" href=\"/\">Surfable</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n\n    <!-- things on the navbar -->\n    <ul class=\"navbar-nav mr-auto\">\n\n      <!-- put new navbar buttons here-->\n      <a class=\"nav-link\" href=\"/customization/\">Surfing Stuff</a>\n      <a class=\"nav-link\" href=\"/surfingData/\">Surfing Data</a>\n\n      <!-- Our Work drop down -->\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarModel\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          About Us\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n          <a class=\"nav-link\" href=\"/yash/\">Yash S</a>\n          <a class=\"nav-link\" href=\"/akhil/\">Akhil N</a>\n          <a class=\"nav-link\" href=\"/valen/\">Valen R</a>\n          <a class=\"nav-link\" href=\"/avinh/\">Avinh H</a>\n          <a class=\"nav-link\" href=\"/jay/\">Jay M</a>\n        </div>\n      </li>\n\n    </ul>\n  </div>\n</nav>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/layouts/navbar.html b/templates/layouts/navbar.html
+--- a/templates/layouts/navbar.html	(revision fad71f1907fa1e8e2a71939e158ecd31b1844eaf)
++++ b/templates/layouts/navbar.html	(date 1639109601826)
+@@ -23,9 +23,12 @@
+           <a class="nav-link" href="/valen/">Valen R</a>
+           <a class="nav-link" href="/avinh/">Avinh H</a>
+           <a class="nav-link" href="/jay/">Jay M</a>
++
+         </div>
+       </li>
+-
+     </ul>
+   </div>
++
++
++
+ </nav>
+\ No newline at end of file
+Index: crud/templates/crud/crud.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/crud/templates/crud/crud.html b/crud/templates/crud/crud.html
+new file mode 100644
+--- /dev/null	(date 1639109601834)
++++ b/crud/templates/crud/crud.html	(date 1639109601834)
+@@ -0,0 +1,240 @@
++<!DOCTYPE html>
++
++<!-- EXTEND (layout.html), this is a template for all rendered pages in the project -->
++{% extends "layout.html" %}
++
++<!-- CONTENT (in <head>), content for this page -->
++{% block meta %}
++<title>CRUD page</title>
++
++<!-- Password verification and error message -->
++<script>
++    //adding dom event listener to allow the verifyPassword funtion to be attached to the form. This is so we can keep our JS separate from our html and not have onsubmit in the form.
++
++    'use strict' //ensures best environment to prevent JS programmer error and tells browser to use most modern version of JS interpreter it has.
++
++    document.addEventListener("DOMContentLoaded", function(){
++        // event listener fires when the DOM is fully loaded. This way you can write scripts that are before the elements are loaded into the dom, but waits to be added to the page until the dom is fully loaded.
++
++        document.querySelector('#create').addEventListener('submit', verifyPassword );
++        //querySelector selects elements with CSS selectors. id="create" gets selected with the code above.
++
++        // pulled this function in here to keep it private from the window object/global scope. This is one way to protect your variables and functions from being hijacked by xss. Declared function names do act like variables in a way.
++
++        function verifyPassword(event) {
++            /*
++            because this is being called by an event, the event object is automatically
++            passed and captured as seen above. We are capturing it with the 'event' parameter in this function.
++            This is frequently represented in the following ways in JS: e, evt and event.
++            As a variable, it could be called anything - but it makes more sense to call it event rather than banana... etc.
++            Name your variables well, my friends.
++            */
++
++            const psw =  document.getElementById("password").value;
++
++            if (psw.length < 6 || psw.length > 20) {
++                document.getElementById("pswError").innerHTML = "Password must be between 6 and 20 characters";
++                event.preventDefault();
++                //prevents submission of form when password length is not valid.
++            }
++
++        } //this function could be expanded upon, where we use JS to completely validate the form and have HTML5 as a fallback. Let me know if you want to have me expand this. - T
++
++        //additional listeners and functions could/should be put in here.
++
++    }); //end DOMContentLoaded listener
++
++</script>
++{% endblock %}
++
++<!-- CONTENT (in <body>), content for this page -->
++{% block content %}
++<div class="container py-4 text-light bg-success">
++    <header class="pb-3 mb-4 border-bottom">
++        <div class="d-flex align-items-center text-light text-decoration-none">
++            <span class="fs-4">SQL CRUD Admin Page</span>
++        </div>
++    </header>
++
++    <div class="container py-4">
++        <div class="p-5 mb-4 bg-light text-dark rounded-3">
++            <h2>Table Viewer</h2>
++            <div class="row align-items-md-stretch">
++                <table class="table">
++                    <tbody>
++                    <tr>
++                        <td></td>
++                        <td></td>
++                        <td><a href={{url_for('crud.crud')}}>Full Table </a></td>
++                        <td><a href={{url_for('crud.emails')}}>E-Mails only</a></td>
++                        <td><a href={{url_for('crud.phones')}}>Phones only</a></td>
++                        <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/tree/master/crud">GitHub Source</a></td>
++                    </tr>
++                    </tbody>
++                </table>
++            </div>
++            <div class="row align-items-md-stretch">
++                <div class="container-fluid py-5">
++                    <table class="table">
++                        <thead>
++                        <tr>
++                            <th>ID</th>
++                            <th>Name</th>
++                            <th>Email</th>
++                            <th>Password</th>
++                            <th>Phone</th>
++                        </tr>
++                        </thead>
++                        <tbody>
++                        <!-- Loop through rows in table -->
++                        {% for row in table %}
++                        <!--
++                        Prepare table for display
++                            caution: phone number needs "~" format step to force type to string
++                        -->
++                        {% set pn = "" ~ row['phone'] %}
++                        {% set pnf = "(" ~ pn[0:3] ~ ")" ~ pn[3:6] ~ "-" ~ pn[6:10] %}
++                        <tr>
++                            <td>{{ row['userID'] }}</td>
++                            <td>{{ row['name'] }}</td>
++                            <td>{{ row['email'] }}</td>
++                            <td>{{ row['password'] }}</td>
++                            <td>{{ pnf }}</td>
++                        </tr>
++                        {% endfor %}
++                        </tbody>
++                    </table>
++                </div>
++            </div>
++        </div>
++
++    </div>
++
++    <div class="row align-items-md-stretch">
++        <div class="col-md-9">
++            <div class="h-100 p-5 bg-light text-dark border rounded-3">
++                <h2>Create a new record</h2>
++                <form method="POST" ID="create" action={{url_for('crud.create')}} >
++                    <table class="table">
++                        <thead>
++                        <tr>
++                            <th><label for="name">Name</label></th>
++                            <th><label for="email">Email</label></th>
++                            <th><label for="password">Password</label></th>
++                            <th><label for="phone">Phone</label></th>
++                        </tr>
++                        </thead>
++                        <tbody>
++                        <tr>
++                            <td><input type="text" name="name" id="name" required></td>
++                            <td><input type="email" name="email" id="email" placeholder="abc@xyz.org" required></td>
++                            <td><input type="password" name="password" id="password" required></td>
++                            <td><input required type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="1234567890"></td>
++                            <td><input type="submit" value="Create"></td>
++                        </tr>
++                        </tbody>
++                    </table>
++                    <p id="pswError"></p>
++                </form>
++            </div>
++        </div>
++    </div>
++</div>
++
++<div class="container py-4">
++
++    <div class="row align-items-md-stretch">
++        <div class="col-md-3">
++            <div class="h-100 p-5 bg-light border rounded-3">
++                <h2>Read a record</h2>
++                <form method="POST" ID="read" action={{url_for('crud.read')}} >
++                    <table id="read_table">
++                        <tr><th><label for="ID">ID</label></th></tr>
++                        <tr><td><select name="ID" id="ID">
++                            <optgroup label="userid">
++                                {% for row in table %}
++                                <option label="{{ row['userID'] }}">{{ row['userID'] }}</option>
++                                {% endfor %}
++                            </optgroup>
++                        </select></td>
++                            <td><input type="submit" value="Read"></td>
++                        </tr>
++                    </table>
++                </form>
++            </div>
++        </div>
++
++        <div class="col-md-6">
++            <div class="h-100 p-5 bg-light border rounded-3">
++                <h2>Update a record</h2>
++                <form method="POST" ID="update" action={{url_for('crud.update')}} >
++                    <table id="update_table">
++                        <tr>
++                            <th><label for="update_userid">ID</label></th>
++                            <th><label for="update_name">Name</label></th>
++                        </tr>
++                        <tr>
++                            <td>
++                                <select name="userid" id="update_userid">
++                                    <optgroup label="userid">
++                                        {% for row in table %}
++                                        <option label="{{ row['userID'] }}">{{ row['userID'] }}</option>
++                                        {% endfor %}
++                                    </optgroup>
++                                </select>
++                            </td>
++                            <td><input type="text" name="name" id="update_name" required></td>
++                            <td><input type="submit" value="Update"></td>
++                        </tr>
++                    </table>
++                </form>
++            </div>
++        </div>
++
++        <div class="col-md-3">
++            <div class="h-100 p-5 bg-light border rounded-3">
++                <h2>Delete record</h2>
++                <form method="POST" ID="read" action={{url_for('crud.delete')}} >
++                    <table id="read_table">
++                        <tr><th><label for="ID">ID</label></th></tr>
++                        <tr><td><select name="ID" id="ID">
++                            <optgroup label="userid">
++                                {% for row in table %}
++                                <option label="{{ row['userID'] }}">{{ row['userID'] }}</option>
++                                {% endfor %}
++                            </optgroup>
++                        </select></td>
++                            <td><input type="submit" value="Delete"></td>
++                        </tr>
++                    </table>
++                </form>
++            </div>
++        </div>
++    </div>
++</div>
++
++<!-- Front End HTML, shows this file -->
++<div class="container py-4">
++    <h1 id="FE-HTML">Front End HTML Code</h1>
++    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csp%2Fblob%2Fmaster%2Fcrud%2Ftemplates%2Fcrud%2Fcrud.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
++</div>
++
++<!-- Back end SQL data definition code (SQLalchemy) -->
++<div class="container py-4">
++    <h1 id="BE-MODEL">Back End RESTapi Definition Code</h1>
++    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csp%2Fblob%2Fmaster%2Fcrud%2Fmodel.py&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
++</div>
++
++<!-- Back end SQL CRUD supporting code -->
++<div class="container py-4">
++    <h1 id="BE-REST">Back End RESTapi Test</h1>
++    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csp%2Fblob%2Fmaster%2Fcrud%2Frest_test.py&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
++</div>
++
++<!-- Back Route code -->
++<div class="container py-4">
++    <h1 id="BE-AUTH">Back End Auth Code</h1>
++    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fflask-idea-homesite%2Fblob%2Fmaster%2Fviews%2Fpythondb%2Fview.py&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on"></script>
++</div>
++
++{% endblock %}
+\ No newline at end of file
+Index: crud/templates/crud/search.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/crud/templates/crud/search.html b/crud/templates/crud/search.html
+new file mode 100644
+--- /dev/null	(date 1639109601837)
++++ b/crud/templates/crud/search.html	(date 1639109601837)
+@@ -0,0 +1,87 @@
++<!DOCTYPE html>
++<!-- Preparing search using asynchronous "fetch" (no page reload, no wait)
++inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
++-->
++{% extends "layout.html" %}
++
++{% block meta %}
++<title>SQL search</title>
++{% endblock %}
++
++{% block content %}
++<div class="container py-4 bg-primary">
++    <!-- heading -->
++    <header class="pb-3 mb-4 border-bottom">
++        <a href="#" class="d-flex align-items-center text-light text-decoration-none">
++            <span class="fs-4">Search Database</span>
++        </a>
++    </header>
++    <!-- search box -->
++    <div class="container">
++        <div class="row">
++            <div class="col">
++                <div class="mb-3">
++                    <div class="form-group">
++                        <input type="text" class="form-control" id="term" placeholder="enter search term">
++                        <label></label> <!-- used for spacer -->
++                    </div>
++                    <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
++                </div>
++            </div>
++        </div>
++    </div>
++</div>
++<!-- result of search -->
++<div class="container">
++    <div class="row" id="result">
++    </div>
++</div>
++
++<script>
++    function search_data() {
++        // fetch standard requires data set to a name-value pair
++        const term = document.getElementById("term");
++        const body = {
++            term: term.value
++        };
++
++        // fetch call with header options
++        fetch('/crud/search/term/', {
++            method: "POST",
++            credentials: "include",
++            body: JSON.stringify(body),
++            cache: "no-cache",
++            headers: new Headers({
++                "content-type": "application/json"
++            })
++        })
++            // async then replies with response header
++            .then(function (response) {
++                // prepare HTML search result container for new output
++                const resultContainer = document.getElementById("result");
++                // clean up from previous search
++                while (resultContainer.firstChild) {
++                    resultContainer.removeChild(resultContainer.firstChild);
++                }
++                // trap error response from Web API
++                if (response.status !== 200) {
++                    const errorMsg = 'Database response error: ' + response.status;
++                    console.log(errorMsg);
++                    const div = document.createElement("div");
++                    div.innerHTML = errorMsg;
++                    resultContainer.appendChild(div);
++                    return;
++                }
++                // response contains valid result
++                response.json().then(function(data) {
++                    // loop through JSON and build HTML output
++                    for (let i = 0; i < data.length; i++) {
++                        const div = document.createElement("div");
++                        div.innerHTML = data[i].name + ' ' + data[i].email;
++                        resultContainer.appendChild(div);
++                    }
++                })
++            })
++    }
++</script>
++{% endblock %}
+\ No newline at end of file
+Index: crud/app_crud.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/crud/app_crud.py b/crud/app_crud.py
+new file mode 100644
+--- /dev/null	(date 1639109601840)
++++ b/crud/app_crud.py	(date 1639109601840)
+@@ -0,0 +1,247 @@
++"""control dependencies to support CRUD app routes and APIs"""
++from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
++from flask_restful import Api, Resource
++import requests
++
++from crud.model import Users
++
++# blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
++app_crud = Blueprint('crud', __name__,
++                     url_prefix='/crud',
++                     template_folder='templates/crud/',
++                     static_folder='static',
++                     static_url_path='assets')
++
++# API generator https://flask-restful.readthedocs.io/en/latest/api.html#id1
++api = Api(app_crud)
++
++""" Application control for CRUD is main focus of this File, key features:
++    1.) User table queries
++    2.) app routes (Blueprint)
++    3.) API routes
++    4.) API testing
++"""
++
++""" Users table queries"""
++
++
++# User/Users extraction from SQL
++def users_all():
++    """converts Users table into JSON list """
++    return [peep.read() for peep in Users.query.all()]
++
++
++def users_ilike(term):
++    """filter Users table by term into JSON list """
++    term = "%{}%".format(term)  # "ilike" is case insensitive and requires wrapped  %term%
++    table = Users.query.filter((Users.name.ilike(term)) | (Users.email.ilike(term)))
++    return [peep.read() for peep in table]
++
++
++# User extraction from SQL
++def user_by_id(userid):
++    """finds User in table matching userid """
++    return Users.query.filter_by(userID=userid).first()
++
++
++# User extraction from SQL
++def user_by_email(email):
++    """finds User in table matching email """
++    return Users.query.filter_by(email=email).first()
++
++
++""" app route section """
++
++
++# Default URL
++@app_crud.route('/')
++def crud():
++    """obtains all Users from table and loads Admin Form"""
++    return render_template("crud.html", table=users_all())
++
++
++# CRUD create/add
++@app_crud.route('/create/', methods=["POST"])
++def create():
++    """gets data from form and add it to Users table"""
++    if request.form:
++        po = Users(
++            request.form.get("name"),
++            request.form.get("email"),
++            request.form.get("password"),
++            request.form.get("phone")
++        )
++        po.create()
++    return redirect(url_for('crud.crud'))
++
++
++# CRUD read
++@app_crud.route('/read/', methods=["POST"])
++def read():
++    """gets userid from form and obtains corresponding data from Users table"""
++    table = []
++    if request.form:
++        userid = request.form.get("userid")
++        po = user_by_id(userid)
++        if po is not None:
++            table = [po.read()]  # placed in list for easier/consistent use within HTML
++    return render_template("crud.html", table=table)
++
++
++# CRUD update
++@app_crud.route('/update/', methods=["POST"])
++def update():
++    """gets userid and name from form and filters and then data in  Users table"""
++    if request.form:
++        userid = request.form.get("userid")
++        name = request.form.get("name")
++        po = user_by_id(userid)
++        if po is not None:
++            po.update(name)
++    return redirect(url_for('crud.crud'))
++
++
++# CRUD delete
++@app_crud.route('/delete/', methods=["POST"])
++def delete():
++    """gets userid from form delete corresponding record from Users table"""
++    if request.form:
++        userid = request.form.get("userid")
++        po = user_by_id(userid)
++        if po is not None:
++            po.delete()
++    return redirect(url_for('crud.crud'))
++
++
++# Search Form
++@app_crud.route('/search/')
++def search():
++    """loads form to search Users data"""
++    return render_template("search.html")
++
++
++# Search request and response
++@app_crud.route('/search/term/', methods=["POST"])
++def search_term():
++    """ obtain term/search request """
++    req = request.get_json()
++    term = req['term']
++    response = make_response(jsonify(users_ilike(term)), 200)
++    return response
++
++
++""" API routes section """
++
++
++class UsersAPI:
++    # class for create/post
++    class _Create(Resource):
++        def post(self, name, email, password, phone):
++            po = Users(name, email, password, phone)
++            person = po.create()
++            if person:
++                return person.read()
++            return {'message': f'Processed {name}, either a format error or {email} is duplicate'}, 210
++
++    # class for read/get
++    class _Read(Resource):
++        def get(self):
++            return users_all()
++
++    # class for read/get
++    class _ReadILike(Resource):
++        def get(self, term):
++            return users_ilike(term)
++
++    # class for update/put
++    class _Update(Resource):
++        def put(self, email, name):
++            po = user_by_email(email)
++            if po is None:
++                return {'message': f"{email} is not found"}, 210
++            po.update(name)
++            return po.read()
++
++    class _UpdateAll(Resource):
++        def put(self, email, name, password, phone):
++            po = user_by_email(email)
++            if po is None:
++                return {'message': f"{email} is not found"}, 210
++            po.update(name, password, phone)
++            return po.read()
++
++    # class for delete
++    class _Delete(Resource):
++        def delete(self, userid):
++            po = user_by_id(userid)
++            if po is None:
++                return {'message': f"{userid} is not found"}, 210
++            data = po.read()
++            po.delete()
++            return data
++
++    # building RESTapi resource
++    api.add_resource(_Create, '/create/<string:name>/<string:email>/<string:password>/<string:phone>')
++    api.add_resource(_Read, '/read/')
++    api.add_resource(_ReadILike, '/read/ilike/<string:term>')
++    api.add_resource(_Update, '/update/<string:email>/<string:name>')
++    api.add_resource(_UpdateAll, '/update/<string:email>/<string:name>/<string:password>/<string:phone>')
++    api.add_resource(_Delete, '/delete/<int:userid>')
++
++
++""" API testing section """
++
++
++def api_tester():
++    # local host URL for model
++    url = 'http://localhost:5222/crud'
++
++    # test conditions
++    API = 0
++    METHOD = 1
++    tests = [
++        ['/create/Wilma Flintstone/wilma@bedrock.org/123wifli/0001112222', "post"],
++        ['/create/Fred Flintstone/fred@bedrock.org/123wifli/0001112222', "post"],
++        ['/read/', "get"],
++        ['/read/ilike/John', "get"],
++        ['/read/ilike/com', "get"],
++        ['/update/wilma@bedrock.org/Wilma S Flintstone/123wsfli/0001112229', "put"],
++        ['/update/wilma@bedrock.org/Wilma Slaghoople Flintstone', "put"],
++        ['/delete/4', "delete"],
++        ['/delete/5', "delete"],
++    ]
++
++    # loop through each test condition and provide feedback
++    for test in tests:
++        print()
++        print(f"({test[METHOD]}, {url + test[API]})")
++        if test[METHOD] == 'get':
++            response = requests.get(url + test[API])
++        elif test[METHOD] == 'post':
++            response = requests.post(url + test[API])
++        elif test[METHOD] == 'put':
++            response = requests.put(url + test[API])
++        elif test[METHOD] == 'delete':
++            response = requests.delete(url + test[API])
++        else:
++            print("unknown RESTapi method")
++            continue
++
++        print(response)
++        try:
++            print(response.json())
++        except:
++            print("unknown error")
++
++
++def api_printer():
++    print()
++    print("Users table")
++    for user in users_all():
++        print(user)
++
++
++"""validating api's requires server to be running"""
++if __name__ == "__main__":
++    api_tester()
++    api_printer()
+Index: crud/model.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/crud/model.py b/crud/model.py
+new file mode 100644
+--- /dev/null	(date 1639109601842)
++++ b/crud/model.py	(date 1639109601842)
+@@ -0,0 +1,123 @@
++""" database dependencies to support Users db examples """
++from flask_sqlalchemy import SQLAlchemy
++from sqlalchemy.exc import IntegrityError
++from flask_migrate import Migrate
++
++from __init__ import app
++
++# Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into Python shell and follow along
++# Define variable to define type of database (sqlite), and name and location of myDB.db
++dbURI = 'sqlite:///model/myDB.db'
++# Setup properties for the database
++app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
++app.config['SQLALCHEMY_DATABASE_URI'] = dbURI
++app.config['SECRET_KEY'] = 'SECRET_KEY'
++# Create SQLAlchemy engine to support SQLite dialect (sqlite:)
++db = SQLAlchemy(app)
++Migrate(app, db)
++
++
++# Define the Users table within the model
++# -- Object Relational Mapping (ORM) is the key concept of SQLAlchemy
++# -- a.) db.Model is like an inner layer of the onion in ORM
++# -- b.) Users represents data we want to store, something that is built on db.Model
++# -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL
++class Users(db.Model):
++    # define the Users schema
++    userID = db.Column(db.Integer, primary_key=True)
++    name = db.Column(db.String(255), unique=False, nullable=False)
++    email = db.Column(db.String(255), unique=True, nullable=False)
++    password = db.Column(db.String(255), unique=False, nullable=False)
++    phone = db.Column(db.String(255), unique=False, nullable=False)
++
++    # constructor of a User object, initializes of instance variables within object
++    def __init__(self, name, email, password, phone):
++        self.name = name
++        self.email = email
++        self.password = password
++        self.phone = phone
++
++    # CRUD create/add a new record to the table
++    # returns self or None on error
++    def create(self):
++        try:
++            # creates a person object from Users(db.Model) class, passes initializers
++            db.session.add(self)  # add prepares to persist person object to Users table
++            db.session.commit()  # SqlAlchemy "unit of work pattern" requires a manual commit
++            return self
++        except IntegrityError:
++            db.session.remove()
++            return None
++
++    # CRUD read converts self to dictionary
++    # returns dictionary
++    def read(self):
++        return {
++            "userID": self.userID,
++            "name": self.name,
++            "email": self.email,
++            "password": self.password,
++            "phone": self.phone
++        }
++
++    # CRUD update: updates users name, password, phone
++    # returns self
++    def update(self, name, password="", phone=""):
++        """only updates values with length"""
++        if len(name) > 0:
++            self.name = name
++        if len(password) > 0:
++            self.password = password
++        if len(phone) > 0:
++            self.phone = phone
++        db.session.commit()
++        return self
++
++    # CRUD delete: remove self
++    # None
++    def delete(self):
++        db.session.delete(self)
++        db.session.commit()
++        return None
++
++
++"""Database Creation and Testing section"""
++
++
++def model_tester():
++    print("--------------------------")
++    print("Seed Data for Table: users")
++    print("--------------------------")
++    db.create_all()
++    """Tester data for table"""
++    u1 = Users(name='Thomas Edison', email='tedison@example.com', password='123toby', phone="1111111111")
++    u2 = Users(name='Nicholas Tesla', email='ntesla@example.com', password='123niko', phone="1111112222")
++    u3 = Users(name='Alexander Graham Bell', email='agbell@example.com', password='123lex', phone="1111113333")
++    u4 = Users(name='Eli Whitney', email='eliw@example.com', password='123whit', phone="1111114444")
++    u5 = Users(name='John Mortensen', email='jmort1021@gmail.com', password='123qwerty', phone="8587754956")
++    u6 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8587754956")
++    # U7 intended to fail as duplicate key
++    u7 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8586791294")
++    table = [u1, u2, u3, u4, u5, u6, u7]
++    for row in table:
++        try:
++            db.session.add(row)
++            db.session.commit()
++        except IntegrityError:
++            db.session.remove()
++            print(f"Records exist, duplicate email, or error: {row.email}")
++
++
++def model_printer():
++    print("------------")
++    print("Table: users with SQL query")
++    print("------------")
++    result = db.session.execute('select * from users')
++    print(result.keys())
++    for row in result:
++        print(row)
++
++
++if __name__ == "__main__":
++    model_tester()  # builds model of Users
++    model_printer()
+Index: __init__.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/__init__.py b/__init__.py
+new file mode 100644
+--- /dev/null	(date 1639109601845)
++++ b/__init__.py	(date 1639109601845)
+@@ -0,0 +1,4 @@
++from flask import Flask
++
++"""This needs to be isolated to support blueprints and models"""
++app = Flask(__name__)
