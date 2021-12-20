@@ -56,24 +56,7 @@ https://rapidapi.com/apihood/api/tides/
 | Avinh | |
 | Akhil | ![image](https://user-images.githubusercontent.com/89219514/146318326-4b9869b6-4820-418e-a55f-2004fb8d1414.png) <br> Corrections: **Q4:** Complete missclick, I knew the right answer was that the number of bits available wasn't enought to represent the number requested. **Q12:** I was looking through the questions quickly and didn't notice that the first column had different numbers, and I thought they were all the same so I looked over it and check the last column without seeing that the first value was wrong. **Q14:** Didn't check that the answer I chose would put the algorithm into an ifnitie loop because I said to store the remainder in the number instead of the integer quotient. **Q15:** The same values are printed inside the loop because program A prints i and then increments it and program B increments i and then prints it. Messed up when I was keeping track of the count on paper at repetition #5. **Q27:** Missclicked, should've put the answer that said there are problems that computer algorithms can't solve. Common sense!!!! **Q47:** Hadn't learnt/forgotten (not sure) how binary search works. Just learnt it by watching one of the college board videos and understand the issue. The list has to have all unique numbers for it to work. **Q49:** Did silly math and thought that 2^6 was 128 :( **Q50:** For an algorithm to run in reasonable time, it must take a number of steps less than or equal to a polynomial function. All of the options do this since on is 2n, n^2, and 10, which all work.|
 | Yash | |
-| Valen | <img width="1395" alt="Screen Shot 2021-12-16 at 10 53 05 AM" src="https://user-images.githubusercontent.com/89166851/146431390-60cf9344-992c-46a0-adf0-0da84231292e.png"> 
-Q5 I chose B because I thought ithat the output would come out true but it came out true because I didn’t realize the AND gate would be false. C has the correct output of true because the AND gate evaluates to true.
-
-Q17 
-I chose B because I thought the other options were singular and therefor not represented by bits but that was incorrect. As all digital data can be represented by a sequence of bits.
-
-Q24
-I chose D I thought it would count odd but it counted even integers. But it sisplayed wrong while B displays the sum of the even integers starting at 2 and ending at 20 which is correct.
-
-Q41
-I chose D II and III because I thought it removed the entire date tag but it doesn’t. B removes the four rightmost charactcters leaving only the desired description.
-
-Q50 I chose C which is I and II but I read the question wrong and thought it was which does not run in reasonable time.
-
-Q54
-I chose B which would only add odd elements from original to new instead of adding even elements. C would add the even elements.
-
-Q56 I chose V but I got it the other way around D is correct because version two takes 5 mins longer than 1. Version 2 takes 9 mins.|
+| Valen | <img width="1395" alt="Screen Shot 2021-12-16 at 10 53 05 AM" src="https://user-images.githubusercontent.com/89166851/146431390-60cf9344-992c-46a0-adf0-0da84231292e.png">  Q5 I chose B because I thought ithat the output would come out true but it came out true because I didn’t realize the AND gate would be false. C has the correct output of true because the AND gate evaluates to true. Q17 I chose B because I thought the other options were singular and therefor not represented by bits but that was incorrect. As all digital data can be represented by a sequence of bits. Q24 I chose D I thought it would count odd but it counted even integers. But it sisplayed wrong while B displays the sum of the even integers starting at 2 and ending at 20 which is correct. Q41 I chose D II and III because I thought it removed the entire date tag but it doesn’t. B removes the four rightmost charactcters leaving only the desired description. Q50 I chose C which is I and II but I read the question wrong and thought it was which does not run in reasonable time. Q54I chose B which would only add odd elements from original to new instead of adding even elements. C would add the even elements. Q56 I chose V but I got it the other way around D is correct because version two takes 5 mins longer than 1. Version 2 takes 9 mins.|
 | Jay | |
 
 ## Week 2
