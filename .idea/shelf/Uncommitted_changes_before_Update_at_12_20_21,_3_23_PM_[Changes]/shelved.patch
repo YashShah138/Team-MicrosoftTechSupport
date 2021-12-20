@@ -1,0 +1,869 @@
+Index: templates/layouts/navbar.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <a class=\"navbar-brand\" href=\"/\">Surfable</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n\n    <!-- things on the navbar -->\n    <ul class=\"navbar-nav mr-auto\">\n      <!-- put new navbar buttons here-->\n      <a class=\"nav-link\" href=\"/customization/\">Surfing Stuff</a>\n      <a class=\"nav-link\" href={{ url_for('crud.crud') }}>SQL CRUD</a>\n      <a class=\"nav-link\" href={{ url_for('crud.search') }}>SQL Search</a>\n\n      <!-- Beaches drop down -->\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarModel\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          Beaches\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n          <a class=\"nav-link\" href=\"/beachlocation1/\">Beach Location 1</a>\n          <a class=\"nav-link\" href=\"/beachlocation2/\">Beach Location 2</a>\n        </div>\n      </li>\n\n      <!-- Our Work drop down -->\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarModel\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          About Us\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n          <a class=\"nav-link\" href=\"/yash/\">Yash S</a>\n          <a class=\"nav-link\" href=\"/akhil/\">Akhil N</a>\n          <a class=\"nav-link\" href=\"/valen/\">Valen R</a>\n          <a class=\"nav-link\" href=\"/avinh/\">Avinh H</a>\n          <a class=\"nav-link\" href=\"/jay/\">Jay M</a>\n        </div>\n      </li>\n    </ul>\n  </div>\n</nav>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/layouts/navbar.html b/templates/layouts/navbar.html
+--- a/templates/layouts/navbar.html	(revision a8b7794c617693ce0bd013633427b6db0f8398a2)
++++ b/templates/layouts/navbar.html	(date 1640031977590)
+@@ -9,8 +9,8 @@
+     <ul class="navbar-nav mr-auto">
+       <!-- put new navbar buttons here-->
+       <a class="nav-link" href="/customization/">Surfing Stuff</a>
+-      <a class="nav-link" href={{ url_for('crud.crud') }}>SQL CRUD</a>
+-      <a class="nav-link" href={{ url_for('crud.search') }}>SQL Search</a>
++      <a class="nav-link" href="{{ url_for('crud.crud') }}">SQL CRUD</a>
++      <a class="nav-link" href="{{ url_for('crud.search') }}">SQL Search</a>
+ 
+       <!-- Beaches drop down -->
+       <li class="nav-item dropdown">
+Index: templates/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends \"layouts/base.html\" %}\n\n{% block head %}\n{% endblock %}\n\n<style>\n    body{\n        background-image: url(\"static/AboutUs-Pictures/Yash/Yash-Final-Background.jpeg\");\n    }\n</style>\n\n{% block body %}\n\n{{output}}\n\n{% endblock %}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/index.html b/templates/index.html
+--- a/templates/index.html	(revision a8b7794c617693ce0bd013633427b6db0f8398a2)
++++ b/templates/index.html	(date 1640031977596)
+@@ -11,6 +11,8 @@
+ 
+ {% block body %}
+ 
+-{{output}}
++<!--
++    {{output}}
++-->
++{% endblock %}
+ 
+-{% endblock %}
+\ No newline at end of file
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from __init__ import app\nfrom flask import Flask, render_template, request, Blueprint\nimport requests\n\nfrom crud.app_crud import app_crud\napp.register_blueprint(app_crud)\n\n# app.routes\n\n@app.route('/')\ndef index():\n    url = \"https://tides.p.rapidapi.com/tides\"\n    querystring = {\"longitude\":\"-2.097\",\"latitude\":\"44.414\",\"interval\":\"60\",\"duration\":\"1440\"}\n\n    headers = {\n        'x-rapidapi-host': \"tides.p.rapidapi.com\",\n        'x-rapidapi-key': \"c1ebf686e7mshe4ed4400d544e06p107f7fjsn1235b397e8bd\"\n    }\n\n    response = requests.request(\"GET\", url, headers=headers, params=querystring)\n\n    return render_template(\"/index.html\", output=response.json())\n\n@app.route('/surfingData/')\ndef surfingData():\n    return render_template(\"/assignments/surfingData.html\")\n\n@app.route('/beachlocation1/')\ndef BeachLocation1():\n    return render_template(\"/assignments/BeachLocation1.html\")\n\n@app.route('/beachlocation2/')\ndef BeachLocation2():\n    return render_template(\"/assignments/BeachLocation2.html\")\n\n@app.route('/yash/')\ndef yash():\n    url = \"https://yourf1.p.rapidapi.com/drivers\"\n\n    headers = {\n    'x-rapidapi-host': \"yourf1.p.rapidapi.com\",\n    'x-rapidapi-key': \"80e73128e0mshda8c95123266391p176951jsnbc06ff234f92\"\n}\n\n    response = requests.request(\"GET\", url, headers=headers)\n    data = response.json()\n    return render_template(\"/assignments/AboutUs/yash.html\", data=data)\n\n\n@app.route('/akhil/')\ndef akhil():\n    url = \"https://sportscore1.p.rapidapi.com/tennis-rankings/atp\"\n    querystring = {\"page\":\"1\"}\n    headers = {\n    'x-rapidapi-host': \"sportscore1.p.rapidapi.com\",\n    'x-rapidapi-key': \"af654d789amshce4b35d071f3bd2p1c0cc8jsn8db3aa6a8acc\"\n    }\n\n    response = requests.request(\"GET\", url, headers=headers, params=querystring)\n    data = response.json()\n\n    return render_template(\"/assignments/AboutUs/akhil.html\", data=data)\n\n\n@app.route('/valen/')\ndef valen():\n    import requests\n\n    url = \"https://nfl-team-stats.p.rapidapi.com/v1/nfl-stats/teams/win-stats/2021\"\n\n    headers = {\n    'x-rapidapi-host': \"nfl-team-stats.p.rapidapi.com\",\n    'x-rapidapi-key': \"dabdc2fe99mshcfa1ae8827f4f16p1f550djsn5f1b6441c796\"\n    }\n    response = requests.request(\"GET\", url, headers=headers)\n    chargers=response.json()\n\n\n    print(response.text)\n    return render_template(\"/assignments/AboutUs/valen.html\", chargers=chargers)\n\n\n@app.route('/avinh/', methods=['GET', 'POST'])\ndef avinh():\n    if request.form:\n        pokemon = request.form.get(\"input\")\n        PokemonAPI = requests.get(\"https://pokeapi.co/api/v2/pokemon/\" + pokemon)\n        PokemonImage = (PokemonAPI.json()[\"sprites\"][\"front_default\"])\n        return render_template(\"/assignments/AboutUs/avinh.html\", PokemonImage=PokemonImage)\n    return render_template(\"/assignments/AboutUs/avinh.html\")\n\n\n@app.route('/jay/')\ndef jay():\n\n\n    import requests\n\n    url = \"https://nhl-stats-and-live-data.p.rapidapi.com/standings\"\n\n    querystring = {\"date\":\"2018-01-09\",\"season\":\"20032004\"}\n\n    headers = {\n        'x-rapidapi-host': \"nhl-stats-and-live-data.p.rapidapi.com\",\n        'x-rapidapi-key': \"39c4bf8c2emsh30b02ab6dc01dd9p13f427jsn690a650cf2ec\"\n    }\n\n    response = requests.request(\"GET\", url, headers=headers, params=querystring)\n    var = response.json()\n    return render_template(\"/assignments/AboutUs/jay.html\", var=var)\n\n\n# run page lol\nif __name__ == \"__main__\":\n    app.run(debug=True)\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision a8b7794c617693ce0bd013633427b6db0f8398a2)
++++ b/main.py	(date 1640031977606)
+@@ -1,7 +1,6 @@
+ from __init__ import app
+ from flask import Flask, render_template, request, Blueprint
+ import requests
+-
+ from crud.app_crud import app_crud
+ app.register_blueprint(app_crud)
+ 
+@@ -19,7 +18,7 @@
+ 
+     response = requests.request("GET", url, headers=headers, params=querystring)
+ 
+-    return render_template("/index.html", output=response.json())
++    return render_template("index.html", output=response.json())
+ 
+ @app.route('/surfingData/')
+ def surfingData():
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_12_9_21,_9_01_PM_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_12_9_21,_9_01_PM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_12_9_21,_9_01_PM_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_12_9_21,_9_01_PM_[Changes]/shelved.patch	(revision a8b7794c617693ce0bd013633427b6db0f8398a2)
++++ /dev/null	(revision a8b7794c617693ce0bd013633427b6db0f8398a2)
+@@ -1,562 +0,0 @@
+-Index: templates/assignments/AboutUs/yash.html
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>{% extends \"assignments/AboutUs/about_layout.html\" %}\n{% set project = \"Yash About Me\" %}\n\n<script>\n    let imgStatus = 'mask';\n    function imageToggle() {\n        if (imgStatus == 'mask') {\n            var imgType = document.getElementById(\"toggleImage\");\n            imgType.src = \"/static/AboutUs-Pictures/Yash/LinkedIn-Profile.jpeg\";\n            imgStatus = 'nomask';\n        }\n        else{\n            var imgType = document.getElementById(\"toggleImage\");\n            imgType.src = \"/static/AboutUs-Pictures/Yash/CSP PIC2.jpeg\";\n            imgStatus = 'mask';\n        }\n    }\n</script>\n\n{% block body %}\n<style>\n    table {\n        width: 50%;\n        border: 1px solid white;\n    }\n    th, td, tr {\n        border: 1px solid white;\n        padding: 15px;\n        text-align: center;\n    }\n\n    #carousel{\n        width: 100%;\n        height: 100%;\n        position: absolute;\n        transform-style: preserve-3d;\n        animation: rotation 20s infinite linear;\n    }\n    #carousel:hover{\n        animation-play-state: paused;\n    }\n    #carousel figure{\n        display: block;\n        position: absolute;\n        width: 90%;\n        height: 78%;\n        left: 10px;\n        top: 10px;\n        background: aqua;\n        overflow: hidden;\n        border: solid 5px white;\n    }\n    #carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}\n    #carousel figure:nth-child(2){ transform: rotateY(40deg) translateZ(288px);}\n    #carousel figure:nth-child(3){ transform: rotateY(80deg) translateZ(288px);}\n    #carousel figure:nth-child(4){ transform: rotateY(120deg) translateZ(288px);}\n    #carousel figure:nth-child(5){ transform: rotateY(160deg) translateZ(288px);}\n    #carousel figure:nth-child(6){ transform: rotateY(200deg) translateZ(288px);}\n    #carousel figure:nth-child(7){ transform: rotateY(240deg) translateZ(288px);}\n    #carousel figure:nth-child(8){ transform: rotateY(280deg) translateZ(288px);}\n    #carousel figure:nth-child(9){ transform: rotateY(320deg) translateZ(288px);}\n    #carousel figure:nth-child(10){ transform: rotateY(360deg) translateZ(288px);}\n\n    #carousel img{\n        -webkit-filter: grayscale(1);\n        cursor: pointer;\n        transition: all .5s ease;\n        width: 100%;\n    }\n    #carousel img:hover{\n        -webkit-filter: grayscale(0);\n        transform: scale(1.2,1.2);\n    }\n    @keyframes rotation{\n        from{\n            transform: rotateY(0deg);\n        }\n        to{\n            transform: rotateY(360deg);\n        }\n    }\n</style>\n<div style=\"text-align: center;\">\n    <h1>Yash Shah</h1>\n    <span>\n        <p>My name is Yash Shah. I am 16 years old and I am junior at Del Norte High School.</p>\n        <p>Some of my hobbies include spending time with my family, hanging out with friends, building LEGOs, photography, and of course, sleeping.</p>\n        <p>I would like to work as an artificial intelligence programmer or work in the private equity sector.</p>\n\n        <div align=\"center\">\n            <a href=\"https://docs.google.com/document/d/1b8XxDljHwsNPgyQ3KBtOjHy1575NbxJuUtkxBfm_Hk0/edit\">CSP Journal</a><br>\n            <a href=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=YashShah138\">Commits</a>\n            <br>\n                <img id=\"toggleImage\" src=\"/static/AboutUs-Pictures/Yash/LinkedIn-Profile.jpeg\" width=\"225\" height=\"300\">\n            <br>\n            <br>\n                <button id=\"toggleButton\" onclick=\"imageToggle()\">Click to toggle image!</button>\n        <!--\n            <br>\n            <br>\n            <img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/20210731045838_IMG_2958.jpeg?raw=true\" width=\"500\" height=\"300\">\n            <br>\n            <br>\n            <img src=\"https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/IMG_20190113_180358.jpeg?raw=true\" width=\"500\" height=\"300\">\n            <br>\n            <br>\n        -->\n        </div>\n    </span>\n<div id=\"carousel\">\n    <figure><img src=\"static/AboutUs-Pictures/Yash/Sunset1.jpeg\" alt=\"\"></figure>\n    <figure><img src=\"static/AboutUs-Pictures/Yash/Carasauel1.jpeg\" alt=\"\"></figure>\n    <figure><img src=\"static/AboutUs-Pictures/Yash/c2.jpeg\" alt=\"\"></figure>\n    <figure><img src=\"static/AboutUs-Pictures/Yash/c3.jpeg\" alt=\"\"></figure>\n    <figure><img src=\"static/AboutUs-Pictures/Yash/c4.jpeg\" alt=\"\"></figure>\n    <figure><img src=\"static/AboutUs-Pictures/Yash/c5.jpeg\" alt=\"\"></figure>\n    <figure><img src=\"static/AboutUs-Pictures/Yash/c6.jpeg\" alt=\"\"></figure>\n    <figure><img src=\"static/AboutUs-Pictures/Yash/c7.jpeg\" alt=\"\"></figure>\n    <figure><img src=\"static/AboutUs-Pictures/Yash/c8.jpeg\" alt=\"\"></figure>\n    <figure><img src=\"static/AboutUs-Pictures/Yash/c9.jpeg\" alt=\"\"></figure>\n</div>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n    <br>\n\n</div>\n<div style=\"text-align: center;\">\n    <h3>Formula One Constructor</h3>\n    <table align=\"center\">\n        <tr>\n            <th>Team</th>\n            <th>Name</th>\n            <th>Country</th>\n            <th>Number of Podiums</th>\n        </tr>\n        <tr>\n            <td>{{ data[0].team }}</td>\n            <td>{{ data[0].name }}</td>\n            <td>{{ data[0].country }}</td>\n            <td>{{ data[0].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[1].team }}</td>\n            <td>{{ data[1].name }}</td>\n            <td>{{ data[1].country }}</td>\n            <td>{{ data[1].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[2].team }}</td>\n            <td>{{ data[2].name }}</td>\n            <td>{{ data[2].country }}</td>\n            <td>{{ data[2].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[3].team }}</td>\n            <td>{{ data[3].name }}</td>\n            <td>{{ data[3].country }}</td>\n            <td>{{ data[3].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[4].team }}</td>\n            <td>{{ data[4].name }}</td>\n            <td>{{ data[4].country }}</td>\n            <td>{{ data[4].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[5].team }}</td>\n            <td>{{ data[5].name }}</td>\n            <td>{{ data[5].country }}</td>\n            <td>{{ data[5].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[6].team }}</td>\n            <td>{{ data[6].name }}</td>\n            <td>{{ data[6].country }}</td>\n            <td>{{ data[6].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[7].team }}</td>\n            <td>{{ data[7].name }}</td>\n            <td>{{ data[7].country }}</td>\n            <td>{{ data[7].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[8].team }}</td>\n            <td>{{ data[8].name }}</td>\n            <td>{{ data[8].country }}</td>\n            <td>{{ data[8].podiums }}</td>\n        </tr>\n        <tr>\n            <td>{{ data[9].team }}</td>\n            <td>{{ data[9].name }}</td>\n            <td>{{ data[9].country }}</td>\n            <td>{{ data[9].podiums }}</td>\n        </tr>\n    </table>\n    <br>\n</div>\n    {% endblock %}
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/templates/assignments/AboutUs/yash.html b/templates/assignments/AboutUs/yash.html
+---- a/templates/assignments/AboutUs/yash.html	(revision 64b0fe4386da25957c483910c75d49d08057ce41)
+-+++ b/templates/assignments/AboutUs/yash.html	(date 1639090738878)
+-@@ -4,20 +4,61 @@
+- <script>
+-     let imgStatus = 'mask';
+-     function imageToggle() {
+--        if (imgStatus == 'mask') {
+--            var imgType = document.getElementById("toggleImage");
+--            imgType.src = "/static/AboutUs-Pictures/Yash/LinkedIn-Profile.jpeg";
+-+        if (imgStatus === 'mask') {
+-+            let imgType = document.getElementById("toggleImage");
+-+            imgType.src = "/Static/AboutUs-Pictures/Yash/LinkedIn-Profile.jpeg";
+-             imgStatus = 'nomask';
+-         }
+-         else{
+--            var imgType = document.getElementById("toggleImage");
+--            imgType.src = "/static/AboutUs-Pictures/Yash/CSP PIC2.jpeg";
+-+
+-+            let imgType = document.getElementById("toggleImage");
+-+            imgType.src = "/Static/AboutUs-Pictures/Yash/CSP PIC2.jpeg";
+-             imgStatus = 'mask';
+-         }
+-     }
+-+    let slideIndex = 1;
+-+    showSlides(slideIndex);
+-+
+-+    // Next/previous controls
+-+    function plusSlides(n) {
+-+        showSlides(slideIndex += n);
+-+    }
+-+
+-+    // Thumbnail image controls
+-+    function currentSlide(n) {
+-+        showSlides(slideIndex = n);
+-+    }
+-+
+-+    function showSlides(n) {
+-+        let i;
+-+        let slides = document.getElementsByClassName("mySlides");
+-+        let dots = document.getElementsByClassName("dot");
+-+        if (n > slides.length) {slideIndex = 1}
+-+        if (n < 1) {slideIndex = slides.length}
+-+        for (i = 0; i < slides.length; i++) {
+-+            slides[i].style.display = "none";
+-+        }
+-+        for (i = 0; i < dots.length; i++) {
+-+            dots[i].className = dots[i].className.replace(" active", "");
+-+        }
+-+        slides[slideIndex-1].style.display = "block";
+-+        dots[slideIndex-1].className += " active";
+-+    }
+-+    function showSlides() {
+-+        let i;
+-+        let slides = document.getElementsByClassName("mySlides");
+-+        for (i = 0; i < slides.length; i++) {
+-+            slides[i].style.display = "none";
+-+        }
+-+        slideIndex++;
+-+        if (slideIndex > slides.length) {slideIndex = 1}
+-+        slides[slideIndex-1].style.display = "block";
+-+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+-+    }
+- </script>
+- 
+- {% block body %}
+-+
+- <style>
+-     table {
+-         width: 50%;
+-@@ -28,130 +69,185 @@
+-         padding: 15px;
+-         text-align: center;
+-     }
+-+    img {
+-+        border: 5px solid aquamarine;
+-+    }
+-+    * {box-sizing:border-box}
+-+
+-+    /* Slideshow container */
+-+    .slideshow-container {
+-+        max-width: 1000px;
+-+        position: relative;
+-+        margin: auto;
+-+    }
+- 
+--    #carousel{
+--        width: 100%;
+--        height: 100%;
+-+    /* Hide the images by default */
+-+    .mySlides {
+-+        display: none;
+-+    }
+-+
+-+    /* Next & previous buttons */
+-+    .prev, .next {
+-+        cursor: pointer;
+-         position: absolute;
+--        transform-style: preserve-3d;
+--        animation: rotation 20s infinite linear;
+-+        top: 50%;
+-+        width: auto;
+-+        margin-top: -22px;
+-+        padding: 16px;
+-+        color: white;
+-+        font-weight: bold;
+-+        font-size: 18px;
+-+        transition: 0.6s ease;
+-+        border-radius: 0 3px 3px 0;
+-+        user-select: none;
+-     }
+--    #carousel:hover{
+--        animation-play-state: paused;
+-+
+-+    /* Position the "next button" to the right */
+-+    .next {
+-+        right: 0;
+-+        border-radius: 3px 0 0 3px;
+-     }
+--    #carousel figure{
+--        display: block;
+-+
+-+    /* On hover, add a black background color with a little bit see-through */
+-+    .prev:hover, .next:hover {
+-+        background-color: rgba(0,0,0,0.8);
+-+    }
+-+
+-+    /* Caption text */
+-+    .text {
+-+        color: #f2f2f2;
+-+        font-size: 15px;
+-+        padding: 8px 12px;
+-         position: absolute;
+--        width: 90%;
+--        height: 78%;
+--        left: 10px;
+--        top: 10px;
+--        background: aqua;
+--        overflow: hidden;
+--        border: solid 5px white;
+--    }
+--    #carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+--    #carousel figure:nth-child(2){ transform: rotateY(40deg) translateZ(288px);}
+--    #carousel figure:nth-child(3){ transform: rotateY(80deg) translateZ(288px);}
+--    #carousel figure:nth-child(4){ transform: rotateY(120deg) translateZ(288px);}
+--    #carousel figure:nth-child(5){ transform: rotateY(160deg) translateZ(288px);}
+--    #carousel figure:nth-child(6){ transform: rotateY(200deg) translateZ(288px);}
+--    #carousel figure:nth-child(7){ transform: rotateY(240deg) translateZ(288px);}
+--    #carousel figure:nth-child(8){ transform: rotateY(280deg) translateZ(288px);}
+--    #carousel figure:nth-child(9){ transform: rotateY(320deg) translateZ(288px);}
+--    #carousel figure:nth-child(10){ transform: rotateY(360deg) translateZ(288px);}
+--
+--    #carousel img{
+--        -webkit-filter: grayscale(1);
+--        cursor: pointer;
+--        transition: all .5s ease;
+-+        bottom: 8px;
+-         width: 100%;
+-+        text-align: center;
+-+    }
+-+
+-+    /* Number text (1/3 etc) */
+-+    .numbertext {
+-+        color: #f2f2f2;
+-+        font-size: 12px;
+-+        padding: 8px 12px;
+-+        position: absolute;
+-+        top: 0;
+-     }
+--    #carousel img:hover{
+--        -webkit-filter: grayscale(0);
+--        transform: scale(1.2,1.2);
+-+
+-+    /* The dots/bullets/indicators */
+-+    .dot {
+-+        cursor: pointer;
+-+        height: 15px;
+-+        width: 15px;
+-+        margin: 0 2px;
+-+        background-color: #bbb;
+-+        border-radius: 50%;
+-+        display: inline-block;
+-+        transition: background-color 0.6s ease;
+-     }
+--    @keyframes rotation{
+--        from{
+--            transform: rotateY(0deg);
+--        }
+--        to{
+--            transform: rotateY(360deg);
+--        }
+-+
+-+    .active, .dot:hover {
+-+        background-color: #717171;
+-+    }
+-+
+-+    /* Fading animation */
+-+    .fade {
+-+        -webkit-animation-name: fade;
+-+        -webkit-animation-duration: 1.5s;
+-+        animation-name: fade;
+-+        animation-duration: 1.5s;
+-+    }
+-+
+-+    @-webkit-keyframes fade {
+-+        from {opacity: .4}
+-+        to {opacity: 1}
+-     }
+-+
+-+    @keyframes fade {
+-+        from {opacity: .4}
+-+        to {opacity: 1}
+-+    }
+- </style>
+-+
+- <div style="text-align: center;">
+-     <h1>Yash Shah</h1>
+-     <span>
+--        <p>My name is Yash Shah. I am 16 years old and I am junior at Del Norte High School.</p>
+-+        <p>My name is Yash Shah. I am 16 years old, and I am junior at Del Norte High School.</p>
+-         <p>Some of my hobbies include spending time with my family, hanging out with friends, building LEGOs, photography, and of course, sleeping.</p>
+-         <p>I would like to work as an artificial intelligence programmer or work in the private equity sector.</p>
+- 
+-         <div align="center">
+-             <a href="https://docs.google.com/document/d/1b8XxDljHwsNPgyQ3KBtOjHy1575NbxJuUtkxBfm_Hk0/edit">CSP Journal</a><br>
+--            <a href="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=YashShah138">Commits</a>
+-+            <a href="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=YashShah138">Commits</a><br>
+-+            <a href="https://docs.google.com/document/d/14YG7ZscxqKMrEArx1GuzEqcIB_f6ZqT086UE8ttQ3lM/edit?usp=sharing">Create Task</a>
+-             <br>
+--                <img id="toggleImage" src="/static/AboutUs-Pictures/Yash/LinkedIn-Profile.jpeg" width="225" height="300">
+-+                <img id="toggleImage" src="/static/AboutUs-Pictures/Yash/LinkedIn-Profile.jpeg" alt="" width="225" height="300">
+-             <br>
+-             <br>
+-                 <button id="toggleButton" onclick="imageToggle()">Click to toggle image!</button>
+--        <!--
+--            <br>
+--            <br>
+--            <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/20210731045838_IMG_2958.jpeg?raw=true" width="500" height="300">
+--            <br>
+--            <br>
+--            <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/IMG_20190113_180358.jpeg?raw=true" width="500" height="300">
+--            <br>
+--            <br>
+--        -->
+--        </div>
+--    </span>
+--<div id="carousel">
+--    <figure><img src="static/AboutUs-Pictures/Yash/Sunset1.jpeg" alt=""></figure>
+--    <figure><img src="static/AboutUs-Pictures/Yash/Carasauel1.jpeg" alt=""></figure>
+--    <figure><img src="static/AboutUs-Pictures/Yash/c2.jpeg" alt=""></figure>
+--    <figure><img src="static/AboutUs-Pictures/Yash/c3.jpeg" alt=""></figure>
+--    <figure><img src="static/AboutUs-Pictures/Yash/c4.jpeg" alt=""></figure>
+--    <figure><img src="static/AboutUs-Pictures/Yash/c5.jpeg" alt=""></figure>
+--    <figure><img src="static/AboutUs-Pictures/Yash/c6.jpeg" alt=""></figure>
+--    <figure><img src="static/AboutUs-Pictures/Yash/c7.jpeg" alt=""></figure>
+--    <figure><img src="static/AboutUs-Pictures/Yash/c8.jpeg" alt=""></figure>
+--    <figure><img src="static/AboutUs-Pictures/Yash/c9.jpeg" alt=""></figure>
+-+        </div>
+-+    </span>
+-+</div>
+-+<br>
+-+<div class="slideshow-container">
+-+    <div class="mySlides fade">
+-+        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Sunset1.jpeg?raw=true" alt="" width="300" height="500">
+-+        <div class="text">Sunset over UCSD Pier</div>
+-+    </div>
+-+    <div class="mySlides fade">
+-+        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Carasauel1.jpeg?raw=true" alt="" width="300" height="500">
+-+        <div class="text">Coast Along Highway 1</div>
+-+    </div>
+-+    <div class="mySlides fade">
+-+        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c2.jpeg?raw=true" alt="" width="300" height="500">
+-+        <div class="text">Lake in the trees</div>
+-+    </div>
+-+    <div class="mySlides fade">
+-+        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c2.jpeg?raw=true" alt="" width="500" height="300">
+-+        <div class="text">Lake in the trees</div>
+-+    </div>
+-+        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c2.jpeg?raw=true" alt="Lake in the Trees" width="500" height="300"></figure>
+-+        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c3.jpeg?raw=true" alt="Sun in the Dead" width="500" height="300"></figure>
+-+        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c4.jpeg?raw=true" alt="The Star" width="300" height="500"></figure>
+-+        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c5.jpeg?raw=true" alt="La Jolla Sunset" width="500" height="300"></figure>
+-+        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c6.jpeg?raw=true" alt="Train Through The Woods" width="500" height="300"></figure>
+-+        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c7.jpeg?raw=true" alt="Tired Lioness" width="500" height="300"></figure>
+-+        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c8.jpeg?raw=true" alt="Dark City" width="500" height="300"></figure>
+-+        <figure><img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c9.jpeg?raw=true" alt="University of Texas" width="500" height="300"></figure>
+-+    <br>
+-+    <br>
+- </div>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+--    <br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+-+<br>
+- 
+--</div>
+- <div style="text-align: center;">
+--    <h3>Formula One Constructor</h3>
+-+    <h3>Formula One Constructors</h3>
+-     <table align="center">
+-         <tr>
+-             <th>Team</th>
+-Index: .idea/runConfigurations.xml
+-===================================================================
+-diff --git a/.idea/runConfigurations.xml b/.idea/runConfigurations.xml
+-deleted file mode 100644
+---- a/.idea/runConfigurations.xml	(revision 64b0fe4386da25957c483910c75d49d08057ce41)
+-+++ /dev/null	(revision 64b0fe4386da25957c483910c75d49d08057ce41)
+-@@ -1,10 +0,0 @@
+--<?xml version="1.0" encoding="UTF-8"?>
+--<project version="4">
+--  <component name="RunConfigurationProducerService">
+--    <option name="ignoredProducers">
+--      <set>
+--        <option value="com.android.tools.idea.compose.preview.runconfiguration.ComposePreviewRunConfigurationProducer" />
+--      </set>
+--    </option>
+--  </component>
+--</project>
+-\ No newline at end of file
+-Index: templates/Test.html
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/templates/Test.html b/templates/Test.html
+-new file mode 100644
+---- /dev/null	(date 1639090556328)
+-+++ b/templates/Test.html	(date 1639090556328)
+-@@ -0,0 +1,171 @@
+-+<style>
+-+    * {box-sizing:border-box}
+-+
+-+    /* Slideshow container */
+-+    .slideshow-container {
+-+        max-width: 1000px;
+-+        position: relative;
+-+        margin: auto;
+-+    }
+-+
+-+    /* Hide the images by default */
+-+    .mySlides {
+-+        display: none;
+-+    }
+-+
+-+    /* Next & previous buttons */
+-+    .prev, .next {
+-+        cursor: pointer;
+-+        position: absolute;
+-+        top: 50%;
+-+        width: auto;
+-+        margin-top: -22px;
+-+        padding: 16px;
+-+        color: white;
+-+        font-weight: bold;
+-+        font-size: 18px;
+-+        transition: 0.6s ease;
+-+        border-radius: 0 3px 3px 0;
+-+        user-select: none;
+-+    }
+-+
+-+    /* Position the "next button" to the right */
+-+    .next {
+-+        right: 0;
+-+        border-radius: 3px 0 0 3px;
+-+    }
+-+
+-+    /* On hover, add a black background color with a little bit see-through */
+-+    .prev:hover, .next:hover {
+-+        background-color: rgba(0,0,0,0.8);
+-+    }
+-+
+-+    /* Caption text */
+-+    .text {
+-+        color: #f2f2f2;
+-+        font-size: 15px;
+-+        padding: 8px 12px;
+-+        position: absolute;
+-+        bottom: 8px;
+-+        width: 100%;
+-+        text-align: center;
+-+    }
+-+
+-+    /* Number text (1/3 etc) */
+-+    .numbertext {
+-+        color: #f2f2f2;
+-+        font-size: 12px;
+-+        padding: 8px 12px;
+-+        position: absolute;
+-+        top: 0;
+-+    }
+-+
+-+    /* The dots/bullets/indicators */
+-+    .dot {
+-+        cursor: pointer;
+-+        height: 15px;
+-+        width: 15px;
+-+        margin: 0 2px;
+-+        background-color: #bbb;
+-+        border-radius: 50%;
+-+        display: inline-block;
+-+        transition: background-color 0.6s ease;
+-+    }
+-+
+-+    .active, .dot:hover {
+-+        background-color: #717171;
+-+    }
+-+
+-+    /* Fading animation */
+-+    .fade {
+-+        -webkit-animation-name: fade;
+-+        -webkit-animation-duration: 1.5s;
+-+        animation-name: fade;
+-+        animation-duration: 1.5s;
+-+    }
+-+
+-+    @-webkit-keyframes fade {
+-+        from {opacity: .4}
+-+        to {opacity: 1}
+-+    }
+-+
+-+    @keyframes fade {
+-+        from {opacity: .4}
+-+        to {opacity: 1}
+-+    }
+-+</style>
+-+
+-+<script>
+-+    let slideIndex = 1;
+-+    showSlides(slideIndex);
+-+
+-+    // Next/previous controls
+-+    function plusSlides(n) {
+-+        showSlides(slideIndex += n);
+-+    }
+-+
+-+    // Thumbnail image controls
+-+    function currentSlide(n) {
+-+        showSlides(slideIndex = n);
+-+    }
+-+
+-+    function showSlides(n) {
+-+        let i;
+-+        let slides = document.getElementsByClassName("mySlides");
+-+        let dots = document.getElementsByClassName("dot");
+-+        if (n > slides.length) {slideIndex = 1}
+-+        if (n < 1) {slideIndex = slides.length}
+-+        for (i = 0; i < slides.length; i++) {
+-+            slides[i].style.display = "none";
+-+        }
+-+        for (i = 0; i < dots.length; i++) {
+-+            dots[i].className = dots[i].className.replace(" active", "");
+-+        }
+-+        slides[slideIndex-1].style.display = "block";
+-+        dots[slideIndex-1].className += " active";
+-+    }
+-+    function showSlides() {
+-+        var i;
+-+        var slides = document.getElementsByClassName("mySlides");
+-+        for (i = 0; i < slides.length; i++) {
+-+            slides[i].style.display = "none";
+-+        }
+-+        slideIndex++;
+-+        if (slideIndex > slides.length) {slideIndex = 1}
+-+        slides[slideIndex-1].style.display = "block";
+-+        setTimeout(showSlides, 10000); // Change image every 2 seconds
+-+    }
+-+</script>
+-+
+-+
+-+<!-- Slideshow container -->
+-+<div class="slideshow-container">
+-+
+-+    <!-- Full-width images with number and caption text -->
+-+    <div class="mySlides fade">
+-+        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Sunset1.jpeg?raw=true" alt="" style="width:100%">
+-+        <div class="text">Caption Text</div>
+-+    </div>
+-+
+-+    <div class="mySlides fade">
+-+        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/Carasauel1.jpeg?raw=true" alt="" style="width:100%">
+-+        <div class="text">Caption Two</div>
+-+    </div>
+-+
+-+    <div class="mySlides fade">
+-+        <img src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Yash/c2.jpeg?raw=true" alt="" style="width:100%">
+-+        <div class="text">Lake in the Trees</div>
+-+    </div>
+-+
+-+    <!-- Next and previous buttons -->
+-+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+-+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+-+</div>
+-+<br>
+-+
+-+<!-- The dots/circles -->
+-+<div style="text-align:center">
+-+    <span class="dot" onclick="currentSlide(1)"></span>
+-+    <span class="dot" onclick="currentSlide(2)"></span>
+-+    <span class="dot" onclick="currentSlide(3)"></span>
+-+</div>
+-\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_12_9_21__9_01_PM__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_12_9_21__9_01_PM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_12_9_21__9_01_PM__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_12_9_21__9_01_PM__Changes_.xml	(revision a8b7794c617693ce0bd013633427b6db0f8398a2)
++++ /dev/null	(revision a8b7794c617693ce0bd013633427b6db0f8398a2)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_12_9_21,_9_01_PM_[Changes]" date="1639112495558" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_9_21,_9_01_PM_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 12/9/21, 9:01 PM [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/runConfigurations.xml
+===================================================================
+diff --git a/.idea/runConfigurations.xml b/.idea/runConfigurations.xml
+deleted file mode 100644
+--- a/.idea/runConfigurations.xml	(revision a8b7794c617693ce0bd013633427b6db0f8398a2)
++++ /dev/null	(revision a8b7794c617693ce0bd013633427b6db0f8398a2)
+@@ -1,10 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RunConfigurationProducerService">
+-    <option name="ignoredProducers">
+-      <set>
+-        <option value="com.android.tools.idea.compose.preview.runconfiguration.ComposePreviewRunConfigurationProducer" />
+-      </set>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: templates/Test-Map.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/Test-Map.html b/templates/Test-Map.html
+new file mode 100644
+--- /dev/null	(date 1640031977647)
++++ b/templates/Test-Map.html	(date 1640031977647)
+@@ -0,0 +1,36 @@
++<!DOCTYPE html>
++<html lang="html">
++    <head>
++        <title></title>
++        <style>
++            * {
++                margin: 0;
++                padding: 0;
++            }
++            #map {
++                height: 500px;
++                width: 700px;
++            }
++        </style>
++    </head>
++    <body>
++        <div align="center">
++            <div id="map"></div>
++        </div>
++
++        <script>
++            function initMap() {
++              let location = {lat: 32.715736, lng: -117.161087};
++              let map = new google.maps.Map(document.getElementById("map"), {
++                  zoom: 12,
++                  center: location
++              });
++              let marker = new google.maps.Marker({
++                  position: location,
++                  map: map
++              });
++            }
++        </script>
++        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-pase5AparMC_AsscX5GaFIff1TJtYvI&callback=initMap"></script>
++    </body>
++</html>
+\ No newline at end of file
+Index: requirements.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>flask~=1.1.2\nrequests~=2.25.1\nSQLAlchemy~=1.3.24\nWerkzeug~=1.0.1\nflask_login\nflask_sqlalchemy\nflask_migrate\nflask_restful\nnumpy\nPillow~=8.2.0
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/requirements.txt b/requirements.txt
+--- a/requirements.txt	(revision a8b7794c617693ce0bd013633427b6db0f8398a2)
++++ b/requirements.txt	(date 1640032081136)
+@@ -7,4 +7,5 @@
+ flask_migrate
+ flask_restful
+ numpy
+-Pillow~=8.2.0
+\ No newline at end of file
++Pillow~=8.2.0
++crud~=0.1
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"7f863de1-c833-43de-ad7b-c4eaa5e0efcf\" name=\"Changes\" comment=\"\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Python Script\" />\n        <option value=\"HTML File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"FlaskConsoleOptions\" custom-start-script=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\">\n    <envs>\n      <env key=\"FLASK_APP\" value=\"app\" />\n    </envs>\n    <option name=\"myCustomStartScript\" value=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\" />\n    <option name=\"myEnvs\">\n      <map>\n        <entry key=\"FLASK_APP\" value=\"app\" />\n      </map>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitSEFilterConfiguration\">\n    <file-type-list>\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\n      <filtered-out-file-type name=\"TAG\" />\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\n    </file-type-list>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"20y0vUDX8BnGjtdBdf3ZID3LV6R\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\n    <property name=\"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"project.structure.last.edited\" value=\"Modules\" />\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\n    <property name=\"ts.external.directory.path\" value=\"$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/Static\" />\n      <recent name=\"$PROJECT_DIR$/Static/AboutUs-Pictures\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Python.main\">\n    <configuration name=\"Test.html\" type=\"JavascriptDebugType\" temporary=\"true\" nameIsGenerated=\"true\" uri=\"http://localhost:63342/Team-MicrosoftTechSupport/templates/Test.html\" useBuiltInWebServerPort=\"true\">\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"main\" type=\"PythonConfigurationType\" factoryName=\"Python\" nameIsGenerated=\"true\">\n      <module name=\"Team-MicrosoftTechSupport\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"/usr/local/bin/python3.9\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/main.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"JavaScript Debug.Test.html\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"7f863de1-c833-43de-ad7b-c4eaa5e0efcf\" name=\"Changes\" comment=\"\" />\n      <created>1637001754508</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1637001754508</updated>\n      <workItem from=\"1637001759888\" duration=\"37000\" />\n      <workItem from=\"1637001880314\" duration=\"264000\" />\n      <workItem from=\"1637082490305\" duration=\"604000\" />\n      <workItem from=\"1637091462981\" duration=\"424000\" />\n      <workItem from=\"1637094421149\" duration=\"292000\" />\n      <workItem from=\"1637175096723\" duration=\"3901000\" />\n      <workItem from=\"1637262216587\" duration=\"706000\" />\n      <workItem from=\"1637263393168\" duration=\"390000\" />\n      <workItem from=\"1637263831425\" duration=\"651000\" />\n      <workItem from=\"1637265590273\" duration=\"89000\" />\n      <workItem from=\"1637341904896\" duration=\"328000\" />\n      <workItem from=\"1637349805003\" duration=\"230000\" />\n      <workItem from=\"1637350252654\" duration=\"2697000\" />\n      <workItem from=\"1637358898300\" duration=\"1109000\" />\n      <workItem from=\"1638211904685\" duration=\"2725000\" />\n      <workItem from=\"1638301004276\" duration=\"3056000\" />\n      <workItem from=\"1638304318400\" duration=\"63000\" />\n      <workItem from=\"1638384843566\" duration=\"389000\" />\n      <workItem from=\"1638388275176\" duration=\"674000\" />\n      <workItem from=\"1638471070353\" duration=\"3852000\" />\n      <workItem from=\"1638492669126\" duration=\"221000\" />\n      <workItem from=\"1638559355288\" duration=\"3619000\" />\n      <workItem from=\"1638816699741\" duration=\"2889000\" />\n      <workItem from=\"1638900385818\" duration=\"169000\" />\n      <workItem from=\"1638905760345\" duration=\"1949000\" />\n      <workItem from=\"1638909056983\" duration=\"536000\" />\n      <workItem from=\"1638989569166\" duration=\"3336000\" />\n      <workItem from=\"1639010060124\" duration=\"2559000\" />\n      <workItem from=\"1639024470088\" duration=\"1283000\" />\n      <workItem from=\"1639027146192\" duration=\"283000\" />\n      <workItem from=\"1639028722611\" duration=\"384000\" />\n      <workItem from=\"1639069196662\" duration=\"967000\" />\n      <workItem from=\"1639075932970\" duration=\"1491000\" />\n      <workItem from=\"1639077540861\" duration=\"2457000\" />\n      <workItem from=\"1639089239788\" duration=\"1533000\" />\n      <workItem from=\"1639112370815\" duration=\"2383000\" />\n      <workItem from=\"1639154395344\" duration=\"2368000\" />\n      <workItem from=\"1639157128656\" duration=\"416000\" />\n      <workItem from=\"1639167871652\" duration=\"371000\" />\n      <workItem from=\"1639415513414\" duration=\"265000\" />\n      <workItem from=\"1639421495945\" duration=\"1767000\" />\n      <workItem from=\"1639511546982\" duration=\"157000\" />\n      <workItem from=\"1639511811182\" duration=\"953000\" />\n      <workItem from=\"1639594325982\" duration=\"1177000\" />\n      <workItem from=\"1639670987136\" duration=\"873000\" />\n      <workItem from=\"1639682560432\" duration=\"633000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Added all base home pages, added tides api, updated readme and navbar.html. Added a static folder for all our images for the project.\">\n      <created>1637178779903</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1637178779903</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Changed project name for the about pages\">\n      <created>1637265435311</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1637265435311</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Changed the base background and changed the base font color to aquamarine\">\n      <created>1637351505457</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1637351505461</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"CHanged css for the base\">\n      <created>1637351838914</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1637351838914</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Changed the font tags on everybody's about me pages\">\n      <created>1637352854953</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1637352854953</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Changed a lot\">\n      <created>1638908479996</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1638908479996</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Changed About me page - Yash\">\n      <created>1638909271247</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1638909271248</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"added an image carousel to about page\">\n      <created>1639025768233</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1639025768233</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"Created an image gallery\">\n      <created>1639112530838</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1639112530840</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Changed some tings\">\n      <created>1639683321845</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1639683321845</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"11\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n    <MESSAGE value=\"Added all base home pages, added tides api, updated readme and navbar.html. Added a static folder for all our images for the project.\" />\n    <MESSAGE value=\"Changed project name for the about pages\" />\n    <MESSAGE value=\"Changed the base background and changed the base font color to aquamarine\" />\n    <MESSAGE value=\"CHanged css for the base\" />\n    <MESSAGE value=\"Changed the font tags on everybody's about me pages\" />\n    <MESSAGE value=\"Changed a lot\" />\n    <MESSAGE value=\"Changed About me page - Yash\" />\n    <MESSAGE value=\"added an image carousel to about page\" />\n    <MESSAGE value=\"Created an image gallery\" />\n    <MESSAGE value=\"Changed some tings\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Changed some tings\" />\n  </component>\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\n    <expand />\n    <select />\n  </component>\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\n    <SUITE FILE_PATH=\"coverage/Team_MicrosoftTechSupport$main.coverage\" NAME=\"main Coverage Results\" MODIFIED=\"1639682570774\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision a8b7794c617693ce0bd013633427b6db0f8398a2)
++++ b/.idea/workspace.xml	(date 1640035419372)
+@@ -1,7 +1,17 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="7f863de1-c833-43de-ad7b-c4eaa5e0efcf" name="Changes" comment="" />
++    <list default="true" id="7f863de1-c833-43de-ad7b-c4eaa5e0efcf" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/templates/Test-Map.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_9_21,_9_01_PM_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_9_21__9_01_PM__Changes_.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/templates/layouts/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/navbar.html" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -37,6 +47,9 @@
+       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+     </file-type-list>
+   </component>
++  <component name="HighlightingSettingsPerFile">
++    <setting file="file:///Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/crud/__init__.py" root0="SKIP_INSPECTION" />
++  </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+@@ -57,7 +70,7 @@
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="nodejs_package_manager_path" value="npm" />
+-    <property name="project.structure.last.edited" value="Modules" />
++    <property name="project.structure.last.edited" value="SDKs" />
+     <property name="project.structure.proportion" value="0.15" />
+     <property name="project.structure.side.proportion" value="0.2" />
+     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+@@ -70,9 +83,15 @@
+     </key>
+   </component>
+   <component name="RunManager" selected="Python.main">
++    <configuration name="Test-Map.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Team-MicrosoftTechSupport/templates/Test-Map.html" useBuiltInWebServerPort="true">
++      <method v="2" />
++    </configuration>
+     <configuration name="Test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Team-MicrosoftTechSupport/templates/Test.html" useBuiltInWebServerPort="true">
+       <method v="2" />
+     </configuration>
++    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Team-MicrosoftTechSupport/templates/index.html" useBuiltInWebServerPort="true">
++      <method v="2" />
++    </configuration>
+     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+       <module name="Team-MicrosoftTechSupport" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -97,6 +116,8 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="JavaScript Debug.index.html" />
++        <item itemvalue="JavaScript Debug.Test-Map.html" />
+         <item itemvalue="JavaScript Debug.Test.html" />
+       </list>
+     </recent_temporary>
+@@ -154,7 +175,10 @@
+       <workItem from="1639511811182" duration="953000" />
+       <workItem from="1639594325982" duration="1177000" />
+       <workItem from="1639670987136" duration="873000" />
+-      <workItem from="1639682560432" duration="633000" />
++      <workItem from="1639682560432" duration="1521000" />
++      <workItem from="1639880620747" duration="1241000" />
++      <workItem from="1640023539604" duration="3423000" />
++      <workItem from="1640032122626" duration="945000" />
+     </task>
+     <task id="LOCAL-00001" summary="Added all base home pages, added tides api, updated readme and navbar.html. Added a static folder for all our images for the project.">
+       <created>1637178779903</created>
+@@ -226,12 +250,29 @@
+       <option name="project" value="LOCAL" />
+       <updated>1639683321845</updated>
+     </task>
+-    <option name="localTasksCounter" value="11" />
++    <task id="LOCAL-00011" summary="Changed some tings">
++      <created>1639683342776</created>
++      <option name="number" value="00011" />
++      <option name="presentableId" value="LOCAL-00011" />
++      <option name="project" value="LOCAL" />
++      <updated>1639683342776</updated>
++    </task>
++    <task id="LOCAL-00012" summary="Changed main.py">
++      <created>1639683487810</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1639683487810</updated>
++    </task>
++    <option name="localTasksCounter" value="13" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
++  <component name="UnknownFeatures">
++    <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
++  </component>
+   <component name="VcsManagerConfiguration">
+     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+     <MESSAGE value="Added all base home pages, added tides api, updated readme and navbar.html. Added a static folder for all our images for the project." />
+@@ -244,13 +285,14 @@
+     <MESSAGE value="added an image carousel to about page" />
+     <MESSAGE value="Created an image gallery" />
+     <MESSAGE value="Changed some tings" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Changed some tings" />
++    <MESSAGE value="Changed main.py" />
++    <option name="LAST_COMMIT_MESSAGE" value="Changed main.py" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
+     <select />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1639682570774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1640032492543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+   </component>
+ </project>
+\ No newline at end of file
