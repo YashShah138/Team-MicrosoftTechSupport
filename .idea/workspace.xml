@@ -1,7 +1,484 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f863de1-c833-43de-ad7b-c4eaa5e0efcf" name="Changes" comment="" />
+    <list default="true" id="858b4215-7dfd-48f1-a79a-ebc0570df582" name="Changes" comment="sccs bootstrap stuff">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/crud/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/myDB.db" beforeDir="false" afterPath="$PROJECT_DIR$/model/myDB.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/cjs/enums.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/cjs/enums.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/cjs/enums.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/cjs/popper-base.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/cjs/popper-base.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/cjs/popper-base.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/cjs/popper-lite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/cjs/popper-lite.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/cjs/popper-lite.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/cjs/popper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/cjs/popper.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/cjs/popper.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/createPopper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/contains.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getBoundingClientRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getClippingRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getCompositeRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getComputedStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getDocumentElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getDocumentRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getHTMLElementScroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getLayoutRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getNodeName.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getNodeScroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getOffsetParent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getParentNode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getScrollParent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getViewportRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getWindow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getWindowScroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/getWindowScrollBarX.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/instanceOf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/isScrollParent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/isTableElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/dom-utils/listScrollParents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/enums.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/modifiers/applyStyles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/modifiers/arrow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/modifiers/computeStyles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/modifiers/eventListeners.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/modifiers/flip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/modifiers/hide.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/modifiers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/modifiers/offset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/modifiers/popperOffsets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/modifiers/preventOverflow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/popper-base.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/popper-lite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/popper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/types.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/computeAutoPlacement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/computeOffsets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/debounce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/detectOverflow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/expandToHashMap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/format.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/getAltAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/getAltLen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/getBasePlacement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/getFreshSideObject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/getMainAxisFromPlacement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/getOppositePlacement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/getOppositeVariationPlacement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/getVariation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/math.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/mergeByName.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/mergePaddingObject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/orderModifiers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/rectToClientRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/uniqueBy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/validateModifiers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/esm/utils/within.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/enums.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/enums.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/enums.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/enums.min.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/enums.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/popper-base.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/popper-base.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/popper-base.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/popper-base.min.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/popper-base.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/popper-lite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/popper-lite.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/popper-lite.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/popper-lite.min.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/popper-lite.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/popper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/popper.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/popper.min.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/dist/umd/popper.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/createPopper.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/createPopper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/createPopper.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/contains.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/contains.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/contains.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getClippingRect.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getCompositeRect.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getCompositeRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getCompositeRect.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getDocumentRect.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getDocumentRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getDocumentRect.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getHTMLElementScroll.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getHTMLElementScroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getHTMLElementScroll.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getNodeName.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getNodeName.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getNodeName.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getNodeScroll.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getNodeScroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getNodeScroll.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getParentNode.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getParentNode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getParentNode.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getScrollParent.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getScrollParent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getScrollParent.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getViewportRect.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getWindow.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getWindow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getWindow.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getWindowScroll.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getWindowScroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getWindowScroll.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/instanceOf.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/instanceOf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/instanceOf.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/isScrollParent.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/isTableElement.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/isTableElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/isTableElement.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/listScrollParents.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/listScrollParents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/dom-utils/listScrollParents.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/enums.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/enums.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/enums.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/index.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/applyStyles.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/applyStyles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/applyStyles.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/arrow.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/arrow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/arrow.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/computeStyles.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/computeStyles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/computeStyles.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/eventListeners.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/eventListeners.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/eventListeners.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/flip.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/flip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/flip.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/hide.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/hide.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/hide.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/index.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/offset.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/offset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/offset.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/popperOffsets.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/popperOffsets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/popperOffsets.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/preventOverflow.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/preventOverflow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/modifiers/preventOverflow.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/popper-base.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/popper-base.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/popper-base.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/popper-lite.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/popper-lite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/popper-lite.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/popper.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/popper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/popper.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/types.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/types.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/types.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/computeAutoPlacement.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/computeAutoPlacement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/computeAutoPlacement.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/computeOffsets.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/computeOffsets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/computeOffsets.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/debounce.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/debounce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/debounce.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/detectOverflow.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/detectOverflow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/detectOverflow.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/expandToHashMap.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/expandToHashMap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/expandToHashMap.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/format.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/format.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/format.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getAltAxis.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getAltAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getAltAxis.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getAltLen.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getAltLen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getAltLen.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getBasePlacement.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getBasePlacement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getBasePlacement.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getFreshSideObject.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getFreshSideObject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getFreshSideObject.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getOppositePlacement.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getOppositePlacement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getOppositePlacement.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getOppositeVariationPlacement.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getOppositeVariationPlacement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getOppositeVariationPlacement.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getVariation.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getVariation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/getVariation.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/math.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/math.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/math.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/mergeByName.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/mergeByName.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/mergeByName.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/mergePaddingObject.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/mergePaddingObject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/mergePaddingObject.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/orderModifiers.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/orderModifiers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/orderModifiers.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/rectToClientRect.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/rectToClientRect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/rectToClientRect.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/uniqueBy.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/uniqueBy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/uniqueBy.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/validateModifiers.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/validateModifiers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/validateModifiers.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/within.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/within.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/lib/utils/within.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@popperjs/core/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-utilities.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-utilities.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-utilities.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/alert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/alert.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/base-component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/base-component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/button.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/carousel.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/collapse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/collapse.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/dom/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/dom/data.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/dom/event-handler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/dom/event-handler.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/dom/manipulator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/dom/manipulator.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/dom/selector-engine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/dom/selector-engine.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/dropdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/dropdown.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/modal.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/offcanvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/offcanvas.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/popover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/popover.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/scrollspy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/scrollspy.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/tab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/tab.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/toast.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/toast.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/tooltip.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/alert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/base-component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/collapse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/dom/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/dom/event-handler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/dom/manipulator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/dom/selector-engine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/dropdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/offcanvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/popover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/scrollspy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/tab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/toast.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/util/backdrop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/util/component-functions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/util/focustrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/util/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/util/sanitizer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/util/scrollbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_accordion.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_breadcrumb.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_button-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_card.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_close.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_containers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_functions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_helpers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_images.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_modal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_nav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_offcanvas.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_placeholders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_popover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_progress.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_root.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_spinners.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_tables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_toasts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_tooltip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_transitions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_type.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/bootstrap-grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/bootstrap-reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/bootstrap-utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/bootstrap.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/forms/_floating-labels.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/forms/_form-check.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/forms/_form-control.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/forms/_form-range.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/forms/_form-select.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/forms/_form-text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/forms/_input-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/forms/_labels.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/forms/_validation.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/helpers/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/helpers/_colored-links.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/helpers/_position.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/helpers/_ratio.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/helpers/_stacks.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/helpers/_stretched-link.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/helpers/_text-truncation.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/helpers/_visually-hidden.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/helpers/_vr.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_backdrop.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_border-radius.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_box-shadow.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_breakpoints.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_caret.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_color-scheme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_container.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_deprecate.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_gradients.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_image.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_lists.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_reset-text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_resize.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_table-variants.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_text-truncate.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_transition.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_visually-hidden.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_api.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/vendor/_rfs.scss" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,10 +514,19 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/templates/layouts/navbar.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/layouts/base.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Static/style/custom.scss" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Static/style/custom.css" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/requirements.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/consoles/db/124c394f-ad82-4bd8-9518-7d0b9b3450bd/console.sql" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/crud/templates/crud/crud.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/crud/app_crud.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/crud/model.py" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectId" id="20y0vUDX8BnGjtdBdf3ZID3LV6R" />
+  <component name="ProjectId" id="216Ve0I0iv6UqjsT0Qa982BERAB" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -50,30 +536,40 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Static/style" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Static/style" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/templates/assignments" />
+      <recent name="$PROJECT_DIR$/templates/layouts" />
+      <recent name="$PROJECT_DIR$/model" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Static" />
-      <recent name="$PROJECT_DIR$/Static/AboutUs-Pictures" />
+      <recent name="$PROJECT_DIR$/crud" />
+      <recent name="$PROJECT_DIR$/Static/AboutUs-Pictures/Valen" />
+      <recent name="$PROJECT_DIR$/Static/AboutUs-Pictures/Akhil" />
+      <recent name="$PROJECT_DIR$/Static/AboutUs-Pictures/Avinh" />
+      <recent name="$PROJECT_DIR$/Static/AboutUs-Pictures/Yash" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="Test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Team-MicrosoftTechSupport/templates/Test.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="MicrosoftTechSupport-Project" type="PythonConfigurationType" factoryName="Python">
       <module name="Team-MicrosoftTechSupport" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -81,8 +577,74 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/local/bin/python3.9" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app_crud" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Team-MicrosoftTechSupport" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crud" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crud/app_crud.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="crud" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Team-MicrosoftTechSupport" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crud.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Team-MicrosoftTechSupport" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -95,162 +657,215 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Team-MicrosoftTechSupport" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crud" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crud/model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rest_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Team-MicrosoftTechSupport" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crud" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crud/rest_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.MicrosoftTechSupport-Project" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.crud" />
+      <item itemvalue="Python.rest_test" />
+      <item itemvalue="Python.model" />
+      <item itemvalue="Python.app_crud" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.Test.html" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.app_crud" />
+        <item itemvalue="Python.model" />
+        <item itemvalue="Python.rest_test" />
+        <item itemvalue="Python.crud" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7f863de1-c833-43de-ad7b-c4eaa5e0efcf" name="Changes" comment="" />
-      <created>1637001754508</created>
+      <changelist id="858b4215-7dfd-48f1-a79a-ebc0570df582" name="Changes" comment="" />
+      <created>1637261616208</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1637001754508</updated>
-      <workItem from="1637001759888" duration="37000" />
-      <workItem from="1637001880314" duration="264000" />
-      <workItem from="1637082490305" duration="604000" />
-      <workItem from="1637091462981" duration="424000" />
-      <workItem from="1637094421149" duration="292000" />
-      <workItem from="1637175096723" duration="3901000" />
-      <workItem from="1637262216587" duration="706000" />
-      <workItem from="1637263393168" duration="390000" />
-      <workItem from="1637263831425" duration="651000" />
-      <workItem from="1637265590273" duration="89000" />
-      <workItem from="1637341904896" duration="328000" />
-      <workItem from="1637349805003" duration="230000" />
-      <workItem from="1637350252654" duration="2697000" />
-      <workItem from="1637358898300" duration="1109000" />
-      <workItem from="1638211904685" duration="2725000" />
-      <workItem from="1638301004276" duration="3056000" />
-      <workItem from="1638304318400" duration="63000" />
-      <workItem from="1638384843566" duration="389000" />
-      <workItem from="1638388275176" duration="674000" />
-      <workItem from="1638471070353" duration="3852000" />
-      <workItem from="1638492669126" duration="221000" />
-      <workItem from="1638559355288" duration="3619000" />
-      <workItem from="1638816699741" duration="2889000" />
-      <workItem from="1638900385818" duration="169000" />
-      <workItem from="1638905760345" duration="1949000" />
-      <workItem from="1638909056983" duration="536000" />
-      <workItem from="1638989569166" duration="3336000" />
-      <workItem from="1639010060124" duration="2559000" />
-      <workItem from="1639024470088" duration="1283000" />
-      <workItem from="1639027146192" duration="283000" />
-      <workItem from="1639028722611" duration="384000" />
-      <workItem from="1639069196662" duration="967000" />
-      <workItem from="1639075932970" duration="1491000" />
-      <workItem from="1639077540861" duration="2457000" />
-      <workItem from="1639089239788" duration="1533000" />
-      <workItem from="1639112370815" duration="2383000" />
-      <workItem from="1639154395344" duration="2368000" />
-      <workItem from="1639157128656" duration="416000" />
-      <workItem from="1639167871652" duration="371000" />
-      <workItem from="1639415513414" duration="265000" />
-      <workItem from="1639421495945" duration="1767000" />
-      <workItem from="1639511546982" duration="157000" />
-      <workItem from="1639511811182" duration="953000" />
-      <workItem from="1639594325982" duration="1177000" />
-      <workItem from="1639670987136" duration="873000" />
-      <workItem from="1639682560432" duration="633000" />
+      <updated>1637261616208</updated>
+      <workItem from="1637261621505" duration="12695000" />
+      <workItem from="1638158045334" duration="6000" />
+      <workItem from="1638214498945" duration="3814000" />
+      <workItem from="1638385037038" duration="3321000" />
+      <workItem from="1638474294954" duration="4618000" />
+      <workItem from="1638562882831" duration="1599000" />
+      <workItem from="1638818466872" duration="2925000" />
+      <workItem from="1639079237430" duration="4051000" />
+      <workItem from="1639359008979" duration="12750000" />
     </task>
-    <task id="LOCAL-00001" summary="Added all base home pages, added tides api, updated readme and navbar.html. Added a static folder for all our images for the project.">
-      <created>1637178779903</created>
+    <task id="LOCAL-00001" summary="created specific directories for about pictures">
+      <created>1637350879934</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1637178779903</updated>
+      <updated>1637350879934</updated>
     </task>
-    <task id="LOCAL-00002" summary="Changed project name for the about pages">
-      <created>1637265435311</created>
+    <task id="LOCAL-00002" summary="about pics file uploads">
+      <created>1637351249373</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1637265435311</updated>
+      <updated>1637351249373</updated>
     </task>
-    <task id="LOCAL-00003" summary="Changed the base background and changed the base font color to aquamarine">
-      <created>1637351505457</created>
+    <task id="LOCAL-00003" summary="About page image toggle">
+      <created>1637352427043</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1637351505461</updated>
+      <updated>1637352427043</updated>
     </task>
-    <task id="LOCAL-00004" summary="CHanged css for the base">
-      <created>1637351838914</created>
+    <task id="LOCAL-00004" summary="api testing for about page">
+      <created>1638154921162</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1637351838914</updated>
+      <updated>1638154921162</updated>
     </task>
-    <task id="LOCAL-00005" summary="Changed the font tags on everybody's about me pages">
-      <created>1637352854953</created>
+    <task id="LOCAL-00005" summary="added tennis api to about page">
+      <created>1638158033627</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1637352854953</updated>
+      <updated>1638158033627</updated>
     </task>
-    <task id="LOCAL-00006" summary="Changed a lot">
-      <created>1638908479996</created>
+    <task id="LOCAL-00006" summary="added journal and commit links to about page">
+      <created>1638387644893</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1638908479996</updated>
+      <updated>1638387644893</updated>
     </task>
-    <task id="LOCAL-00007" summary="Changed About me page - Yash">
-      <created>1638909271247</created>
+    <task id="LOCAL-00007" summary="added create task plan to about page">
+      <created>1638992221103</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1638909271248</updated>
+      <updated>1638992221103</updated>
     </task>
-    <task id="LOCAL-00008" summary="added an image carousel to about page">
-      <created>1639025768233</created>
+    <task id="LOCAL-00008" summary="added create task plan to about page">
+      <created>1639109705220</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1639025768233</updated>
+      <updated>1639109705220</updated>
     </task>
-    <task id="LOCAL-00009" summary="Created an image gallery">
-      <created>1639112530838</created>
+    <task id="LOCAL-00009" summary="beach info pages">
+      <created>1639513906049</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1639112530840</updated>
+      <updated>1639513906049</updated>
     </task>
-    <task id="LOCAL-00010" summary="Changed some tings">
-      <created>1639683321845</created>
+    <task id="LOCAL-00010" summary="database progress">
+      <created>1639513956318</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1639683321845</updated>
+      <updated>1639513956318</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="requirements.txt">
+      <created>1639514381184</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1639514381184</updated>
+    </task>
+    <task id="LOCAL-00012" summary="database updated and fixed">
+      <created>1639596960680</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1639596960680</updated>
+    </task>
+    <task id="LOCAL-00013" summary="sccs bootstrap stuff">
+      <created>1639598485837</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1639598485837</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added all base home pages, added tides api, updated readme and navbar.html. Added a static folder for all our images for the project." />
-    <MESSAGE value="Changed project name for the about pages" />
-    <MESSAGE value="Changed the base background and changed the base font color to aquamarine" />
-    <MESSAGE value="CHanged css for the base" />
-    <MESSAGE value="Changed the font tags on everybody's about me pages" />
-    <MESSAGE value="Changed a lot" />
-    <MESSAGE value="Changed About me page - Yash" />
-    <MESSAGE value="added an image carousel to about page" />
-    <MESSAGE value="Created an image gallery" />
-    <MESSAGE value="Changed some tings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed some tings" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="created specific directories for about pictures" />
+    <MESSAGE value="about pics file uploads" />
+    <MESSAGE value="About page image toggle" />
+    <MESSAGE value="api testing for about page" />
+    <MESSAGE value="added tennis api to about page" />
+    <MESSAGE value="added journal and commit links to about page" />
+    <MESSAGE value="added create task plan to about page" />
+    <MESSAGE value="beach info pages" />
+    <MESSAGE value="database progress" />
+    <MESSAGE value="requirements.txt" />
+    <MESSAGE value="database updated and fixed" />
+    <MESSAGE value="sccs bootstrap stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="sccs bootstrap stuff" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1639682570774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$rest_test.coverage" NAME="rest_test Coverage Results" MODIFIED="1638818569043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$model.coverage" NAME="model Coverage Results" MODIFIED="1640035129656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$app_crud.coverage" NAME="app_crud Coverage Results" MODIFIED="1640035142665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1640035147377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
