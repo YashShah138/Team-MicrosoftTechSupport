@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ef650720-69b6-4a94-aa22-2041ba3c3b9e" name="Changes" comment="Image Toggle About Me Updated">
+      <change afterPath="$PROJECT_DIR$/Survey.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="213jj38r0yWCGerp8j6PNRLrPj6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Team-MicrosoftTechSupport" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.9" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef650720-69b6-4a94-aa22-2041ba3c3b9e" name="Changes" comment="" />
+      <created>1637176799066</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637176799066</updated>
+      <workItem from="1637176804262" duration="102000" />
+      <workItem from="1637176974040" duration="893000" />
+      <workItem from="1637345783016" duration="1938000" />
+      <workItem from="1637350402491" duration="235000" />
+      <workItem from="1637350643855" duration="827000" />
+      <workItem from="1637353208766" duration="412000" />
+      <workItem from="1637360632856" duration="102000" />
+      <workItem from="1638212170021" duration="2655000" />
+      <workItem from="1638303300211" duration="202000" />
+      <workItem from="1638384747644" duration="2668000" />
+      <workItem from="1638471164770" duration="1717000" />
+      <workItem from="1638559702813" duration="2557000" />
+      <workItem from="1638816695659" duration="1585000" />
+      <workItem from="1638908734308" duration="1218000" />
+      <workItem from="1638989470231" duration="408000" />
+      <workItem from="1639076019654" duration="3350000" />
+      <workItem from="1639164596887" duration="1134000" />
+      <workItem from="1639511464534" duration="1932000" />
+      <workItem from="1639595279799" duration="578000" />
+      <workItem from="1639680997207" duration="131000" />
+      <workItem from="1639681586409" duration="212000" />
+      <workItem from="1641238936282" duration="46000" />
+      <workItem from="1641239046676" duration="556000" />
+    </task>
+    <task id="LOCAL-00001" summary="About me">
+      <created>1637346542097</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1637346542097</updated>
+    </task>
+    <task id="LOCAL-00002" summary="About me">
+      <created>1637350919498</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637350919498</updated>
+    </task>
+    <task id="LOCAL-00003" summary="About me Api">
+      <created>1638387501918</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638387501919</updated>
+    </task>
+    <task id="LOCAL-00004" summary="About me Links to Journal and Commits">
+      <created>1638472715949</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1638472715949</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Full About Me">
+      <created>1638816853033</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638816853033</updated>
+    </task>
+    <task id="LOCAL-00006" summary="About Me API Updated">
+      <created>1638819823496</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1638819823496</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Image Toggle About Me Updated">
+      <created>1639080058156</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1639080058156</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Image Toggle About Me Updated">
+      <created>1639681084486</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1639681084486</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="About me" />
+    <MESSAGE value="About me Api" />
+    <MESSAGE value="About me Links to Journal and Commits" />
+    <MESSAGE value="Full About Me" />
+    <MESSAGE value="About Me API Updated" />
+    <MESSAGE value="Image Toggle About Me Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Image Toggle About Me Updated" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$Team_MicrosoftTechSupport.coverage" NAME="Team-MicrosoftTechSupport Coverage Results" MODIFIED="1641239691506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>

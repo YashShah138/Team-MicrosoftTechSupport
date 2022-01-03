@@ -1,0 +1,42 @@
+Index: Survey.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Survey.html b/Survey.html
+new file mode 100644
+--- /dev/null	(date 1641239691437)
++++ b/Survey.html	(date 1641239691437)
+@@ -0,0 +1,31 @@
++`{% extends "assignments/AboutUs/about_layout.html" %}
++{% set project = "Beach Survey" %}
++
++{% block body %}
++
++
++<!DOCTYPE html>
++<html lang="en">
++
++<head>
++    <meta charset="UTF-8">
++    <meta http-equiv="X-UA-Compatible" content="IE=edge">
++    <meta name="viewport" content=
++            "width=device-width, initial-scale=1.0">
++    <title>
++       Find Your Beach Survey
++    </title>
++        <body>
++        <h1> Find Your Beach Survey Form</h1>
++
++        <form id="form">
++            <div class="form-control">
++                <label for="name" id="label-name">
++                    Name
++                </label>
++
++                <!-- Input Type Text -->
++                <input type="text"
++                       id="name"
++                       placeholder="Enter your name" />
++            </div>
+\ No newline at end of file
