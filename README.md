@@ -35,6 +35,25 @@ https://rapidapi.com/apihood/api/tides/
 
 # Timebox - [Review Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/31)
 
+## Week 4
+
+### Team
+| Name | Role | PBL |
+| Avinh | Scrum Master | This time box lol, Jekyll |
+| Akhil | Technical Officer | Update database |
+| Valen | GitHub Admin | Survey |
+| Yash | Deployment Manager | Map, Update deployed |
+| Jay | Design Manager | Jekyll |
+
+### Individual 
+| Name | 3.11 | 3.12 | 3.13 |
+| --- | --- | --- | --- |
+| Avinh | | | |
+| Akhil | | | |
+| Valen | | | |
+| Yash | | | |
+| Jay | | | |
+
 ## Week 3
 
 ### Team
