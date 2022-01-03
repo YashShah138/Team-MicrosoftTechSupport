@@ -1,5 +1,5 @@
 from __init__ import app
-from flask import Flask, render_template, request, Blueprint
+from flask import render_template, request
 import requests
 
 from crud.app_crud import app_crud
@@ -20,6 +20,7 @@ def index():
     response = requests.request("GET", url, headers=headers, params=querystring)
 
     return render_template("/index.html", output=response.json())
+
 
 @app.route('/surfingData/')
 def surfingData():
