@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Test2</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-pase5AparMC_AsscX5GaFIff1TJtYvI&callback=initMap"
+            type="text/javascript"></script>
+</head>
+<body>
+<style>
+    #map {
+        border: solid black 5px;
+    }
+</style>
+<div id="map" style="width: 800px; height: 600px;"></div>
+
+<script type="text/javascript">
+    var locations = [
+        ['Ocean Beach', 32.751671, -117.244278, 4],
+        ['Mission Beach', 32.802910, -117.216380, 5],
+        ['Tourmaline Surf Park', 32.80725210875066, -117.2659091433535, 3],
+        ['Blacks Beach', 32.89074673771713, -117.25346147074998, 2],
+        ['Windansea Beach', 32.83267151163511, -117.28295138927425, 1]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: new google.maps.LatLng(32.8130735, -117.398392),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map
+        });
+
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infowindow.setContent(locations[i][0]);
+                infowindow.open(map, marker);
+            }
+        })(marker, i));
+    }
+</script>
+</body>
+</html>

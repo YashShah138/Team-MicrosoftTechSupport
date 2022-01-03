@@ -1,16 +1,54 @@
-{% extends "layouts/base.html" %}
-
-{% block head %}
-{% endblock %}
-
-<style>
-    body{
-        background-image: url("static/AboutUs-Pictures/Yash/Yash-Final-Background.jpeg");
-    }
-</style>
+{% set project = "Home" %}
 
 {% block body %}
 
-{{output}}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-pase5AparMC_AsscX5GaFIff1TJtYvI&callback=initMap"
+        type="text/javascript"></script>
+<style>
+    body {
+        background-image: url("/Static/AboutUs-Pictures/Yash/Yash-Final-Background.jpeg");
+    }
+    #map {
+        border: solid black 5px;
+    }
+</style>
+<div align="center">
+    <div id="map" style="width: 800px; height: 600px;"></div>
+</div>
 
+<script type="text/javascript">
+    let locations = [
+        ['Ocean Beach', 32.751671, -117.244278, 4],
+        ['Mission Beach', 32.802910, -117.216380, 5],
+        ['Tourmaline Surf Park', 32.80725210875066, -117.2659091433535, 3],
+        ['Blacks Beach', 32.89074673771713, -117.25346147074998, 2],
+        ['Windansea Beach', 32.83267151163511, -117.28295138927425, 1]
+    ];
+
+    let map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: new google.maps.LatLng(32.8130735, -117.398392),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    let infowindow = new google.maps.InfoWindow();
+
+    let marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map
+        });
+
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infowindow.setContent(locations[i][0]);
+                infowindow.open(map, marker);
+            }
+        })(marker, i));
+    }
+</script>
+
+{{output}}
 {% endblock %}
