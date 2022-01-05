@@ -35,6 +35,26 @@ https://rapidapi.com/apihood/api/tides/
 
 # Timebox - [Review Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/31)
 
+## Week 4
+
+### Team
+| Name | Role | PBL |
+| --- | --- | --- |
+| Avinh | Scrum Master | ReadMe Timeboxing, Jekyll |
+| Akhil | Technical Officer | Update database |
+| Valen | GitHub Admin | Survey |
+| Yash | Deployment Manager | Map, Update deployed |
+| Jay | Design Manager | Jekyll |
+
+### Individual 
+| Name | 3.11 | 3.12 | 3.13 |
+| --- | --- | --- | --- |
+| Avinh | | | |
+| Akhil | ![image](https://user-images.githubusercontent.com/89219514/148165050-ce5c37d0-882a-4936-96de-25ab823d22ee.png) <br> **Corrections:** _Q2_ - When I put 2^10 in my calcuator, I read 1024 as 10,024 and went way to fast choosing my answer. The correct answer should've been 15 which accounts for all 10000 elements by using 2 to the power of how many times it would need to search. | ![image](https://user-images.githubusercontent.com/89219514/148165290-1b869e77-383d-4dce-a604-27e41940b9cc.png) <br> **6/6** | ![image](https://user-images.githubusercontent.com/89219514/148165318-05dcc3a7-ef6c-4a88-8500-20af5c746893.png) <br> **6/6** |
+| Valen | | | |
+| Yash | | | |
+| Jay | | | |
+
 ## Week 3
 
 ### Team
