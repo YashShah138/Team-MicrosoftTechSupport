@@ -39,7 +39,8 @@ https://rapidapi.com/apihood/api/tides/
 
 ### Team
 | Name | Role | PBL |
-| Avinh | Scrum Master | This time box lol, Jekyll |
+| --- | --- | --- |
+| Avinh | Scrum Master | ReadMe Timeboxing, Jekyll |
 | Akhil | Technical Officer | Update database |
 | Valen | GitHub Admin | Survey |
 | Yash | Deployment Manager | Map, Update deployed |
@@ -49,7 +50,7 @@ https://rapidapi.com/apihood/api/tides/
 | Name | 3.11 | 3.12 | 3.13 |
 | --- | --- | --- | --- |
 | Avinh | | | |
-| Akhil | | | |
+| Akhil | ![image](https://user-images.githubusercontent.com/89219514/148165050-ce5c37d0-882a-4936-96de-25ab823d22ee.png) <br> Corrections: Q2 - When I put 2^10 in my calcuator, I read 1024 as 10,024 and went way to fast choosing my answer. The correct answer should've been 15 which accounts for all 10000 elements by using 2 to the power of how many times it would need to search. | | |
 | Valen | | | |
 | Yash | | | |
 | Jay | | | |
