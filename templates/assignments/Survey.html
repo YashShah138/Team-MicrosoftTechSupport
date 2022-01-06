@@ -26,6 +26,8 @@
             text-align: center;
         }
 
+        paragraph { text-align: end; height: 300px; bottom: 0%; }
+
         /* Styling the Form (Color, Padding, Shadow) */
         form {
             background-color: #fff;
@@ -52,7 +54,7 @@
         button {
             background-color: #05c46b;
             border: 1px solid #777;
-            bottom: 10%;
+            bottom: 20%;
             border-radius: 2px;
             font-family: inherit;
             font-size: 18px;
@@ -90,6 +92,10 @@
         <label for="dog">
             <input type="checkbox"
                    name="dog">Dog Friendly</input></label>
+
+    <!--   {% if beach %} -->
+        <p class="text position: fixed; bottom: 0; width:100%; text-align: right">{{ beach }}</p>
+    <!--   {% endif %} -->
     </div>
 
     <!-- Button Control -->
@@ -97,12 +103,7 @@
         Submit
     </button>
 
- <!--   {% if beach %} -->
-    <div>
-    <p class="text position: fixed; bottom: 0; width:100%; text-align: center">{{ beach }}</p>
-    </div>
-        <!--   {% endif %} -->
-</form>
+ </form>
 </body>
 
 </html>
