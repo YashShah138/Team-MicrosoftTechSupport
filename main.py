@@ -21,6 +21,9 @@ def index():
 
     return render_template("/index.html", output=response.json())
 
+@app.route('/reviews/')
+def reviews():
+    return render_template("/assignments/reviews.html")
 
 @app.route('/surfingData/')
 def surfingData():

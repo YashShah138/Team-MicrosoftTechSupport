@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="IU-213.5744.223">
+  <component name="dataSourceStorageLocal" created-in="IU-212.5284.40">
     <data-source name="myDB" uuid="124c394f-ad82-4bd8-9518-7d0b9b3450bd">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping />
+    </data-source>
+    <data-source name="review" uuid="4a8b8aed-21ae-4eaa-b956-a2600034ba29">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
       <auth-provider>no-auth</auth-provider>
       <schema-mapping />
