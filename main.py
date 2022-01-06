@@ -53,6 +53,17 @@ def yash():
 
 @app.route('/akhil/')
 def akhil():
+
+    url = "https://sportscore1.p.rapidapi.com/tennis-rankings/wta"
+    querystring = {"page":"1"}
+    headers = {
+        'x-rapidapi-host': "sportscore1.p.rapidapi.com",
+        'x-rapidapi-key': "af654d789amshce4b35d071f3bd2p1c0cc8jsn8db3aa6a8acc"
+    }
+
+    responseTwo = requests.request("GET", url, headers=headers, params=querystring)
+    WTAdata = responseTwo.json()
+
     url = "https://sportscore1.p.rapidapi.com/tennis-rankings/atp"
     querystring = {"page":"1"}
     headers = {
@@ -63,7 +74,7 @@ def akhil():
     response = requests.request("GET", url, headers=headers, params=querystring)
     data = response.json()
 
-    return render_template("/assignments/AboutUs/akhil.html", data=data)
+    return render_template("/assignments/AboutUs/akhil.html", data=data, WTAdata=WTAdata)
 
 
 @app.route('/valen/')
