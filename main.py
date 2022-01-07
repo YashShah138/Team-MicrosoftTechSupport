@@ -155,6 +155,9 @@ def jay():
     var = response.json()
     return render_template("/assignments/AboutUs/jay.html", var=var)
 
+@app.route('/password/')
+def Password():
+    return render_template("/assignments/password.html")
 
 # run page lol
 if __name__ == "__main__":
