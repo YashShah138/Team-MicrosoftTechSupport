@@ -1,16 +1,26 @@
-{% extends "assignments/AboutUs/about_layout.html" %}
+{% extends "layouts/base.html" %}
 {% set project = "Avinh About Me" %}
 
 {% block head %}
 <script>
-    PokemonImage
+    let imgStatus = 'mask';
+    function imageToggle(unmasked, masked) {
+        if (imgStatus == 'mask') {
+            var imgType = document.getElementById("toggleImage");
+            imgType.src = unmasked;
+            imgStatus = 'nomask';
+        }
+        else{
+            var imgType = document.getElementById("toggleImage");
+            imgType.src = masked;
+            imgStatus = 'mask';
+        }
+    }
 </script>
-<style>
-</style>
 {% endblock %}
 {% block body %}
 <p>Hi I am Avinh!</p>
-<img id="toggleImage" src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_masked.jpg?raw=true">
+<img id="toggleImage" src="https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_masked.jpg?raw=true"  width="500" height="500">
 <button id="toggleButton" onclick="imageToggle('https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_masked.jpg?raw=true', 'https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/blob/main/Static/AboutUs-Pictures/Avinh/avinh_unmasked.jpg?raw=true')">Click to toggle image!</button>
 
 <form id="PokeAPI" method="POST" action="/avinh/">
