@@ -53,7 +53,7 @@ https://rapidapi.com/apihood/api/tides/
 | Akhil | ![image](https://user-images.githubusercontent.com/89219514/148165050-ce5c37d0-882a-4936-96de-25ab823d22ee.png) <br> **Corrections:** _Q2_ - When I put 2^10 in my calcuator, I read 1024 as 10,024 and went way to fast choosing my answer. The correct answer should've been 15 which accounts for all 10000 elements by using 2 to the power of how many times it would need to search. | ![image](https://user-images.githubusercontent.com/89219514/148165290-1b869e77-383d-4dce-a604-27e41940b9cc.png) <br> **6/6** | ![image](https://user-images.githubusercontent.com/89219514/148165318-05dcc3a7-ef6c-4a88-8500-20af5c746893.png) <br> **6/6** |
 | Valen | | | |
 | Yash | | | |
-| Jay | | | |
+| Jay | ![3 11 CB](https://user-images.githubusercontent.com/89176673/148597760-78dbab0c-d2ae-4993-a454-02ca857c2e5f.PNG) | ![3 12 CB](https://user-images.githubusercontent.com/89176673/148597782-bf52cb2c-0572-48c5-a8f8-10d54bf4ab53.PNG) | ![3 13 Cb](https://user-images.githubusercontent.com/89176673/148597827-0cdb2e49-632b-45d1-b92b-a8772b4eb12e.PNG) |
 
 ## Week 3
 
