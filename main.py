@@ -38,6 +38,10 @@ def BeachLocation1():
 def BeachLocation2():
     return render_template("/assignments/BeachLocation2.html")
 
+@app.route('/beachlocation3/')
+def BeachLocation3():
+    return render_template("/assignments/BeachLocation3.html")
+
 def selectBestBeach(form):
     return "DelMar is the best beach for you"
 
