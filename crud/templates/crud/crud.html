@@ -11,27 +11,23 @@
 
 <!-- CONTENT (in <body>), content for this page -->
 {% block content %}
-<div class="container py-4 text-light bg-success">
+<style>
+    h1{
+        color: white;
+    }
+</style>
+
+
+<div class="container py-4">
     <header class="pb-3 mb-4 border-bottom">
-        <div class="d-flex align-items-center text-light text-decoration-none">
-            <h1>SQL CRUD Admin Page</h1>
-        </div>
+            <h1 align="center">Write Beach Reviews!</h1>
     </header>
 
     <div class="container py-4">
         <div class="p-5 mb-4 bg-light text-dark rounded-3">
-            <h2>Table Viewer</h2>
-            <div class="row align-items-md-stretch">
-                <table class="table">
-                    <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td><a href={{url_for('crud.crud')}}>Full Table </a></td>
-                        <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/tree/master/crud">GitHub Source</a></td>
-                    </tr>
-                    </tbody>
-                </table>
+            <h2 align="center">All Reviews</h2>
+            <div align="center" class="row align-items-center">
+                <a href={{url_for('crud.crud')}}>Full Table</a>
             </div>
             <div class="row align-items-md-stretch">
                 <div class="container-fluid py-5">
@@ -86,7 +82,7 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td><input type="text" name="name" id="name" required></td>
+                        <td><input type="text" name="name" id="name" placeholder="Full Name" required></td>
                         <td><input type="title" name="title" id="title" placeholder="Review Title" required></td>
                         <td><input type="content" name="content" id="content" placeholder="Type review here" required></td>
                         <td><input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="1234567890" required></td>
