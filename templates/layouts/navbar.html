@@ -9,9 +9,7 @@
     <ul class="navbar-nav mr-auto">
       <!-- put new navbar buttons here-->
       <a class="nav-link" href="/customization/">Surfing Stuff</a>
-      <a class="nav-link" href={{ url_for('crud.crud') }}>SQL CRUD</a>
-      <a class="nav-link" href={{ url_for('crud.search') }}>SQL Search</a>
-      <a class="nav-link" href="/reviews/">Reviews</a>
+
       <!-- Beaches drop down -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -26,6 +24,15 @@
         </div>
       </li>
 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Reviews
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="nav-link" href={{ url_for('crud.crud') }}>Write a Review</a>
+          <a class="nav-link" href={{ url_for('crud.search') }}>Search for Reviews</a>
+        </div>
+      </li>
       <!-- Our Work drop down -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

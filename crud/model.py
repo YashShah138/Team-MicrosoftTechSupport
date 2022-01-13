@@ -8,8 +8,8 @@ from __init__ import app
 
 
 # Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into Python shell and follow along
-# Define variable to define type of database (sqlite), and name and location of myDB.db
-dbURI = 'sqlite:///model/myDB.db'
+# Define variable to define type of database (sqlite), and name and location of review.db
+dbURI = 'sqlite:///model/review.db'
 # Setup properties for the database
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = dbURI
@@ -28,15 +28,15 @@ class Users(db.Model):
     # define the Users schema
     userID = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255), unique=False, nullable=False)
-    email = db.Column(db.String(255), unique=True, nullable=False)
-    password = db.Column(db.String(255), unique=False, nullable=False)
+    title = db.Column(db.String(255), unique=True, nullable=False)
+    content = db.Column(db.Text, unique=False, nullable=False)
     phone = db.Column(db.String(255), unique=False, nullable=False)
 
     # constructor of a User object, initializes of instance variables within object
-    def __init__(self, name, email, password, phone):
+    def __init__(self, name, title, content, phone):
         self.name = name
-        self.email = email
-        self.password = password
+        self.title = title
+        self.content = content
         self.phone = phone
 
     # CRUD create/add a new record to the table
@@ -57,19 +57,19 @@ class Users(db.Model):
         return {
             "userID": self.userID,
             "name": self.name,
-            "email": self.email,
-            "password": self.password,
+            "title": self.title,
+            "content": self.content,
             "phone": self.phone
         }
 
-    # CRUD update: updates users name, password, phone
+    # CRUD update: updates users name, content, phone
     # returns self
-    def update(self, name, password="", phone=""):
+    def update(self, name, content="", phone=""):
         """only updates values with length"""
         if len(name) > 0:
             self.name = name
-        if len(password) > 0:
-            self.password = password
+        if len(content) > 0:
+            self.content = content
         if len(phone) > 0:
             self.phone = phone
         db.session.commit()
@@ -93,7 +93,7 @@ def model_tester():
     print("--------------------------")
     db.create_all()
     """Tester data for table"""
-    u1 = Users(name='test', email='test@test.com', password='test', phone="1111111111")
+    u1 = Users(name='Akhil', title='Loved Del Mar!', content='The beach was awesome! I had a super enjoyable experience with my family, and playing volleyball was super fun!', phone="8582078758")
     table = [u1]
     for row in table:
         try:
@@ -101,7 +101,7 @@ def model_tester():
             db.session.commit()
         except IntegrityError:
             db.session.remove()
-            print(f"Records exist, duplicate email, or error: {row.email}")
+            print(f"Records exist, duplicate title, or error: {row.title}")
 
 
 def model_printer():
