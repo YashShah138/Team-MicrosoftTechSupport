@@ -3,6 +3,7 @@ from flask import render_template, request
 from flask import request, redirect
 import requests
 
+from beach_features import sortBestBeaches, anyBeachCriteriaCanMatch
 from crud.app_crud import app_crud
 app.register_blueprint(app_crud)
 
@@ -45,21 +46,27 @@ def BeachLocation3():
 def selectBestBeach(form):
     return "DelMar is the best beach for you"
 
-@app.route('/favoritebeach1/', methods=["GET", "POST"])
+@app.route('/favoritebeachnew/', methods=["GET", "POST"])
+def FavoriteBeachSurveyNew():
+    # sortBestBeaches(anyBeachCriteriaCanMatch, 'volleyball', 'picnic')
+    if request.method == "POST":
+        print (request.form)   # pass this in to sortBestBeaches? Need list
+
+@app.route('/favoritebeach/', methods=["GET", "POST"])
 def FavoriteBeachSurvey():
     feedback = "Beach Not Identified"
     SolanaBeach = 0
     DelMar = 0
     if request.method == "POST":
-        if (request.form.get("surfing") != None):
+        if request.form.get("surfing") is not None:
             SolanaBeach += 1
-        if (request.form.get("volleyball") != None):
+        if (request.form.get("volleyball") is not None):
             DelMar += 1
-        if (request.form.get("dog") != None):
+        if (request.form.get("dog") is not None):
             DelMar += 1
-        if (request.form.get("crowd") != None):
+        if (request.form.get("crowd") is not None):
             SolanaBeach += 1
-        if (request.form.get("picnic") != None):
+        if (request.form.get("picnic") is not None):
             DelMar += 1
         if (DelMar == 0 and SolanaBeach == 0):
             feedback = "Pick at least one preference"
