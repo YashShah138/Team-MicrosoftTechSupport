@@ -20,6 +20,9 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
         padding: 20px;
         background-color: rgba(246, 242, 242, 0.65);
     }
+    #resultcol{
+        margin: 2px;
+    }
 </style>
 
 <div class="container py-4 bg-primary">
@@ -97,7 +100,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                     const div = document.createElement("div")
                     let table = ""
                     for (let i = 0; i < data.length; i++) {
-                        table += "<div class='row'>" + "<div class='col'>" + data[i].name + "</div><div class='col'>" + data[i].title + "</div><div class='col'>" + data[i].content + "</div><div class='col'>" + data[i].phone + "</div></div>";
+                        table += "<div class='row' id='resultcol'>" + "<div class='col' id='resultcol'>" + data[i].name + "</div><div class='col' id='resultcol'>" + data[i].title + "</div><div class='col' id='resultcol'>" + data[i].content + "</div><div class='col' id='resultcol'>" + data[i].phone + "</div></div>";
                     }
                     div.innerHTML = table;
                     resultContainer.appendChild(div);
