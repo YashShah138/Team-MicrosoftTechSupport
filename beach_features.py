@@ -85,6 +85,40 @@ def sortBestBeaches(match, *argv):
             print("\r", bestspot)
     return best_beaches
 
+# all criteria must match or the beach is not included
+def allBeachCriteriaMustMatch(beach, criteria):
+    return _beachCriteriaMatcher(True, beach, criteria)
+
+def _beachCriteriaMatcher(allMatch, beach, criteria):
+    n = 0
+    beach_criteria_match = allMatch
+    while n < len(criteria):
+        if (beach.__getattribute__(criteria[n]) > 0):
+            beach_criteria_match = True
+            if allMatch is False:
+                break;
+        else:
+            beach_criteria_match = False
+            if allMatch is True:
+                break;
+        n = n + 1
+    return beach_criteria_match
+
+def anyBeachCriteriaCanMatch(bestspot, criteria):
+    return _beachCriteriaMatcher(False, bestspot, criteria)
+
+def sortBestBeaches(match, criteria):
+    best_beaches = []
+    print("\nBeach Criteria", criteria)
+#    sorted_beach_spots = sorted(local_beach_features, key=attrgetter(criteria), reverse=True)
+    k = 0
+    while k < len(local_beach_features):
+        bestspot = local_beach_features[k]
+        k = k + 1
+        if (match(bestspot, criteria) == True):
+            best_beaches.append(bestspot.__getattribute__("beach"))
+            print("\r", bestspot)
+    return best_beaches
 
 def print_hi(name):
     # beaches returned matching volleyball (1st choice) or picnic (2nd choice)

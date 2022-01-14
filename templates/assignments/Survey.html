@@ -32,7 +32,7 @@
         form {
             background-color: #fff;
             max-width: 500px;
-            height: 400px;
+            height: 420px;
             margin: 50px auto;
             padding: 30px 20px;
             box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
@@ -41,7 +41,7 @@
         /* Styling form-control Class */
         .form-control {
             text-align: left;
-            margin-bottom: 25px;
+            margin-bottom: 50px;
         }
 
         /* Styling form-control Label */
@@ -54,14 +54,14 @@
         button {
             background-color: #05c46b;
             border: 1px solid #777;
-            bottom: 20%;
+            bottom: 10%;
             border-radius: 2px;
             font-family: inherit;
             font-size: 18px;
             display: block;
-            position: fixed;
+            position: sticky;
             width: auto;
-            margin-top: 50px;
+            margin-top: 150px;
             margin-bottom: 20px;
         }
     </style>
@@ -73,28 +73,34 @@
 <!-- Create Form -->
 <form id="form" method="POST">
     <div class="form-control">
-        <label>Provide your criteria for selecting a beach, and we will recommend one.
-            <small>(you can pick more than one)</small>
+        <label>Provide criteria for beach recommendations.
         </label>
         <!-- Input Type Checkbox -->
-        <label for="surfing">
+        <label for="surf">
             <input type="checkbox"
-                   name="surfing">Surfing</input></label>
-        <label for="volleyball">
-            <input type="checkbox"
-                   name="volleyball">Beach Volleyball</input></label>
-        <label for="crowd">
-            <input type="checkbox"
-                   name="crowd">Smaller Crowd Size</input></label>
+                   name="surf">Surfing</input></label>
         <label for="picnic">
             <input type="checkbox"
                    name="picnic">Picnic Grounds</input></label>
-        <label for="dog">
+        <label for="volleyball">
             <input type="checkbox"
-                   name="dog">Dog Friendly</input></label>
+                   name="volleyball">Beach Volleyball</input></label>
+        <label for="dogs">
+            <input type="checkbox"
+                   name="dogs">Dog Friendly</input></label>
+        <label for="family">
+            <input type="checkbox"
+                   name="family">Family</input></label>
+        <label for="bonfires">
+            <input type="checkbox"
+                   name="bonfires">Bonfires</input></label>
+        <label for="boardwalk">
+            <input type="checkbox"
+                   name="boardwalk">Boardwalk</input></label>
+
 
     <!--   {% if beach %} -->
-        <p class="text position: fixed; bottom: 0; width:100%; text-align: right">{{ beach }}</p>
+        <p class="text position: fixed; bottom: 0; width:100%; text-align: right">Best beaches {{ beach }}</p>
     <!--   {% endif %} -->
     </div>
 

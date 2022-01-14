@@ -3,6 +3,7 @@ from flask import render_template, request
 from flask import request, redirect
 import requests
 
+from beach_features import sortBestBeaches, allBeachCriteriaMustMatch
 from crud.app_crud import app_crud
 app.register_blueprint(app_crud)
 
@@ -41,30 +42,22 @@ def BeachLocation2():
 def selectBestBeach(form):
     return "DelMar is the best beach for you"
 
+
 @app.route('/favoritebeach1/', methods=["GET", "POST"])
 def FavoriteBeachSurvey():
-    feedback = "Beach Not Identified"
-    SolanaBeach = 0
-    DelMar = 0
+    n = 0
+    beach_features = []
     if request.method == "POST":
-        if (request.form.get("surfing") != None):
-            SolanaBeach += 1
-        if (request.form.get("volleyball") != None):
-            DelMar += 1
-        if (request.form.get("dog") != None):
-            DelMar += 1
-        if (request.form.get("crowd") != None):
-            SolanaBeach += 1
-        if (request.form.get("picnic") != None):
-            DelMar += 1
-        if (DelMar == 0 and SolanaBeach == 0):
-            feedback = "Pick at least one preference"
-        elif (DelMar > SolanaBeach):
-            feedback = "Del Mar beach is best for you"
-        elif (SolanaBeach > DelMar):
-            feedback = "Solana Beach is best for you"
-        elif (SolanaBeach == DelMar):
-            feedback = "Solana and Del Mar beach are good for you"
+        for field in request.form:
+            beach_features.append (field)
+            n = n + 1
+        print (beach_features)
+        beaches = sortBestBeaches(allBeachCriteriaMustMatch, beach_features)
+        print (beaches)
+        if (n == 0):
+            feedback = "\nunknown! Pick something!"
+        else:
+            feedback = beaches
 
     return render_template("/assignments/Survey.html", beach = feedback)
 
