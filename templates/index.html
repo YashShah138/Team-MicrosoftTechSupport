@@ -10,6 +10,7 @@
     }
     #map {
         border: solid black 5px;
+        background-color: transparent;
     }
 </style>
 
@@ -27,9 +28,9 @@
     ];
 
     let map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10,
-        center: new google.maps.LatLng(32.8130735, -117.398392),
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        zoom: 12,
+        center: new google.maps.LatLng(32.827754, -117.247621),
+        mapTypeId: google.maps.MapTypeId.SATELLITE
     });
 
     let infowindow = new google.maps.InfoWindow();
