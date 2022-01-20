@@ -1,37 +1,42 @@
-## Welcome to GitHub Pages
+## Midterm Vocab
 
-You can use the [editor on GitHub](https://github.com/YashShah138/Team-MicrosoftTechSupport/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Binary Hexadecimal, Bit, Nibble, Byte
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### Data, Data Abstraction
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+### Lossless/Lossy Compression
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+### Metadata
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+### Computer Network, Parallel/Distributed Computing
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+### Protocol, TCP/IP, HTTP, GET, POST
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/YashShah138/Team-MicrosoftTechSupport/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Library, Dependencies, Import
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Web API, REST, FETCH, Async, Request, Response
+
+
+### Blueprints
+
+
+### MVC
+
+
+### Code Sequence, Procedures/Functions, Procedural Abstraction
+
+
+### OOP, Class, Attribute, Method, Object
+
+
+### CRUD
+
+
+### Sort, Search-Linear/Binary
