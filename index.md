@@ -1,4 +1,4 @@
-# Trimester 2 Midterm Vocab
+# Midterm Vocab
 
 ## Binary Hexadecimal, Bit, Nibble, Byte
 ![image](https://www.watelectronics.com/wp-content/uploads/Hexadecimal-and-Binary-Number-System-Representation.jpg)
