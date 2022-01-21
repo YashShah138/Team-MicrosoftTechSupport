@@ -143,7 +143,20 @@ A method is a procedure contained within a class. Public methods can be called o
 In order to use a class, we need to initialize it in the form of objects. In some languages a class can be an abstract class that is not initialized, but used as a base class from which other classes can inherit. For example, an abstract Car class from which an SUV class inherits behavior. A singleton is a special class that has only one object which gets shared.
 
 ## CRUD
+### Create, Read, Update, Delete
+Generally speaking CRUD operations refer to input and output activities with a device such as file storage or a database. In HTTP web actions, the GET (read), PUT (create and update), and DELETE (delete) methods are also CRUD operations. Examples of each case are described below.
 
+#### Create
+An example of a Create operation would be creating a new file in the file system, or creating a new table in a database. HTTP PUT where nothing exists
+
+#### Read
+Reading input from a file in a file system. Performing a database query such as using a SQL SELECT HTTP GET
+
+#### Update
+Appending to the end of a file Performing a SQL UPDATE on a database HTTP PUT
+
+#### Delete
+Deleting portions of a file or an entire file Performing a SQL DELETE on a database HTTP DELETE
 
 ## Sort, Search-Linear/Binary
 
