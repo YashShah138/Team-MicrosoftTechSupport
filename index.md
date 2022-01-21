@@ -110,6 +110,24 @@ Example where same procedure is called with another procedure passed as a variab
 sortBestBeaches(anyBeachCriteriaCanMatch, 'surf', 'bonfires')
 sortBestBeaches(allBeachCriteriaMustMatch, 'surf', 'bonfires')
 ```
+### Procedural Abstraction
+Creating logical abstractions in code can enable greater re-use of the individual method behaviors. Procedural abstractions may take a variable number of arguments, as I did in my Favorite Beach example below. Procedural abstraction may also include abstracting the procedure itself, which I also used in my second example from my assignment below where I abstract the search method.
+
+- - - -
+```
+def sortBestBeaches(match, *argv):
+    best_beaches = []
+    print("\nBeach Criteria", argv)
+    sorted_beach_spots = sorted(local_beach_features, key=attrgetter(*argv), reverse=True)
+    k = 0
+    while k < len(sorted_beach_spots):
+        bestspot = sorted_beach_spots[k]
+        k = k + 1
+        if (match(bestspot, *argv) == True):
+            best_beaches.append(bestspot.__getattribute__("beach"))
+            print("\r", bestspot)
+    return best_beaches
+```
 
 ## OOP, Class, Attribute, Method, Object
 
