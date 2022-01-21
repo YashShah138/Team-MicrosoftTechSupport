@@ -159,4 +159,45 @@ Appending to the end of a file Performing a SQL UPDATE on a database HTTP PUT
 Deleting portions of a file or an entire file Performing a SQL DELETE on a database HTTP DELETE
 
 ## Sort, Search-Linear/Binary
+### Linear Searching
+A Linear Search is also called a brute force search because it involves traversing a data structure from start to finish until the item being searched for is found. The traditional method of performing such a search is using a looping mechanism, but modern languages support lambda operations that make code more simple to read and maintain but are said to run slower. Unless the list of data items is short a linear search should not be used.
 
+Example of an ugly linear search:
+```
+# Searching listOfStuff sequentially  
+for i in range(0, n):  
+    if (listOfStuff[i] == key):  
+        return i  
+return -1
+```
+### Binary Searching
+The binary search works by repeatedly dividing up in half the portion of the list that might contain the search item, until we have just one place left to check (the thing we want to find). This is at the worst case Log n number of searches to find our item in a sorted list. A binary search only works if the data is sorted. For larger data sets, sort the data, then use binary search. In Python 3.10 we can use containers that automatically work as ordered so we can just use binary search. I learned recently that older versions of Python behaved differently and some structures were unordered.
+
+- - - -
+
+Example of a binary search using recursion (shorter code) in Python
+```
+if high >= low:
+
+    mid = low + (high - low)//2
+
+    # If found at mid, then return it
+    if array[mid] == x:
+        return mid
+
+    # Search the left half
+    elif array[mid] > x:
+        return binarySearch(array, x, low, mid-1)
+
+    # Search the right half
+    else:
+        return binarySearch(array, x, mid + 1, high)
+
+else:
+    return -1
+```
+array = [3, 4, 5, 6, 7, 8, 9] x = 7
+
+result = binarySearch(array, x, 0, len(array)-1)
+
+if result ! = -1: print("Found it " + str(result)) else: print("Not found")
