@@ -28,6 +28,11 @@
   * Texts sent to a friend
   * Or a the contacts in your phone
 
+### Data Abstraction
+* Data abstraction makes data more easily read and/or understood
+* For example, a computer can take a string of bits and convert them to our alphanumeric system and then display that
+  * This would be like sending a set of texts
+
 ## Lossless/Lossy Compression
 
 
