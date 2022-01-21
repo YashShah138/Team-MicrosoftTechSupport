@@ -54,7 +54,7 @@
 * F1.8
 * 1/24 s
 * 5.40 mm
-* ISO 1000
+* ISO 500
 * No flash
 
 ## Computer Network, Parallel/Distributed Computing
