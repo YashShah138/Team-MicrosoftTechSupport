@@ -107,7 +107,28 @@ Analogy You are dependent on banks the bank's money. The bank can't function wit
 
 
 ## Web API, REST, FETCH, Async, Request, Response
+* Allows programmers to access data from another database
+* Used through HTTP protocol
+* Considered to be an enhanced version of a web application This is an API which shows data of NHL stats
+![image](https://user-images.githubusercontent.com/89176673/150574563-11db2e92-fc38-4925-a1e6-8fe1ba00f32e.PNG)
 
+### Rest
+* A server which sets parameters to define the design and development of the web
+* A design pattern for API's
+
+### Fetch
+Sends requests to get JSON Data and fetches data from another database
+
+### Asynch
+* Updates the data
+* Constantly pulls new data from the database
+
+### Request
+Fetch requests data, and typically gets a response
+
+### Response
+The response made from the request
+![image](https://user-images.githubusercontent.com/89176673/150580678-bc80639a-976d-4745-8297-2faee07cde82.PNG)
 
 ## Blueprints
 
