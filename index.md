@@ -34,7 +34,7 @@
   * This would be like sending a set of texts
 
 ## Lossless/Lossy Compression
-
+![image](http://pediaa.com/wp-content/uploads/2018/08/Difference-Between-Lossy-and-Lossless-Compression-Comparison-Summary.jpg)
 
 ## Metadata
 
