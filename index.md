@@ -68,6 +68,19 @@
 
 ![image](https://www.tutorialandexample.com/wp-content/uploads/2019/09/Computer-Network-1.png)
 
+### Parallel and Distributed Computing
+#### Parallel Computing
+* It is a computational method where tasks are separated into operations where the are done sequentially
+* Parallel computing is best for tasks that are independent of each other
+  * This way they can be done simultaneously
+* The time it takes for execution is the time for the longest task
+
+#### Distributed Computing
+* Uses multiple devices to complete tasks and run a program
+* Solve problems that couldn’t be solved on a single computer due to processing time/storage
+* Requires a network and multiple devices
+* The time is takes for execution is all the times combined
+
 ## Protocol, TCP/IP, HTTP, GET, POST
 
 
