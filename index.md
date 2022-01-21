@@ -1,6 +1,7 @@
 ## Midterm Vocab
 
 ### Binary Hexadecimal, Bit, Nibble, Byte
+![image](https://www.watelectronics.com/wp-content/uploads/Hexadecimal-and-Binary-Number-System-Representation.jpg)
 ### Binary
 * Binary is a number system based off of a base of 2
   * This means that the digits are powers of 2
@@ -13,7 +14,7 @@
   * To do the same with binary, we would need 8 digits.
 
 ### Bit, Nibble, Byte
-
+![image](https://www.dataunitconverter.com/blog/images/bit-nibble-byte-1.png)
 * A bit is one binary digit
 * A nibble is four bits
 * A byte is eight bits
