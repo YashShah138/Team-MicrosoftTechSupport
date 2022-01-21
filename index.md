@@ -22,7 +22,11 @@
 ## Data, Data Abstraction
 ### Data
 ![image](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReAlES1HWaSRCx-0JZlJZ2iQNiZStQ0HCjkQ&usqp=CAU)
-
+* Data is any information that can be processed and interpreted by a computer
+* Almost anything can be data (or turned into data)
+  * Music
+  * Texts sent to a friend
+  * Or a the contacts in your phone
 
 ## Lossless/Lossy Compression
 
