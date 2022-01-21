@@ -131,6 +131,7 @@ def sortBestBeaches(match, *argv):
 
 ## OOP, Class, Attribute, Method, Object
 ### Object-Oriented Programming
+![image](https://user-images.githubusercontent.com/89176673/150482982-7ecf6054-2bf7-46d8-a58b-20ed2d4964c9.PNG)
 Grady Booch defined OOP as “a method of implementation in which programs are organized as cooperative collections of objects, each of which represents an instance of some class, and whose classes are all members of a hierarchy of classes united via inheritance relationships” I would say OOP allows collections of related objects to perform business functions of value to customers. Those classes are best related to each other loosely, avoiding strong coupling such as inheritance. Ideally OOP class interactions are achieved through abstract interfaces. OOP was considered an improvement (i.e. C++) over earlier functional programming approaches such as C.
 
 ### Class
