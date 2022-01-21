@@ -66,6 +66,7 @@
   * MAN(Metropolitan Area Network)
   * WAN(Wide Area Network)
 
+![image](https://www.tutorialandexample.com/wp-content/uploads/2019/09/Computer-Network-1.png)
 
 ## Protocol, TCP/IP, HTTP, GET, POST
 
