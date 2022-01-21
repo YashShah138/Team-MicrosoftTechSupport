@@ -130,7 +130,17 @@ def sortBestBeaches(match, *argv):
 ```
 
 ## OOP, Class, Attribute, Method, Object
+### Object-Oriented Programming
+Grady Booch defined OOP as “a method of implementation in which programs are organized as cooperative collections of objects, each of which represents an instance of some class, and whose classes are all members of a hierarchy of classes united via inheritance relationships” I would say OOP allows collections of related objects to perform business functions of value to customers. Those classes are best related to each other loosely, avoiding strong coupling such as inheritance. Ideally OOP class interactions are achieved through abstract interfaces. OOP was considered an improvement (i.e. C++) over earlier functional programming approaches such as C.
 
+### Class
+A class consists of data members and methods. Most classes are initialized through a constructor method, that may take arguments. In python init performs the object construction for a class. Data members may be initialized in the constructor, they may be initialized in the scope of the Class itself, or initialization may be delayed until later (lazy initialization) Classes allow for different access to methods and data, such as public availability to everyone and private which hides information from anyone outside the class. Best practice states we should hide implementation details inside the class that others outside do not need to know to use the class.
+
+### Method
+A method is a procedure contained within a class. Public methods can be called on instance objects of the class. Private methods can only be called within the class itself.
+
+### Objects
+In order to use a class, we need to initialize it in the form of objects. In some languages a class can be an abstract class that is not initialized, but used as a base class from which other classes can inherit. For example, an abstract Car class from which an SUV class inherits behavior. A singleton is a special class that has only one object which gets shared.
 
 ## CRUD
 
