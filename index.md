@@ -41,7 +41,10 @@
   * Usually used with audio and video
 
 ## Metadata
-
+* Metadata is information about other types of information
+  * This could be:
+   * the author, date, location, and time when a picture was taken
+  * Or it could be how it was compressed and the original size
 
 ## Computer Network, Parallel/Distributed Computing
 
