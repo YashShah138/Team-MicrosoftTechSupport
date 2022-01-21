@@ -46,7 +46,7 @@
    * the author, date, location, and time when a picture was taken
   * Or it could be how it was compressed and the original size
 
-## Example
+### Example
 ![San Diego SkyLine](https://user-images.githubusercontent.com/89223735/150541637-5378c5d5-7372-4a66-8294-7bc87fce7110.jpeg)
 * Jan 15, 5:31 PM
 * 1.04 MB
