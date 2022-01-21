@@ -58,6 +58,13 @@
 * No flash
 
 ## Computer Network, Parallel/Distributed Computing
+### Computer Network
+* A computer network is a set of computers sharing resources located on or provided by network nodes
+* There are four types of computer network
+  * LAN (Local Area Network)
+  * PAN(Personal Area Network)
+  * MAN(Metropolitan Area Network)
+  * WAN(Wide Area Network)
 
 
 ## Protocol, TCP/IP, HTTP, GET, POST
