@@ -35,6 +35,10 @@
 
 ## Lossless/Lossy Compression
 ![image](http://pediaa.com/wp-content/uploads/2018/08/Difference-Between-Lossy-and-Lossless-Compression-Comparison-Summary.jpg)
+* Lossless is used for when you cannot compromise on the quality of the message you are sending
+  * Usually used with images
+* Lossy is when you can compromise on the quality of the message.
+  * Usually used with audio and video
 
 ## Metadata
 
