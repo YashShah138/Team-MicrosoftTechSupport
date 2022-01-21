@@ -20,7 +20,7 @@
 * A byte is eight bits
 
 ## Data, Data Abstraction
-![image](https://i.ytimg.com/vi/GlhaZBB2774/maxresdefault.jpg)
+<img src="https://i.ytimg.com/vi/GlhaZBB2774/maxresdefault.jpg" width="100" height="100"
 
 ## Lossless/Lossy Compression
 
