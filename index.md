@@ -1,6 +1,6 @@
-## Midterm Vocab
+# Midterm Vocab
 
-### Binary Hexadecimal, Bit, Nibble, Byte
+## Binary Hexadecimal, Bit, Nibble, Byte
 ![image](https://www.watelectronics.com/wp-content/uploads/Hexadecimal-and-Binary-Number-System-Representation.jpg)
 ### Binary
 * Binary is a number system based off of a base of 2
@@ -19,40 +19,41 @@
 * A nibble is four bits
 * A byte is eight bits
 
-### Data, Data Abstraction
+## Data, Data Abstraction
 
 
-### Lossless/Lossy Compression
+## Lossless/Lossy Compression
 
 
-### Metadata
+## Metadata
 
 
-### Computer Network, Parallel/Distributed Computing
+## Computer Network, Parallel/Distributed Computing
 
 
-### Protocol, TCP/IP, HTTP, GET, POST
+## Protocol, TCP/IP, HTTP, GET, POST
 
 
-### Library, Dependencies, Import
+## Library, Dependencies, Import
 
 
-### Web API, REST, FETCH, Async, Request, Response
+## Web API, REST, FETCH, Async, Request, Response
 
 
-### Blueprints
+## Blueprints
 
 
-### MVC
+## MVC
 
 
-### Code Sequence, Procedures/Functions, Procedural Abstraction
+## Code Sequence, Procedures/Functions, Procedural Abstraction
 
 
-### OOP, Class, Attribute, Method, Object
+## OOP, Class, Attribute, Method, Object
 
 
-### CRUD
+## CRUD
 
 
-### Sort, Search-Linear/Binary
+## Sort, Search-Linear/Binary
+
