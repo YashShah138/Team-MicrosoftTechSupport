@@ -101,6 +101,9 @@ HTTP (Hyper Text Transfer Protocol) Communication between a Server and a Client.
 
 
 ## Library, Dependencies, Import
+Library It is a collection of prewritten code. Dependencies: Libraries used from other places. Other parts of the code rely on the library to work. Includes configuration data and documentation. Example: Py is a Python Library Import takes Py from Python and it becomes a dependency Import Python \
+![image](https://camo.githubusercontent.com/fd2749b900c4b4c883ef2bc2979a2cc8227323a80590f953c47540d018c9ac6d/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f70726163746963616c6465762f696d6167652f66657463682f732d2d465856436e6436622d2d2f635f6c696d6974253243665f6175746f253243666c5f70726f6772657373697665253243715f6175746f253243775f3838302f68747470733a2f2f6465762d746f2d75706c6f6164732e73332e616d617a6f6e6177732e636f6d2f75706c6f6164732f61727469636c65732f6a6e647831706574726f30316d6f397136326f772e6a7067) \
+Analogy You are dependent on banks the bank's money. The bank can't function without your money so it is dependent on you. Money is Libraries of prewritten code You get more money You import to get libraries
 
 
 ## Web API, REST, FETCH, Async, Request, Response
