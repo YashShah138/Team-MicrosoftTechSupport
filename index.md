@@ -97,6 +97,15 @@
 
 
 ## Code Sequence, Procedures/Functions, Procedural Abstraction
+### Code Sequence
+A set of computer instructions that are executed in a logical order. Depending on the language, code sequences are either interpreted or compiled then executed. Compiled lines of code are expected to run faster than interpreted languages. Interpreted languages like Python and Javascript are converted to byte code before being executed.
+
+### Procedures
+In object-oriented languages like C++ these are called methods. In functional programming languages, they are often called functions. A good procedure is used to perform a single behavior that makes code easier to understand, test, and maintain While not desirable, a procedure can be used to run any code sequence of lengthy and unrelated steps
+
+- - - -
+
+Example where same procedure is called with another procedure passed as a variable argument depending on whether we use the any match or all match algorithm
 
 
 ## OOP, Class, Attribute, Method, Object
