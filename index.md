@@ -47,7 +47,7 @@
   * Or it could be how it was compressed and the original size
 
 ## Example
-![image](
+![San Diego SkyLine](https://user-images.githubusercontent.com/89223735/150541637-5378c5d5-7372-4a66-8294-7bc87fce7110.jpeg)
 
 ## Computer Network, Parallel/Distributed Computing
 
