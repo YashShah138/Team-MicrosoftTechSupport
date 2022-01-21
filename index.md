@@ -83,7 +83,7 @@
 
 ## Protocol, TCP/IP, HTTP, GET, POST
 The rules data follows when traveling through a network Guides code in keeping it as it is. Analogy: Postal Office Makes sure mail gets to where it needs to be \
-HTTP (Hyper Text Transfer Protocol) Communication between a Server and a Client. It uses Hyper links to travel. It gets images, sounds, and text. It updates the page.
+HTTP (Hyper Text Transfer Protocol) Communication between a Server and a Client. It uses Hyper links to travel. It gets images, sounds, and text. It updates the page. \
 ![image](https://camo.githubusercontent.com/ef51bc580ba3a27a8fa5d4fde06ee46b82c84357f575e94f771b099fae18b57c/68747470733a2f2f7777772e7265736561726368676174652e6e65742f70726f66696c652f49737261656c2d4369646f6e2f7075626c69636174696f6e2f323835313139302f6669677572652f666967342f41533a36363837303835313039303834313940313533363434333934313333382f485454502d4745542d726571756573742d616e642d7265706c792d6f7665722d5443502e706e67)
 
 ### TCP/IP
@@ -131,9 +131,25 @@ The response made from the request
 ![image](https://user-images.githubusercontent.com/89176673/150580678-bc80639a-976d-4745-8297-2faee07cde82.PNG)
 
 ## Blueprints
-
+Allows you to make app routes for other python files besides main.py
+![image](https://user-images.githubusercontent.com/89176673/150580065-1907de80-49d4-4e63-8907-97c234df500f.PNG)
 
 ## MVC
+### Model
+* The model code is typically used to exemplify code when it comes to real world scenarios
+* The model stores data and logic
+* Retrieves infrormation from database
+
+### View
+* Typically the syntax which makes the appearance of an app or website look appealing
+* Directly interacts with the user
+* Displays data from charts, tables, and diagrams
+
+### Control
+* The part where user commands are interpreted
+* An example is when a computer renders the clicks of a keyboard
+
+![image](https://user-images.githubusercontent.com/89176673/150480808-a3a66daa-05bd-487e-ae63-1b6140f6dc9c.png)
 
 
 ## Code Sequence, Procedures/Functions, Procedural Abstraction
