@@ -46,6 +46,9 @@
    * the author, date, location, and time when a picture was taken
   * Or it could be how it was compressed and the original size
 
+## Example
+![image](
+
 ## Computer Network, Parallel/Distributed Computing
 
 
