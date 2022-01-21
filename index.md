@@ -106,7 +106,10 @@ In object-oriented languages like C++ these are called methods. In functional pr
 - - - -
 
 Example where same procedure is called with another procedure passed as a variable argument depending on whether we use the any match or all match algorithm
-
+```
+sortBestBeaches(anyBeachCriteriaCanMatch, 'surf', 'bonfires')
+sortBestBeaches(allBeachCriteriaMustMatch, 'surf', 'bonfires')
+```
 
 ## OOP, Class, Attribute, Method, Object
 
