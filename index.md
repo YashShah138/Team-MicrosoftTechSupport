@@ -82,28 +82,84 @@
 * The time is takes for execution is all the times combined
 
 ## Protocol, TCP/IP, HTTP, GET, POST
-The rules data follows when traveling through a network Guides code in keeping it as it is. Analogy: Postal Office Makes sure mail gets to where it needs to be \
-HTTP (Hyper Text Transfer Protocol) Communication between a Server and a Client. It uses Hyper links to travel. It gets images, sounds, and text. It updates the page. \
-![image](https://camo.githubusercontent.com/ef51bc580ba3a27a8fa5d4fde06ee46b82c84357f575e94f771b099fae18b57c/68747470733a2f2f7777772e7265736561726368676174652e6e65742f70726f66696c652f49737261656c2d4369646f6e2f7075626c69636174696f6e2f323835313139302f6669677572652f666967342f41533a36363837303835313039303834313940313533363434333934313333382f485454502d4745542d726571756573742d616e642d7265706c792d6f7665722d5443502e706e67)
+### Protocol
+* Protocols allow applications to communicate across a computer network
+* Application layer protocols on the WWW follow the TCP/IP protocol or OSI model.
+* There are a lot of protocol standards that enable standard communications between layers of a network or across networks. \
+
+#### Protocol Examples
+Some examples of the early protocols that are still popular today:
+* Remotely login to a host computer: Telnet
+* Transfer files: File Transfer Protocol (FTP)
+* Support electronic mail transport: Simple Mail Transfer Protocol (SMTP)
+* A new protocol you may have heard of used to buy and trade cryptocurrency; Bitcoin, it's a protocol!
 
 ### TCP/IP
-#### TCP: Transmission Control Protocol
-* Cuts data up into smaller bits and transfers them
-* Makes sure data gets there safely
+* Transmission Control Protocol/Internet Protocol (TCP/IP) is another standard computers can use to communicate on a network
+* TCP has built-in error checks and can guarantee data is delivered in the order it was sent.
+* Used when applications need to communicate reliably and speed is a secondary concern
+* TCP is the ideal protocol for transferring information like still images, data files, and web pages that need a guaranteed and reliable delivery
+* TCP is slower than a protocol like UDP
+* BitTorrent applications are TCP/IP and built on open-source uTorrent protocol
 
-#### IP (Internet Protocol)
-* Defines where something goes
-* Creates an ID that defines where something goes or comes from (IP Address)
-* Works with the TCP to get data through a network safely
+### UDP
+* User Datagram Protocol (UDP) is a simple, connectionless protocol where error-checking and recovery services are not required.
+* With UDP, there is no overhead for opening, maintaining, or terminating a connection; data is continuously sent to a recipient, even if they are unable to receive it
+* UDP is commonly used in distributed gaming where speed is essential
 
-### Get
-<img width="433" alt="Screen Shot 2022-01-21 at 10 28 38 AM" src="https://user-images.githubusercontent.com/89223735/150580828-c4990ee8-bdd1-4aa1-bdc2-46c7a32fd8ff.png">
+### HTTP
+* Hypertext Transfer Protocol is a widely used, unsecured application tier communication protocol for distributed hypermedia
+* An HTTP request has three parts; a request, header, and body
+* An HTTP response has three parts; a status, header, and body
+* If you are communicating with an HTTP URL be careful as this is not a secure communication
 
+### HTTPS
+* Essentially identical to HTTP but secured using TLS (SSL) encryption
+* Remember that just because the URL is HTTPS does not mean you can trust the content or site you are communicating with
+
+### HTTPS GET
+* An HTTP GET request should only be used to receive data and not modify data.
+* HTTP GET is idempotent which means it does not modify data
+* HTTP GET URL can be cached by a browser and referenced later and is expected to keep returning the same result
+
+### HTTPS POST
+* An HTTP POST method requests a server to create a resource.
+* POST is non-idempotent which means multiple requests can and likely will have different effects.
+* If you want to change data you can use any one of the HTTP POST, PUT, PATCH or DELETE methods.
+
+This example performs an HTTP POST to login to a website with username and password
+```
+curl -X POST http://www.mywebsite.com/login/ -d 'username=myusername&password=mypassword'
+```
 
 ## Library, Dependencies, Import
-Library It is a collection of prewritten code. Dependencies: Libraries used from other places. Other parts of the code rely on the library to work. Includes configuration data and documentation. Example: Py is a Python Library Import takes Py from Python and it becomes a dependency Import Python \
 ![image](https://camo.githubusercontent.com/fd2749b900c4b4c883ef2bc2979a2cc8227323a80590f953c47540d018c9ac6d/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f70726163746963616c6465762f696d6167652f66657463682f732d2d465856436e6436622d2d2f635f6c696d6974253243665f6175746f253243666c5f70726f6772657373697665253243715f6175746f253243775f3838302f68747470733a2f2f6465762d746f2d75706c6f6164732e73332e616d617a6f6e6177732e636f6d2f75706c6f6164732f61727469636c65732f6a6e647831706574726f30316d6f397136326f772e6a7067) \
-Analogy You are dependent on banks the bank's money. The bank can't function without your money so it is dependent on you. Money is Libraries of prewritten code You get more money You import to get libraries
+* A Library is a collection of prewritten code.
+* Ideally the collection is cohesive meaning its a collection of things that belong together and perform related jobs
+* Dependencies occur when one library depends on another library
+* If a library is well designed it is okay for our code to include and depend on it to work. This is called being cohesive.
+* A Library may include configuration data and documentation on how to use the library.
+* More modern libraries are called services and these services separate configuration data from the code used to build the service (see 12-factor app)
+
+### Import
+* Libraries are imported into code to enable them to be re-used.
+* This is common practice and can save a lot of time so developers are not re-creating work (re-inventing the wheel)
+* Importing and using a library creates a dependency between the library and the code using it.
+![image](https://camo.githubusercontent.com/fd2749b900c4b4c883ef2bc2979a2cc8227323a80590f953c47540d018c9ac6d/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f70726163746963616c6465762f696d6167652f66657463682f732d2d465856436e6436622d2d2f635f6c696d6974253243665f6175746f253243666c5f70726f6772657373697665253243715f6175746f253243775f3838302f68747470733a2f2f6465762d746f2d75706c6f6164732e73332e616d617a6f6e6177732e636f6d2f75706c6f6164732f61727469636c65732f6a6e647831706574726f30316d6f397136326f772e6a7067)
+
+### Dependency
+* When code is not well-organized dependencies can become entangled and complex, making it hard to maintain and test
+* We need to constantly manage method and class level dependencies as well as library level to avoid creating nightmare dependencies
+
+#### Circular Dependency
+* A circular dependency can be identified and re-designed to avoid between software components.
+* Remove dependencies by introducing abstract interfaces between the two dependent things
+* For libraries, separate out whatever the two depend on into a new library so it's no longer circular
+* Consider the chicken and egg problem as an analogy.
+* A chicken is needed to lay eggs, and eggs need chickens to hatch them.
+* Chicken and Egg have a circular dependency on each other that we cannot fix with abstract interfaces
+* Given our current knowledge of Chickens and Eggs, it is an unsolvable dependency \
+![image](https://camo.githubusercontent.com/3a816cd0d0c75e80d262cd10c89459a026a4c170133ed718a6433c0171b6de77/68747470733a2f2f6472656b343533376c316b6c722e636c6f756466726f6e742e6e65742f7365656d616e6e322f466967757265732f30362d31322e706e67)
 
 
 ## Web API, REST, FETCH, Async, Request, Response
