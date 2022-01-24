@@ -85,7 +85,7 @@
 ### Protocol
 * Protocols allow applications to communicate across a computer network
 * Application layer protocols on the WWW follow the TCP/IP protocol or OSI model.
-* There are a lot of protocol standards that enable standard communications between layers of a network or across networks. \
+* There are a lot of protocol standards that enable standard communications between layers of a network or across networks.
 
 #### Protocol Examples
 Some examples of the early protocols that are still popular today:
@@ -133,7 +133,7 @@ curl -X POST http://www.mywebsite.com/login/ -d 'username=myusername&password=my
 ```
 
 ## Library, Dependencies, Import
-![image](https://camo.githubusercontent.com/fd2749b900c4b4c883ef2bc2979a2cc8227323a80590f953c47540d018c9ac6d/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f70726163746963616c6465762f696d6167652f66657463682f732d2d465856436e6436622d2d2f635f6c696d6974253243665f6175746f253243666c5f70726f6772657373697665253243715f6175746f253243775f3838302f68747470733a2f2f6465762d746f2d75706c6f6164732e73332e616d617a6f6e6177732e636f6d2f75706c6f6164732f61727469636c65732f6a6e647831706574726f30316d6f397136326f772e6a7067) \
+![image](https://camo.githubusercontent.com/fd2749b900c4b4c883ef2bc2979a2cc8227323a80590f953c47540d018c9ac6d/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f70726163746963616c6465762f696d6167652f66657463682f732d2d465856436e6436622d2d2f635f6c696d6974253243665f6175746f253243666c5f70726f6772657373697665253243715f6175746f253243775f3838302f68747470733a2f2f6465762d746f2d75706c6f6164732e73332e616d617a6f6e6177732e636f6d2f75706c6f6164732f61727469636c65732f6a6e647831706574726f30316d6f397136326f772e6a7067)
 * A Library is a collection of prewritten code.
 * Ideally the collection is cohesive meaning its a collection of things that belong together and perform related jobs
 * Dependencies occur when one library depends on another library
