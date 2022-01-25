@@ -30,6 +30,7 @@
 
 ### Team
 | Task | Ticket |
+| --- | --- |
 | Evaluation of Crossover Team | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/41) |
 | Github Pages, Jekyll, WIKI | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/40) |
 | Sassy / Bootstrap | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/39) |
@@ -40,6 +41,7 @@
 
 ### Individual
 | Name | 3.16 | 3.17 | 3.18 |
+| --- | --- | --- | --- |
 | Avinh | | | |
 | Akhil | | | |
 | Yash | | | |
