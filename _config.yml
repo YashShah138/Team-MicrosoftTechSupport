@@ -1,3 +1,44 @@
-theme: jekyll-theme-cayman
-title: Microsoft Tech Support
-description: You have a computer virus
+theme: jekyll-theme-slate
+title: Team-MicrosoftTechSupport
+description: Jekyll for Team-MicrosoftTechSupport
+team:
+  - fname: Avinh
+    lname: Huynh
+    role: Scrum Master
+    Week4:
+      - PBL: ReadMe Timeboxing, Jekyll
+      - 3.1: test1
+      - 3.2: test2
+      - 3.3: test3
+  - fname: Akhil
+    lname: Nandhakumar
+    role: Technical Officer
+    Week4:
+      - PBL: ReadMe Timeboxing, Jekyll
+      - 3.1: test1
+      - 3.2: test2
+      - 3.3: test3
+  - fname: Yash
+    lname: Shah
+    role: Deployment Manager
+    Week4:
+      - PBL: ReadMe Timeboxing, Jekyll
+      - 3.1: test1
+      - 3.2: test2
+      - 3.3: test3
+  - fname: Valen
+    lname: Reynolds
+    role: Github Admin
+    Week4:
+      - PBL: ReadMe Timeboxing, Jekyll
+      - 3.1: test1
+      - 3.2: test2
+      - 3.3: test3
+  - fname: Jay
+    lname: Manjrekar
+    role: Design Manager
+    Week4:
+      - PBL: ReadMe Timeboxing, Jekyll
+      - 3.1: test1
+      - 3.2: test2
+      - 3.3: test3
