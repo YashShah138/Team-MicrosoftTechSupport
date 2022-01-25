@@ -8,6 +8,8 @@
 
 ### [Team Overview and Journals](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport#pair-share-journals)
 
+### [Midterm VOCAB](https://akhilnandhakumar.github.io/CSP-Midterm-Week-6/)
+
 ### Site Objective
 Temp__________________________
 
