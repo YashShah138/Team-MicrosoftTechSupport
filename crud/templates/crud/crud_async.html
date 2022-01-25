@@ -10,8 +10,6 @@
 
 <script>
     function create_User(){
-        //Validate name (must be 6-20 characters in len)
-        verifycontent("click");
         const name = document.getElementById("name").value;
         const title = document.getElementById("title").value;
         const content = document.getElementById("content").value;
@@ -291,8 +289,8 @@
                 <tbody>
                 <tr>
                     <td><input type="text" name="name" id="name" required></td>
-                    <td><input type="title" name="title" id="title" placeholder="abc@xyz.org" required></td>
-                    <td><input type="content" name="content" id="content" required></td>
+                    <td><input type="title" name="title" id="title" placeholder="Title" required></td>
+                    <td><input type="content" name="content" id="content" placeholder="type review here" required></td>
                     <td><input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="1234567890" required></td>
                     <td ><button onclick="create_User()">Create</button></td>
 
