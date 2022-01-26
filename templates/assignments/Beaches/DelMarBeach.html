@@ -1,0 +1,58 @@
+{% include "layouts/base.html" %}
+{% set project = "Beach Location 1" %}
+
+{% block body %}
+<style>
+    h1 {
+        text-align: center;
+        font-style: italic;
+        color: white;
+    }
+    .image{
+        font-style: inherit;
+        color: white;
+        padding: 20px;
+    }
+    #info{
+        background-color: rgba(12, 9, 9, 0.58);
+        color: white;
+        margin: 20px;
+        padding: 10px;
+        font-size: 14pt;
+    }
+
+    #api{
+        color: white;
+        font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+        font-size: 15pt;
+        background-color: rgba(12, 9, 9, 0.58);
+        color: white;
+        margin: 20px;
+        padding: 10px;
+    }
+</style>
+
+<h1>Del Mar Beach</h1>
+<div class="image" align="center">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/1c/7c/6a/del-mar-city-beach.jpg?w=1200&h=-1&s=1" height="300" width="300">
+    <img src="https://ewscripps.brightspotcdn.com/bf/0a/dfcef15b47168a60751e3442b481/kim-decew-del-mar.jpg" width="300" height="300">
+    <img src="https://www.delmar.ca.us/ImageRepository/Document?documentID=4462" height="300" width="300">
+</div>
+
+<div id="info" align="center">
+    <p>The beach in Del Mar is one of the most beautiful and enjoyable in San Diego.
+        The two plus miles of sandy beach offers a great place to relax, walk, or run.
+        Two coastal parks, Powerhouse and Seagrove Parks, are located just above the 15th Street surf break;
+        providing a great spot to picnic with friends and family.
+        The Powerhouse Park also features a barefoot friendly, dog free "tot lot," where kids can play on swings, slides, and climb.
+    (source: City of Del Mar, CA)</p>
+</div>
+
+<div id="api" align="center">
+    <h1>Api Data for Del Mar Beach</h1>
+    <p>Tide Status: {{ tides.heights[0].state }}</p>
+    <p>Tide Status Updated at: {{ tides.heights[0].datetime }} UTC</p>
+    <p>Tide Height Above Average Low Point: + {{ tides.heights[0].height }} feet</p>
+</div>
+
+{% endblock %}

@@ -8,22 +8,13 @@
 
 ### [Team Overview and Journals](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport#pair-share-journals)
 
-### Site Objective
-Temp__________________________
-
-#### Implemented
-- Temp
-
-#### Future Goals
-- Temp
+### [Midterm VOCAB](https://akhilnandhakumar.github.io/CSP-Midterm-Week-6/)
 
 ### Pair Share Journals
 - Jay and Yash: [Journal](https://drive.google.com/drive/folders/1R4J1MEYuWC8TaFjjSe82onjl0v0V590C?usp=sharing)
 - Akhil, Avinh, and Valen: [Journal](https://drive.google.com/drive/folders/17oNFYESdK0PYHA6Rs27DjnvH61ntZlDT?usp=sharing)
 
 ### Team Overview
-
-https://rapidapi.com/apihood/api/tides/
 
 | Role | Name | ID | Tasks | Commits | Scrumboard | Profile |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -34,6 +25,28 @@ https://rapidapi.com/apihood/api/tides/
 | Scrum Master | Avinh Huinh | #43688346 | [tasks](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/issues/assigned/SlimeyTurtles) | [commits](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/commits?author=SlimeyTurtles) | [scrumboard](https://github.com/AkhilNandhakumar/Team-MicrosoftTechSupport/projects/1?card_filter_query=assignee%3Aslimeyturtles) | [profile](https://github.com/SlimeyTurtles) |
 
 # Timebox - [Review Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/31)
+
+## Week 7
+
+### Team
+| Task | Ticket |
+| --- | --- |
+| Evaluation of Crossover Team | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/41) |
+| Github Pages, Jekyll, WIKI | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/40) |
+| Sassy / Bootstrap | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/39) |
+| Async Operation | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/38) |
+| CRUD in Database | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/37) |
+| Blueprint | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/44) |
+| Filtering / Searching Data | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/45) |
+
+### Individual
+| Name | 3.16 | 3.17 | 3.18 |
+| --- | --- | --- | --- |
+| Avinh | | | |
+| Akhil | | | |
+| Yash | | | |
+| Valen | | | |
+| Jay | | | |
 
 ## Week 4
 
