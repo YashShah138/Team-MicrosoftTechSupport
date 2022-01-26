@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="858b4215-7dfd-48f1-a79a-ebc0570df582" name="Changes" comment="db update">
+    <list default="true" id="858b4215-7dfd-48f1-a79a-ebc0570df582" name="Changes" comment="fixed create feature for async">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crud/templates/crud/crud_async.html" beforeDir="false" afterPath="$PROJECT_DIR$/crud/templates/crud/crud_async.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crud/templates/static/reload_page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crud/templates/static/validation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/review.db" beforeDir="false" afterPath="$PROJECT_DIR$/model/review.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assignments/BeachLocation1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/assignments/SolanaBeach.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assignments/BeachLocation2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/assignments/DelMarBeach.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -467,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643141019096</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fixed create feature for async">
+      <created>1643142728238</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1643142728238</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +494,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="about pics file uploads" />
     <MESSAGE value="About page image toggle" />
     <MESSAGE value="api testing for about page" />
     <MESSAGE value="added tennis api to about page" />
@@ -512,7 +518,8 @@
     <MESSAGE value="js file" />
     <MESSAGE value="added navbar async link and updated db" />
     <MESSAGE value="db update" />
-    <option name="LAST_COMMIT_MESSAGE" value="db update" />
+    <MESSAGE value="fixed create feature for async" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed create feature for async" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$rest_test.coverage" NAME="rest_test Coverage Results" MODIFIED="1638818569043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
@@ -523,6 +530,6 @@
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$reviewmodel.coverage" NAME="reviewmodel Coverage Results" MODIFIED="1641585638969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reviews" />
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$app_crud.coverage" NAME="app_crud Coverage Results" MODIFIED="1641844326166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$tpt_test.coverage" NAME="tpt test Coverage Results" MODIFIED="1641931704710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1643142588837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1643224797890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
