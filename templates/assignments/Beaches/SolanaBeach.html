@@ -50,8 +50,8 @@
 <div id="api" align="center">
     <h1>Api Data for Solana Beach</h1>
     <p>Tide Status: {{ tides.heights[0].state }}</p>
-    <p>Tide <Stat></Stat>us Updated at: {{ tides.heights[0].datetime }} UTC</p>
-    <p>Tide Height Above Average Low Point: + {{ tides.heights[0].height }} feet</p>
+    <p>Tide Status Updated at: {{ tides.heights[0].datetime }} UTC</p>
+    <p>Tide Height Above Average Low Point: {{ tides.heights[0].height }} feet</p>
 </div>
 
 {% endblock %}

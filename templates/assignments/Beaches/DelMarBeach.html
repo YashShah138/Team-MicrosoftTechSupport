@@ -52,7 +52,7 @@
     <h1>Api Data for Del Mar Beach</h1>
     <p>Tide Status: {{ tides.heights[0].state }}</p>
     <p>Tide Status Updated at: {{ tides.heights[0].datetime }} UTC</p>
-    <p>Tide Height Above Average Low Point: + {{ tides.heights[0].height }} feet</p>
+    <p>Tide Height Above Average Low Point: {{ tides.heights[0].height }} feet</p>
 </div>
 
 {% endblock %}

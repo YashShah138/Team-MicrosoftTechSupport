@@ -56,6 +56,23 @@ def DelMarBeach():
 
     return render_template("/assignments/Beaches/DelMarBeach.html", tides=tides)
 
+@app.route('/blacks-beach/')
+def BlacksBeach():
+    import requests
+    url = "https://tides.p.rapidapi.com/tides"
+
+    querystring = {"longitude":"-117.253716","latitude":"32.898354","interval":"60","duration":"1440"}
+
+    headers = {
+        'x-rapidapi-host': "tides.p.rapidapi.com",
+        'x-rapidapi-key': "af654d789amshce4b35d071f3bd2p1c0cc8jsn8db3aa6a8acc"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    tides = response.json()
+
+    return render_template("/assignments/Beaches/BlacksBeach.html", tides=tides)
+
 @app.route('/beachlocation3/')
 def BeachLocation3():
     return render_template("/assignments/Beaches/BeachLocation3.html")
