@@ -1,0 +1,58 @@
+{% include "layouts/base.html" %}
+{% set project = "Pacific Beach" %}
+
+{% block body %}
+<style>
+    h1 {
+        text-align: center;
+        font-style: italic;
+        color: white;
+    }
+    .image{
+        font-style: inherit;
+        color: white;
+        padding: 20px;
+    }
+    #info{
+        background-color: rgba(12, 9, 9, 0.58);
+        color: white;
+        margin: 20px;
+        padding: 10px;
+        font-size: 14pt;
+    }
+
+    #api{
+        color: white;
+        font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+        font-size: 15pt;
+        background-color: rgba(12, 9, 9, 0.58);
+        color: white;
+        margin: 20px;
+        padding: 10px;
+    }
+</style>
+
+<h1>Pacific Beach</h1>
+<div class="image" align="center">
+    <img src="https://ca-times.brightspotcdn.com/dims4/default/1c507fa/2147483647/strip/true/crop/2048x1152+0+0/resize/840x473!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F41%2F85%2F6b387cae259949dbada6d240baca%2Fsd-1490473217-sf7s1x6f3l-snap-image" height="300" width="300">
+    <img src="https://www.pods.com/-/media/pods/primary-feature/21_0041-ca_pacific_beach-desktop-header.jpg?mw=1280&hash=695BA56CA5547A1CD3CDB713C59FD2A3" width="300" height="300">
+    <img src="https://i0.wp.com/timesofsandiego.com/wp-content/uploads/2018/01/surfing-at-OBa.jpg?ssl=1" height="300" width="300">
+</div>
+
+<div id="info" align="center">
+    <p>Located just south of Crystal Pier, Pacific Beach extends south before becoming Mission Beach.
+        One of the busiest beach areas in San Diego, Pacific Beach draws large crowds of locals and tourists in the summer.
+        The two most popular activities at Pacific Beach beaches are swimming and surfing. Ocean Front Walk is a 2.3-mile paved walkway simply referred to as “the boardwalk” by locals.
+        It runs from the north end of North Pacific Beach to the jetty at the south end of Mission Beach.
+        Near Crystal Pier begins the row of numerous bars, restaurants, and shops, including places for bike rentals.
+        (source: City of San Diego, and La Jolla)</p>
+</div>
+
+<div id="api" align="center">
+    <h1>Api Data for Pacific Beach</h1>
+    <p>Tide Status: {{ tides.heights[0].state }}</p>
+    <p>Tide Status Updated at: {{ tides.heights[0].datetime }} UTC</p>
+    <p>Tide Height Above Average Low Point: {{ tides.heights[0].height }} feet</p>
+</div>
+
+{% endblock %}
