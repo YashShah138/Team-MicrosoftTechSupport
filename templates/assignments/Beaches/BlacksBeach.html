@@ -32,6 +32,12 @@
   }
 </style>
 
+<script>
+  function refreshPage(){
+    window.location.reload();
+  }
+</script>
+
 <h1>Blacks Beach</h1>
 <div class="image" align="center">
   <img src="https://www.californiabeaches.com/wp-content/uploads/2014/09/BigS-Overlooking-Blacks-Beach-San-Diego-CA-Large-e1512026583176.jpg" height="300" width="300">
@@ -50,6 +56,7 @@
 
 <div id="api" align="center">
   <h1>Api Data for Blacks Beach</h1>
+  <button onclick="refreshPage()">Update Data</button>
   <p>Tide Status: {{ tides.heights[0].state }}</p>
   <p>Tide Status Updated at: {{ tides.heights[0].datetime }} UTC</p>
   <p>Tide Height Above Average Low Point: {{ tides.heights[0].height }} feet</p>
