@@ -3,7 +3,6 @@ from flask import render_template, request
 from flask import request, redirect
 import requests
 
-from beach_features import sortBestBeaches, allBeachCriteriaMustMatch
 from crud.app_crud import app_crud
 from crud.app_crud_api import app_crud_api
 app.register_blueprint(app_crud)
@@ -57,25 +56,54 @@ def DelMarBeach():
 
     return render_template("/assignments/Beaches/DelMarBeach.html", tides=tides)
 
+@app.route('/blacks-beach/')
+def BlacksBeach():
+    import requests
+    url = "https://tides.p.rapidapi.com/tides"
+
+    querystring = {"longitude":"-117.253716","latitude":"32.898354","interval":"60","duration":"1440"}
+
+    headers = {
+        'x-rapidapi-host': "tides.p.rapidapi.com",
+        'x-rapidapi-key': "af654d789amshce4b35d071f3bd2p1c0cc8jsn8db3aa6a8acc"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    tides = response.json()
+
+    return render_template("/assignments/Beaches/BlacksBeach.html", tides=tides)
+
+@app.route('/beachlocation3/')
+def BeachLocation3():
+    return render_template("/assignments/Beaches/BeachLocation3.html")
+
 def selectBestBeach(form):
     return "DelMar is the best beach for you"
 
-
 @app.route('/favoritebeach1/', methods=["GET", "POST"])
 def FavoriteBeachSurvey():
-    n = 0
-    beach_features = []
+    feedback = "Beach Not Identified"
+    SolanaBeach = 0
+    DelMar = 0
     if request.method == "POST":
-        for field in request.form:
-            beach_features.append (field)
-            n = n + 1
-        print (beach_features)
-        beaches = sortBestBeaches(allBeachCriteriaMustMatch, beach_features)
-        print (beaches)
-        if (n == 0):
-            feedback = "\nunknown! Pick something!"
-        else:
-            feedback = beaches
+        if (request.form.get("surfing") != None):
+            SolanaBeach += 1
+        if (request.form.get("volleyball") != None):
+            DelMar += 1
+        if (request.form.get("dog") != None):
+            DelMar += 1
+        if (request.form.get("crowd") != None):
+            SolanaBeach += 1
+        if (request.form.get("picnic") != None):
+            DelMar += 1
+        if (DelMar == 0 and SolanaBeach == 0):
+            feedback = "Pick at least one preference"
+        elif (DelMar > SolanaBeach):
+            feedback = "Del Mar beach is best for you"
+        elif (SolanaBeach > DelMar):
+            feedback = "Solana Beach is best for you"
+        elif (SolanaBeach == DelMar):
+            feedback = "Solana and Del Mar beach are good for you"
 
     return render_template("/assignments/Survey.html", beach = feedback)
 
@@ -170,8 +198,4 @@ def Password():
 
 # run page lol
 if __name__ == "__main__":
-    app.run(
-        debug=True,
-        host="0.0.0.0",
-        port=5000
-    ),
+    app.run(debug=True)
