@@ -29,7 +29,7 @@
         color: white;
         margin: 20px;
         padding: 10px;
-    
+    }
 </style>
 
 <h1>Del Mar Beach</h1>
@@ -37,8 +37,6 @@
     <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/1c/7c/6a/del-mar-city-beach.jpg?w=1200&h=-1&s=1" height="300" width="300">
     <img src="https://ewscripps.brightspotcdn.com/bf/0a/dfcef15b47168a60751e3442b481/kim-decew-del-mar.jpg" width="300" height="300">
     <img src="https://www.delmar.ca.us/ImageRepository/Document?documentID=4462" height="300" width="300">
-    <img>src= "" height="300" width="300">
-    <img> src="https://media.cbs8.com/assets/KFMB/images/6cc9764a-8ef7-4339-a686-1ff896611296/6cc9764a-8ef7-4339-a686-1ff896611296_750x422.jpg" height="300" width="300">
 </div>
 
 <div id="info" align="center">
@@ -47,7 +45,7 @@
         Two coastal parks, Powerhouse and Seagrove Parks, are located just above the 15th Street surf break;
         providing a great spot to picnic with friends and family.
         The Powerhouse Park also features a barefoot friendly, dog free "tot lot," where kids can play on swings, slides, and climb.
-    (source: City of Del Mar, CA)</p>
+        (source: City of Del Mar, CA)</p>
 </div>
 
 <div id="api" align="center">
@@ -56,8 +54,5 @@
     <p>Tide Status Updated at: {{ tides.heights[0].datetime }} UTC</p>
     <p>Tide Height Above Average Low Point: + {{ tides.heights[0].height }} feet</p>
 </div>
-
-
-
 
 {% endblock %}
