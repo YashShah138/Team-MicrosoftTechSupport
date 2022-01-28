@@ -12,9 +12,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content=
             "width=device-width, initial-scale=1.0">
-    <title>
-        Build a Survey Form using HTML and CSS
-    </title>
 
     <style>
 
@@ -26,14 +23,21 @@
             text-align: center;
         }
 
+        h1{
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: white;
+        }
+
         paragraph { text-align: end; height: 300px; bottom: 0%; }
 
         /* Styling the Form (Color, Padding, Shadow) */
+
         form {
             background-color: #fff;
             max-width: 500px;
-            height: 400px;
-            margin: 50px auto;
+            height: 450px;
+            margin: 10px auto;
             padding: 30px 20px;
             box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
         }
@@ -73,8 +77,11 @@
 <!-- Create Form -->
 <form id="form" method="POST">
     <div class="form-control">
-        <label>Provide your criteria for selecting a beach, and we will recommend one.
-            <small>(you can pick more than one)</small>
+        <div align="center">
+            <h3>Provide your criteria for selecting a beach, and we will recommend one.</h3>
+            <h5>(you can pick more than one)</h5>
+        </div>
+
         </label>
         <!-- Input Type Checkbox -->
         <label for="surfing">
@@ -93,15 +100,18 @@
             <input type="checkbox"
                    name="dog">Dog Friendly</input></label>
 
-    <!--   {% if beach %} -->
+        <!-- Button Control -->
+        <button type="submit" class="btn btn-primary" value="submit"  >
+            Submit
+        </button>
+        <br>
+        <br>
+        <!--   {% if beach %} -->
+        <div align="center">
         <p class="text position: fixed; bottom: 0; width:100%; text-align: right">{{ beach }}</p>
+        </div>
     <!--   {% endif %} -->
     </div>
-
-    <!-- Button Control -->
-    <button type="submit" class="btn btn-primary" value="submit"  >
-        Submit
-    </button>
 
  </form>
 </body>

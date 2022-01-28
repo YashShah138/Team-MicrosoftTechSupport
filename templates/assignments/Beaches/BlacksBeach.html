@@ -1,0 +1,65 @@
+{% include "layouts/base.html" %}
+{% set project = "Blacks Beach" %}
+
+{% block body %}
+<style>
+  h1 {
+    text-align: center;
+    font-style: italic;
+    color: white;
+  }
+  .image{
+    font-style: inherit;
+    color: white;
+    padding: 20px;
+  }
+  #info{
+    background-color: rgba(12, 9, 9, 0.58);
+    color: white;
+    margin: 20px;
+    padding: 10px;
+    font-size: 14pt;
+  }
+
+  #api{
+    color: white;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-size: 15pt;
+    background-color: rgba(12, 9, 9, 0.58);
+    color: white;
+    margin: 20px;
+    padding: 10px;
+  }
+</style>
+
+<script>
+  function refreshPage(){
+    window.location.reload();
+  }
+</script>
+
+<h1>Blacks Beach</h1>
+<div class="image" align="center">
+  <img src="https://www.californiabeaches.com/wp-content/uploads/2014/09/BigS-Overlooking-Blacks-Beach-San-Diego-CA-Large-e1512026583176.jpg" height="300" width="300">
+  <img src="https://theshoallajolla.com/latest/wp-content/uploads/2019/02/shutterstock_767106478.jpg" width="300" height="300">
+  <img src="https://d14fqx6aetz9ka.cloudfront.net/wp-content/uploads/2018/05/03094852/11.jpg" height="300" width="300">
+</div>
+
+<div id="info" align="center">
+  <p>Blacks Beach in San Diego County is an exposed beach break that has consistent surf.
+    It is well known for its amazing waves providing a great spot for advanced surfers.
+    Winter is the optimum time of year for surfing here. Works best in offshore winds from the east.
+    Groundswells are more common than windswells and the ideal swell angle is from the west northwest.
+    The beach break offers both left and right hand waves and is often very crowded. (Source: surf-forecast)</p>
+
+</div>
+
+<div id="api" align="center">
+  <h1>Api Data for Blacks Beach</h1>
+  <button onclick="refreshPage()">Update Data</button>
+  <p>Tide Status: {{ tides.heights[0].state }}</p>
+  <p>Tide Status Updated at: {{ tides.heights[0].datetime }} UTC</p>
+  <p>Tide Height Above Average Low Point: {{ tides.heights[0].height }} feet</p>
+</div>
+
+{% endblock %}
