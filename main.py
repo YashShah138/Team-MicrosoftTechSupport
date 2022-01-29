@@ -3,7 +3,7 @@ from flask import render_template, request
 from flask import request, redirect
 import requests
 
-from beach_features import sortBestBeaches, allBeachCriteriaMustMatch, anyBeachCriteriaCanMatch
+from beach_features import sortBestBeaches, allBeachCriteriaMustMatch, anyBeachCriteriaCanMatch, getMyFavoriteBeaches
 from crud.app_crud import app_crud
 from crud.app_crud_api import app_crud_api
 app.register_blueprint(app_crud)
@@ -98,36 +98,7 @@ def selectBestBeach(form):
 
 @app.route('/favoritebeach1/', methods=["GET", "POST"])
 def FavoriteBeachSurvey():
-    feedback = "Beach Not Identified"
-    n = 0
-    beach_features = []
-    requests = list(request.form.items())
-    sortMustMatch = False
-
-# GO through the form we got from Survey.html POST and see what sort was selected (Any, All)
-    if request.method == "POST":
-        if "SORT" in request.form:
-            sortMustMatch = True
-        else:
-            sortMustMatch = False
-
-    if request.method == "POST":
-        for field in request.form:
-            if field != "SORT":
-                beach_features.append (field)
-                n = n + 1
-        print (beach_features)
-        if (sortMustMatch == True):
-            beaches = sortBestBeaches(allBeachCriteriaMustMatch, beach_features)
-        else:
-            beaches = sortBestBeaches(anyBeachCriteriaCanMatch, beach_features)
-
-        print (beaches)
-        if (n == 0):
-            feedback = "\nunknown! Pick something!"
-        else:
-            feedback = beaches
-
+    feedback = getMyFavoriteBeaches(request)
     return render_template("/assignments/Survey.html", beach = feedback)
 
 @app.route('/yash/')

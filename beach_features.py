@@ -44,6 +44,39 @@ local_beach_features = [
     BeachFeatures('Moonlight Beach', 1, 1, 1, 0, 1, 1, 0, 0),
 ]
 
+def getMyFavoriteBeaches(request):
+    feedback = "Beach Not Identified"
+    n = 0
+    beach_features = []
+    requests = list(request.form.items())
+    sortMustMatch = False
+
+    # GO through the form we got from Survey.html POST and see what sort was selected (Any, All)
+    if request.method == "POST":
+        if "SORT" in request.form:
+            sortMustMatch = True
+        else:
+            sortMustMatch = False
+
+    if request.method == "POST":
+        for field in request.form:
+            if field != "SORT":
+                beach_features.append (field)
+                n = n + 1
+        print (beach_features)
+        if (sortMustMatch == True):
+            beaches = sortBestBeaches(allBeachCriteriaMustMatch, beach_features)
+        else:
+            beaches = sortBestBeaches(anyBeachCriteriaCanMatch, beach_features)
+
+        print (beaches)
+        if (n == 0):
+            feedback = "\nUnknowable unless you pick something!"
+        else:
+            feedback = beaches
+
+    return feedback
+
 # all criteria must match or the beach is not included
 def allBeachCriteriaMustMatch(beach, *argv):
     n = 0
