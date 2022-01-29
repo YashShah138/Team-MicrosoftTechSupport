@@ -65,12 +65,12 @@ html, body {
   --#{$variable-prefix}body-bg: #{$body-bg};
 
   /* redefine theme colors */
-  $primary: $purple;
-  $secondary: $green-600;
+  $primary: $blue;
+  $secondary: $green;
 
   $theme-colors: (
-          "primary": $primary,
-          "secondary": $secondary
+          "primary": $blue,
+          "secondary": $green
   );
   /* redefine theme color variables */
   @each $color, $value in $theme-colors {

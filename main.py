@@ -216,6 +216,11 @@ def jay():
     return render_template("/assignments/AboutUs/jay.html", var=var)
 
 
+@app.route('/Beach4/')
+def Beach4():
+    return render_template("/beaches/Beach4.html")
+
+
 # run page lol
 if __name__ == "__main__":
     app.run(debug=True)
