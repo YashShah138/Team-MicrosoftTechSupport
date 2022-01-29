@@ -3,18 +3,14 @@
 
 {% block body %}
 
-
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head title="Beach Survey">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content=
             "width=device-width, initial-scale=1.0">
-    <title>
-        Build a Survey Form using HTML and CSS
-    </title>
 
     <style>
 
@@ -26,15 +22,21 @@
             text-align: center;
         }
 
-        paragraph { text-align: end; height: 300px; bottom: 0%; }
+        h1{
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        paragraph { text-align: end; height: 300px; bottom: 0; }
 
         /* Styling the Form (Color, Padding, Shadow) */
 
         form {
             background-color: #fff;
             max-width: 500px;
-            height: 400px;
-            margin: 50px auto;
+            height: 450px;
+            margin: 10px auto;
             padding: 30px 20px;
             box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
         }
@@ -49,6 +51,12 @@
         .form-control label {
             display: block;
             margin-bottom: 10px;
+        }
+
+        .column {
+            float: left;
+            width: 50.00%;
+            padding: 10px;
         }
 
         /* Styling Button */
@@ -74,37 +82,64 @@
 <!-- Create Form -->
 <form id="form" method="POST">
     <div class="form-control">
-        <label>Provide your criteria for selecting a beach, and we will recommend one.
-            <small>(you can pick more than one)</small>
-        </label>
-        <!-- Input Type Checkbox -->
-        <label for="surfing">
-            <input type="checkbox"
-                   name="surfing">Surfing</input></label>
-        <label for="volleyball">
-            <input type="checkbox"
-                   name="volleyball">Beach Volleyball</input></label>
-        <label for="crowd">
-            <input type="checkbox"
-                   name="crowd">Smaller Crowd Size</input></label>
-        <label for="picnic">
-            <input type="checkbox"
-                   name="picnic">Picnic Grounds</input></label>
-        <label for="dog">
-            <input type="checkbox"
-                   name="dog">Dog Friendly</input></label>
+        <div align="center">
+            <h4>Provide one or more beach criteria.</h4>
+        </div>
 
-    <!--   {% if beach %} -->
-        <p class="text position: fixed; bottom: 0; width:100%; text-align: right">{{ beach }}</p>
-    <!--   {% endif %} -->
+        <div class="column">
+            <!-- Input Type Checkbox -->
+            <label for="surf">
+                <input type="checkbox"
+                       name="surf"> Surfing
+                </input></label>
+            <label for="volleyball">
+                <input type="checkbox"
+                       name="volleyball"> Beach Volleyball</input></label>
+            <label for="snorkeling">
+                <input type="checkbox"
+                       name="snorkeling"> Snorkeling</input></label>
+            <label for="picnic">
+                <input type="checkbox"
+                       name="picnic"> Picnic Grounds</input></label>
+        </div>
+
+        <div class="column">
+            </label>
+            <!-- Input Type Checkbox -->
+            <label for="dogs">
+                <input type="checkbox"
+                       name="dogs"> Dogs Ok</input></label>
+            <label for="family">
+                <input type="checkbox"
+                       name="family"> Family Friendly</input></label>
+            <label for="bonfires">
+                <input type="checkbox"
+                       name="bonfires"> Bonfires Ok</input></label>
+            <label for="boardwalk">
+                <input type="checkbox"
+                       name="boardwalk"> Boardwalk</input></label>
+        </div>
+
+            <!-- Radio Button Control -->
+        <label for="SORT">
+            <input type="checkbox"
+                   name="SORT"> All Criteria Must Match
+            </input></label>
+
+        <!-- Button Control -->
+        <button type="submit" class="btn btn-primary" value="submit"  >
+            Submit
+        </button>
+        <br>
+        <br>
+        <!--   {% if beach %} -->
+        <div align="center">
+            <p class="text position: fixed; bottom: 0; width:100%; text-align: right">{{ beach }}</p>
+        </div>
+        <!--   {% endif %} -->
     </div>
 
-    <!-- Button Control -->
-    <button type="submit" class="btn btn-primary" value="submit"  >
-        Submit
-    </button>
-
- </form>
+</form>
 </body>
 
 </html>

@@ -18,7 +18,7 @@ from operator import itemgetter, attrgetter
 
 
 class BeachFeatures:
-    def __init__(self, beach, surf, picnic, volleyball, dogs, family, bonfires, boardwalk):
+    def __init__(self, beach, surf, picnic, volleyball, dogs, family, bonfires, boardwalk, snorkeling):
         self.beach = beach
         self.surf = surf
         self.picnic = picnic
@@ -27,20 +27,21 @@ class BeachFeatures:
         self.family = family
         self.bonfires = bonfires
         self.boardwalk = boardwalk
+        self.snorkeling = snorkeling
 
     def __repr__(self):
         return repr((self.beach, self.surf, self.picnic, self.volleyball, self.dogs, self.family, self.bonfires,
-                     self.boardwalk))
+                     self.boardwalk, self.snorkeling))
 
 # https://docs.python.org/3/howto/sorting.html
 # Beach objects representing beach features. A score of 2 is max, 1 is available
 local_beach_features = [
-    BeachFeatures('Del Mar Beach', 0, 2, 1, 1, 1, 0, 0),
-    BeachFeatures('Trustles Beach', 1, 0, 0, 0, 0, 1, 0),
-    BeachFeatures('Mission Beach', 0, 1, 2, 0, 1, 1, 1),
-    BeachFeatures('La Jolla Shores', 0, 1, 0, 0, 1, 1, 1),
-    BeachFeatures('Blacks Beach', 2, 0, 0, 0, -1, 0, 0),
-    BeachFeatures('Moonlight Beach', 1, 1, 1, 0, 1, 1, 0),
+    BeachFeatures('Del Mar Beach', 0, 2, 1, 1, 1, 0, 0, 0),
+    BeachFeatures('Trustles Beach', 1, 0, 0, 0, 0, 1, 0, 0),
+    BeachFeatures('Mission Beach', 0, 1, 2, 0, 1, 1, 1, 0),
+    BeachFeatures('La Jolla Shores', 0, 1, 0, 0, 1, 1, 1, 1),
+    BeachFeatures('Blacks Beach', 2, 0, 0, 0, -1, 0, 0, 0) ,
+    BeachFeatures('Moonlight Beach', 1, 1, 1, 0, 1, 1, 0, 0),
 ]
 
 # all criteria must match or the beach is not included
