@@ -31,7 +31,7 @@
 ### Team
 | Task | Ticket |
 | --- | --- |
-| Evaluation of Crossover Team | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/41) |
+| Evaluation of the Crossover Team | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/41) |
 | Github Pages, Jekyll, WIKI | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/40) |
 | Sassy / Bootstrap | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/39) |
 | Async Operation | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/38) |
