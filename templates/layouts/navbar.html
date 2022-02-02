@@ -8,6 +8,7 @@
     <!-- things on the navbar -->
     <ul class="navbar-nav mr-auto">
       <!-- put new navbar buttons here-->
+      <a class="nav-link" href="/customization/">Surfing Stuff</a>
 
       <!-- Beaches drop down -->
       <li class="nav-item dropdown">
@@ -15,13 +16,11 @@
           Beaches
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="nav-link" href="/solana-beach/">Solana Beach</a>
-          <a class="nav-link" href="/del-mar-beach/">Del Mar Beach</a>
-          <a class="nav-link" href="/blacks-beach/">Blacks Beach</a>
-          <a class="nav-link" href="/pacific-beach/">Pacific Beach</a>
-          <div class="dropdown-divider"></div>
-          <a class="nav-link" href="/favoritebeach1/">Favorite Beach Survey</a>
+          <a class="nav-link" href="/beachlocation1/">Beach Location 1</a>
+          <a class="nav-link" href="/beachlocation2/">Beach Location 2</a>
           <a class="nav-link" href="/beachlocation3/">Beach Location 3</a>
+          <a class="nav-link" href="/favoritebeach1/">Favorite Beach Survey</a>
+          <a class="nav-link" href="/password/">Password</a>
         </div>
       </li>
 
@@ -31,7 +30,6 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="nav-link" href={{ url_for('crud.crud') }}>Write a Review</a>
-          <a class="nav-link" href={{ url_for('crud_api.crud_api') }}>Async Reviews</a>
           <a class="nav-link" href={{ url_for('crud.search') }}>Search for Reviews</a>
         </div>
       </li>
@@ -48,6 +46,30 @@
           <a class="nav-link" href="/jay/">Jay M</a>
         </div>
       </li>
+      <li>
+        <div class="px-3">
+          <input id="search" type="search" placeholder="Search" aria-label="Search">
+        </div>
+      </li>
     </ul>
   </div>
 </nav>
+
+<script>
+  const search = document.getElementById('search');
+  const google = 'https://www.google.com/search?q=site%3A+';
+  const site = 'https://www.investopedia.com/tech/how-does-bitcoin-mining-work/';
+
+  function submitted(event) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      const url = google
+              + site
+              + '+'
+              + search.value;
+      const win = window.open(url, '_blank');
+      win.focus();
+    }
+  }
+  search.addEventListener('keypress', submitted);
+</script>
