@@ -3,91 +3,40 @@ from flask import render_template, request
 from flask import request, redirect
 import requests
 
-from beach_features import sortBestBeaches, allBeachCriteriaMustMatch, anyBeachCriteriaCanMatch, getMyFavoriteBeaches
 from crud.app_crud import app_crud
-from crud.app_crud_api import app_crud_api
 app.register_blueprint(app_crud)
-app.register_blueprint(app_crud_api)
 
 # app.routes
 
 @app.route('/')
 def index():
-    return render_template("/index.html")
+    url = "https://tides.p.rapidapi.com/tides"
+    querystring = {"longitude":"-2.097","latitude":"44.414","interval":"60","duration":"1440"}
+
+    headers = {
+        'x-rapidapi-host': "tides.p.rapidapi.com",
+        'x-rapidapi-key': "c1ebf686e7mshe4ed4400d544e06p107f7fjsn1235b397e8bd"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    return render_template("/index.html", output=response.json())
 
 @app.route('/reviews/')
 def reviews():
     return render_template("/assignments/reviews.html")
 
-# ---------------- BEACHES --------------------
+@app.route('/surfingData/')
+def surfingData():
+    return render_template("/assignments/surfingData.html")
 
-@app.route('/solana-beach/')
-def SolanaBeach():
-    import requests
-    url = "https://tides.p.rapidapi.com/tides"
+@app.route('/beachlocation1/')
+def BeachLocation1():
+    return render_template("/assignments/BeachLocation1.html")
 
-    querystring = {"longitude":"-117.272469","latitude":"32.989262","interval":"60","duration":"1440"}
-
-    headers = {
-        'x-rapidapi-host': "tides.p.rapidapi.com",
-        'x-rapidapi-key': "af654d789amshce4b35d071f3bd2p1c0cc8jsn8db3aa6a8acc"
-    }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    tides = response.json()
-
-    return render_template("/assignments/Beaches/SolanaBeach.html", tides=tides)
-
-@app.route('/del-mar-beach/')
-def DelMarBeach():
-    import requests
-    url = "https://tides.p.rapidapi.com/tides"
-
-    querystring = {"longitude":"-117.872269","latitude":"33.603588","interval":"60","duration":"1440"}
-
-    headers = {
-        'x-rapidapi-host': "tides.p.rapidapi.com",
-        'x-rapidapi-key': "af654d789amshce4b35d071f3bd2p1c0cc8jsn8db3aa6a8acc"
-    }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    tides = response.json()
-
-    return render_template("/assignments/Beaches/DelMarBeach.html", tides=tides)
-
-@app.route('/blacks-beach/')
-def BlacksBeach():
-    import requests
-    url = "https://tides.p.rapidapi.com/tides"
-
-    querystring = {"longitude":"-117.253716","latitude":"32.898354","interval":"60","duration":"1440"}
-
-    headers = {
-        'x-rapidapi-host': "tides.p.rapidapi.com",
-        'x-rapidapi-key': "af654d789amshce4b35d071f3bd2p1c0cc8jsn8db3aa6a8acc"
-    }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    tides = response.json()
-
-    return render_template("/assignments/Beaches/BlacksBeach.html", tides=tides)
-
-@app.route('/pacific-beach/')
-def PacificBeach():
-    import requests
-    url = "https://tides.p.rapidapi.com/tides"
-
-    querystring = {"longitude":"-117.236748","latitude":"32.782021","interval":"60","duration":"1440"}
-
-    headers = {
-        'x-rapidapi-host': "tides.p.rapidapi.com",
-        'x-rapidapi-key': "af654d789amshce4b35d071f3bd2p1c0cc8jsn8db3aa6a8acc"
-    }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    tides = response.json()
-
-    return render_template("/assignments/Beaches/PacificBeach.html", tides=tides)
+@app.route('/beachlocation2/')
+def BeachLocation2():
+    return render_template("/assignments/BeachLocation2.html")
 
 @app.route('/beachlocation3/')
 def BeachLocation3():
@@ -98,7 +47,29 @@ def selectBestBeach(form):
 
 @app.route('/favoritebeach1/', methods=["GET", "POST"])
 def FavoriteBeachSurvey():
-    feedback = getMyFavoriteBeaches(request)
+    feedback = "Beach Not Identified"
+    SolanaBeach = 0
+    DelMar = 0
+    if request.method == "POST":
+        if (request.form.get("surfing") != None):
+            SolanaBeach += 1
+        if (request.form.get("volleyball") != None):
+            DelMar += 1
+        if (request.form.get("dog") != None):
+            DelMar += 1
+        if (request.form.get("crowd") != None):
+            SolanaBeach += 1
+        if (request.form.get("picnic") != None):
+            DelMar += 1
+        if (DelMar == 0 and SolanaBeach == 0):
+            feedback = "Pick at least one preference"
+        elif (DelMar > SolanaBeach):
+            feedback = "Del Mar beach is best for you"
+        elif (SolanaBeach > DelMar):
+            feedback = "Solana Beach is best for you"
+        elif (SolanaBeach == DelMar):
+            feedback = "Solana and Del Mar beach are good for you"
+
     return render_template("/assignments/Survey.html", beach = feedback)
 
 @app.route('/yash/')
@@ -171,6 +142,8 @@ def avinh():
 
 @app.route('/jay/')
 def jay():
+
+
     import requests
 
     url = "https://nhl-stats-and-live-data.p.rapidapi.com/standings"
@@ -186,11 +159,9 @@ def jay():
     var = response.json()
     return render_template("/assignments/AboutUs/jay.html", var=var)
 
-
-@app.route('/Beach4/')
-def Beach4():
-    return render_template("/beaches/Beach4.html")
-
+@app.route('/password/')
+def Password():
+    return render_template("/assignments/password.html")
 
 # run page lol
 if __name__ == "__main__":
