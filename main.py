@@ -18,6 +18,10 @@ def index():
 def reviews():
     return render_template("/assignments/reviews.html")
 
+@app.route('/snake-game/')
+def Snake():
+    return render_template("/assignments/Beaches/Snake.html")
+
 # ---------------- BEACHES --------------------
 
 @app.route('/solana-beach/')
