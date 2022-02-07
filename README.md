@@ -26,6 +26,25 @@
 
 # Timebox - [Review Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/31)
 
+## Week 8
+
+### Weaknesses
+
+- [x] Sassy
+- [x] Async
+- [x] CRUD
+
+### New Features
+
+| Task | Name | Ticket |
+| --- | --- | --- |
+| Search Bar | Avinh | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/52) |
+| Snake | Sanvi | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/47) |
+| Graphing | Kashish | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/48) |
+| Beach Base | Avinh | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/51) |
+
+(note: Ellen was absent so n/a)
+
 ## Week 7
 
 ### Team
