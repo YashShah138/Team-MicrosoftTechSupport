@@ -22,6 +22,10 @@ def reviews():
 def Snake():
     return render_template("/assignments/Beaches/Snake.html")
 
+@app.route('/hangman-game/')
+def Hangman():
+    return render_template("/assignments/Beaches/Hangman.html")
+
 @app.route('/graphing/')
 def Graphing():
     return render_template("/assignments/Beaches/graphing.html")
