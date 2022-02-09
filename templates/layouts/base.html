@@ -18,6 +18,13 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
+        h2{
+            color: white;
+            margin-top: 15px;
+            background-color: rgba(0, 0, 0, 0.25);
+            width: 22%;
+        }
     </style>
     <script>
 
@@ -32,6 +39,41 @@
 {% include "layouts/navbar.html" %}
 
 {% block body %}
+
+<div align="center">
+    <h2>Search for a Beach!</h2>
+    <input id="beachsearch" placeholder="search for a beach">
+    <input id="submit" type="submit" onclick="document.location.href=SearchBeaches()">
+    <br>
+    <a id="result" href="index.html"></a>
+</div>
+
+
+<script>
+    //  search function -----------------------------------------------------------------------------------------------
+
+    const beachPages = '{"pages":[' +
+        // beaches
+        '{"name":"Del Mar Beach", "url":"/del-mar-beach/"},' + '{"name":"Solana Beach", "url":"/solana-beach/"},' + '{"name":"Pacific Beach", "url":"/pacific-beach/"},' + '{"name":"Blacks Beach", "url":"/blacks-beach/"},' + '{"name":"Snake Game", "url":"/snake-game/"},' +'{"name":"Hangman Game", "url":"/hangman-game/"},' +
+        // about pages
+        '{"name":"Akhil Nandhakumar", "url":"/akhil/"},' +
+        '{"name":"Yash Shah", "url":"/yash/"},' +
+        '{"name":"Avinh Huynh", "url":"/avinh/"},' +
+        '{"name":"Jay Manjrekar", "url":"/jay/"}]}';
+
+    function SearchBeaches() {
+        x = JSON.parse(beachPages);
+        input = document.getElementById('beachsearch');
+        list = input.value.toLowerCase(); // the user's input is changed to uppercase so that the search is not case-sensitive
+        for (i = 0; i < beachPages.length; i++) { // this section goes through the items in my array and checks if the user's input is the same as any object name
+            if (list.substring(0, list.length) === x.pages[i].name.toLowerCase().substring(0, list.length)) { //using substrings allows users to only input part of the page name instead of the whole thing
+                link = x.pages[i].url
+                return link
+            }
+        }
+    }
+</script>
+
 {% endblock %}
 
 </body>
