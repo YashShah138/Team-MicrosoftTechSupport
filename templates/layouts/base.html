@@ -48,30 +48,52 @@
     <a id="result" href="index.html"></a>
 </div>
 
+<div align="center">
+    <p id="error"></p>
+</div>
+
 
 <script>
     //  search function -----------------------------------------------------------------------------------------------
 
-    const beachPages = '{"pages":[' +
+    const beachPages = '{"pages":[' +  // dictionary containing names of beach pages and corresponding URL
+
         // beaches
         '{"name":"Del Mar Beach", "url":"/del-mar-beach/"},' + '{"name":"Solana Beach", "url":"/solana-beach/"},' + '{"name":"Pacific Beach", "url":"/pacific-beach/"},' + '{"name":"Blacks Beach", "url":"/blacks-beach/"},' + '{"name":"Snake Game", "url":"/snake-game/"},' +'{"name":"Hangman Game", "url":"/hangman-game/"},' +
+
         // about pages
         '{"name":"Akhil Nandhakumar", "url":"/akhil/"},' +
         '{"name":"Yash Shah", "url":"/yash/"},' +
         '{"name":"Avinh Huynh", "url":"/avinh/"},' +
         '{"name":"Jay Manjrekar", "url":"/jay/"}]}';
 
-    function SearchBeaches() {
-        x = JSON.parse(beachPages);
-        input = document.getElementById('beachsearch');
-        list = input.value.toLowerCase(); // the user's input is changed to uppercase so that the search is not case-sensitive
-        for (i = 0; i < beachPages.length; i++) { // this section goes through the items in my array and checks if the user's input is the same as any object name
-            if (list.substring(0, list.length) === x.pages[i].name.toLowerCase().substring(0, list.length)) { //using substrings allows users to only input part of the page name instead of the whole thing
-                link = x.pages[i].url
-                return link
+    function SearchBeaches(input) {    // function to search for pages
+
+        x = JSON.parse(beachPages); // converts dictionary to JSON data
+
+        input = document.getElementById('beachsearch');  // user's input is assigned to input parameter
+
+        list = input.value.toLowerCase(); // removes case sensitivity
+
+        for (i = 0; i < beachPages.length; i++) { // iterates for each item in dictionary
+
+            if (list.substring(0, list.length) === x.pages[i].name.toLowerCase().substring(0, list.length)) {
+                // ^ substrings so that the whole word doesn't need to be typed in as input ^
+                // checks if the input matches one of the pages in the dictionary
+
+                link = x.pages[i].url //assigns variable "link" to the url of the page found
+
+                document.getElementById('error').innerHTML=""  // clears the error message if one existed from previous searches
+
+                return link  // returns the url as a string
+
+
+            } else{  // if the input does not match any of the pages in the dictionary, display an error message
+                document.getElementById('error').innerHTML="Page Does Not Exist. Please Try Again."
             }
         }
     }
+
 </script>
 
 {% endblock %}
