@@ -22,6 +22,10 @@ def reviews():
 def Snake():
     return render_template("/assignments/Beaches/Snake.html")
 
+@app.route('/hangman-game/')
+def Hangman():
+    return render_template("/assignments/Beaches/Hangman.html")
+
 @app.route('/graphing/')
 def Graphing():
     return render_template("/assignments/Beaches/graphing.html")
@@ -107,10 +111,6 @@ def BeachLocation3():
         "https://theshoallajolla.com/latest/wp-content/uploads/2019/02/shutterstock_767106478.jpg",
         "https://d14fqx6aetz9ka.cloudfront.net/wp-content/uploads/2018/05/03094852/11.jpg"
                                                                                   ])
-
-@app.route('/Beach4/')
-def Beach4():
-    return render_template("/beaches/Beach4.html")
 
 def selectBestBeach(form):
     return "DelMar is the best beach for you"
