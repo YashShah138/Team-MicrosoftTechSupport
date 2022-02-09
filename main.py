@@ -26,6 +26,10 @@ def Snake():
 def Graphing():
     return render_template("/assignments/Beaches/graphing.html")
 
+@app.route('/wordle/')
+def Wordle():
+    return render_template("/assignments/wordle.html")
+
 # ---------------- BEACHES --------------------
 
 @app.route('/solana-beach/')
@@ -98,7 +102,11 @@ def PacificBeach():
 
 @app.route('/beachlocation3/')
 def BeachLocation3():
-    return render_template("/assignments/Beaches/BeachLocation3.html")
+    return render_template("/assignments/Beaches/BeachLocation3.html", image_list=[
+        "https://www.californiabeaches.com/wp-content/uploads/2014/09/BigS-Overlooking-Blacks-Beach-San-Diego-CA-Large-e1512026583176.jpg",
+        "https://theshoallajolla.com/latest/wp-content/uploads/2019/02/shutterstock_767106478.jpg",
+        "https://d14fqx6aetz9ka.cloudfront.net/wp-content/uploads/2018/05/03094852/11.jpg"
+                                                                                  ])
 
 @app.route('/Beach4/')
 def Beach4():
