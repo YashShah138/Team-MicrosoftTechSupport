@@ -26,12 +26,31 @@
 
 # Timebox - [Review Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/31)
 
+## Week 8
+
+### Weaknesses
+
+- [x] Sassy
+- [x] Async
+- [x] CRUD
+
+### New Features
+
+| Task | Name | Ticket |
+| --- | --- | --- |
+| Search Bar | Avinh | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/52) |
+| Snake | Sanvi | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/47) |
+| Graphing | Kashish | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/48) |
+| Beach Base | Avinh | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/51) |
+
+(note: Ellen was absent so n/a)
+
 ## Week 7
 
 ### Team
 | Task | Ticket |
 | --- | --- |
-| Evaluation of Crossover Team | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/41) |
+| Evaluation of the Crossover Team | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/41) |
 | Github Pages, Jekyll, WIKI | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/40) |
 | Sassy / Bootstrap | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/39) |
 | Async Operation | [Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/38) |

@@ -3,7 +3,6 @@ from flask import render_template, request
 from flask import request, redirect
 import requests
 
-from beach_features import sortBestBeaches, allBeachCriteriaMustMatch, anyBeachCriteriaCanMatch, getMyFavoriteBeaches
 from crud.app_crud import app_crud
 from crud.app_crud_api import app_crud_api
 app.register_blueprint(app_crud)
@@ -18,6 +17,18 @@ def index():
 @app.route('/reviews/')
 def reviews():
     return render_template("/assignments/reviews.html")
+
+@app.route('/snake-game/')
+def Snake():
+    return render_template("/assignments/Beaches/Snake.html")
+
+@app.route('/hangman-game/')
+def Hangman():
+    return render_template("/assignments/Beaches/Hangman.html")
+
+@app.route('/graphing/')
+def Graphing():
+    return render_template("/assignments/Beaches/graphing.html")
 
 # ---------------- BEACHES --------------------
 
@@ -98,8 +109,32 @@ def selectBestBeach(form):
 
 @app.route('/favoritebeach1/', methods=["GET", "POST"])
 def FavoriteBeachSurvey():
-    feedback = getMyFavoriteBeaches(request)
+    feedback = "Beach Not Identified"
+    SolanaBeach = 0
+    DelMar = 0
+    if request.method == "POST":
+        if (request.form.get("surfing") != None):
+            SolanaBeach += 1
+        if (request.form.get("volleyball") != None):
+            DelMar += 1
+        if (request.form.get("dog") != None):
+            DelMar += 1
+        if (request.form.get("crowd") != None):
+            SolanaBeach += 1
+        if (request.form.get("picnic") != None):
+            DelMar += 1
+        if (DelMar == 0 and SolanaBeach == 0):
+            feedback = "Pick at least one preference"
+        elif (DelMar > SolanaBeach):
+            feedback = "Del Mar beach is best for you"
+        elif (SolanaBeach > DelMar):
+            feedback = "Solana Beach is best for you"
+        elif (SolanaBeach == DelMar):
+            feedback = "Solana and Del Mar beach are good for you"
+
     return render_template("/assignments/Survey.html", beach = feedback)
+
+# Individual
 
 @app.route('/yash/')
 def yash():
@@ -185,11 +220,6 @@ def jay():
     response = requests.request("GET", url, headers=headers, params=querystring)
     var = response.json()
     return render_template("/assignments/AboutUs/jay.html", var=var)
-
-
-@app.route('/Beach4/')
-def Beach4():
-    return render_template("/beaches/Beach4.html")
 
 
 # run page lol

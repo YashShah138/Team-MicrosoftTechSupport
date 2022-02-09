@@ -18,6 +18,13 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
+        h2{
+            color: white;
+            margin-top: 15px;
+            background-color: rgba(0, 0, 0, 0.25);
+            width: 22%;
+        }
     </style>
     <script>
 
@@ -32,6 +39,63 @@
 {% include "layouts/navbar.html" %}
 
 {% block body %}
+
+<div align="center">
+    <h2>Search for a Beach!</h2>
+    <input id="beachsearch" placeholder="search for a beach">
+    <input id="submit" type="submit" onclick="document.location.href=SearchBeaches()">
+    <br>
+    <a id="result" href="index.html"></a>
+</div>
+
+<div align="center">
+    <p id="error"></p>
+</div>
+
+
+<script>
+    //  search function -----------------------------------------------------------------------------------------------
+
+    const beachPages = '{"pages":[' +  // dictionary containing names of beach pages and corresponding URL
+
+        // beaches
+        '{"name":"Del Mar Beach", "url":"/del-mar-beach/"},' + '{"name":"Solana Beach", "url":"/solana-beach/"},' + '{"name":"Pacific Beach", "url":"/pacific-beach/"},' + '{"name":"Blacks Beach", "url":"/blacks-beach/"},' + '{"name":"Snake Game", "url":"/snake-game/"},' +'{"name":"Hangman Game", "url":"/hangman-game/"},' +
+
+        // about pages
+        '{"name":"Akhil Nandhakumar", "url":"/akhil/"},' +
+        '{"name":"Yash Shah", "url":"/yash/"},' +
+        '{"name":"Avinh Huynh", "url":"/avinh/"},' +
+        '{"name":"Jay Manjrekar", "url":"/jay/"}]}';
+
+    function SearchBeaches(input) {    // function to search for pages
+
+        x = JSON.parse(beachPages); // converts dictionary to JSON data
+
+        input = document.getElementById('beachsearch');  // user's input is assigned to input parameter
+
+        list = input.value.toLowerCase(); // removes case sensitivity
+
+        for (i = 0; i < beachPages.length; i++) { // iterates for each item in dictionary
+
+            if (list.substring(0, list.length) === x.pages[i].name.toLowerCase().substring(0, list.length)) {
+                // ^ substrings so that the whole word doesn't need to be typed in as input ^
+                // checks if the input matches one of the pages in the dictionary
+
+                link = x.pages[i].url //assigns variable "link" to the url of the page found
+
+                document.getElementById('error').innerHTML=""  // clears the error message if one existed from previous searches
+
+                return link  // returns the url as a string
+
+
+            } else{  // if the input does not match any of the pages in the dictionary, display an error message
+                document.getElementById('error').innerHTML="Page Does Not Exist. Please Try Again."
+            }
+        }
+    }
+
+</script>
+
 {% endblock %}
 
 </body>
