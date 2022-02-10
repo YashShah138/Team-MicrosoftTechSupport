@@ -5,7 +5,8 @@ let guess = document.querySelector('#character');
 let textForm = document.querySelector('.textForm');
 
 var commonWords = [
-    "Surfing", "Beach Volleyball", "Dogs", "Sun Bathing", "Picnic", "Bonfire", "Running", "Walking", "Tanning", "Sandcastle", "Relaxing", "Snorkeling"
+    "Surfing", "Volleyball", "Dogs", "Sunbathing", "Picnic", "Bonfire", "Running", "Walking", "Tanning", "Sandcastle", "Relaxing", "Snorkeling"
+
 var chooseRandomWord = function(array) {
     return array[Math.floor(Math.random() * array.length)];
 
@@ -15,3 +16,10 @@ var chooseRandomWord = function(array) {
 
     for (choenWord.length)
 }
+
+var scrambleWord = function(word) {
+    var myword = "picnic"
+    var scrambled = myword.split('').sort(function(){return 0.5-Math.random()}).join('')
+    return scrambled;
+}
+
