@@ -58,8 +58,15 @@
 
     const beachPages = '{"pages":[' +  // dictionary containing names of beach pages and corresponding URL
 
-        // beaches
-        '{"name":"Del Mar Beach", "url":"/del-mar-beach/"},' + '{"name":"Solana Beach", "url":"/solana-beach/"},' + '{"name":"Pacific Beach", "url":"/pacific-beach/"},' + '{"name":"Blacks Beach", "url":"/blacks-beach/"},' + '{"name":"Snake Game", "url":"/snake-game/"},' +'{"name":"Hangman Game", "url":"/hangman-game/"},' +
+        // beaches or PBL pages
+        '{"name":"Del Mar Beach", "url":"/del-mar-beach/"},' +
+        '{"name":"Solana Beach", "url":"/solana-beach/"},' +
+        '{"name":"Pacific Beach", "url":"/pacific-beach/"},' +
+        '{"name":"Blacks Beach", "url":"/blacks-beach/"},' +
+        '{"name":"Survey", "url":"/favoritebeach1/"},' +
+        '{"name":"Favorite Beach Survey", "url":"/favoritebeach1/"},' +
+        '{"name":"Snake Game", "url":"/snake-game/"},' +
+        '{"name":"Hangman Game", "url":"/hangman-game/"},' +
 
         // about pages
         '{"name":"Akhil Nandhakumar", "url":"/akhil/"},' +
@@ -67,11 +74,11 @@
         '{"name":"Avinh Huynh", "url":"/avinh/"},' +
         '{"name":"Jay Manjrekar", "url":"/jay/"}]}';
 
-    function SearchBeaches(input) {    // function to search for pages
+    function SearchBeaches() {    // function to search for pages
 
         x = JSON.parse(beachPages); // converts dictionary to JSON data
 
-        input = document.getElementById('beachsearch');  // user's input is assigned to input parameter
+        input = document.getElementById('beachsearch');  // user's input is taken from what is inputted into the search bar
 
         list = input.value.toLowerCase(); // removes case sensitivity
 
