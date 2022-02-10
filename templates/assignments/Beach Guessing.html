@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    let ccdisplay = document.querySelector('.crrDisplay');
-    let incdisplay = document.querySelector('.incDisplay');
-    let guess = document.querySelector('#character');
-    let textForm = document.querySelector('.textForm');
 
-    var commonWords = [
-    "Surfing", "Beach Volleyball",
+{% include "layouts/navbar.html" %}
 
-    var chooseRandomWord = function(array) {
-    return array[Math.floor(Math.random() * array.length)];
-    }
-
-</head>
-<body>
-
-</body>
-</html>
+{% include "layouts/Beach Guessing.js" %}

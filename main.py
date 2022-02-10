@@ -134,6 +134,10 @@ def FavoriteBeachSurvey():
 
     return render_template("/assignments/Survey.html", beach = feedback)
 
+@app.route('/beach-guessing/', methods=["GET", "POST"])
+def BeachGuessing():
+
+    return render_template("/assignments/Beach Guessing.html", word = feedback)
 # Individual
 
 @app.route('/yash/')
