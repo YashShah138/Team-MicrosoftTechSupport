@@ -43,7 +43,7 @@
 <div align="center">
     <h2>Search for a Beach!</h2>
     <input id="beachsearch" placeholder="search for a beach">
-    <input id="submit" type="submit" onclick="document.location.href=SearchBeaches()">
+    <input id="submit" type="submit" onclick="document.location.href=SearchBeaches(pblPages)">
     <br>
     <a id="result" href="index.html"></a>
 </div>
@@ -56,33 +56,34 @@
 <script>
     //  search function -----------------------------------------------------------------------------------------------
 
-    const beachPages = '{"pages":[' +  // dictionary containing names of beach pages and corresponding URL
-
-        // beaches or PBL pages
+    const beachPages = '{"pages":[' +
         '{"name":"Del Mar Beach", "url":"/del-mar-beach/"},' +
         '{"name":"Solana Beach", "url":"/solana-beach/"},' +
         '{"name":"Pacific Beach", "url":"/pacific-beach/"},' +
         '{"name":"Blacks Beach", "url":"/blacks-beach/"},' +
-        '{"name":"Survey", "url":"/favoritebeach1/"},' +
-        '{"name":"Favorite Beach Survey", "url":"/favoritebeach1/"},' +
-        '{"name":"Snake Game", "url":"/snake-game/"},' +
-        '{"name":"Hangman Game", "url":"/hangman-game/"},' +
+        '{"name":"Survey", "url":"/favoritebeach1/"}]}';
 
-        // about pages
+    const pblPages = '{"pages":[' +
+        '{"name":"Favorite Beach Survey", "url":"/favoritebeach1/"},' +
+        '{"name":"Survey", "url":"/favoritebeach1/"},' +
+        '{"name":"Snake Game", "url":"/snake-game/"},' +
+        '{"name":"Hangman Game", "url":"/hangman-game/"}]}';
+
+    const aboutPages = '{"pages":[' +
         '{"name":"Akhil Nandhakumar", "url":"/akhil/"},' +
         '{"name":"Yash Shah", "url":"/yash/"},' +
         '{"name":"Avinh Huynh", "url":"/avinh/"},' +
         '{"name":"Jay Manjrekar", "url":"/jay/"}]}';
 
-    function SearchBeaches() {    // function to search for pages
+    function SearchBeaches(dictName) {    // function to search for pages
 
-        x = JSON.parse(beachPages); // converts dictionary to JSON data
+        x = JSON.parse(dictName); // converts dictionary to JSON data
 
         input = document.getElementById('beachsearch');  // user's input is taken from what is inputted into the search bar
 
         list = input.value.toLowerCase(); // removes case sensitivity
 
-        for (i = 0; i < beachPages.length; i++) { // iterates for each item in dictionary
+        for (i = 0; i < dictName.length; i++) { // iterates for each item in dictionary
 
             if (list.substring(0, list.length) === x.pages[i].name.toLowerCase().substring(0, list.length)) {
                 // ^ substrings so that the whole word doesn't need to be typed in as input ^
