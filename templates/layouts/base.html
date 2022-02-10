@@ -41,11 +41,9 @@
 {% block body %}
 
 <div align="center">
-    <h2>Search for a Beach!</h2>
-    <input id="beachsearch" placeholder="search for a beach">
-    <input id="submit" type="submit" onclick="document.location.href=SearchBeaches(pblPages)">
-    <br>
-    <a id="result" href="index.html"></a>
+    <h2>Search for a Page!</h2>
+    <input id="beachsearch" placeholder="search for a page">
+    <input id="submit" type="submit" onclick="document.location.href=SearchBeaches(beachPages)">
 </div>
 
 <div align="center">
@@ -95,15 +93,14 @@
 
                 return link  // returns the url as a string
 
-
-            } else{  // if the input does not match any of the pages in the dictionary, display an error message
-                document.getElementById('error').innerHTML="Page Does Not Exist. Please Try Again."
+            } else{  // if the input does not match any of the pages in the dictionary,
+                document.getElementById('error').innerHTML="Page Does Not Exist. Please search for pages similar to: " + x.pages[Math.floor(Math.random() * 3)].name
+                // display an error message, and give example of acceptable input
             }
         }
     }
 
 </script>
-
 {% endblock %}
 
 </body>
