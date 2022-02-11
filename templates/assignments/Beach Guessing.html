@@ -1,4 +1,119 @@
 
-{% include "layouts/navbar.html" %}
+Greg Reynolds
+12:04 AM (11 hours ago)
+to me
 
-{% include "layouts/Beach Guessing.js" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div.background {
+            background: url(https://images.unsplash.com/photo-1528784289209-d1bf7e951bcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGFjaWZpYyUyMGJlYWNofGVufDB8fDB8fA%3D%3D&w=1000&q=80) no-repeat;
+            background-size: cover;
+            border: 10px solid black opacity: 0.7;
+            min-width: 400px;
+            min-height: 600px;
+        }
+
+        <div.guessbox p {
+             margin: 10%;
+             font-weight: bold;
+             color: #000000;
+         }
+    </style>
+</head>
+
+<body onload="getscrambledword();">
+<div class="background">
+    <div class="guessbox" align="center">
+        <h1>Solve the scrambed word!</h1>
+
+        <label id="scrambledword" font-size="20"></label>
+        <div id="guessword"></div>
+
+
+        <input type="button" value="GUESS" onclick="getguess()">
+        <input type="text" name="guess" id="guesstext">
+        <p>Score:</p>
+        <label id="score"></label>
+        <br>
+
+        <br>
+        <div id="result"></div>
+    </div>
+</div>
+
+
+<script>
+    function getguess() {
+        // get the text value from the guess text box
+        var result = document.getElementById("guesstext").value;
+        if (result == commonWords[wordCount]) {
+            wordCount += 1;
+            rightAnswer += 1;
+            document.getElementById("result").innerHTML = "CORRECT!";
+
+            if (wordCount > 3) // game over
+            {
+
+                document.getElementById("score").innerHTML = calculateScore().toString;
+                exit();
+            } else {
+                // get next scrambled work
+                document.getElementById("scrambleword").innerHTML = getscrambledword();
+                // need to clear text box - this is not working yet
+                document.getElementById("guesstext").value = " ";
+            }
+        } else {
+            wrongAnswer += 1;
+            document.getElementById("result").innerHTML = "SORRY, TRY AGAIN!";
+        }
+    }
+
+    var commonWords = [
+        "surfing",
+        "volleyball",
+        "running",
+        "picnic"
+    ];
+    var word = "";
+    var currentWord = commonWords[0];
+    var wordCount = 0;
+    var rightAnswer = 0;
+    var wrongAnswer = 0;
+    var totalScore = 0;
+
+    function calcuateScore() {
+        totalScore = rightAnswer * 4 - wrongAnswer;
+        return totalScore.toString;
+    }
+
+    function randomIntFromInterval(min, max) { // min and max included
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    function scrambleWord(someword) {
+        return someword.split('').sort(function() {
+            return 0.5 - Math.random()
+        }).join('')
+    }
+
+    function getscrambledword() {
+        //    var randomWord = randomFromInterval(0, commonWords.length - 1);a
+        word = scrambleWord(commonWords[wordCount]);
+        document.getElementById("scrambledword").innerHTML = word;
+
+    }
+</script>
+
+<p id="guess1"> volleyball
+    < /p>
+</body>
+
+</html>
