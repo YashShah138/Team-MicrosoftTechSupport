@@ -30,6 +30,10 @@ def Hangman():
 def Graphing():
     return render_template("/assignments/Beaches/graphing.html")
 
+@app.route('/jaypbl/')
+def jaypbl():
+    return render_template("/assignments/Beaches/jaypbl.html")
+
 # ---------------- BEACHES --------------------
 
 @app.route('/solana-beach/')
