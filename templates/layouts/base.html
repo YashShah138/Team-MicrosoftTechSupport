@@ -94,7 +94,8 @@
                 return link  // returns the url as a string
 
             } else{  // if the input does not match any of the pages in the dictionary,
-                document.getElementById('error').innerHTML="Page Does Not Exist. Please search for pages similar to: " + x.pages[Math.floor(Math.random() * 3)].name
+                document.getElementById('error').innerHTML="Page Does Not Exist. Please search for pages similar to: " +
+                    x.pages[Math.floor(Math.random() * 3)].name
                 // display an error message, and give example of acceptable input
             }
         }
