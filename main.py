@@ -34,6 +34,10 @@ def Graphing():
 def Wordle():
     return render_template("/assignments/wordle.html")
 
+@app.route('/jaypbl/')
+def jaypbl():
+    return render_template("/assignments/Beaches/jaypbl.html")
+
 # ---------------- BEACHES --------------------
 
 @app.route('/solana-beach/')
@@ -142,6 +146,10 @@ def FavoriteBeachSurvey():
 
     return render_template("/assignments/Survey.html", beach = feedback)
 
+@app.route('/beach-guessing/', methods=["GET", "POST"])
+def BeachGuessing():
+
+    return render_template("/assignments/Beach Guessing.html")
 # Individual
 
 @app.route('/yash/')

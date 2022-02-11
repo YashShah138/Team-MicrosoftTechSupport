@@ -45,37 +45,36 @@ local_beach_features = [
 ]
 
 def getMyFavoriteBeaches(request):
-    feedback = "Beach Not Identified"
+    feedback = ""
     n = 0
     beach_features = []
     requests = list(request.form.items())
     sortMustMatch = False
 
+    if request.method != "POST":
+        return ""
+
     # GO through the form we got from Survey.html POST and see what sort was selected (Any, All)
-    if request.method == "POST":
-        if "SORT" in request.form:
-            sortMustMatch = True
-        else:
-            sortMustMatch = False
+    if "SORT" in request.form:
+        sortMustMatch = True
+    else:
+        sortMustMatch = False
 
-    if request.method == "POST":
-        for field in request.form:
-            if field != "SORT":
-                beach_features.append (field)
-                n = n + 1
-        print (beach_features)
-        if (sortMustMatch == True):
-            beaches = sortBestBeaches(allBeachCriteriaMustMatch, beach_features)
-        else:
-            beaches = sortBestBeaches(anyBeachCriteriaCanMatch, beach_features)
-
-        print (beaches)
-        if (n == 0):
-            feedback = "\nUnknowable unless you pick something!"
-        else:
-            feedback = beaches
-
-    return feedback
+    for field in request.form:
+        if field != "SORT":
+            beach_features.append (field)
+            n = n + 1
+    print (beach_features)
+    if (n == 0):
+        return "\nUnknowable unless you pick something!"
+    if sortMustMatch != True:
+        beaches = sortBestBeaches(anyBeachCriteriaCanMatch, beach_features)
+    else:
+        beaches = sortBestBeaches(allBeachCriteriaMustMatch, beach_features)
+    if len(beaches) == 0:
+        return "\nNo beaches match all selected criteria. Select fewer!"
+    else:
+        return beaches
 
 # all criteria must match or the beach is not included
 def allBeachCriteriaMustMatch(beach, *argv):

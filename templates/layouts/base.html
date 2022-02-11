@@ -41,11 +41,9 @@
 {% block body %}
 
 <div align="center">
-    <h2>Search for a Beach!</h2>
-    <input id="beachsearch" placeholder="search for a beach">
-    <input id="submit" type="submit" onclick="document.location.href=SearchBeaches()">
-    <br>
-    <a id="result" href="index.html"></a>
+    <h2>Search for a Page!</h2>
+    <input id="beachsearch" placeholder="search for a page">
+    <input id="submit" type="submit" onclick="document.location.href=SearchBeaches(beachPages)">
 </div>
 
 <div align="center">
@@ -56,26 +54,34 @@
 <script>
     //  search function -----------------------------------------------------------------------------------------------
 
-    const beachPages = '{"pages":[' +  // dictionary containing names of beach pages and corresponding URL
+    const beachPages = '{"pages":[' +
+        '{"name":"Del Mar Beach", "url":"/del-mar-beach/"},' +
+        '{"name":"Solana Beach", "url":"/solana-beach/"},' +
+        '{"name":"Pacific Beach", "url":"/pacific-beach/"},' +
+        '{"name":"Blacks Beach", "url":"/blacks-beach/"},' +
+        '{"name":"Survey", "url":"/favoritebeach1/"}]}';
 
-        // beaches
-        '{"name":"Del Mar Beach", "url":"/del-mar-beach/"},' + '{"name":"Solana Beach", "url":"/solana-beach/"},' + '{"name":"Pacific Beach", "url":"/pacific-beach/"},' + '{"name":"Blacks Beach", "url":"/blacks-beach/"},' + '{"name":"Snake Game", "url":"/snake-game/"},' +'{"name":"Hangman Game", "url":"/hangman-game/"},' +
+    const pblPages = '{"pages":[' +
+        '{"name":"Favorite Beach Survey", "url":"/favoritebeach1/"},' +
+        '{"name":"Survey", "url":"/favoritebeach1/"},' +
+        '{"name":"Snake Game", "url":"/snake-game/"},' +
+        '{"name":"Hangman Game", "url":"/hangman-game/"}]}';
 
-        // about pages
+    const aboutPages = '{"pages":[' +
         '{"name":"Akhil Nandhakumar", "url":"/akhil/"},' +
         '{"name":"Yash Shah", "url":"/yash/"},' +
         '{"name":"Avinh Huynh", "url":"/avinh/"},' +
         '{"name":"Jay Manjrekar", "url":"/jay/"}]}';
 
-    function SearchBeaches(input) {    // function to search for pages
+    function SearchBeaches(dictName) {    // function to search for pages
 
-        x = JSON.parse(beachPages); // converts dictionary to JSON data
+        x = JSON.parse(dictName); // converts dictionary to JSON data
 
-        input = document.getElementById('beachsearch');  // user's input is assigned to input parameter
+        input = document.getElementById('beachsearch');  // user's input is taken from what is inputted into the search bar
 
         list = input.value.toLowerCase(); // removes case sensitivity
 
-        for (i = 0; i < beachPages.length; i++) { // iterates for each item in dictionary
+        for (i = 0; i < dictName.length; i++) { // iterates for each item in dictionary
 
             if (list.substring(0, list.length) === x.pages[i].name.toLowerCase().substring(0, list.length)) {
                 // ^ substrings so that the whole word doesn't need to be typed in as input ^
@@ -87,15 +93,15 @@
 
                 return link  // returns the url as a string
 
-
-            } else{  // if the input does not match any of the pages in the dictionary, display an error message
-                document.getElementById('error').innerHTML="Page Does Not Exist. Please Try Again."
+            } else{  // if the input does not match any of the pages in the dictionary,
+                document.getElementById('error').innerHTML="Page Does Not Exist. Please search for pages similar to: " +
+                    x.pages[Math.floor(Math.random() * 3)].name
+                // display an error message, and give example of acceptable input
             }
         }
     }
 
 </script>
-
 {% endblock %}
 
 </body>
