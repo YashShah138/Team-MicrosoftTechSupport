@@ -28,14 +28,14 @@
             color: white;
         }
 
-        paragraph { text-align: end; height: 300px; bottom: 10%; }
+        paragraph { text-align: end; height: 30px; bottom: 20%; }
 
         /* Styling the Form (Color, Padding, Shadow) */
 
         form {
             background-color: #fff;
             max-width: 500px;
-            height: 450px;
+            height: 460px;
             margin: 10px auto;
             padding: 30px 20px;
             box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
@@ -63,7 +63,7 @@
         button {
             background-color: #05c46b;
             border: 1px solid #777;
-            bottom: 20%;
+            bottom: 15%;
             border-radius: 2px;
             font-family: inherit;
             font-size: 18px;
@@ -71,6 +71,7 @@
             position: fixed;
             width: auto;
             margin-top: 50px;
+            margin-left: 180px;
             margin-bottom: 20px;
         }
     </style>
@@ -126,20 +127,18 @@
                    name="SORT"> All Criteria Must Match
             </input></label>
 
+        <!-- Button Control -->
+        <button type="submit" class="btn btn-primary" value="submit"  >
+            Submit
+        </button>
+        <br>
+
         <!--   {% if beach %} -->
         <div align="center">
             <p class="text position: fixed; bottom: 50%; width:100%; text-align: right">
             <h5>Best Beaches are</h5>
             {{ beach }}</p>
         </div>
-
-        <!-- Button Control -->
-        <button type="submit" class="btn btn-primary" value="submit"  >
-            Submit
-        </button>
-        <br>
-        <br>
-
         <!--   {% endif %} -->
     </div>
 
