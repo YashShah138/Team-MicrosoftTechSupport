@@ -32,11 +32,11 @@
 
 | Name | Ticket |
 | --- | --- |
-| Avinh | |
-| Akhil | |
-| Yash | |
-| Valen | |
-| Jay | |
+| Avinh | [Wordle](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/54) |
+| Akhil | [Search](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/55) |
+| Yash | [TicTacToe](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/58) |
+| Valen | [Beach Word Scramble](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/59) |
+| Jay | [API Search](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/60) |
 
 ### MCQ
 
