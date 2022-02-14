@@ -26,6 +26,28 @@
 
 # Timebox - [Review Ticket](https://github.com/YashShah138/Team-MicrosoftTechSupport/issues/31)
 
+## Week 10
+
+### Create Task
+
+| Name | Ticket |
+| --- | --- |
+| Avinh | |
+| Akhil | |
+| Yash | |
+| Valen | |
+| Jay | |
+
+### MCQ
+
+| Name | MCQ |
+| --- | --- |
+| Avinh | |
+| Akhil | |
+| Yash | |
+| Valen | |
+| Jay | |
+
 ## Week 8
 
 ### Weaknesses
