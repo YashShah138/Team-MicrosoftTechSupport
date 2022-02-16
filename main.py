@@ -1,10 +1,10 @@
-from __init__ import app
+from app import app
 from flask import render_template, request
 from flask import request, redirect
 import requests
 
-from crud.app_crud import app_crud
-from crud.app_crud_api import app_crud_api
+from crudy.app_crud import app_crud
+from crudy.app_crud_api import app_crud_api
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
 
