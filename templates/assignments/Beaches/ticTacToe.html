@@ -7,6 +7,7 @@
         body {
             background-image: linear-gradient(to right, #dc8c24, #fcdc7b, #c6b3b0, #3c3c44);
         }
+
         td {
             border:  2px solid #333;
             height:  100px;
@@ -27,6 +28,35 @@
     </style>
 </head>
 <body>
+    <table>
+        <tr>
+            <td class="cell" id="0"></td>
+            <td class="cell" id="1"></td>
+            <td class="cell" id="2"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="3"></td>
+            <td class="cell" id="4"></td>
+            <td class="cell" id="5"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="6"></td>
+            <td class="cell" id="7"></td>
+            <td class="cell" id="8"></td>
+        </tr>
+    </table>
 
+    <div class="center" align="center">
+        <button class="button button1" onClick="startGame()">Replay!</button>
+    </div>
+
+    <div class="endgame">
+        <div class="text"></div>
+    </div>
+    <div class = "selectSym">
+        <p>Select:</p>
+        <button onClick="selectSym('X')">X</button>
+        <button onClick="selectSym('O')">O</button>
+    </div>
 </body>
 </html>
