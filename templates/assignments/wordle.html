@@ -1,0 +1,57 @@
+{% extends "layouts/base.html" %}
+
+{% block head %}
+
+<style>
+
+</style>
+<script>
+
+    WordBank = [Beach]
+    index = Math.round(Math.random * WordBank.length)
+    Word = WordBank[index]
+
+    function Guess(Guess, GuessNum) {
+
+        var index;
+
+        for (var char in Guess) {
+
+            index = Guess.indexOf(char)
+
+            if (index>0) {
+
+                let canvas = document.getElementById(toString(GuessNum) + 'x' + toString(index))
+                let ctx = canvas.getContext('2d');
+
+                if (index == Word.indexOf(char)) {
+                    ctx.fillStyle = 'green';
+                } else {
+                    ctx.fillStyle = 'yellow';
+                }
+                ctx.fillRect(10, 10, 150, 100);
+            }
+        }
+    }
+
+</script>
+
+{% endblock %}
+{% block body %}
+
+{% for row in range(6) %}
+    {% for column in range(6) %}
+    <canvas class="canvas" id="{{row}}x{{column}}" width="150" height="150"></canvas>
+    {% endfor %}
+    <br>
+{% endfor %}
+
+<script>
+    const canvas = document.getElementById('5x4')
+    const ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = 'green';
+    ctx.fillRect(10, 10, 150, 100);
+</script>
+
+{% endblock %}

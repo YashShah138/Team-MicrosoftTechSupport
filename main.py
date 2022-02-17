@@ -10,43 +10,35 @@ app.register_blueprint(app_crud_api)
 
 # app.routes
 
-
 @app.route('/')
 def index():
     return render_template("/index.html")
-
 
 @app.route('/reviews/')
 def reviews():
     return render_template("/assignments/reviews.html")
 
-
 @app.route('/snake-game/')
 def Snake():
     return render_template("/assignments/Beaches/Snake.html")
-
-
-@app.route('/ticTacToe/')
-def ticTacToe():
-    return render_template("/assignments/beaches/ticTacToe.html")
-
 
 @app.route('/hangman-game/')
 def Hangman():
     return render_template("/assignments/Beaches/Hangman.html")
 
-
 @app.route('/graphing/')
 def Graphing():
     return render_template("/assignments/Beaches/graphing.html")
 
+@app.route('/wordle/')
+def Wordle():
+    return render_template("/assignments/wordle.html")
 
 @app.route('/jaypbl/')
 def jaypbl():
     return render_template("/assignments/Beaches/jaypbl.html")
 
 # ---------------- BEACHES --------------------
-
 
 @app.route('/solana-beach/')
 def SolanaBeach():
@@ -65,7 +57,6 @@ def SolanaBeach():
 
     return render_template("/assignments/Beaches/SolanaBeach.html", tides=tides)
 
-
 @app.route('/del-mar-beach/')
 def DelMarBeach():
     import requests
@@ -82,7 +73,6 @@ def DelMarBeach():
     tides = response.json()
 
     return render_template("/assignments/Beaches/DelMarBeach.html", tides=tides)
-
 
 @app.route('/blacks-beach/')
 def BlacksBeach():
@@ -101,7 +91,6 @@ def BlacksBeach():
 
     return render_template("/assignments/Beaches/BlacksBeach.html", tides=tides)
 
-
 @app.route('/pacific-beach/')
 def PacificBeach():
     import requests
@@ -119,15 +108,16 @@ def PacificBeach():
 
     return render_template("/assignments/Beaches/PacificBeach.html", tides=tides)
 
-
 @app.route('/beachlocation3/')
 def BeachLocation3():
-    return render_template("/assignments/Beaches/BeachLocation3.html")
-
+    return render_template("/assignments/Beaches/BeachLocation3.html", image_list=[
+        "https://www.californiabeaches.com/wp-content/uploads/2014/09/BigS-Overlooking-Blacks-Beach-San-Diego-CA-Large-e1512026583176.jpg",
+        "https://theshoallajolla.com/latest/wp-content/uploads/2019/02/shutterstock_767106478.jpg",
+        "https://d14fqx6aetz9ka.cloudfront.net/wp-content/uploads/2018/05/03094852/11.jpg"
+                                                                                  ])
 
 def selectBestBeach(form):
     return "DelMar is the best beach for you"
-
 
 @app.route('/favoritebeach1/', methods=["GET", "POST"])
 def FavoriteBeachSurvey():
@@ -156,13 +146,11 @@ def FavoriteBeachSurvey():
 
     return render_template("/assignments/Survey.html", beach = feedback)
 
-
 @app.route('/beach-guessing/', methods=["GET", "POST"])
 def BeachGuessing():
 
     return render_template("/assignments/Beach Guessing.html")
 # Individual
-
 
 @app.route('/yash/')
 def yash():
