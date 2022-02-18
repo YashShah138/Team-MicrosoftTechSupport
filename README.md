@@ -40,13 +40,13 @@
 
 ### MCQ
 
-| Name | MCQ |
-| --- | --- |
-| Avinh | |
-| Akhil | |
-| Yash | |
-| Valen | |
-| Jay | |
+| Name | MCQ | Corrections |
+| --- | --- | --- |
+| Avinh | | |
+| Akhil | ![image](https://user-images.githubusercontent.com/89219514/154613349-3a17c56b-ef85-479f-9cca-67981c2b0b22.png) | **Question 14:** The answer I chose would cause the function to stop immediately if any value was equal to 6 and none of the others would get checked. Correct answer is C, lines 8 and 12 should be interchanged to the function evaluated true and false correctly. <br> **Question 13:**  Simulations are most useful when real-world events are impractical. A simulation is unlikely to be appropriate if continuous real-world data is needed, and should be definitely used if many trials need to be done quickly. <br> **Question 48:** Forgot what a rogue acces point was, its when a router doesn't have good security measures, its able to be accessed easily and an attack can be done through it.|
+| Yash | | |
+| Valen | | |
+| Jay | | |
 
 ## Week 8
 
