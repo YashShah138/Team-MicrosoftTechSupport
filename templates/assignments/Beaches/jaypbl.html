@@ -68,27 +68,19 @@
 </div>
 
     <script>
-        let x = 10;
-        x *= 5;
-        document.getElementById("demo").innerHTML = x;
-</script>
+function shuffle_deck(deck) {
+    const position = deck.length;
 
-<body>
+    while (position !== 0) {
+        rndIdx=Math.floor(Math.random()*position);
+        tmp=deck[position];
+        deck[position]=deck[rndIdx];
+        deck[rndIdx]=tmp;
 
-<h2>JavaScript Functions</h2>
 
-<p>This example calls a function which performs a calculation, and returns the result:</p>
-
-<p id="demo"></p>
-
-<script>
-    function myFunction(p1, p2) {
-        return p1 * p2;
     }
-    document.getElementById("demo").innerHTML = myFunction(4, 3);
+    return deck;
+}
 </script>
-
-</body>
-
 
 </body>
