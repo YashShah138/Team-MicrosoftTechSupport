@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="858b4215-7dfd-48f1-a79a-ebc0570df582" name="Changes" comment="Fixed main from whoever broke my code! &#10;Put in awesome new feature to require ALL beach survey feature match or any match. &#10;Updated the survey into two columns so it can show all criteria, and added an 8th criteria for snorkeling at La Jolla Cove / Beach.">
+    <list default="true" id="858b4215-7dfd-48f1-a79a-ebc0570df582" name="Changes" comment="Added shuffle function to JayPBL">
       <change beforePath="$PROJECT_DIR$/templates/assignments/Beaches/jaypbl.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/assignments/Beaches/jaypbl.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -275,7 +275,7 @@
       <workItem from="1643309608043" duration="2065000" />
       <workItem from="1643397832084" duration="10460000" />
       <workItem from="1644955112386" duration="297000" />
-      <workItem from="1645654522203" duration="1167000" />
+      <workItem from="1645654522203" duration="2713000" />
     </task>
     <task id="LOCAL-00001" summary="created specific directories for about pictures">
       <created>1637350879934</created>
@@ -417,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643422952852</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added shuffle function to JayPBL">
+      <created>1645655742613</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1645655742613</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,10 +472,11 @@
     <MESSAGE value="search page formatted and css" />
     <MESSAGE value="formatted navbar for review pages" />
     <MESSAGE value="Fixed main from whoever broke my code! &#10;Put in awesome new feature to require ALL beach survey feature match or any match. &#10;Updated the survey into two columns so it can show all criteria, and added an 8th criteria for snorkeling at La Jolla Cove / Beach." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed main from whoever broke my code! &#10;Put in awesome new feature to require ALL beach survey feature match or any match. &#10;Updated the survey into two columns so it can show all criteria, and added an 8th criteria for snorkeling at La Jolla Cove / Beach." />
+    <MESSAGE value="Added shuffle function to JayPBL" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added shuffle function to JayPBL" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1645654580558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1645655860621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$rest_test.coverage" NAME="rest_test Coverage Results" MODIFIED="1638818569043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$MicrosoftTechSupport_Project.coverage" NAME="MicrosoftTechSupport-Project Coverage Results" MODIFIED="1643744564315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$.coverage" NAME=" Coverage Results" MODIFIED="1642103387442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
