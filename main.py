@@ -40,8 +40,13 @@ def Graphing():
     return render_template("/assignments/Beaches/graphing.html")
 
 
-@app.route('/wordle/')
+@app.route('/wordle/', methods=['GET', 'POST'])
 def Wordle():
+    if request.form:
+        guess = request.form.get("Guess")
+        print(guess)
+        if len(guess) == 5:
+            return render_template("/assignments/wordle.html", guess=guess)
     return render_template("/assignments/wordle.html")
 
 
@@ -54,7 +59,7 @@ def jaypbl():
 
 @app.route('/solana-beach/')
 def SolanaBeach():
-    import requests
+
     url = "https://tides.p.rapidapi.com/tides"
 
     querystring = {"longitude":"-117.272469","latitude":"32.989262","interval":"60","duration":"1440"}
@@ -72,7 +77,7 @@ def SolanaBeach():
 
 @app.route('/del-mar-beach/')
 def DelMarBeach():
-    import requests
+
     url = "https://tides.p.rapidapi.com/tides"
 
     querystring = {"longitude":"-117.872269","latitude":"33.603588","interval":"60","duration":"1440"}
@@ -90,7 +95,7 @@ def DelMarBeach():
 
 @app.route('/blacks-beach/')
 def BlacksBeach():
-    import requests
+
     url = "https://tides.p.rapidapi.com/tides"
 
     querystring = {"longitude":"-117.253716","latitude":"32.898354","interval":"60","duration":"1440"}
@@ -108,7 +113,7 @@ def BlacksBeach():
 
 @app.route('/pacific-beach/')
 def PacificBeach():
-    import requests
+
     url = "https://tides.p.rapidapi.com/tides"
 
     querystring = {"longitude":"-117.236748","latitude":"32.782021","interval":"60","duration":"1440"}
