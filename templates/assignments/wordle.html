@@ -10,44 +10,59 @@
 
     if (localStorage.getItem("Word") == undefined) {
         let index = Math.floor(Math.random() * WordBank.length)
-        let Word = WordBank[index].toUpperCase()
-        localStorage.setItem("Word", Word)
+        localStorage.setItem("Word", WordBank[index].toUpperCase())
     }
 
-    GuessNum = 0
+    if (localStorage.getItem("GuessList") == undefined) {
+        let GuessList = [];
+        GuessList[0] = '{{guess}}'
+        localStorage.setItem("GuessList", JSON.stringify(GuessList))
+    } else if ('{{guess}}'.length != 0) {
+        let GuessList = JSON.parse(localStorage.getItem("GuessList"));
+        if (!('{{guess}}' in GuessList)) {
+            GuessList.push('{{guess}}')
+            localStorage.setItem("GuessList", JSON.stringify(GuessList))
+        }
+    }
 
-    let Word = localStorage.getItem("Word")
+    let GuessList = JSON.parse(localStorage.getItem("GuessList"));
+    let Word = localStorage.getItem("Word");
 
-    console.log(Word)
+    console.log('Latest Guess: ' + '{{guess}}')
+    console.log('Guess List: ' + GuessList)
+    console.log('Word: ' + Word)
 
-    function Guess(Guess, GuessNum) {
+    function Render(GuessList) {
 
-        for (var i = 0; i < Guess.length; i++) {
+        for (let j = 0; j < GuessList.length; j++) {
 
-            let GuessChar = Guess[i].toUpperCase()
+            let Guess = GuessList[j]
 
-            var canvas = document.getElementById(GuessNum + "x" + i)
-            var ctx = canvas.getContext('2d');
-            console.log(GuessChar)
+            for (let i = 0; i < Guess.length; i++) {
 
-            if (GuessChar === Word[i]) {
+                let GuessChar = Guess[i].toUpperCase()
+                let canvas = document.getElementById(j + "x" + i)
+                let ctx = canvas.getContext('2d');
 
-                ctx.fillStyle = 'green';
+                if (GuessChar === Word[i]) {
 
-            } else if (Word.indexOf(GuessChar) > -1) {
+                    ctx.fillStyle = 'green';
 
-                ctx.fillStyle = 'yellow';
+                } else if (Word.indexOf(GuessChar) > -1) {
 
-            } else {
+                    ctx.fillStyle = 'yellow';
 
-                ctx.fillStyle = 'grey';
+                } else {
 
+                    ctx.fillStyle = 'grey';
+
+                }
+
+                ctx.fillRect(10, 10, 150, 100);
+                ctx.fillStyle = 'black';
+                ctx.font = "30px Verdana";
+                ctx.fillText(GuessChar, 70, 75)
             }
-
-            ctx.fillRect(10, 10, 150, 100);
-            ctx.fillStyle = 'black';
-            ctx.font = "30px Verdana";
-            ctx.fillText(GuessChar, 70, 75)
         }
     }
 
@@ -80,9 +95,10 @@
 </form>
 
 <p>guess: {{guess}}</p>
+<button onclick="localStorage.setItem('GuessList', JSON.stringify([]))">reset</button>
 
 <script>
-    Guess('{{guess}}', GuessNum)
+    Render(GuessList)
 </script>
 
 {% endblock %}
