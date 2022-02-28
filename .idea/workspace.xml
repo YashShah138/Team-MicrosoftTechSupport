@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="858b4215-7dfd-48f1-a79a-ebc0570df582" name="Changes" comment="wordle wip" />
+    <list default="true" id="858b4215-7dfd-48f1-a79a-ebc0570df582" name="Changes" comment="Edited the Code Format">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assignments/Beaches/jaypbl.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/assignments/Beaches/jaypbl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assignments/memorygame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/navbar.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,15 +47,15 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/templates/layouts/navbar.html" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/templates/layouts/base.html" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/crudy/model.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/crudy/templates/crud/crud.html" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/crudy/app_crud.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Static/style/custom.css" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Static/style/custom.scss" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/layouts/base.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/layouts/navbar.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Static/style/custom.css" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/requirements.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/crudy/app_crud.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/crudy/model.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/crudy/templates/crud/crud.html" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -273,6 +279,7 @@
       <workItem from="1643309608043" duration="2065000" />
       <workItem from="1643397832084" duration="10460000" />
       <workItem from="1644955112386" duration="297000" />
+      <workItem from="1646024849755" duration="11644000" />
     </task>
     <task id="LOCAL-00001" summary="created specific directories for about pictures">
       <created>1637350879934</created>
@@ -414,14 +421,35 @@
       <option name="project" value="LOCAL" />
       <updated>1643422952852</updated>
     </task>
-    <task id="LOCAL-00021" summary="wordle wip">
-      <created>1645844487816</created>
+    <task id="LOCAL-00021" summary="Added the shuffle function and unflip cards">
+      <created>1646023686718</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1645844487816</updated>
+      <updated>1646023686718</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Reformatted Images">
+      <created>1646027260152</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1646027260152</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Added Iteration and Lists">
+      <created>1646031105975</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1646031105975</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Edited the Code Format">
+      <created>1646032210652</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1646032210652</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,7 +476,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -470,23 +497,25 @@
     <MESSAGE value="search page formatted and css" />
     <MESSAGE value="formatted navbar for review pages" />
     <MESSAGE value="Fixed main from whoever broke my code! &#10;Put in awesome new feature to require ALL beach survey feature match or any match. &#10;Updated the survey into two columns so it can show all criteria, and added an 8th criteria for snorkeling at La Jolla Cove / Beach." />
-    <MESSAGE value="wordle wip" />
-    <option name="LAST_COMMIT_MESSAGE" value="wordle wip" />
+    <MESSAGE value="Added Finished Javascript" />
+    <MESSAGE value="Added the shuffle function and unflip cards" />
+    <MESSAGE value="Reformatted Images" />
+    <MESSAGE value="Added Iteration and Lists" />
+    <MESSAGE value="Edited the Code Format" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited the Code Format" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$reviewmodel.coverage" NAME="reviewmodel Coverage Results" MODIFIED="1641585638969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reviews" />
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$.coverage" NAME=" Coverage Results" MODIFIED="1642103387442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$app_crud.coverage" NAME="app_crud Coverage Results" MODIFIED="1641844326166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1646037317708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$rest_test.coverage" NAME="rest_test Coverage Results" MODIFIED="1638818569043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$app_crud_api.coverage" NAME="app_crud_api Coverage Results" MODIFIED="1643053971264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$sql.coverage" NAME="sql Coverage Results" MODIFIED="1643052762265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$Team_MicrosoftTechSupport.coverage" NAME="Team-MicrosoftTechSupport Coverage Results" MODIFIED="1641240063373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$beach_features.coverage" NAME="beach_features Coverage Results" MODIFIED="1642052927595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$model.coverage" NAME="model Coverage Results" MODIFIED="1641844763675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$test_main.coverage" NAME="test_main Coverage Results" MODIFIED="1642052345796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$MicrosoftTechSupport_Project.coverage" NAME="MicrosoftTechSupport-Project Coverage Results" MODIFIED="1642975516993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$MicrosoftTechSupport_Project.coverage" NAME="MicrosoftTechSupport-Project Coverage Results" MODIFIED="1643744564315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$.coverage" NAME=" Coverage Results" MODIFIED="1642103387442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$app_review.coverage" NAME="app_review Coverage Results" MODIFIED="1641842340441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reviews" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$reviewmodel.coverage" NAME="reviewmodel Coverage Results" MODIFIED="1641585638969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reviews" />
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$tpt_test.coverage" NAME="tpt test Coverage Results" MODIFIED="1641931704710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1645207259356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$Team_MicrosoftTechSupport.coverage" NAME="Team-MicrosoftTechSupport Coverage Results" MODIFIED="1641240063373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$model.coverage" NAME="model Coverage Results" MODIFIED="1642537806678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$beach_features.coverage" NAME="beach_features Coverage Results" MODIFIED="1642052927595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$test_main.coverage" NAME="test_main Coverage Results" MODIFIED="1642052345796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Downloads" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$app_crud.coverage" NAME="app_crud Coverage Results" MODIFIED="1642537838243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
   </component>
 </project>

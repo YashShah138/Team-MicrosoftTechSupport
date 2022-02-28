@@ -55,6 +55,7 @@ def jaypbl():
     return render_template("/assignments/Beaches/jaypbl.html")
 
 
+
 # ---------------- BEACHES --------------------
 
 @app.route('/solana-beach/')

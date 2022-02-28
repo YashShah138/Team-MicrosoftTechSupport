@@ -1,114 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Tic Tac Toe</title>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tic Tac Toe</title>
+        <style>
+            body {
+                background-image: linear-gradient(to right, #F9D199, #FDD8B5, #F6E3D4, #BBDBF7, #92C4EE, #64ABE3);
+            }
 
-    <style>
-        body {
-            background-image: linear-gradient(to right, #dc8c24, #fcdc7b, #c6b3b0, #3c3c44);
-        }
+            td {
+                border:  2px solid #333;
+                height:  100px;
+                width:  100px;
+                text-align:  center;
+                vertical-align:  middle;
+                font-size:  70px;
+                cursor: pointer;
+            }
 
-        buttonButton1 {
-            height: 75px;
-            width: 100px;
-            font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
-            font-size: 100vmin;
-        }
+            table {
+                border-collapse: collapse;
+                position:   absolute;
+                left: 50%;
+                margin-left: -155px;
+                top: 50px;
+            }
 
-        td {
-            border:  2px solid #333;
-            height:  100px;
-            width:  100px;
-            text-align:  center;
-            vertical-align:  middle;
-            font-size:  70px;
-            cursor: pointer;
-        }
+            table tr:first-child td {
+                border-top: 0;
+            }
 
-        table {
-            border-collapse: collapse;
-            position:   absolute;
-            left: 50%;
-            margin-left: -155px;
-            top: 50px;
-        }
+            table tr:last-child td {
+                border-bottom: 0;
+            }
 
-        table tr:first-child td {
-            border-top: 0;
-        }
+            table tr td:first-child {
+                border-left: 0;
+            }
 
-        table tr:last-child td {
-            border-bottom: 0;
-        }
+            table tr td:last-child {
+                border-right: 0;
+            }
 
-        table tr td:first-child {
-            border-left: 0;
-        }
+            .endgame {
+                display: none;
+                width:  200px;
+                top: 120px;
+                background-color: rgba(0, 0, 0, 0);
+                position: absolute;
+                left: 50%;
+                margin-left: -100px;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-size: 2em;
+            }
 
-        table tr td:last-child {
-            border-right: 0;
-        }
+            .selectSym{
+                display: none;
+                width: 220px;
+                top: 110px;
+                background-color: rgb(101, 203, 218);
+                background-image: radial-gradient(circle, #65CBDA, #236E95);
+                position: absolute;
+                left: 50%;
+                margin-left: -110px;
+                padding-top: 10px;
+                padding-bottom: 50px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-size: 2em;
+            }
 
-        .endgame {
-            display: none;
-            width:  200px;
-            top: 120px;
-            background-color: rgba(205, 133, 63, 0.8);
-            position: absolute;
-            left: 50%;
-            margin-left: -100px;
-            padding-top: 50px;
-            padding-bottom: 50px;
-            text-align: center;
-            border-radius: 5px;
-            color: white;
-            font-size: 2em;
-        }
+            .selectSym button{
+                font-family: 'Times New Roman', Times, serif, serif;
+                font-size:  50px;
+                width: 70px;
+            }
 
-        .selectSym{
-            display: none;
-            width: 220px;
-            top: 110px;
-            background-color: rgba(205, 133, 63, 0.8);
-            position: absolute;
-            left: 50%;
-            margin-left: -110px;
-            padding-top: 10px;
-            padding-bottom: 50px;
-            text-align: center;
-            border-radius: 5px;
-            color: yellow;
-            font-size: 2em;
-        }
+            .selectSym  button:first-of-type {
+                margin-right: 10px;
+            }
 
-        .selectSym button{
-            font-family: 'Times New Roman', Times, serif, serif;
-            font-size:  50px;
-            width: 70px;
-        }
+            .selectSym  button:last-of-type {
+                margin-left: 10px;
+            }
 
-        .selectSym  button:first-of-type {
-            margin-right: 10px;
-        }
+            .center {
+                margin: 0;
+                position: absolute;
+                top: 55%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
 
-        .selectSym  button:last-of-type {
-            margin-left: 10px;
-        }
+    <body>
 
-        .center {
-            margin: 0;
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
-    </style>
-</head>
-
-
-<body>
     <table>
         <tr>
             <td class="cell" id="0"></td>
@@ -128,7 +121,7 @@
     </table>
 
     <div class="center" align="center">
-        <button id="buttonButton1" onClick="startGame()" style="width: 100px; height: 75px; font-size: 3vmin; background: #fcdc7b;">Replay!</button>
+        <button class="button button1" onClick="startGame()">Replay</button>
     </div>
 
     <div class="endgame">
@@ -139,161 +132,159 @@
         <button onClick="selectSym('X')">X</button>
         <button onClick="selectSym('O')">O</button>
     </div>
+        <script>
+            let origBoard;
+            let huPlayer ='O';
+            let aiPlayer = 'X';
+            const winCombos =[
+                [0, 1, 2],
+                [3, 4, 5],
+                [6, 7, 8],
+                [0, 4, 8],
+                [6, 4, 2],
+                [2, 5, 8],
+                [1, 4, 7],
+                [0, 3, 6]
+            ];
 
+            const cells = document.querySelectorAll('.cell');
+            startGame();
 
-    <script>
-        let origBoard;
-        let huPlayer ='O';
-        let aiPlayer = 'X';
-        const winCombos =[
-            [0, 1, 2],
-            [3, 4, 5],
-            [6, 7, 8],
-            [0, 4, 8],
-            [6, 4, 2],
-            [2, 5, 8],
-            [1, 4, 7],
-            [0, 3, 6]
-        ];
-
-        const cells = document.querySelectorAll('.cell');
-        startGame();
-
-        function selectSym(sym){
-            huPlayer = sym;
-            aiPlayer = sym==='O' ? 'X' :'O';
-            origBoard = Array.from(Array(9).keys());
-            for (let i = 0; i < cells.length; i++) {
-                cells[i].addEventListener('click', turnClick, false);
+            function selectSym(sym){
+                huPlayer = sym;
+                aiPlayer = sym==='O' ? 'X' :'O';
+                origBoard = Array.from(Array(9).keys());
+                for (let i = 0; i < cells.length; i++) {
+                    cells[i].addEventListener('click', turnClick, false);
+                }
+                if (aiPlayer === 'X') {
+                    turn(bestSpot(),aiPlayer);
+                }
+                document.querySelector('.selectSym').style.display = "none";
             }
-            if (aiPlayer === 'X') {
-                turn(bestSpot(),aiPlayer);
-            }
-            document.querySelector('.selectSym').style.display = "none";
-        }
 
-        function startGame() {
-            document.querySelector('.endgame').style.display = "none";
-            document.querySelector('.endgame .text').innerText ="";
-            document.querySelector('.selectSym').style.display = "block";
-            for (let i = 0; i < cells.length; i++) {
-                cells[i].innerText = '';
-                cells[i].style.removeProperty('background-color');
-            }
-        }
-
-        function turnClick(square) {
-            if (typeof origBoard[square.target.id] ==='number') {
-                turn(square.target.id, huPlayer);
-                if (!checkWin(origBoard, huPlayer) && !checkTie())
-                    turn(bestSpot(), aiPlayer);
-            }
-        }
-
-        function turn(squareId, player) {
-            origBoard[squareId] = player;
-            document.getElementById(squareId).innerHTML = player;
-            let gameWon = checkWin(origBoard, player);
-            if (gameWon) gameOver(gameWon);
-            checkTie();
-        }
-
-        function checkWin(board, player) {
-            let plays = board.reduce((a, e, i) => (e === player) ? a.concat(i) : a, []);
-            let gameWon = null;
-            for (let [index, win] of winCombos.entries()) {
-                if (win.every(elem => plays.indexOf(elem) > -1)) {
-                    gameWon = {index: index, player: player};
-                    break;
+            function startGame() {
+                document.querySelector('.endgame').style.display = "none";
+                document.querySelector('.endgame .text').innerText ="";
+                document.querySelector('.selectSym').style.display = "block";
+                for (let i = 0; i < cells.length; i++) {
+                    cells[i].innerText = '';
+                    cells[i].style.removeProperty('background-color');
                 }
             }
-            return gameWon;
-        }
 
-        function gameOver(gameWon){
-            for (let index of winCombos[gameWon.index]) {
-                document.getElementById(index).style.backgroundColor =
-                    gameWon.player === huPlayer ? "green" : "red";
-            }
-            for (let i=0; i < cells.length; i++) {
-                cells[i].removeEventListener('click', turnClick, false);
-            }
-            declareWinner(gameWon.player === huPlayer ? "You win!" : "You lose");
-        }
-
-        function declareWinner(who) {
-            document.querySelector(".endgame").style.display = "block";
-            document.querySelector(".endgame .text").innerText = who;
-        }
-        function emptySquares() {
-            return origBoard.filter((elm, i) => i===elm);
-        }
-
-        function bestSpot(){
-            return minimax(origBoard, aiPlayer).index;
-        }
-
-        function checkTie() {
-            if (emptySquares().length === 0){
-                for (cell of cells) {
-                    cell.style.backgroundColor = "blue";
-                    cell.removeEventListener('click',turnClick, false);
+            function turnClick(square) {
+                if (typeof origBoard[square.target.id] ==='number') {
+                    turn(square.target.id, huPlayer);
+                    if (!checkWin(origBoard, huPlayer) && !checkTie())
+                        turn(bestSpot(), aiPlayer);
                 }
-                declareWinner("Tie game");
-                return true;
-            }
-            return false;
-        }
-
-        function minimax(newBoard, player) {
-            var availSpots = emptySquares(newBoard);
-
-            if (checkWin(newBoard, huPlayer)) {
-                return {score: -10};
-            } else if (checkWin(newBoard, aiPlayer)) {
-                return {score: 10};
-            } else if (availSpots.length === 0) {
-                return {score: 0};
             }
 
-            var moves = [];
-            for (let i = 0; i < availSpots.length; i ++) {
-                var move = {};
-                move.index = newBoard[availSpots[i]];
-                newBoard[availSpots[i]] = player;
-
-                if (player === aiPlayer)
-                    move.score = minimax(newBoard, huPlayer).score;
-                else
-                    move.score =  minimax(newBoard, aiPlayer).score;
-                newBoard[availSpots[i]] = move.index;
-                if ((player === aiPlayer && move.score === 10) || (player === huPlayer && move.score === -10))
-                    return move;
-                else
-                    moves.push(move);
+            function turn(squareId, player) {
+                origBoard[squareId] = player;
+                document.getElementById(squareId).innerHTML = player;
+                let gameWon = checkWin(origBoard, player);
+                if (gameWon) gameOver(gameWon);
+                checkTie();
             }
 
-            let bestMove, bestScore;
-            if (player === aiPlayer) {
-                bestScore = -1000;
-                for(let i = 0; i < moves.length; i++) {
-                    if (moves[i].score > bestScore) {
-                        bestScore = moves[i].score;
-                        bestMove = i;
+            function checkWin(board, player) {
+                let plays = board.reduce((a, e, i) => (e === player) ? a.concat(i) : a, []);
+                let gameWon = null;
+                for (let [index, win] of winCombos.entries()) {
+                    if (win.every(elem => plays.indexOf(elem) > -1)) {
+                        gameWon = {index: index, player: player};
+                        break;
                     }
                 }
-            } else {
-                bestScore = 1000;
-                for(let i = 0; i < moves.length; i++) {
-                    if (moves[i].score < bestScore) {
-                        bestScore = moves[i].score;
-                        bestMove = i;
-                    }
-                }
+                return gameWon;
             }
 
-            return moves[bestMove];
-        }
-    </script>
-</body>
+            function gameOver(gameWon){
+                for (let index of winCombos[gameWon.index]) {
+                    document.getElementById(index).style.backgroundColor =
+                        gameWon.player === huPlayer ? "green" : "red";
+                }
+                for (let i=0; i < cells.length; i++) {
+                    cells[i].removeEventListener('click', turnClick, false);
+                }
+                declareWinner(gameWon.player === huPlayer ? "You win!" : "You lose");
+            }
+
+            function declareWinner(who) {
+                document.querySelector(".endgame").style.display = "block";
+                document.querySelector(".endgame .text").innerText = who;
+            }
+            function emptySquares() {
+                return origBoard.filter((elm, i) => i===elm);
+            }
+
+            function bestSpot(){
+                return minimax(origBoard, aiPlayer).index;
+            }
+
+            function checkTie() {
+                if (emptySquares().length === 0){
+                    for (cell of cells) {
+                        cell.style.backgroundColor = "blue";
+                        cell.removeEventListener('click',turnClick, false);
+                    }
+                    declareWinner("Tie game");
+                    return true;
+                }
+                return false;
+            }
+
+            function minimax(newBoard, player) {
+                var availSpots = emptySquares(newBoard);
+
+                if (checkWin(newBoard, huPlayer)) {
+                    return {score: -10};
+                } else if (checkWin(newBoard, aiPlayer)) {
+                    return {score: 10};
+                } else if (availSpots.length === 0) {
+                    return {score: 0};
+                }
+
+                var moves = [];
+                for (let i = 0; i < availSpots.length; i ++) {
+                    var move = {};
+                    move.index = newBoard[availSpots[i]];
+                    newBoard[availSpots[i]] = player;
+
+                    if (player === aiPlayer)
+                        move.score = minimax(newBoard, huPlayer).score;
+                    else
+                        move.score =  minimax(newBoard, aiPlayer).score;
+                    newBoard[availSpots[i]] = move.index;
+                    if ((player === aiPlayer && move.score === 10) || (player === huPlayer && move.score === -10))
+                        return move;
+                    else
+                        moves.push(move);
+                }
+
+                let bestMove, bestScore;
+                if (player === aiPlayer) {
+                    bestScore = -1000;
+                    for(let i = 0; i < moves.length; i++) {
+                        if (moves[i].score > bestScore) {
+                            bestScore = moves[i].score;
+                            bestMove = i;
+                        }
+                    }
+                } else {
+                    bestScore = 1000;
+                    for(let i = 0; i < moves.length; i++) {
+                        if (moves[i].score < bestScore) {
+                            bestScore = moves[i].score;
+                            bestMove = i;
+                        }
+                    }
+                }
+
+                return moves[bestMove];
+            }
+        </script>
+    </body>
 </html>
