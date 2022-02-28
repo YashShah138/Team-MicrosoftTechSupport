@@ -55,6 +55,11 @@ def jaypbl():
     return render_template("/assignments/Beaches/jaypbl.html")
 
 
+@app.route('/memorygame/')
+def memorygame():
+    return render_template("/assignments/Beaches/memorygame.html")
+
+
 # ---------------- BEACHES --------------------
 
 @app.route('/solana-beach/')
