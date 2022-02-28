@@ -95,7 +95,7 @@
 </form>
 
 <p>guess: {{guess}}</p>
-<button onclick="localStorage.setItem('GuessList', JSON.stringify([]))">reset</button>
+<button onclick="localStorage.setItem('GuessList', JSON.stringify([]));window.location.reload();{% set guess = '' %}" >reset</button>
 
 <script>
     Render(GuessList)
