@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="858b4215-7dfd-48f1-a79a-ebc0570df582" name="Changes" comment="Added Iteration and Lists">
+    <list default="true" id="858b4215-7dfd-48f1-a79a-ebc0570df582" name="Changes" comment="Edited the Code Format">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/assignments/Beaches/jaypbl.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/assignments/Beaches/jaypbl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/assignments/memorygame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +279,7 @@
       <workItem from="1643309608043" duration="2065000" />
       <workItem from="1643397832084" duration="10460000" />
       <workItem from="1644955112386" duration="297000" />
-      <workItem from="1646024849755" duration="7138000" />
+      <workItem from="1646024849755" duration="11644000" />
     </task>
     <task id="LOCAL-00001" summary="created specific directories for about pictures">
       <created>1637350879934</created>
@@ -439,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646031105975</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Edited the Code Format">
+      <created>1646032210652</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1646032210652</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,10 +501,11 @@
     <MESSAGE value="Added the shuffle function and unflip cards" />
     <MESSAGE value="Reformatted Images" />
     <MESSAGE value="Added Iteration and Lists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Iteration and Lists" />
+    <MESSAGE value="Edited the Code Format" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited the Code Format" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1646031918643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1646037317708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$rest_test.coverage" NAME="rest_test Coverage Results" MODIFIED="1638818569043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$MicrosoftTechSupport_Project.coverage" NAME="MicrosoftTechSupport-Project Coverage Results" MODIFIED="1643744564315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$.coverage" NAME=" Coverage Results" MODIFIED="1642103387442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

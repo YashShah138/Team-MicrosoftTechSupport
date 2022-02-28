@@ -55,7 +55,7 @@
         padding: 20px;
         position: absolute;
         border-radius: 5px;
-        background: #1C7CCC;
+        background: # green;
         backface-visibility: hidden;
     }
 
@@ -129,7 +129,9 @@
         [8, 9],
         [10, 11]
     ];
-
+    for (var img in frontimages) {
+        console.log(img);
+    }
 
     const cards = document.querySelectorAll('.memory-card');
 
@@ -170,8 +172,8 @@
     }
 
     function disableCards(validate) {
-        for (var img in frontimages) {
-            console.log(img);
+        for (var frontimage in frontimages) {
+            console.log(frontimage);
         }
         if(validate) {
             firstCard.removeEventListener('click', flipCard);
