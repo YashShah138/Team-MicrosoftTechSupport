@@ -54,9 +54,7 @@ def Wordle():
 def jaypbl():
     return render_template("/assignments/Beaches/jaypbl.html")
 
-@app.route('/memorygame/')
-def memorygame():
-    return render_template("/assignments/memorygame.html")
+
 # ---------------- BEACHES --------------------
 
 @app.route('/solana-beach/')

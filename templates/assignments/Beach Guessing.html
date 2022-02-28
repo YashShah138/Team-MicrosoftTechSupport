@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,98 +16,253 @@
             min-height: 600px;
         }
 
-        <div.guessbox p {
-             margin: 10%;
-             font-weight: bold;
-             color: #000000;
-         }
+        div.guessbox p {
+            margin: 10%;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .stars {
+            align-items: top;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+        }
+
+        .clip-star {
+            background: gold;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            align-items: center;
+        }
+
+        .clip-star-dark {
+            background: #333;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            align-items: center;
+        }
     </style>
 </head>
 
-<body onload="getscrambledword();">
+<body onload="initialize();">
+
 <div class="background">
     <div class="guessbox" align="center">
-        <h1>Solve the scrambed word!</h1>
-
-        <label id="scrambledword" font-size="20"></label>
+        <label id="solve" font-size="20"><br><h2>Solve the scrambled words!</h2></label>
+        <br><br>
+        <label id="scrambleword" font-size="20"></label>
         <div id="guessword"></div>
 
 
-        <input type="button" value="GUESS" onclick="getguess()">
-        <input type="text" name="guess" id="guesstext">
-        <p>Score:</p>
+        <input type="button" value="GUESS" id="guessbutton" onclick="getguess();">
+        <input type="text" name="guess" id="guesstext" onfocus=this.value=''><br>Score:
         <label id="score"></label>
         <br>
 
         <br>
         <div id="result"></div>
     </div>
+
+    <div class="stars" id="starbox">
+        <div class="clip-star-dark" id="star1"></div>
+        <div class="clip-star-dark" id="star2"></div>
+        <div class="clip-star-dark" id="star3"></div>
+        <div class="clip-star-dark" id="star4"></div>
+        <div class="clip-star-dark" id="star5"></div>
+    </div>
 </div>
 
 
 <script>
     function getguess() {
+        if (gameover() == true) {
+            return null;
+        }
         // get the text value from the guess text box
-        var result = document.getElementById("guesstext").value;
-        if (result == commonWords[wordCount]) {
-            wordCount += 1;
+        currentGuess = document.getElementById("guesstext").value;
+
+        // check for correctly guessing a word in our array
+        if (guessCorrectly(currentGuess) == true) {
             rightAnswer += 1;
-            document.getElementById("result").innerHTML = "CORRECT!";
+            document.getElementById("result").innerHTML = "CORRECT ANSWER!";
 
-            if (wordCount > 3) // game over
-            {
+            // reprint scrambled word list with remaining unguessed words
+            if (commonWords.length == 0) {
+                document.getElementById("scrambleword").innerHTML = "<br>";
+                gameover();
+            } else
+                document.getElementById("scrambleword").innerHTML = commonWordsScrambled.toString();
 
-                document.getElementById("score").innerHTML = calculateScore().toString;
-                exit();
-            } else {
-                // get next scrambled work
-                document.getElementById("scrambleword").innerHTML = getscrambledword();
-                // need to clear text box - this is not working yet
-                document.getElementById("guesstext").value = " ";
-            }
         } else {
             wrongAnswer += 1;
             document.getElementById("result").innerHTML = "SORRY, TRY AGAIN!";
         }
+        // clear the old guess out of the text box before proceeding
+        document.getElementById("guesstext").value = '';
+
+        // calculate and display score every answer
+        score = calculateScore();
+        document.getElementById("score").innerHTML = score.toString();
+    }
+
+    // Game is over when all commonWords have been guessed correctly
+    function gameover() {
+        if (commonWords.length == 0) {
+            document.getElementById("solve").innerHTML = "<br><h2>Congratulations</h2>"
+            document.getElementById("result").innerHTML = "Below is your rating"
+            // calculate final score before showing star rating
+            calculateScore();
+            showStarRatings(totalScore);
+            return true;
+        } else
+            return false;
     }
 
     var commonWords = [
         "surfing",
         "volleyball",
         "running",
-        "picnic"
+        "picnic",
+        "kayaking"
     ];
-    var word = "";
+    var commonWordsScrambled = [];
     var currentWord = commonWords[0];
+    var currentGuess = ''; // guess word
     var wordCount = 0;
     var rightAnswer = 0;
     var wrongAnswer = 0;
     var totalScore = 0;
 
-    function calcuateScore() {
+    function calculateScore() {
         totalScore = rightAnswer * 4 - wrongAnswer;
-        return totalScore.toString;
+        return totalScore;
     }
 
+    // create a random integer between [min,max]
     function randomIntFromInterval(min, max) { // min and max included
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
+
+    // Iterates one word at a time in our early game version
+    // we use it get one scrambled word at a time for guessing purposes
+    // currently not being used
+    function iteratenextword() {
+        if (gameover() == true) {
+            return " "
+        } else {
+            wordCount++;
+            return getscrambledword(wordCount)
+        }
+    }
+
+    // iterate all words and check for match
+    function guessCorrectly(guess) {
+        var j = 0;
+        while (j < commonWords.length) {
+            if (guess == commonWords[j]) {
+                // Remove correctly guessed item from the position in both arrays
+                commonWords.splice(j, 1)
+                commonWordsScrambled.splice(j, 1)
+                return true;
+            }
+            j = j + 1;
+        }
+        return false; // no match
+    }
+
+    function showStarRatings() {
+        // every 4 points you get a star up to a max of 5 stars
+        var score = totalScore
+        j = 1;
+        do {
+            // if you have a zero or negative score then no stars for you!
+            if (totalScore < 1)
+                break;
+            // If we got even one wrong we cannot get a 5 star rating
+            if (wrongAnswer == 1 && j == 5)
+                break;
+            // If we got more than three wrong we cant get a 4 star rating
+            if (wrongAnswer > 3 && j == 4)
+                break;
+            // If we got more than five wrong we cant get a 3 star rating
+            if (wrongAnswer > 5 && j == 3)
+                break;
+
+            // Every answer we got right earns us a star
+            score -= 4;
+            var starid = "star" + j;
+            var star = document.getElementById(starid);
+            // change gray star to gold star
+            star.className = "clip-star";
+
+        } while (++j <= rightAnswer && score > 0);
+        document.getElementById("starbox").style.visibility = "visible";
+    }
+
+    function hideStarRatings() {
+        // var element = document.getElementById("starbox").style.visibility = "hidden"
+        //   element.style.visibility = "hidden";
+    }
+
+    function initialize() {
+        hideStarRatings();
+        addListenerToTextBox();
+        scrambleAllWords();
+        var scrambledwords = commonWordsScrambled.toString();
+        document.getElementById("scrambleword").innerHTML = scrambledwords;
+    }
+
+    // fancy function most of the time scrambles up the word
     function scrambleWord(someword) {
         return someword.split('').sort(function() {
             return 0.5 - Math.random()
         }).join('')
     }
 
-    function getscrambledword() {
-        //    var randomWord = randomFromInterval(0, commonWords.length - 1);a
-        word = scrambleWord(commonWords[wordCount]);
-        document.getElementById("scrambledword").innerHTML = word;
+    function getscrambledword(index) {
+        // in case the scrambled word comes back the same keep repeating this until
+        // it's different.
+        do {
+            var word = commonWords[index].split('').sort(function() {
+                return 0.5 - Math.random()
+            }).join('')
+            // If someone is mean enough to create words of 0 or 1 character length
+            // it would put us in an infinite loop here
+            // this check makes sure we exit if a beach word is "a" or ""
+            if (word.length <= 1)
+                break;
+        } while (word == commonWords[index])
 
+        return word;
+    }
+
+    // Scrambles every word in CommonWords and puts them into commonWordsScrambled
+    function scrambleAllWords() {
+        var j = 0;
+        while (j < commonWords.length) {
+            commonWordsScrambled[j] = getscrambledword(j)
+            j = j + 1;
+        }
+    }
+
+    // Register listener for our text box so when we
+    // hit enter key in the text box it clicks on the guess button
+    function addListenerToTextBox() {
+        document.getElementById("guesstext")
+            .addEventListener("keyup", function(event) {
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    document.getElementById("guessbutton").click();
+                }
+            });
     }
 </script>
-
-<p id="guess1"> volleyball </p>
 </body>
 
 </html>
