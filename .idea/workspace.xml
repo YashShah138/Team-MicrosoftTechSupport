@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="858b4215-7dfd-48f1-a79a-ebc0570df582" name="Changes" comment="Reformatted Images">
+    <list default="true" id="858b4215-7dfd-48f1-a79a-ebc0570df582" name="Changes" comment="Added Iteration and Lists">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/assignments/Beaches/jaypbl.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/assignments/Beaches/jaypbl.html" afterDir="false" />
     </list>
@@ -276,7 +276,7 @@
       <workItem from="1643309608043" duration="2065000" />
       <workItem from="1643397832084" duration="10460000" />
       <workItem from="1644955112386" duration="297000" />
-      <workItem from="1646024849755" duration="6109000" />
+      <workItem from="1646024849755" duration="7138000" />
     </task>
     <task id="LOCAL-00001" summary="created specific directories for about pictures">
       <created>1637350879934</created>
@@ -432,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646027260152</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added Iteration and Lists">
+      <created>1646031105975</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1646031105975</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,10 +490,11 @@
     <MESSAGE value="Added Finished Javascript" />
     <MESSAGE value="Added the shuffle function and unflip cards" />
     <MESSAGE value="Reformatted Images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reformatted Images" />
+    <MESSAGE value="Added Iteration and Lists" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Iteration and Lists" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1646030884248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$main.coverage" NAME="main Coverage Results" MODIFIED="1646031918643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$rest_test.coverage" NAME="rest_test Coverage Results" MODIFIED="1638818569043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$MicrosoftTechSupport_Project.coverage" NAME="MicrosoftTechSupport-Project Coverage Results" MODIFIED="1643744564315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Team_MicrosoftTechSupport$.coverage" NAME=" Coverage Results" MODIFIED="1642103387442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

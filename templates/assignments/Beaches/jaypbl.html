@@ -129,9 +129,7 @@
         [8, 9],
         [10, 11]
     ];
-    for (var img in frontimages) {
-        console.log(img);
-    }
+
 
     const cards = document.querySelectorAll('.memory-card');
 
@@ -172,6 +170,9 @@
     }
 
     function disableCards(validate) {
+        for (var img in frontimages) {
+            console.log(img);
+        }
         if(validate) {
             firstCard.removeEventListener('click', flipCard);
             secondCard.removeEventListener('click', flipCard);
