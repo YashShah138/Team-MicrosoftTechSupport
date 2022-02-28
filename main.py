@@ -3,8 +3,15 @@ from flask import render_template, request
 from flask import request, redirect
 import requests
 
+from xBP_routes.about_pages import about_pages
+from xBP_routes.games import games
+from xBP_routes.beaches import beaches
 from crudy.app_crud import app_crud
 from crudy.app_crud_api import app_crud_api
+
+app.register_blueprint(beaches)
+app.register_blueprint(games)
+app.register_blueprint(about_pages)
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
 
