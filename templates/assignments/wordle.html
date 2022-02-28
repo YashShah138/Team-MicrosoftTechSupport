@@ -6,31 +6,48 @@
 
 </style>
 <script>
+    const WordBank = ['Beach', 'Towel', 'Shell', 'Shark']
 
-    WordBank = [Beach]
-    index = Math.round(Math.random * WordBank.length)
-    Word = WordBank[index]
+    if (localStorage.getItem("Word") == undefined) {
+        let index = Math.floor(Math.random() * WordBank.length)
+        let Word = WordBank[index].toUpperCase()
+        localStorage.setItem("Word", Word)
+    }
+
+    GuessNum = 0
+
+    let Word = localStorage.getItem("Word")
+
+    console.log(Word)
 
     function Guess(Guess, GuessNum) {
 
-        var index;
+        for (var i = 0; i < Guess.length; i++) {
 
-        for (var char in Guess) {
+            let GuessChar = Guess[i].toUpperCase()
 
-            index = Guess.indexOf(char)
+            var canvas = document.getElementById(GuessNum + "x" + i)
+            var ctx = canvas.getContext('2d');
+            console.log(GuessChar)
 
-            if (index>0) {
+            if (GuessChar === Word[i]) {
 
-                let canvas = document.getElementById(toString(GuessNum) + 'x' + toString(index))
-                let ctx = canvas.getContext('2d');
+                ctx.fillStyle = 'green';
 
-                if (index == Word.indexOf(char)) {
-                    ctx.fillStyle = 'green';
-                } else {
-                    ctx.fillStyle = 'yellow';
-                }
-                ctx.fillRect(10, 10, 150, 100);
+            } else if (Word.indexOf(GuessChar) > -1) {
+
+                ctx.fillStyle = 'yellow';
+
+            } else {
+
+                ctx.fillStyle = 'grey';
+
             }
+
+            ctx.fillRect(10, 10, 150, 100);
+            ctx.fillStyle = 'black';
+            ctx.font = "30px Verdana";
+            ctx.fillText(GuessChar, 70, 75)
         }
     }
 
@@ -40,18 +57,32 @@
 {% block body %}
 
 {% for row in range(6) %}
-    {% for column in range(6) %}
+    {% for column in range(5) %}
+
     <canvas class="canvas" id="{{row}}x{{column}}" width="150" height="150"></canvas>
+
+    <script>
+        var canvas = document.getElementById('{{row}}x{{column}}')
+        var ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'grey';
+        ctx.fillRect(10, 10, 150, 100);
+    </script>
+
     {% endfor %}
     <br>
 {% endfor %}
 
-<script>
-    const canvas = document.getElementById('5x4')
-    const ctx = canvas.getContext('2d');
+<form action="/wordle/" method="POST">
+    <label for="Guess">Enter a guess:</label><br>
+    <input type="text" id="Guess" name="Guess"><br>
+    <input type="submit" value="Submit">
+</form>
 
-    ctx.fillStyle = 'green';
-    ctx.fillRect(10, 10, 150, 100);
+<p>guess: {{guess}}</p>
+
+<script>
+    Guess('{{guess}}', GuessNum)
 </script>
 
 {% endblock %}

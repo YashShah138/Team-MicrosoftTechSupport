@@ -28,6 +28,7 @@
 
 ## Week 10
 
+
 ### Create Task
 
 | Name | Ticket |
@@ -40,13 +41,13 @@
 
 ### MCQ
 
-| Name | MCQ |
-| --- | --- |
-| Avinh | |
-| Akhil | |
-| Yash | |
-| Valen | |
-| Jay | |
+| Name | MCQ + CB Quizzes | Corrections | Notes |
+| --- | --- | --- | --- |
+| Avinh | | | |
+| Jay | ![image](https://user-images.githubusercontent.com/89176673/154636875-10b60afd-5784-4ec3-b795-bda262660f24.PNG) | **Question 42:** This answer is incorrect because the  result would be displayed if the code segment counted the number of even values in the list rather than the number of odd values. The correct answer would be 3 because The expression  is equal to 1 for odd values and equal to 0 for even values. Therefore the code segment would add 1 to result for each odd value in integerList. There are three odd values in the list, so 3 is displayed. <br> **Question 47:**  This is inccorect because the  expression will become  true for restaurants with a correct customer rating and will be false for restaurants with an incorrect customer rating, regardless of the price range. The correct answer is B because it would be true only for restaurants with the correct price range and the correct customer rating <br> **Question 51:** This would be incorrect because a simulation is run on a computer and is not likely to require input from individuals distributed around the world. The correct answer is A because this would benefit from using a citizen science model for gathering photographs of birds from amateur photographers around the world. <br> **Question 59 :** This would be incorrect because his information is determined using data collected from Adrianna’s device. The correct answer would be C because this information is collected from other user’s devices, not Adrianna’s device. <br> **Question 67 :** This is incorrect because the given spinner has a 14 chance of "blue", a 38 chance of "orange", and a 38 chance of "purple. A is correct the other 12 of the time that "blue" does not occur, the code segment prints "purple".|[notes](https://docs.google.com/document/d/1b8XxDljHwsNPgyQ3KBtOjHy1575NbxJuUtkxBfm_Hk0/edit?usp=sharing) |
+| Yash |![image](https://user-images.githubusercontent.com/89223735/154739535-a3c622e2-0436-4fd6-b545-cdc5cc9baaea.png)| 5.4 Quiz, question 2: I missed the question because I didn't read the question correctly.| |
+| Valen |<img width="1145" alt="Screen Shot 2022-02-18 at 10 08 55 AM" src="https://user-images.githubusercontent.com/89166851/154738493-412432f0-5d92-44cb-9455-1489bb158cd9.png"> |Q25 I chose B because I thought it returned 2 * n. But it sums the integers from 1 to n because it originally sets 1 and j to 2. But I didn’t realize that J had to exceed n. Q29 I chose A but data packets may travel along different paths, arriving at the destination in order, out of order, or not at all. It was actually B because Data transmitted on the Internet is broken into packets and then reassembled upon arrival. Packets may travel along different paths, arriving at the destination in order, out of order, or not at all. Q31 I chose B but Appending three 0s to the end of a binary number multiplies it by 23 23, not by 4. Its C because, Appending a 0 to the end of a binary number multiplies the number by 2. Therefore, appending three 0s to the end of a binary number multiples the number by 2 three times, which is the same as multiplying the number by 8. Q32 I chose D but, Public key encryption uses a public key for encryption and a private key for decryption. Symmetric encryption is a method that uses a single key for both encryption and decryption. It is A because Public-key encryption is considered a secure way of encoding data to prevent unauthorized access. | |
+| Akhil | <img width="1161" alt="Screen Shot 2022-02-18 at 10 03 59 AM" src="https://user-images.githubusercontent.com/89219514/154738788-9bae04cb-bcc7-4455-b185-d638e40c486d.png"> | **Question 14:** The answer I chose would cause the function to stop immediately if any value was equal to 6 and none of the others would get checked. Correct answer is C, lines 8 and 12 should be interchanged to the function evaluated true and false correctly. <br> **Question 13:**  Simulations are most useful when real-world events are impractical. A simulation is unlikely to be appropriate if continuous real-world data is needed, and should be definitely used if many trials need to be done quickly. <br> **Question 48:** Forgot what a rogue acces point was, its when a router doesn't have good security measures, its able to be accessed easily and an attack can be done through it. | [notes](https://docs.google.com/document/d/1D3Wq4URGIq4PRvkJWu946mdJOZl7XkRoSjJaQ6-Ur10/edit?usp=sharing) |
 
 ## Week 8
 

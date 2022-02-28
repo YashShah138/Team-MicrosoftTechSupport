@@ -66,4 +66,43 @@
         </tr>
     </table>
 </div>
+
+    <script>
+function shuffle_deck(deck) {
+    const position = deck.length;
+
+    while (position !== 0) {
+        rndIdx=Math.floor(Math.random()*position);
+        tmp=deck[position];
+        deck[position]=deck[rndIdx];
+        deck[rndIdx]=tmp;
+
+
+    }
+    return deck;
+
+}
+function card_Open() {
+    cardsOpened.push(this);
+    const openedLength = cardsOpened.length;
+
+    if (openedLength==2) {
+        incrementCounter();
+    if (cardsOpened[1].kind===cardsOpened[0].kind)
+        foundMatch();
+    else
+        noFoundMatch();
+    }
+}
+
+function foundMatch(){
+    cardsopened[0].classList.add("matched");
+    cardsopened[1].classList.add("matched");
+    cardsopened[0].classList.remove("display","reveal");
+    cardsopened[1].classList.remove("display","reveal");
+    cardsopened=[];
+
+}
+</script>
+
 </body>
